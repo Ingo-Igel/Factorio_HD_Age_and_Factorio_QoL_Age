@@ -3,7 +3,7 @@
 	"version": "1.0.8",
 	"title": "Factorio HD Age: Modpack - Base Game (all optional)",
 	"author": "Ingo_Igel",
-	"homepage": "https://github.com/Ingo-Igel",
+	"homepage": "https://codeberg.org/Ingo_Igel/Factorio_HD_Age_and_Factorio_QoL_Age",
 	"factorio_version": "2.0",
 	"dependencies": [
 	"base >= 2.0.23",
