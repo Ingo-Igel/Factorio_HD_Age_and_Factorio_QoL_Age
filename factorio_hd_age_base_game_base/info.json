@@ -22,11 +22,9 @@
 			".gallery/06-rocket-silo-HD.png"
 		],
 		"prune_gallery": true,
-		"readme": "README.md",
 		"faq": "FAQ.md",
 		"markdown": {
-			"strip_first_header": false,
-			"url_match": "^((http(s?)|data):.*\\)|#)/"
+			"strip_first_header": false
 		},
 		"no_git_push": true,
 		"no_git_tag": true,
