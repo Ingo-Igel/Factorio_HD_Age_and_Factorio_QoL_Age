@@ -1,0 +1,28 @@
+{
+	"name": "factorio_hd_age_space_age_decorative",
+	"version": "1.1.2",
+	"title": "Factorio HD Age: Space Age - Decorative",
+	"author": "Ingo_Igel",
+	"homepage": "https://github.com/Ingo-Igel",
+	"factorio_version": "2.0",
+	"dependencies": ["base >= 2.0.44", "space-age >=2.0.44"],
+	"description": "This mod contains and integrates HD textures for the decoratives of the Space Age DLC.",
+	"package": {
+		"gallery": [
+			".gallery/thumbnail_huge.png",
+			".gallery/orange-root-01-SD.png",
+			".gallery/orange-root-01-HD.png",
+			".gallery/fulgoran-ruin-vault-SD.png",
+			".gallery/fulgoran-ruin-vault-HD.png",
+			".gallery/bob-fingers-small-03-SD.png",
+			".gallery/bob-fingers-small-03-HD.png"
+		],
+		"prune_gallery": true,
+		"readme": "README.md",
+		"faq": "FAQ.md",
+		"markdown": {
+			"strip_first_header": false
+		},
+		"sync_portal_details": true
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"name": "factorio_hd_age_quality",
+	"version": "1.1.5",
+	"title": "Factorio HD Age: Quality",
+	"author": "Ingo_Igel",
+	"homepage": "https://github.com/Ingo-Igel",
+	"factorio_version": "2.0",
+	"dependencies": [
+	"base >= 2.0.29",
+	"quality >=2.0.29"
+	],
+	"quality_required": true,
+	"description": "This mod contains and integrates HD textures for the quality entities of the Space Age DLC.",
+	"package": {
+		"gallery": [
+			".gallery/thumbnail_huge.png",
+			".gallery/recycler-E-SD.png",
+			".gallery/recycler-E-HD.png"
+		],
+		"prune_gallery": true,
+		"readme": "README.md",
+		"faq": "FAQ.md",
+		"markdown": {
+			"strip_first_header": false
+		},
+		"sync_portal_details": true
+	}
+}

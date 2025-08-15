@@ -1,0 +1,25 @@
+{
+	"name": "factorio_qol_age_space_age",
+	"version": "1.0.4",
+	"title": "Factorio QoL Age: Space Age",
+	"author": "Ingo_Igel",
+	"homepage": "https://github.com/Ingo-Igel",
+	"factorio_version": "2.0",
+	"dependencies": [
+	"base >= 2.0.23",
+	"space-age >= 2.0.23",
+	"factorio_qol_age_base_game"
+	],
+	"description": "This mod pack contains various QoL mods for the Space Age DLC and Base Game that I personally use.",
+	"package": {
+		"gallery": [
+			".gallery/thumbnail_huge.png"
+		],
+		"prune_gallery": true,
+		"readme": "README.md",
+		"markdown": {
+			"strip_first_header": false
+		},
+		"sync_portal_details": true
+	}
+}

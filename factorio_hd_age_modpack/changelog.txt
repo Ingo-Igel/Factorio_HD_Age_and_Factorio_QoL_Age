@@ -1,0 +1,93 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: ????
+  Changes:
+---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+Date: 2025-08-14
+  Changes:
+    - removed all GitHub links and references
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 2025-08-08
+  Changes:
+    - Added LICENCE file
+    - Updated long description
+    - Added FAQ
+    - Updated thumbnail
+---------------------------------------------------------------------------------------------------
+Version: 1.0.14
+Date: 2025-07-13
+  Changes:
+    - Optimized textures to reduce VRAM usage and improve performance. Thanks to WildWolf, boskid and Rseding91 for the detailed feedback and help.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.13
+Date: 2025-01-17
+  Changes:
+    - Reworked mod settings discription
+---------------------------------------------------------------------------------------------------
+Version: 1.0.12
+Date: 2025-01-15
+  Changes:
+    - Added settings to exclude HD textures
+---------------------------------------------------------------------------------------------------
+Version: 1.0.11
+Date: 2025-01-05
+  Changes:
+    - Added new thumbnail
+---------------------------------------------------------------------------------------------------
+Version: 1.0.10
+Date: 2024-12-31
+  Changes:
+    - Added FeatureFlags to indicate DLC requirements in the Mod Portal
+---------------------------------------------------------------------------------------------------
+Version: 1.0.9
+Date: 2024-12-30
+  Changes:
+    - added factorio_hd_age_space_age_graphics_addon
+---------------------------------------------------------------------------------------------------
+Version: 1.0.8
+Date: 2024-12-22
+  Changes:
+    - Updated description
+---------------------------------------------------------------------------------------------------
+Version: 1.0.7
+Date: 2024-12-19
+  Changes:
+    - added factorio_hd_age_modpack_base_game_only
+---------------------------------------------------------------------------------------------------
+Version: 1.0.6
+Date: 2024-11-30
+  Changes:
+    - changed finished mods from optional to required (Terrain Packages)
+---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+Date: 2024-11-17
+  Changes:
+    - changed finished mod from optional to required (Enemies Vulcanus)
+---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+Date: 2024-11-02
+  Changes:
+    - added factorio_hd_age_space_age_enemies_vulcanus
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 2024-10-30
+  Changes:
+    - Set terrain packs to optional as they have a lot of display errors
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 2024-10-27
+  Changes:
+    - added factorio_hd_age_space_age_terrain_aquilo
+    - added factorio_hd_age_space_age_terrain_fulgora
+    - added factorio_hd_age_space_age_terrain_gleba
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2024-10-27
+  Changes:
+    - added factorio_hd_age_space_age_terrain_vulcanus
+    - The included mods have been changed from optional to required
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2024-10-27

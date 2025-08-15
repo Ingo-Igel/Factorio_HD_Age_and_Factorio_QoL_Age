@@ -1,0 +1,141 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.1.3
+Date: ????
+  Changes:
+---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: 2025-08-14
+  Changes:
+    - Fixed alpha layer of textures not being fully transparent
+    - Fixed alpha layer of preview images (some preview images have also been updated)
+    - removed all GitHub links and references
+---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+Date: 2025-08-09
+  Changes:
+    - Added LICENCE file
+    - Added FAQ
+    - Updated long description
+    - Updated preview images
+---------------------------------------------------------------------------------------------------
+Version: 1.0.10
+Date: ????
+  Changes:
+    - The textures have been completely re-upscaled to be more alike the source material in terms of appearance and color. Additionally, there are fewer artifacts and a reduced file size.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.9
+Date: ????
+  Changes:
+    - New, optimized frozen layer for the transport-belt, fast-transport-belt and express-transport-belt
+---------------------------------------------------------------------------------------------------
+Version: 1.0.8
+Date: 2025-07-12
+  Changes:
+    - Optimized textures to reduce VRAM usage and improve performance. Thanks to WildWolf, boskid and Rseding91 for the detailed feedback and help.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.7
+Date: 2025-04-11
+  Changes:
+    - Fix for game version 2.0.44
+---------------------------------------------------------------------------------------------------
+Version: 1.0.6
+Date: 2025-02-09
+  Changes:
+    - Moved all content from data.lua to data-final-fixes.lua so that other mods can load a data.raw[...]... table in the first and second data phase without modified scaling
+---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+Date: 2025-01-17
+  Changes:
+    - Added settings to exclude HD textures
+    - Cleaned up code
+---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+Date: 2025-01-07
+  Changes:
+    - Added options to disable loading of mech armor HD textures. This ensures compatibility with other mods that change the same textures. The options can be hidden and will then be overridden as active (e.g. by other mods) to ensure compatibility.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 2025-01-05
+  Changes:
+    - Added new thumbnail
+    - Fixed width and height calculation in data-final-fixes.lua (Code provided with friendly permission by mindcloud)
+    - Cleanup of code in data-final-fixes.lua
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 2024-12-31
+  Changes:
+    - Fixed compatibility issues with the "Yuoki" mod
+    - Fixed compatibility issues with the "Mountain Fortress Addons" mod
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2024-12-08
+  Changes:
+    - Optimised png file size with a better png optimiser
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2024-12-06
+  Changes:
+    - Replaced a lot of upscaled textures with better, manually adjusted ones
+---------------------------------------------------------------------------------------------------
+Version: 0.1.12
+Date: 2024-11-30
+  Changes:
+    - added HD textures for a few missing transitions
+---------------------------------------------------------------------------------------------------
+Version: 0.1.11
+Date: 2024-11-19
+  Changes:
+    - Changed the way some textures are loaded to be more robust when Factorio receives updates
+---------------------------------------------------------------------------------------------------
+Version: 0.1.10
+Date: 2024-11-19
+  Changes:
+    - fixed missing selector-combinator-frozen.png in 2.0.20
+---------------------------------------------------------------------------------------------------
+Version: 0.1.9
+Date: 2024-11-16
+  Changes:
+    - added HD mech-armor running and mining animations
+---------------------------------------------------------------------------------------------------
+Version: 0.1.8
+Date: 2024-11-07
+  Changes:
+    - added HD mech-armor (except running and mining animations)
+---------------------------------------------------------------------------------------------------
+Version: 0.1.7
+Date: 2024-11-07
+  Changes:
+    - fixed HD sprites of the asteroids
+---------------------------------------------------------------------------------------------------
+Version: 0.1.6
+Date: 2024-10-30
+  Changes:
+    - fixed bracket error
+---------------------------------------------------------------------------------------------------
+Version: 0.1.5
+Date: 2024-10-30
+  Changes:
+    - disabled the HD sprites of the asteroids, as they were not displayed correctly
+---------------------------------------------------------------------------------------------------
+Version: 0.1.4
+Date: 2024-10-29
+  Changes:
+    - fixed: white lines at the edge of the space platform
+---------------------------------------------------------------------------------------------------
+Version: 0.1.3
+Date: 2024-10-28
+  Changes:
+    - added foundation sprites
+---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: 2024-10-27
+  Changes:
+    - added space platform terrain
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 2024-10-27
+  Changes:
+    - added asteroids an space platform build animation
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2024-10-27

@@ -1,0 +1,9 @@
+.vscode/
+*.zip
+*.png
+!*Logo.png
+!thumbnail.png
+!thumbnail_huge.png
+mod-list.json
+mod-settings.dat
+ToDo.md

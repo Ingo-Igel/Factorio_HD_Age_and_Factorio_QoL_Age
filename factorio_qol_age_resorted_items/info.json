@@ -1,0 +1,35 @@
+{
+	"name": "factorio_qol_age_resorted_items",
+	"version": "1.0.8",
+	"title": "Factorio Qol Age: Resorted Items",
+	"author": "Ingo-Igel",
+	"homepage": "https://github.com/Ingo-Igel",
+	"factorio_version": "2.0",
+	"dependencies": ["base >= 2.0.28",
+	"? space-age >=2.0.28"
+	],
+	"description": "This mod partially changes the order of items within the Logistics, Production, and Combat groups.",
+	"package": {
+		"gallery": [
+			".gallery/thumbnail_huge.png",
+			".gallery/Logistics Base Game.png",
+			".gallery/Logistics Base Game + RI.png",
+			".gallery/Logistics Space Age.png",
+			".gallery/Logistics Space Age + RI.png",
+			".gallery/Production Base Game.png",
+			".gallery/Production Base Game + RI.png",
+			".gallery/Production Space Age.png",
+			".gallery/Production Space Age + RI.png",
+			".gallery/Combat Base Game.png",
+			".gallery/Combat Base Game + RI.png",
+			".gallery/Combat Space Age.png",
+			".gallery/Combat Space Age + RI.png"
+		],
+		"prune_gallery": true,
+		"readme": "README.md",
+		"markdown": {
+			"strip_first_header": false
+		},
+		"sync_portal_details": true
+	}
+}

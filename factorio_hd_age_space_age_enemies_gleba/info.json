@@ -1,0 +1,30 @@
+{
+	"name": "factorio_hd_age_space_age_enemies_gleba",
+	"version": "1.1.3",
+	"title": "Factorio HD Age: Space Age - Enemies Gleba",
+	"author": "Ingo_Igel",
+	"homepage": "https://github.com/Ingo-Igel",
+	"factorio_version": "2.0",
+	"dependencies": ["base >= 2.0", "space-age >=2.0"],
+	"description": "This mod contains and integrates HD textures for the Gleba enemies of the Space Age DLC.",
+	"package": {
+		"gallery": [
+			".gallery/thumbnail_huge.png",
+			".gallery/wriggler-projectile-SD.png",
+			".gallery/wriggler-projectile-HD.png",
+			".gallery/stomper-corpse-head-SD.png",
+			".gallery/stomper-corpse-head-HD.png",
+			".gallery/stomper-corpse-2-SD.png",
+			".gallery/stomper-corpse-2-HD.png",
+			".gallery/spawner-upper-4-SD.png",
+			".gallery/spawner-upper-4-HD.png"
+		],
+		"prune_gallery": true,
+		"readme": "README.md",
+		"faq": "FAQ.md",
+		"markdown": {
+			"strip_first_header": false
+		},
+		"sync_portal_details": true
+	}
+}

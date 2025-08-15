@@ -1,0 +1,30 @@
+{
+	"name": "factorio_hd_age_base_game_railway",
+	"version": "1.1.4",
+	"title": "Factorio HD Age: Base Game - Railway",
+	"author": "Ingo_Igel",
+	"homepage": "https://github.com/Ingo-Igel",
+	"factorio_version": "2.0",
+	"dependencies": ["base >= 2.0.23"],
+	"description": "This mod contains and integrates HD textures for the railway entities of the base game.",
+	"package": {
+		"gallery": [
+			".gallery/thumbnail_huge.png",
+			".gallery/locomotive-4-SD.png",
+			".gallery/locomotive-4-HD.png",
+			".gallery/fluid-wagon-3-SD.png",
+			".gallery/fluid-wagon-3-HD.png",
+			".gallery/curved-b-north-SD.png",
+			".gallery/curved-b-north-HD.png",
+			".gallery/cargo-wagon-2-SD.png",
+			".gallery/cargo-wagon-2-HD.png"
+		],
+		"prune_gallery": true,
+		"readme": "README.md",
+		"faq": "FAQ.md",
+		"markdown": {
+			"strip_first_header": false
+		},
+		"sync_portal_details": true
+	}
+}

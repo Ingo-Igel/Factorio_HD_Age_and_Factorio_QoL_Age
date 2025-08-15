@@ -1,0 +1,61 @@
+{
+	"name": "factorio_qol_age_base_game",
+	"version": "1.0.12",
+	"title": "Factorio QoL Age: Base Game",
+	"author": "Ingo_Igel",
+	"homepage": "https://mods.factorio.com/user/Ingo_Igel",
+	"factorio_version": "2.0",
+	"dependencies": [
+	"base >= 2.0.23",
+	"assemblyanalyst",
+	"AutoDeconstruct",
+	"belt-visualizer",
+	"BlueprintTools",
+	"CopyPasteModules",
+	"CursorEnhancements",
+	"death-location",
+	"EnableWhen",
+	"ets-queue-to-front",
+	"EvenDistributionLite",
+	"expandtooltip",
+	"Explosive Excavation",
+	"factorio_qol_age_resorted_items",
+	"factoryplanner",
+	"FilterHelper",
+	"inventory-repair",
+	"map-tag-generator",
+	"mining-patch-planner",
+	"ModuleInserterSimplified",
+	"MouseOverConstruction",
+	"no-remote-view-border",
+	"not-enough-parameters",
+	"OilOutpostPlanner",
+	"power-grid-comb",
+	"pump",
+	"RailSignalPlanner",
+	"RateCalculator",
+	"resourceMarker",
+	"RotateQuickbars",
+	"TaskList",
+	"tidy",
+	"toolbars-mod",
+	"UndergroundIndicatorsFixed",
+	"VariantHotkeys",
+	"vehicle-corpses",
+	"vehicle-finder",
+	"VehicleSnap",
+	"what-items-do-i-have"
+	],
+	"description": "This mod pack contains various QoL mods for the Base Game that I personally use.",
+	"package": {
+		"gallery": [
+			".gallery/thumbnail_huge.png"
+		],
+		"prune_gallery": true,
+		"readme": "README.md",
+		"markdown": {
+			"strip_first_header": false
+		},
+		"sync_portal_details": true
+	}
+}

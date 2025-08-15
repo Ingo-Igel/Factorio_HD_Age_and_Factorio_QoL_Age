@@ -1,0 +1,33 @@
+{
+	"name": "factorio_hd_age_base_game_graphics_addon",
+	"version": "1.0.8",
+	"title": "Factorio HD Age: Base Game - Graphics Addon",
+	"author": "Ingo-_Igel",
+	"homepage": "https://github.com/Ingo-Igel",
+	"factorio_version": "2.0",
+	"dependencies": ["base >= 2.0",
+	"alternate-science-packs >= 1.0.1",
+	"BetterAlertArrows >= 1.1.0",
+	"biter-cleanup >= 2.2.1",
+	"bullet-trails >= 0.7.1",
+	"coloured-tool-icons >= 0.0.3",
+	"DiscoScience >= 2.0.1",
+	"Humble-Alt-Mode-Shadow-2 >=1.0.0",
+	"MiningScars >= 2.0.0",
+	"RealisticDecorationCleanup >= 2.0.0",
+	"tree-healing >= 1.2.1",
+	"uranium_geiger >= 0.5.1"
+	],
+	"description": "In addition to the HD textures for the Base Game, this modpack includes visual enhancement mods and tweaks.\nAll included mods are automatically set and adjusted to create a consistent look.",
+	"package": {
+		"gallery": [
+			".gallery/thumbnail_huge.png"
+		],
+		"prune_gallery": true,
+		"readme": "README.md",
+		"markdown": {
+			"strip_first_header": false
+		},
+		"sync_portal_details": true
+	}
+}

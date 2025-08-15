@@ -1,0 +1,58 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.8
+Date: ????
+  Changes:
+---------------------------------------------------------------------------------------------------
+Version: 1.0.7
+Date: 2025-08-14
+  Changes:
+    - removed all GitHub links and references
+---------------------------------------------------------------------------------------------------
+Version: 1.0.6
+Date: 2025-08-10
+  Changes:
+    - Added LICENCE file
+    - Reorderd combat items
+    - Updated example images
+    - Added suport for "lane-splitters" (requested and Code provided by UltraJohn)
+    - Added suport for "lignumis" (requested and Code provided by UltraJohn)
+    - Added suport for "castra" (requested and Code provided by UltraJohn)
+    - Added suport for "planetaris-unbounded" (requested and Code provided by UltraJohn)
+    - Added suport for "snouz_better_substation" (requested and Code provided by UltraJohn)
+    - Added suport for "zithorian-extra-storage-tanks-port" (requested and Code provided by UltraJohn)
+    - Added suport for "est-tiny-storage-tank" (requested and Code provided by UltraJohn)
+    - Added suport for "est-steel-storage-tank" (requested and Code provided by UltraJohn)
+    - Added suport for "underground-storage-tank" (requested and Code provided by UltraJohn)
+    - Added suport for "corrundum" (requested and Code provided by UltraJohn)
+    - Added suport for "wide-steel-chests" (requested and Code provided by UltraJohn)
+---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+Date: 2025-06-09
+  Changes:
+    - Moved Radar from the Military group to the Circuit-Network subgroup within the Logistics tab. (requested by NOiZE / Idea from V3xt)
+---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+Date: 2025-05-12
+  Changes:
+    - Fixed loading error without DLC
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 2025-05-10
+  Changes:
+    - Changed Logistic-Chests order
+    - Changed processing and production machine order
+    - Added suport for "k2-steel-pipes" (requestet by NOiZE)
+    - Added suport for "HotPipes" (requestet by NOiZE)
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 2025-02-06
+  Changes:
+    - Fixed compatibility issue with Tidy Menus update 1.0.2
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2025-01-28
+  Changes:
+    - Fixed bug in line 2 of settings-updates.lua if tidy mod is not installed
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2025-01-20

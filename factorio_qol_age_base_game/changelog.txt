@@ -1,0 +1,92 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.12
+Date: ????
+  Changes:
+---------------------------------------------------------------------------------------------------
+Version: 1.0.11
+Date: 2025-08-14
+  Changes:
+    - Updated long description
+    - removed all GitHub links and references
+---------------------------------------------------------------------------------------------------
+Version: 1.0.10
+Date: 2025-08-08
+  Changes:
+    - Added LICENCE file
+---------------------------------------------------------------------------------------------------
+Version: 1.0.9
+Date: 2025-02-26
+  Changes:
+    - Removed Car/Tank/Spidertron Locator Button
+    - Removed minimalwire
+    - Added power-grid-comb
+    - Added MouseOverConstruction
+    - Added Vehicle Finder
+    - Added Oil Outpost Planner
+    - Added No Remote View Border
+---------------------------------------------------------------------------------------------------
+Version: 1.0.8
+Date: 2025-01-20
+  Changes:
+    - Added factorio_qol_age_resorted_items
+---------------------------------------------------------------------------------------------------
+Version: 1.0.7
+Date: 2025-01-17
+  Changes:
+    - Remouved Fill4Me
+    - Added VariantHotkeys
+    - Added what-items-do-i-have
+    - Added FilterHelper
+---------------------------------------------------------------------------------------------------
+Version: 1.0.6
+Date: 2025-01-11
+  Changes:
+    - Added EnableWhen
+    - Added UndergroundIndicatorsFixed
+    - Removed Waterfill_v17
+    - Removed squeak-through-2
+    - Removed Custom-Production-UI-Fixed
+    - Removed SchallCircuitGroup
+    - Removed SchallTransportGroup
+    - Removed show-max-underground-distance
+---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+Date: 2025-01-05
+  Changes:
+    - Added new thumbnail
+---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+Date: 2025-01-03
+  Changes:
+    - Removed nuke-cliffs
+    - Removed some-cprpsemarker
+    - Added CopyPasteModules
+    - Added Custom-Production-UI-Fixed
+    - Added death-location
+    - Added Explosive Excavation
+    - Added RotateQuickbars
+    - Added SchallCircuitGroup
+    - Added SchallTransportGroup
+    - Added tidy
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 2025-01-02
+  Changes:
+    - Added BlueprintTools
+    - Added not-enough-parameters
+    - Added toolbars-mod
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 2025-01-01
+  Changes:
+    - Added some-cprpsemarker
+    - Removed DeathMarkers
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2025-01-01
+  Changes:
+    - Added CursorEnhancements, DeathMarkers, nuke-cliffs and vehicle-corpses
+    - Removed some-cprpsemarker
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2025-01-01

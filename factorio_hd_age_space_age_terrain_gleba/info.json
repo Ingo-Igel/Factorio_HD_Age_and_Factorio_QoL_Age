@@ -1,0 +1,34 @@
+{
+	"name": "factorio_hd_age_space_age_terrain_gleba",
+	"version": "1.1.3",
+	"title": "Factorio HD Age: Space Age - Terrain Gleba",
+	"author": "Ingo_Igel",
+	"homepage": "https://github.com/Ingo-Igel",
+	"factorio_version": "2.0",
+	"dependencies": ["base >= 2.0.44", "space-age >=2.0.44"],
+	"description": "This mod contains and integrates HD textures for the Gleba terrain of the Space Age DLC.",
+	"package": {
+		"gallery": [
+			".gallery/thumbnail_huge.png",
+			".gallery/starburst-lichen-4-SD.png",
+			".gallery/starburst-lichen-4-HD.png",
+			".gallery/lowland-red-infection-SD.png",
+			".gallery/lowland-red-infection-HD.png",
+			".gallery/lowland-olive-blubber-3-SD.png",
+			".gallery/lowland-olive-blubber-3-HD.png",
+			".gallery/highland-dark-rock-2-SD.png",
+			".gallery/highland-dark-rock-2-HD.png",
+			".gallery/cracked-lichen-SD.png",
+			".gallery/cracked-lichen-HD.png",
+			".gallery/artificial-yumako-soil-SD.png",
+			".gallery/artificial-yumako-soil-HD.png"
+		],
+		"prune_gallery": true,
+		"readme": "README.md",
+		"faq": "FAQ.md",
+		"markdown": {
+			"strip_first_header": false
+		},
+		"sync_portal_details": true
+	}
+}

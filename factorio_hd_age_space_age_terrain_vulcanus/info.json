@@ -1,0 +1,32 @@
+{
+	"name": "factorio_hd_age_space_age_terrain_vulcanus",
+	"version": "1.1.2",
+	"title": "Factorio HD Age: Space Age - Terrain Vulcanus",
+	"author": "Ingo_Igel",
+	"homepage": "https://github.com/Ingo-Igel",
+	"factorio_version": "2.0",
+	"dependencies": ["base >= 2.0", "space-age >=2.0"],
+	"description": "This mod contains and integrates HD textures for the Vulcanus terrain of the Space Age DLC.",
+	"package": {
+		"gallery": [
+			".gallery/thumbnail_huge.png",
+			".gallery/vulcanus-crater-section-upper-W-SD.png",
+			".gallery/vulcanus-crater-section-upper-W-HD.png",
+			".gallery/volcanic-pumice-stones-SD.png",
+			".gallery/volcanic-pumice-stones-HD.png",
+			".gallery/volcanic-folds-warm-SD.png",
+			".gallery/volcanic-folds-warm-HD.png",
+			".gallery/volcanic-ash-cracks-SD.png",
+			".gallery/volcanic-ash-cracks-HD.png",
+			".gallery/lava-SD.png",
+			".gallery/lava-HD.png"
+		],
+		"prune_gallery": true,
+		"readme": "README.md",
+		"faq": "FAQ.md",
+		"markdown": {
+			"strip_first_header": false
+		},
+		"sync_portal_details": true
+	}
+}
