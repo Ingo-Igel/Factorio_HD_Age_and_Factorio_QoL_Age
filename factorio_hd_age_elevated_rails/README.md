@@ -1,6 +1,6 @@
 # Factorio HD Age: Elevated Rails
 
-[![Codeberg Sorce Code](https://img.shields.io/badge/Codeberg-Source_Code-black?style=for-the-badge&logo=codeberg&logoColor=white&labelColor=blue)](https://codeberg.org/Ingo_Igel/Factorio_HD_Age_and_Factorio_QoL_Age/src/branch/main/factorio_hd_age_elevated_rails) [![Factorio Mod Portal Downloads](https://img.shields.io/badge/dynamic/json?color=orange&label=Factorio%20Mod%20Portal&style=for-the-badge&query=downloads_count&suffix=%20downloads&url=https%3A%2F%2Fmods.factorio.com%2Fapi%2Fmods%2Ffactorio_hd_age_elevated_rails)](https://mods.factorio.com/mod/factorio_hd_age_elevated_rails)
+[![Codeberg Source Code](https://img.shields.io/badge/Codeberg-Source_Code-black?style=for-the-badge&logo=codeberg&logoColor=white&labelColor=blue)](https://codeberg.org/Ingo_Igel/Factorio_HD_Age_and_Factorio_QoL_Age/src/branch/main/factorio_hd_age_elevated_rails) [![Factorio Mod Portal Downloads](https://img.shields.io/badge/dynamic/json?color=orange&label=Factorio%20Mod%20Portal&style=for-the-badge&query=downloads_count&suffix=%20downloads&url=https%3A%2F%2Fmods.factorio.com%2Fapi%2Fmods%2Ffactorio_hd_age_elevated_rails)](https://mods.factorio.com/mod/factorio_hd_age_elevated_rails)
 
 This mod contains and integrates HD textures for the elevated rails from the Space Age DLC.
 
