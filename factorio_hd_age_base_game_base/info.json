@@ -25,8 +25,10 @@
 		"readme": "README.md",
 		"faq": "FAQ.md",
 		"markdown": {
-			"strip_first_header": false
+			"strip_first_header": false,
+			"url_match": "^((http(s?)|data):.*\\)|#)/"
 		},
+		"no_portal_upload": true,
 		"sync_portal_details": true
 	}
 }
