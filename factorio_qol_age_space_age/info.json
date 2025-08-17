@@ -20,7 +20,6 @@
 			"strip_first_header": false
 		},
 		"no_git_push": true,
-		"no_git_tag": true,
-		"sync_portal_details": true
+		"no_git_tag": true
 	}
 }
