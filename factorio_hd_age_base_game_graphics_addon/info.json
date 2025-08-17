@@ -16,7 +16,7 @@
 	"MiningScars >= 2.0.0",
 	"RealisticDecorationCleanup >= 2.0.0",
 	"tree-healing >= 1.2.1",
-	"uranium_geiger >= 0.5.1"
+	"? uranium_geiger >= 0.5.1"
 	],
 	"description": "In addition to the HD textures for the Base Game, this modpack includes visual enhancement mods and tweaks.\nAll included mods are automatically set and adjusted to create a consistent look.",
 	"package": {

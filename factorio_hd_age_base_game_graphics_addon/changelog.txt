@@ -2,6 +2,7 @@
 Version: 1.0.8
 Date: ????
   Changes:
+    - Changed uranium_geiger to an optional dependency since it is not a graphical addon
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.7
 Date: 2025-08-14

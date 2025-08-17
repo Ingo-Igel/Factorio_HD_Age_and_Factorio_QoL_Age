@@ -17,7 +17,7 @@ All included mods are automatically set and adjusted to create a consistent look
 * [Mining Scars](https://mods.factorio.com/mod/MiningScars) by [Mylon](https://mods.factorio.com/user/Mylon)
 * [Realistic Decoration Cleanup](https://mods.factorio.com/mod/RealisticDecorationCleanup) by [someone1337](https://mods.factorio.com/user/someone1337)
 * [Tree Healing](https://mods.factorio.com/mod/tree-healing) by [Pseudonymous](https://mods.factorio.com/user/Pseudonymous)
-* [Uranium Geiger](https://mods.factorio.com/mod/uranium_geiger) by [ikornaselur](https://mods.factorio.com/user/ikornaselur)
+* [Uranium Geiger](https://mods.factorio.com/mod/uranium_geiger) by [ikornaselur](https://mods.factorio.com/user/ikornaselur) (Optional Dependency)
 
 ***
 
