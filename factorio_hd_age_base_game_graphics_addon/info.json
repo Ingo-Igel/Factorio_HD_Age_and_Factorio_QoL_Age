@@ -24,9 +24,7 @@
 			".gallery/thumbnail_huge.png"
 		],
 		"prune_gallery": true,
-		"markdown": {
-			"strip_first_header": false
-		},
+		"faq": "FAQ.md",
 		"no_git_push": true,
 		"no_git_tag": true
 	}

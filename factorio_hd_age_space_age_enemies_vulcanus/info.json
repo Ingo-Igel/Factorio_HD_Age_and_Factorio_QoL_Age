@@ -17,9 +17,6 @@
 		],
 		"prune_gallery": true,
 		"faq": "FAQ.md",
-		"markdown": {
-			"strip_first_header": false
-		},
 		"no_git_push": true,
 		"no_git_tag": true
 	}

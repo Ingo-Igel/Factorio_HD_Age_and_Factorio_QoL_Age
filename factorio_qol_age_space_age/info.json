@@ -16,12 +16,7 @@
 			".gallery/thumbnail_huge.png"
 		],
 		"prune_gallery": true,
-		"readme": "README.md",
-		"markdown": {
-			"url_match": "<(http(s?)|data):.*?>"
-		},
 		"no_git_push": true,
-		"no_git_tag": true,
-		"sync_portal_details": true
+		"no_git_tag": true
 	}
 }
