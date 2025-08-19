@@ -23,10 +23,12 @@
 		],
 		"prune_gallery": true,
 		"faq": "FAQ.md",
+		"readme": "README.md",
 		"markdown": {
-			"strip_first_header": false
+			"url_match": "<(http(s?)|data):.*?>"
 		},
 		"no_git_push": true,
-		"no_git_tag": true
+		"no_git_tag": true,
+		"sync_portal_details": true
 	}
 }
