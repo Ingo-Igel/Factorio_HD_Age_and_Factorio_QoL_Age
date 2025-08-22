@@ -336,30 +336,46 @@ if not settings.startup["f_hd_a_sa_eg_disable_stomper"].value then
 			usage = "enemy"
 		})
 
-		-- data.raw["corpse"][size .. "stomper-corpse"].animation[1].layers[1] = util.sprite_load("__factorio_hd_age_space_age_enemies_gleba__/data/space-age/graphics/entity/stomper/stomper-corpse-2", {
-		-- 	frame_count = 1,
-		-- 	scale = 0.2 * stomper_scale,
-		-- 	direction_count = 1,
-		-- 	surface = "gleba",
-		-- 	usage = "enemy"
-		-- })
-		-- data.raw["corpse"][size .. "stomper-corpse"].animation[1].layers[2] = util.sprite_load("__factorio_hd_age_space_age_enemies_gleba__/data/space-age/graphics/entity/stomper/stomper-corpse-2-mask", {
-		-- 	frame_count = 1,
-		-- 	scale = 0.2 * stomper_scale,
-		-- 	direction_count = 1,
-		-- 	tint = tint_mask,
-		-- 	tint_as_overlay = true,
-		-- 	surface = "gleba",
-		-- 	usage = "enemy"
-		-- })
-		data.raw["corpse"][size .. "stomper-corpse"].animation.layers[1] = util.sprite_load("__factorio_hd_age_space_age_enemies_gleba__/data/space-age/graphics/entity/stomper/stomper-corpse-3", {
+		data.raw["corpse"][size .. "stomper-corpse"].animation[1].layers[1] = util.sprite_load("__factorio_hd_age_space_age_enemies_gleba__/data/space-age/graphics/entity/stomper/stomper-corpse-1", {
 			frame_count = 1,
 			scale = 0.2 * stomper_scale,
 			direction_count = 1,
 			surface = "gleba",
 			usage = "enemy"
 		})
-		data.raw["corpse"][size .. "stomper-corpse"].animation.layers[2] = util.sprite_load("__factorio_hd_age_space_age_enemies_gleba__/data/space-age/graphics/entity/stomper/stomper-corpse-3-mask", {
+		data.raw["corpse"][size .. "stomper-corpse"].animation[1].layers[2] = util.sprite_load("__factorio_hd_age_space_age_enemies_gleba__/data/space-age/graphics/entity/stomper/stomper-corpse-1-mask", {
+			frame_count = 1,
+			scale = 0.2 * stomper_scale,
+			direction_count = 1,
+			tint = tint_mask,
+			tint_as_overlay = true,
+			surface = "gleba",
+			usage = "enemy"
+		})
+		data.raw["corpse"][size .. "stomper-corpse"].animation[2].layers[1] = util.sprite_load("__factorio_hd_age_space_age_enemies_gleba__/data/space-age/graphics/entity/stomper/stomper-corpse-2", {
+			frame_count = 1,
+			scale = 0.2 * stomper_scale,
+			direction_count = 1,
+			surface = "gleba",
+			usage = "enemy"
+		})
+		data.raw["corpse"][size .. "stomper-corpse"].animation[2].layers[2] = util.sprite_load("__factorio_hd_age_space_age_enemies_gleba__/data/space-age/graphics/entity/stomper/stomper-corpse-2-mask", {
+			frame_count = 1,
+			scale = 0.2 * stomper_scale,
+			direction_count = 1,
+			tint = tint_mask,
+			tint_as_overlay = true,
+			surface = "gleba",
+			usage = "enemy"
+		})
+		data.raw["corpse"][size .. "stomper-corpse"].animation[3].layers[1] = util.sprite_load("__factorio_hd_age_space_age_enemies_gleba__/data/space-age/graphics/entity/stomper/stomper-corpse-3", {
+			frame_count = 1,
+			scale = 0.2 * stomper_scale,
+			direction_count = 1,
+			surface = "gleba",
+			usage = "enemy"
+		})
+		data.raw["corpse"][size .. "stomper-corpse"].animation[3].layers[2] = util.sprite_load("__factorio_hd_age_space_age_enemies_gleba__/data/space-age/graphics/entity/stomper/stomper-corpse-3-mask", {
 			frame_count = 1,
 			scale = 0.2 * stomper_scale,
 			direction_count = 1,
@@ -369,25 +385,7 @@ if not settings.startup["f_hd_a_sa_eg_disable_stomper"].value then
 			usage = "enemy"
 		})
 
-		-- data.raw["corpse"][size .. "stomper-corpse"].decay_animation[1].layers[1] = util.sprite_load("__factorio_hd_age_space_age_enemies_gleba__/data/space-age/graphics/entity/stomper/stomper-corpse-2", {
-		-- 	frame_count = 16,
-		-- 	scale = 0.2 * stomper_scale,
-		-- 	direction_count = 1,
-		-- 	flags = {"corpse-decay"},
-		-- 	surface = "gleba",
-		-- 	usage = "corpse-decay"
-		-- })
-		-- data.raw["corpse"][size .. "stomper-corpse"].decay_animation[1].layers[2] = util.sprite_load("__factorio_hd_age_space_age_enemies_gleba__/data/space-age/graphics/entity/stomper/stomper-corpse-2-mask", {
-		-- 	frame_count = 16,
-		-- 	scale = 0.2 * stomper_scale,
-		-- 	direction_count = 1,
-		-- 	tint = tint_mask,
-		-- 	tint_as_overlay = true,
-		-- 	flags = {"corpse-decay"},
-		-- 	surface = "gleba",
-		-- 	usage = "corpse-decay"
-		-- })
-		data.raw["corpse"][size .. "stomper-corpse"].decay_animation.layers[1] = util.sprite_load("__factorio_hd_age_space_age_enemies_gleba__/data/space-age/graphics/entity/stomper/stomper-corpse-3", {
+		data.raw["corpse"][size .. "stomper-corpse"].decay_animation[1].layers[1] = util.sprite_load("__factorio_hd_age_space_age_enemies_gleba__/data/space-age/graphics/entity/stomper/stomper-corpse-1", {
 			frame_count = 16,
 			scale = 0.2 * stomper_scale,
 			direction_count = 1,
@@ -395,7 +393,43 @@ if not settings.startup["f_hd_a_sa_eg_disable_stomper"].value then
 			surface = "gleba",
 			usage = "corpse-decay"
 		})
-		data.raw["corpse"][size .. "stomper-corpse"].decay_animation.layers[2] = util.sprite_load("__factorio_hd_age_space_age_enemies_gleba__/data/space-age/graphics/entity/stomper/stomper-corpse-3-mask", {
+		data.raw["corpse"][size .. "stomper-corpse"].decay_animation[1].layers[2] = util.sprite_load("__factorio_hd_age_space_age_enemies_gleba__/data/space-age/graphics/entity/stomper/stomper-corpse-1-mask", {
+			frame_count = 16,
+			scale = 0.2 * stomper_scale,
+			direction_count = 1,
+			tint = tint_mask,
+			tint_as_overlay = true,
+			flags = {"corpse-decay"},
+			surface = "gleba",
+			usage = "corpse-decay"
+		})
+		data.raw["corpse"][size .. "stomper-corpse"].decay_animation[2].layers[1] = util.sprite_load("__factorio_hd_age_space_age_enemies_gleba__/data/space-age/graphics/entity/stomper/stomper-corpse-2", {
+			frame_count = 16,
+			scale = 0.2 * stomper_scale,
+			direction_count = 1,
+			flags = {"corpse-decay"},
+			surface = "gleba",
+			usage = "corpse-decay"
+		})
+		data.raw["corpse"][size .. "stomper-corpse"].decay_animation[2].layers[2] = util.sprite_load("__factorio_hd_age_space_age_enemies_gleba__/data/space-age/graphics/entity/stomper/stomper-corpse-2-mask", {
+			frame_count = 16,
+			scale = 0.2 * stomper_scale,
+			direction_count = 1,
+			tint = tint_mask,
+			tint_as_overlay = true,
+			flags = {"corpse-decay"},
+			surface = "gleba",
+			usage = "corpse-decay"
+		})
+		data.raw["corpse"][size .. "stomper-corpse"].decay_animation[3].layers[1] = util.sprite_load("__factorio_hd_age_space_age_enemies_gleba__/data/space-age/graphics/entity/stomper/stomper-corpse-3", {
+			frame_count = 16,
+			scale = 0.2 * stomper_scale,
+			direction_count = 1,
+			flags = {"corpse-decay"},
+			surface = "gleba",
+			usage = "corpse-decay"
+		})
+		data.raw["corpse"][size .. "stomper-corpse"].decay_animation[3].layers[2] = util.sprite_load("__factorio_hd_age_space_age_enemies_gleba__/data/space-age/graphics/entity/stomper/stomper-corpse-3-mask", {
 			frame_count = 16,
 			scale = 0.2 * stomper_scale,
 			direction_count = 1,
