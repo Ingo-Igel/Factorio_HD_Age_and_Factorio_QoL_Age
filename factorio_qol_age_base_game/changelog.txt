@@ -2,6 +2,8 @@
 Version: 1.0.12
 Date: ????
   Changes:
+    - Removed ModuleInserterSimplified
+    - Added ModuleInserterEx
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.11
 Date: 2025-08-14
