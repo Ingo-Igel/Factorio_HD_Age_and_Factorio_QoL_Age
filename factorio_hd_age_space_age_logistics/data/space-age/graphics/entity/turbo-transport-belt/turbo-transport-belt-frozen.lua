@@ -3,10 +3,6 @@ return
   width = 128*2,
   height = 128*2,
   shift = util.by_pixel( 0.0, 0.0),
-  line_length = 32,
-  filenames = {
-    "-1.png",
-    "-2.png",
-  },
+  line_length = 1,
   lines_per_file = 20,
 }

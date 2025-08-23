@@ -2,6 +2,7 @@
 Version: 1.1.3
 Date: ????
   Changes:
+    - Fixed frozen layer on turbo-transport-bels
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.2
 Date: 2025-08-14

@@ -13,7 +13,7 @@ if not settings.startup["f_hd_a_sa_l_disable_turbo_transport_belt_frozen_layer"]
 		priority = "extra-high",
 		size = 256,
 		scale = 0.25,
-		line_length = 64,
+		line_length = 1,
 		lines_per_file = 20,
 		direction_count = 20
 	})
