@@ -51,8 +51,6 @@ return {
 						["chemical-plant"]={},
 						["combinator"]={},
 						["electric-furnace"]={},
-						["express-transport-belt"]={},
-						["fast-transport-belt"]={},
 						["inserter"]={},
 						["lab"]={},
 						["oil-refinery"]={},
@@ -68,7 +66,6 @@ return {
 						["splitter"]={},
 						["steam-turbine"]={},
 						["storage-tank"]={},
-						["transport-belt"]={},
 						["underground-belt"]={}
 					},
 					["lightning"]={},
