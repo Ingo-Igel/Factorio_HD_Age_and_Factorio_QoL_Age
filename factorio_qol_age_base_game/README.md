@@ -26,6 +26,7 @@ All QoL Mods that require the Space Age DLC can be found in [Factorio QoL Age: S
 * [Inventory Repair](https://mods.factorio.com/mod/inventory-repair) by [calcwizard](https://mods.factorio.com/user/calcwizard)
 * [Map Tag Generator](https://mods.factorio.com/mod/map-tag-generator) by [majoca](https://mods.factorio.com/user/majoca)
 * [Mining Patch Planner](https://mods.factorio.com/mod/mining-patch-planner) by [rimbas](https://mods.factorio.com/user/rimbas)
+* [Module Inserter Extended](https://mods.factorio.com/mod/ModuleInserterEx) by [Gorfiend7](https://mods.factorio.com/user/Gorfiend7)
 * [Module Inserter Simplified](https://mods.factorio.com/mod/ModuleInserterSimplified) by [Xorimuth](https://mods.factorio.com/user/Xorimuth)
 * [Mouse-over Construction](https://mods.factorio.com/mod/MouseOverConstruction) by [raiguard](https://mods.factorio.com/user/raiguard)
 * [No Remote View Border](https://mods.factorio.com/mod/no-remote-view-border) by [_CodeGreen](https://mods.factorio.com/user/_CodeGreen)
