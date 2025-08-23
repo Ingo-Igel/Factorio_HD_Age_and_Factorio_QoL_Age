@@ -16,7 +16,7 @@
 	"death-location",
 	"EnableWhen",
 	"ets-queue-to-front",
-	"EvenDistributionLite",
+	"? EvenDistributionLite",
 	"expandtooltip",
 	"Explosive Excavation",
 	"factorio_qol_age_resorted_items",
