@@ -52,8 +52,6 @@ All mods in the series, apart from the modpacks, can be used individually in any
 
 ## Other Series [![Codeberg](https://img.shields.io/badge/-blue?style=flat-square&logo=codeberg&logoColor=white)](https://codeberg.org/Ingo_Igel/Factorio_HD_Age_and_Factorio_QoL_Age) [![GitHub](https://img.shields.io/badge/-black?style=flat-square&logo=GitHub&logoColor=white)](https://GitHub.com/Ingo-Igel/Factorio_HD_Age_and_Factorio_QoL_Age)
 
-## Other Series [![Codeberg](https://img.shields.io/badge/-blue?style=flat-square&logo=codeberg&logoColor=white)](https://codeberg.org/Ingo_Igel/Factorio_HD_Age_and_Factorio_QoL_Age) [![GitHub](https://img.shields.io/badge/-black?style=flat-square&logo=GitHub&logoColor=white)](https://GitHub.com/Ingo-Igel/Factorio_HD_Age_and_Factorio_QoL_Age)
-
 ![Factorio QoL Age Mods](https://codeberg.org/Ingo_Igel/Factorio_HD_Age_and_Factorio_QoL_Age/raw/branch/main/.gallery/Factorio_QoL_Age_Logo.png)
 
 * [Factorio QoL Age: Space Age](https://mods.factorio.com/mod/factorio_qol_age_space_age)  
