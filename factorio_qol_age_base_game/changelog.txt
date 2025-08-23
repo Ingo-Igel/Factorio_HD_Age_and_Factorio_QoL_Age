@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.12
-Date: ????
+Date: 2025-08-23
   Changes:
     - Added ModuleInserterEx
     - Added updated icons for Explosive Excavation
