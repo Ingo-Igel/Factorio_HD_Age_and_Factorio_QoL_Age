@@ -18,6 +18,7 @@ This mod partially changes the order of items within the Logistics, Production, 
 * [Planet Castra](https://mods.factorio.com/mod/castra) by [Bartz24](https://mods.factorio.com/user/Bartz24)
 * [Planetaris Unbounded: Arig](https://mods.factorio.com/mod/planetaris-unbounded) by [Syen_ce](https://mods.factorio.com/user/Syen_ce)
 * [Underground Storage Tank](https://mods.factorio.com/mod/underground-storage-tank) by [fgardt](https://mods.factorio.com/user/fgardt)
+* [Uranium Shotgun Shell](https://mods.factorio.com/mod/UraniumShotgunShell) by [NOiZE](https://mods.factorio.com/user/NOiZE)
 * [Wide Containers](https://mods.factorio.com/mod/wide-steel-chests) by [Lebothegizebo](https://mods.factorio.com/user/Lebothegizebo)
 * [Zithorian's Extra Storage Tanks for 2.0](https://mods.factorio.com/mod/zithorian-extra-storage-tanks-port) by [ZarSasha](https://mods.factorio.com/user/ZarSasha)
 

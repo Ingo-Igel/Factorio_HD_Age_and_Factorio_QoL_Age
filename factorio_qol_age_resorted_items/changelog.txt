@@ -2,6 +2,7 @@
 Version: 1.0.8
 Date: ????
   Changes:
+    - Added suport for "Uranium Shotgun Shell" (requested by NOiZE)
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.7
 Date: 2025-08-14

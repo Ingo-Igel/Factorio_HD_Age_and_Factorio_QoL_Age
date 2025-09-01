@@ -96,6 +96,13 @@ data:extend({{
 	data.raw.recipe["piercing-shotgun-shell"].subgroup = "shotgun-combat"
 	data.raw.recipe["piercing-shotgun-shell"].order = "bb"
 
+if mods["UraniumShotgunShell"] then
+	data.raw.ammo["uranium-shotgun-shell"].subgroup = "shotgun-combat"
+	data.raw.ammo["uranium-shotgun-shell"].order = "bc"
+	data.raw.recipe["uranium-shotgun-shell"].subgroup = "shotgun-combat"
+	data.raw.recipe["uranium-shotgun-shell"].order = "bc"
+end
+
 	data.raw.gun["shotgun"].subgroup = "shotgun-combat"
 	data.raw.gun["shotgun"].order = "ca"
 	data.raw.recipe["shotgun"].subgroup = "shotgun-combat"
