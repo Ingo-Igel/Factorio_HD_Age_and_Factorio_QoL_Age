@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.4
+Date: ????
+  Changes:
+    - Added support for arrowless-belts by disabling HD belt textures if these mods are enabled.
+---------------------------------------------------------------------------------------------------
 Version: 1.1.3
 Date: 2025-08-23
   Changes:
