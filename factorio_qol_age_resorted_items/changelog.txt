@@ -2,6 +2,7 @@
 Version: 1.0.10
 Date: ????
   Changes:
+    - Fixed error with Advanced Belts and Castra
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.9
 Date: 2025-09-29
