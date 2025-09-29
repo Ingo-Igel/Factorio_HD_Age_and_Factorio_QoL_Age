@@ -15,7 +15,7 @@ end
 
 local AdvancedBelts = false
 if mods["AdvancedBeltsSA"] then
-	castra = true
+	AdvancedBeltsSA = true
 end
 
 local planetaris_unbounded = false
