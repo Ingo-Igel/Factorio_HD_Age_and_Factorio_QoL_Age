@@ -18,8 +18,10 @@
 			".gallery/railgun-turret-rising-SE-HD.png"
 		],
 		"prune_gallery": true,
+		"readme": "README.md",
 		"faq": "FAQ.md",
 		"no_git_push": true,
-		"no_git_tag": true
+		"no_git_tag": true,
+		"sync_portal_details": true
 	}
 }

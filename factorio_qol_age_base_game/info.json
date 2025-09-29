@@ -52,7 +52,9 @@
 			".gallery/thumbnail_huge.png"
 		],
 		"prune_gallery": true,
+		"readme": "README.md",
 		"no_git_push": true,
-		"no_git_tag": true
+		"no_git_tag": true,
+		"sync_portal_details": true
 	}
 }
