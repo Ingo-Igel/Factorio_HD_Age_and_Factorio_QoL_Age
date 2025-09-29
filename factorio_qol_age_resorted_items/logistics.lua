@@ -13,6 +13,11 @@ if mods["castra"] then
 	castra = true
 end
 
+local AdvancedBelts = false
+if mods["AdvancedBeltsSA"] then
+	castra = true
+end
+
 local planetaris_unbounded = false
 if mods["planetaris-unbounded"] then
 	planetaris_unbounded = true
@@ -29,7 +34,7 @@ if castra then
 end
 
 -- item-subgroup - underground-belt
-if space_age then
+if space_age or lignumis or castra or AdvancedBelts or planetaris_unbounded then
 	data:extend({{
 		type = "item-subgroup",
 		name = "underground-belt",
@@ -41,14 +46,22 @@ if space_age then
 		data.raw.item["wood-underground-belt"].subgroup = "underground-belt"
 	end
 
+	if space_age then
 		data.raw.item["underground-belt"].subgroup = "underground-belt"
 		data.raw.item["fast-underground-belt"].subgroup = "underground-belt"
 		data.raw.item["express-underground-belt"].subgroup = "underground-belt"
 		data.raw.item["turbo-underground-belt"].subgroup = "underground-belt"
+	end
 
 	if castra then
 		data.raw.item["military-underground-belt"].subgroup = "underground-belt"
 		data.raw.item["military-underground-belt"].order = "b[underground-belt]-c[express-underground-belt]-a"
+	end
+
+	if AdvancedBelts then
+		data.raw.item["extreme-underground"].subgroup = "underground-belt"
+		data.raw.item["ultimate-underground"].subgroup = "underground-belt"
+		data.raw.item["high-speed-underground"].subgroup = "underground-belt"
 	end
 
 	if planetaris_unbounded then
@@ -58,7 +71,7 @@ end
 
 
 -- item-subgroup - splitter
-if space_age then
+if space_age or lignumis or castra or AdvancedBelts or planetaris_unbounded then
 	data:extend({{
 		type = "item-subgroup",
 		name = "splitter",
@@ -69,14 +82,23 @@ if space_age then
 	if lignumis then
 		data.raw.item["wood-splitter"].subgroup = "splitter"
 	end
+
+	if space_age then
 		data.raw.item["splitter"].subgroup = "splitter"
 		data.raw.item["fast-splitter"].subgroup = "splitter"
 		data.raw.item["express-splitter"].subgroup = "splitter"
 		data.raw.item["turbo-splitter"].subgroup = "splitter"
+	end
 
 	if castra then
 		data.raw.item["military-splitter"].subgroup = "splitter"
 		data.raw.item["military-splitter"].order = "c[splitter]-c[express-splitter]-a"
+	end
+
+	if AdvancedBelts then
+		data.raw.item["extreme-splitter"].subgroup = "splitter"
+		data.raw.item["ultimate-splitter"].subgroup = "splitter"
+		data.raw.item["high-speed-splitter"].subgroup = "splitter"
 	end
 
 	if planetaris_unbounded then
@@ -84,25 +106,31 @@ if space_age then
 	end
 end
 
--- item-subgroup - lane-splitters
-if mods["lane-splitters"] then
+-- item-subgroup - lane-splitter
+if mods["lane-splitters"] or AdvancedBelts then
 	data:extend({{
 		type = "item-subgroup",
-		name = "lane-splitters",
+		name = "lane-splitter",
 		group = "logistics",
 		order = "bd"
 	}})
 
 	if lignumis then
-		data.raw.item["wood-lane-splitter"].subgroup = "lane-splitters"
+		data.raw.item["wood-lane-splitter"].subgroup = "lane-splitter"
 	end
 
-		data.raw.item["lane-splitter"].subgroup = "lane-splitters"
-		data.raw.item["fast-lane-splitter"].subgroup = "lane-splitters"
-		data.raw.item["express-lane-splitter"].subgroup = "lane-splitters"
+	data.raw.item["lane-splitter"].subgroup = "lane-splitter"
+	data.raw.item["fast-lane-splitter"].subgroup = "lane-splitter"
+	data.raw.item["express-lane-splitter"].subgroup = "lane-splitter"
 
-	if mods["space-age"] then
-		data.raw.item["turbo-lane-splitter"].subgroup = "lane-splitters"
+	if space_age then
+		data.raw.item["turbo-lane-splitter"].subgroup = "lane-splitter"
+	end
+
+	if AdvancedBelts then
+		data.raw.item["extreme-lanesplitter"].subgroup = "lane-splitter"
+		data.raw.item["ultimate-lanesplitter"].subgroup = "lane-splitter"
+		data.raw.item["high-speed-lanesplitter"].subgroup = "lane-splitter"
 	end
 end
 
