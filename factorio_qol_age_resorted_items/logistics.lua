@@ -23,6 +23,12 @@ if mods["planetaris-unbounded"] then
 	planetaris_unbounded = true
 end
 
+local lane_splitters = false
+if mods["lane-splitters"] then
+	lane_splitters = true
+end
+
+
 -- item-subgroup - storage
 data.raw["item-subgroup"]["storage"].order="a"
 
@@ -107,7 +113,7 @@ if space_age or lignumis or castra or AdvancedBelts or planetaris_unbounded then
 end
 
 -- item-subgroup - lane-splitter
-if mods["lane-splitters"] or AdvancedBelts then
+if lignumis or lane_splitters or AdvancedBelts then
 	data:extend({{
 		type = "item-subgroup",
 		name = "lane-splitter",
@@ -117,20 +123,30 @@ if mods["lane-splitters"] or AdvancedBelts then
 
 	if lignumis then
 		data.raw.item["wood-lane-splitter"].subgroup = "lane-splitter"
+		data.raw.item["wood-lane-splitter"].order = "a"
 	end
 
-	data.raw.item["lane-splitter"].subgroup = "lane-splitter"
-	data.raw.item["fast-lane-splitter"].subgroup = "lane-splitter"
-	data.raw.item["express-lane-splitter"].subgroup = "lane-splitter"
+	if lane_splitters then
+		data.raw.item["lane-splitter"].subgroup = "lane-splitter"
+		data.raw.item["lane-splitter"].order = "b"
+		data.raw.item["fast-lane-splitter"].subgroup = "lane-splitter"
+		data.raw.item["fast-lane-splitter"].order = "c"
+		data.raw.item["express-lane-splitter"].subgroup = "lane-splitter"
+		data.raw.item["express-lane-splitter"].order = "d"
 
-	if space_age then
-		data.raw.item["turbo-lane-splitter"].subgroup = "lane-splitter"
+		if space_age then
+			data.raw.item["turbo-lane-splitter"].subgroup = "lane-splitter"
+			data.raw.item["turbo-lane-splitter"].order = "e"
+		end
 	end
 
 	if AdvancedBelts then
 		data.raw.item["extreme-lanesplitter"].subgroup = "lane-splitter"
+		data.raw.item["extreme-lanesplitter"].order = "f"
 		data.raw.item["ultimate-lanesplitter"].subgroup = "lane-splitter"
+		data.raw.item["ultimate-lanesplitter"].order = "g"
 		data.raw.item["high-speed-lanesplitter"].subgroup = "lane-splitter"
+		data.raw.item["high-speed-lanesplitter"].order = "h"
 	end
 end
 
