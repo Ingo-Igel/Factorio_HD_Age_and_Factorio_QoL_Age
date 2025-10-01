@@ -2,6 +2,7 @@
 Version: 1.0.13
 Date: ????
   Changes:
+    - Fixed error with Lignumis Lane Splitter without lane_splitters mod
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.12
 Date: 2025-09-30

@@ -113,7 +113,7 @@ if space_age or lignumis or castra or AdvancedBelts or planetaris_unbounded then
 end
 
 -- item-subgroup - lane-splitter
-if lignumis or lane_splitters or AdvancedBelts then
+if lane_splitters or AdvancedBelts then
 	data:extend({{
 		type = "item-subgroup",
 		name = "lane-splitter",
@@ -121,12 +121,12 @@ if lignumis or lane_splitters or AdvancedBelts then
 		order = "bd"
 	}})
 
-	if lignumis then
-		data.raw.item["wood-lane-splitter"].subgroup = "lane-splitter"
-		data.raw.item["wood-lane-splitter"].order = "a"
-	end
-
 	if lane_splitters then
+		if lignumis then
+			data.raw.item["wood-lane-splitter"].subgroup = "lane-splitter"
+			data.raw.item["wood-lane-splitter"].order = "a"
+		end
+
 		data.raw.item["lane-splitter"].subgroup = "lane-splitter"
 		data.raw.item["lane-splitter"].order = "b"
 		data.raw.item["fast-lane-splitter"].subgroup = "lane-splitter"
