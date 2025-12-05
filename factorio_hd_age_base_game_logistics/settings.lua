@@ -1,4 +1,4 @@
-data:extend{
+data:extend {
 	{
 		type = "bool-setting",
 		setting_type = "startup",
@@ -36,6 +36,6 @@ data:extend{
 		setting_type = "startup",
 		name = "f_hd_a_bg_l_loading_methode",
 		default_value = "fallback",
-		allowed_values = {"fast", "fallback"}
+		allowed_values = { "fast", "fallback" }
 	}
 }
