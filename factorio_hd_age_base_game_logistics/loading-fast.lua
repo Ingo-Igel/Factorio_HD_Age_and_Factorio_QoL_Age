@@ -20,41 +20,51 @@
 -- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 -- SOFTWARE.
 
-local config = require("config-fast")
-local sf = config.scalefactor
-local rpn = config.resource_pack_name
-local en = config.exclude_names
-local dt = config.data
+local config      = require("config-fast")
+local val_sf      = config.scalefactor
+local str_rpn     = config.resource_pack_name
+local tbl_en      = config.exclude_names
+local str_tbl_wl  = config.white_list
+local tbl_dt      = config.data
+
+local next_ref    = next
+local pairs_ref   = pairs
+
+local floor       = math.floor
+local max         = math.max
+
+local str_byte    = string.byte
+local str_find    = string.find
+local str_gmatch  = string.gmatch
+local str_gsub    = string.gsub
+local str_sub     = string.sub
 
 -- split string into list via seperator
-local split = function(str, sep)
-	local pattern = "(.-)" .. sep
-	local list, i = {}, 1
-	for match in (str .. sep):gmatch(pattern) do
+local split       = function(str, sep)
+	local list = {}
+	local pattern = "([^" .. sep .. "]+)"
+	local i = 1
+	for match in str_gmatch(str .. sep, pattern) do
 		list[i] = match
 		i = i + 1
 	end
 	return list
 end
 
-local firstIndex = function(in_table)
+local firstIndex  = function(in_table)
 	return next(in_table)
 end
 
 -- separates the items in search by wild cards (*). Ensures these separated terms can be found in the specified order in the final item string, and that if there are no wild cards at the beginning/end of the serach string, the beginning / end of the search string are also the beginning / end of the item string
 local isValidTerm = function(search, item)
 	-- quick path: no wildcard at all
-	if not search:find("%*") then
+	if not str_find(search, "*", 1, true) then
 		return search == item
 	end
 
-	local str_find           = string.find
-	local str_sub            = string.sub
-
-	local startsWithWildcard = str_sub(search, 1, 1) == "*"
-	local endsWithWildcard   = str_sub(search, -1) == "*"
+	local startsWithWildcard = str_byte(search, 1) == 42
+	local endsWithWildcard   = str_byte(search, -1) == 42
 	local lastIndex          = 1
-	local itemLen            = #item
 	local last_e
 
 	-- iterate over non-empty segments between '*' without allocating a split table
@@ -78,8 +88,10 @@ local isValidTerm = function(search, item)
 	end
 
 	-- if the pattern does not end with '*', the last matched term must reach the end
-	if not endsWithWildcard and last_e ~= itemLen then
-		return false
+	if not endsWithWildcard then
+		if last_e ~= #item then
+			return false
+		end
 	end
 
 	return true
@@ -89,34 +101,29 @@ end
 -- See if a path from data.raw is among those declared in the config.lua data = {} table as one to be retextured & hence if the path needs to be changed to the retextured version
 local isReplace_cache = {}
 
-local function hasNonSettingsChildren(t)
-	return next(t) ~= nil
-end
-
 local function isReplaceItem(path, step)
 	step = step or 1
 
-	local cached = isReplace_cache[path .. ":" .. tostring(step)]
-	if cached ~= nil then return cached end
+	local path_cache = isReplace_cache[path]
+	if path_cache then
+		local cached = path_cache[step]
+		if cached ~= nil then return cached end
+	else
+		path_cache = {}
+		isReplace_cache[path] = path_cache
+	end
 
-	local split_path = split(path:gsub("__", ""), "/")
-	local cfg = dt
+	local split_path = split(str_gsub(path, "__", ""), "/")
 	local i = step
 	local n = #split_path
-	local match = isValidTerm
+	local cfg = tbl_dt
 
-	while true do
-		if i > n then
-			local res = not hasNonSettingsChildren(cfg)
-			isReplace_cache[path .. ":" .. tostring(step)] = res
-			return res
-		end
-
+	while i <= n do
 		local part = split_path[i]
 		local found = false
 
-		for k, v in pairs(cfg) do
-			if match(k, part) then
+		for k, v in pairs_ref(cfg) do
+			if isValidTerm(k, part) then
 				cfg = v
 				found = true
 				i = i + 1
@@ -125,18 +132,22 @@ local function isReplaceItem(path, step)
 		end
 
 		if not found then
-			local res = not hasNonSettingsChildren(cfg)
-			isReplace_cache[path .. ":" .. tostring(step)] = res
+			local res = (next_ref(cfg) == nil)
+			path_cache[step] = res
 			return res
 		end
 	end
+
+	local res = (next_ref(cfg) == nil)
+	path_cache[step] = res
+	return res
 end
 
--- adjust metadata of importing image/sound at path in data.raw as set by the settings accumulated in lookForTreeSettings
+
+-- adjust metadata of importing image at path in data.raw as set by the settings accumulated in lookForTreeSettings
 local adjustDataDotRaw = function(path, filename_key, new_path)
-	local data_raw = data.raw
-	local cfg_root = data_raw
-	local generic_root = data_raw
+	local cfg_root = data.raw
+	local generic_root = data.raw
 	local path_len = #path
 	if path_len == 0 then return end
 
@@ -153,20 +164,16 @@ local adjustDataDotRaw = function(path, filename_key, new_path)
 
 	if not pathed_data then return end
 
-	local floor = math.floor
-	local max = math.max
-
-	local function scaled_floor(v) return max(floor(v * sf), 1) end
+	local function scaled_floor(v) return max(floor(v * val_sf), 1) end
 
 	-- do not overwrite image path if image name contains an element of exclude_names declared in settings
-	if type(en) == "table" then
+	if type(tbl_en) == "table" then
 		local filename = pathed_data[filename_key]
 		if type(filename) == "string" then
 			local split_path = split(filename, "/")
 			local last_name = split_path[#split_path]
-			local match = isValidTerm
-			for _, name in pairs(en) do
-				if match(name, last_name) then
+			for _, name in pairs(tbl_en) do
+				if isValidTerm(name, last_name) then
 					return
 				end
 			end
@@ -179,31 +186,30 @@ local adjustDataDotRaw = function(path, filename_key, new_path)
 	end
 
 	-- General Value Manipulation: Change image scaling etc.
-	local pd = pathed_data
-	pd["scale"] = (pd["scale"] or 1) / sf
-	if type(pd["width"]) == "number" then pd["width"] = scaled_floor(pd["width"]) end
-	if type(pd["height"]) == "number" then pd["height"] = scaled_floor(pd["height"]) end
-	if type(pd["x"]) == "number" then pd["x"] = floor(pd["x"] * sf) end
-	if type(pd["y"]) == "number" then pd["y"] = floor(pd["y"] * sf) end
+	pathed_data["scale"] = (pathed_data["scale"] or 1) / val_sf
+	if type(pathed_data["width"]) == "number" then pathed_data["width"] = scaled_floor(pathed_data["width"]) end
+	if type(pathed_data["height"]) == "number" then pathed_data["height"] = scaled_floor(pathed_data["height"]) end
+	if type(pathed_data["x"]) == "number" then pathed_data["x"] = floor(pathed_data["x"] * val_sf) end
+	if type(pathed_data["y"]) == "number" then pathed_data["y"] = floor(pathed_data["y"] * val_sf) end
 
 	-- used when x and y property are 0
-	local pos = pd["position"]
+	local pos = pathed_data["position"]
 	if type(pos) == "table" and type(pos[1]) == "number" and type(pos[2]) == "number" then
-		pd["position"] = { floor(pos[1] * sf), floor(pos[2] * sf) }
+		pathed_data["position"] = { floor(pos[1] * val_sf), floor(pos[2] * val_sf) }
 	end
 
 	-- sets icon_size if no icons={} or pictures={} table are specified in icon prototype
-	if filename_key == "icon" and pd["icon_size"] and pd["icons"] == nil and pd["pictures"] == nil then
-		pd["icon_size"] = scaled_floor(pd["icon_size"])
+	if filename_key == "icon" and pathed_data["icon_size"] and pathed_data["icons"] == nil and pathed_data["pictures"] == nil then
+		pathed_data["icon_size"] = scaled_floor(pathed_data["icon_size"])
 	end
 
 	-- Type specific value manipulation
 	if generic_data and generic_data["type"] == "item" then
-		local s = pd["size"]
+		local s = pathed_data["size"]
 		if type(s) == "table" and type(s[1]) == "number" and type(s[2]) == "number" then
-			pd["size"] = { s[1] * sf, s[2] / sf }
+			pathed_data["size"] = { s[1] * val_sf, s[2] / val_sf }
 		elseif type(s) == "number" then
-			pd["size"] = s * sf
+			pathed_data["size"] = s * val_sf
 		end
 	end
 
@@ -212,8 +218,8 @@ local adjustDataDotRaw = function(path, filename_key, new_path)
 	local prev = path[path_len - 1]
 
 	-- scales shortcut GUI elements (guard generic_data and prev)
-	if generic_data and prev and generic_data[prev] and generic_data[prev]["type"] == "shortcut" and pd["size"] then
-		pd["size"] = max(floor(pd["size"] * sf), 1)
+	if generic_data and prev and generic_data[prev] and generic_data[prev]["type"] == "shortcut" and pathed_data["size"] then
+		pathed_data["size"] = max(floor(pathed_data["size"] * val_sf), 1)
 	end
 
 	-- sets item / icon prototype icon_size when images are specified under pictures={} or icons={}
@@ -225,54 +231,64 @@ local adjustDataDotRaw = function(path, filename_key, new_path)
 	end
 
 	-- prevents black tiles in scaled terrain
-	if pd["probability"] ~= nil then pd["probability"] = 1 end
+	if pathed_data["probability"] ~= nil then pathed_data["probability"] = 1 end
 
 	-- upscales resources (sheet/stages/hr_version)
 	if (last == "sheet" and prev == "stages") or (prev == "sheet" and last == "hr_version") then
-		if pd["size"] then pd["size"] = pd["size"] * sf end
+		if pathed_data["size"] then pathed_data["size"] = pathed_data["size"] * val_sf end
 	end
 
 	-- Adjusts properties for animations making use of the stripes attribute
 	if prev == "stripes" and last == 1 then
-		local node = generic_data
-		pd["scale"] = (pd["scale"] or 1) / sf
-		if node then
-			if node["scale"] then node["scale"] = node["scale"] / sf end
-			if node["width"] then node["width"] = scaled_floor(node["width"]) end
-			if node["height"] then node["height"] = scaled_floor(node["height"]) end
-			if node["x"] then node["x"] = floor(node["y"] * sf) end
-			if node["y"] then node["y"] = floor(node["y"] * sf) end
+		pathed_data["scale"] = (pathed_data["scale"] or 1) / val_sf
+		if generic_data then
+			if generic_data["scale"] then generic_data["scale"] = generic_data["scale"] / val_sf end
+			if generic_data["width"] then generic_data["width"] = scaled_floor(generic_data["width"]) end
+			if generic_data["height"] then generic_data["height"] = scaled_floor(generic_data["height"]) end
+			if generic_data["x"] then generic_data["x"] = floor(generic_data["y"] * val_sf) end
+			if generic_data["y"] then generic_data["y"] = floor(generic_data["y"] * val_sf) end
 		end
 	end
 
 	-- Adjusts properties for animations making use of the layers TileTransitions filenames attribute
 	if last == "filenames" and filename_key == 1 then
-		local node = generic_data
-		if node then
-			if node["scale"] then node["scale"] = node["scale"] / sf end
-			if node["width"] then node["width"] = scaled_floor(node["width"]) end
-			if node["height"] then node["height"] = scaled_floor(node["height"]) end
-			if node["x"] then node["x"] = floor(node["y"] * sf) end
-			if node["y"] then node["y"] = floor(node["y"] * sf) end
+		if generic_data then
+			if generic_data["scale"] then generic_data["scale"] = generic_data["scale"] / val_sf end
+			if generic_data["width"] then generic_data["width"] = scaled_floor(generic_data["width"]) end
+			if generic_data["height"] then generic_data["height"] = scaled_floor(generic_data["height"]) end
+			if generic_data["x"] then generic_data["x"] = floor(generic_data["y"] * val_sf) end
+			if generic_data["y"] then generic_data["y"] = floor(generic_data["y"] * val_sf) end
 		end
 	end
 
 	-- overwrite old path with path to retextured version
-	pd[filename_key] = new_path
+	pathed_data[filename_key] = new_path
 end
 
+local starts_with_any
+if type(str_tbl_wl) == "string" then
+	local p = str_tbl_wl
+	starts_with_any = function(s)
+		return str_sub(s, 1, #p) == p
+	end
+else
+	starts_with_any = function(s)
+		for i = 1, #str_tbl_wl do
+			local p = str_tbl_wl[i]
+			if str_sub(s, 1, #p) == p then
+				return true
+			end
+		end
+		return false
+	end
+end
 
 -- recursively loop through data.raw to find strings (and the list of keys that leads to them in data.raw) which resemble file paths ending in .png, .jpg and .ogg
 checkData = function(path)
 	-- path is a keylist in data.raw in which this fuction will look for paths that match the description above
 	-- navigate to the location in data.raw denoted by path keylist
 	local pathed_data = data.raw
-	local prefix      = "__" .. rpn .. "__"
-	local prefix_data = prefix .. "/data/"
-
-	local str_find    = string.find
-	local str_sub     = string.sub
-	local str_gsub    = string.gsub
+	local prefix_data = "__" .. str_rpn .. "__" .. "/data/"
 
 	for i = 1, #path do
 		pathed_data = pathed_data[path[i]]
@@ -283,15 +299,10 @@ checkData = function(path)
 	for key, item in pairs(pathed_data) do
 		local t = type(item)
 		if t == "string" then
-			if str_sub(item, -4) == ".png" then
-				local firstSlash = str_find(item, "/", 1, true)
-				local firstPart = firstSlash and str_sub(item, 1, firstSlash - 1) or item
-
-				if firstPart ~= prefix then
-					if isReplaceItem(item) then
-						local changed_item_path = prefix_data .. str_gsub(item, "__", "")
-						adjustDataDotRaw(path, key, changed_item_path)
-					end
+			if str_sub(item, -4) == ".png" and starts_with_any(item) then
+				if isReplaceItem(item) then
+					local changed_item_path = prefix_data .. str_gsub(item, "__", "")
+					adjustDataDotRaw(path, key, changed_item_path)
 				end
 			end
 		elseif t == "table" then
@@ -308,10 +319,8 @@ end
 local hasWildcard = false
 local hasDir = false
 
-local find = string.find
-
-for k in pairs(dt) do
-	if find(k, "*", 1, true) then
+for k in pairs(tbl_dt) do
+	if str_find(k, "*", 1, true) then
 		hasWildcard = true
 		break
 	end

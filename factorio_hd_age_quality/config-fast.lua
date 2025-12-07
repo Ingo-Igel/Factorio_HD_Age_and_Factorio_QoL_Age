@@ -22,6 +22,7 @@ return {
 	scalefactor = 2,
 	resource_pack_name = "factorio_hd_age_quality",
 	exclude_names = exclude,
+	white_list = "__quality__/graphics/entity/";
 	data = {
 		quality = {
 			graphics = {

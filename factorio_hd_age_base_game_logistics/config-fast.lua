@@ -27,6 +27,7 @@ return {
 	scalefactor = 2,
 	resource_pack_name = "factorio_hd_age_base_game_logistics",
 	exclude_names = exclude,
+	white_list = "__base__/graphics/entity/";
 	data = {
 		base = {
 			graphics = {
