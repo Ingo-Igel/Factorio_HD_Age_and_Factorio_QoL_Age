@@ -30,12 +30,5 @@ data:extend {
 		default_value = "",
 		allow_blank = true,
 		order = "z"
-	},
-	{
-		type = "string-setting",
-		setting_type = "startup",
-		name = "f_hd_a_bg_l_loading_methode",
-		default_value = "fallback",
-		allowed_values = { "fast", "fallback" }
 	}
 }
