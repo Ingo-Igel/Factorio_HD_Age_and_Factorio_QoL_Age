@@ -2,16 +2,12 @@
 Version: 2.0.0
 Date: ????
   Changes:
----------------------------------------------------------------------------------------------------
-Version: 1.1.4
-Date: 2025-08-15
-  Changes:
-    - test
+    - Implemented new faster loading methode
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.3
 Date: 2025-08-14
   Changes:
-    - removed all GitHub links and references
+    - Removed all GitHub links and references
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.2
 Date: 2025-08-13
