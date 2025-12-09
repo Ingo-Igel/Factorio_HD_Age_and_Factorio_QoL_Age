@@ -25,7 +25,13 @@ return {
 	scalefactor = 2,
 	resource_pack_name = "factorio_hd_age_base_game_enemies_nauvis",
 	exclude_names = exclude,
-	white_list = "__base__/graphics/entity/",
+	white_list = {
+		"__base__/graphics/entity/acid-splash/",
+		"__base__/graphics/entity/acid-sticker/",
+		"__base__/graphics/entity/biter/",
+		"__base__/graphics/entity/spawner/",
+		"__base__/graphics/entity/worm/",
+	},
 	data = {
 		base = {
 			graphics = {
