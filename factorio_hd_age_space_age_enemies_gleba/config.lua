@@ -17,12 +17,11 @@ if mods["factorio_hd_age_modpack"] or mods["factorio_hd_age_modpack_optional"] o
 end
 
 return {
+	scalefactor = 2,
 	resource_pack_name = "factorio_hd_age_space_age_enemies_gleba",
+	exclude_names = exclude,
+	white_list = "__space-age__/graphics/entity/gleba-spawner/",
 	data = {
-		__settings__ = {
-			exclude_names = exclude,
-			upscale = 2
-		},
 		["space-age"]={
 			graphics = {
 				entity = {
