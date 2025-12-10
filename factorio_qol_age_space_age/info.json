@@ -6,9 +6,9 @@
 	"homepage": "https://codeberg.org/Ingo_Igel/Factorio_HD_Age_and_Factorio_QoL_Age",
 	"factorio_version": "2.0",
 	"dependencies": [
-	"base >= 2.0.23",
-	"space-age >= 2.0.23",
-	"factorio_qol_age_base_game"
+		"base >= 2.0.23",
+		"space-age >= 2.0.23",
+		"factorio_qol_age_base_game"
 	],
 	"description": "This mod pack contains various QoL mods for the Space Age DLC and Base Game that I personally use.",
 	"package": {
