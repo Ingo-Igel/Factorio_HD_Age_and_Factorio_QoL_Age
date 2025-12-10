@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.1.4
+Version: 2.0.0
 Date: ????
   Changes:
+    - Implemented new faster loading methode
     - Added support for arrowless-belts by disabling HD belt textures if these mods are enabled.
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.3
