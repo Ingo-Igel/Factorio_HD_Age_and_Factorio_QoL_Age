@@ -1,4 +1,5 @@
-local exclude = { "*shadow*",
+local exclude = {
+	"*shadow*",
 	"*reflection*",
 	"*visualisation*",
 	"*03-rocket*",
