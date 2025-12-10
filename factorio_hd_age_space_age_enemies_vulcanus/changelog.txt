@@ -2,6 +2,7 @@
 Version: 2.0.0
 Date: ????
   Changes:
+    - Implemented new faster loading methode
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.2
 Date: 2025-08-14
