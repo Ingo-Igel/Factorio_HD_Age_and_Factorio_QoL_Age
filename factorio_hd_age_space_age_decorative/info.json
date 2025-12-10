@@ -5,7 +5,10 @@
 	"author": "Ingo_Igel",
 	"homepage": "https://codeberg.org/Ingo_Igel/Factorio_HD_Age_and_Factorio_QoL_Age",
 	"factorio_version": "2.0",
-	"dependencies": ["base >= 2.0.44", "space-age >=2.0.44"],
+	"dependencies": [
+		"base >= 2.0.44",
+		"space-age >=2.0.44"
+	],
 	"description": "This mod contains and integrates HD textures for the decoratives of the Space Age DLC.",
 	"package": {
 		"gallery": [
