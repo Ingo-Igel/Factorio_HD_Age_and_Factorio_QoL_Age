@@ -313,7 +313,7 @@ checkData = function(path)
 	end
 end
 
--- only trigger checkdata to look for paths that fit config.lua data = {} table if that table is not empty (__settings__ doesn't count as a directory entry) / has modnames that include a wildcard!
+-- only trigger checkdata to look for paths that fit config.lua data = {} table if that table is not empty / has modnames that include a wildcard!
 -- Important, as if it were & checkData ran, all files of all actively running mods would need to be retextured (all of data.raw), which is unsustainable, as it would make texturepacks break if it was run with mods that weren't retextured!
 
 local hasWildcard = false

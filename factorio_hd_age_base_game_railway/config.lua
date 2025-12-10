@@ -26,10 +26,6 @@ return {
 	exclude_names = exclude,
 	white_list = "__base__/graphics/entity/",
 	data = {
-		__settings__ = {
-			exclude_names = exclude,
-			upscale = 2,
-		},
 		base = {
 			graphics = {
 				entity = {

@@ -22,10 +22,6 @@ return {
 	exclude_names = exclude,
 	white_list = "__space-age__/graphics/terrain/aquilo/",
 	data = {
-		__settings__ = {
-			exclude_names = exclude,
-			upscale = 2
-		},
 		["space-age"] = {
 			graphics = {
 				terrain = {
