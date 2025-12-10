@@ -1,5 +1,5 @@
 if not mods["factorio_hd_age_modpack"] then
-	data:extend{
+	data:extend {
 		{
 			type = "string-setting",
 			setting_type = "startup",
