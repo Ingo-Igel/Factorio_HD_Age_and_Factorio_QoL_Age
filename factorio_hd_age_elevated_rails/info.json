@@ -1,16 +1,16 @@
 {
-    "name": "factorio_hd_age_elevated_rails",
-    "version": "1.1.3",
-    "title": "Factorio HD Age: Elevated Rails",
-    "author": "Ingo_Igel",
-    "homepage": "https://codeberg.org/Ingo_Igel/Factorio_HD_Age_and_Factorio_QoL_Age",
-    "factorio_version": "2.0",
-    "dependencies": [
-	"base >= 2.0",
-	"elevated-rails >=2.0"
-    ],
+	"name": "factorio_hd_age_elevated_rails",
+	"version": "1.1.3",
+	"title": "Factorio HD Age: Elevated Rails",
+	"author": "Ingo_Igel",
+	"homepage": "https://codeberg.org/Ingo_Igel/Factorio_HD_Age_and_Factorio_QoL_Age",
+	"factorio_version": "2.0",
+	"dependencies": [
+		"base >= 2.0",
+		"elevated-rails >=2.0"
+	],
 	"rail_bridges_required": true,
-    "description": "This mod contains and integrates HD textures for the elevated rails from the Space Age DLC.",
+	"description": "This mod contains and integrates HD textures for the elevated rails from the Space Age DLC.",
 	"package": {
 		"gallery": [
 			".gallery/thumbnail_huge.png",
