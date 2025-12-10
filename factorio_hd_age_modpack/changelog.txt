@@ -2,6 +2,8 @@
 Version: 2.0.0
 Date: ????
   Changes:
+    - Code cleanup
+    - Increase the version number to match those of the included mods
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.1
 Date: 2025-08-14
