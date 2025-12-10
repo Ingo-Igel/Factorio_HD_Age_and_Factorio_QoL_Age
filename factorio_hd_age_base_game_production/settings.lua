@@ -1,4 +1,4 @@
-data:extend{
+data:extend {
 	{
 		type = "string-setting",
 		setting_type = "startup",
