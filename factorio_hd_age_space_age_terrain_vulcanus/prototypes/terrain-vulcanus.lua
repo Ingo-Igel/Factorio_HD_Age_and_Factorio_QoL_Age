@@ -44,10 +44,10 @@ local function tile_variations_template_hd(high_res_picture, high_res_transition
 				o_transition_count = 1,
 				u_transition_line_length = 1,
 				o_transition_line_length = 2,
-				outer_corner_x = 576*2,
-				side_x = 1152*2,
-				u_transition_x = 1728*2,
-				o_transition_x = 2304*2,
+				outer_corner_x = 576 * 2,
+				side_x = 1152 * 2,
+				u_transition_x = 1728 * 2,
+				o_transition_x = 2304 * 2,
 				mask = { y_offset = 0 }
 			}
 		}
@@ -119,20 +119,20 @@ local function tile_variations_template_with_transitions_hd(high_res_picture, op
 
 	if result.transition then
 		result.transition.layout = {
-			scale = 0.25,
-			inner_corner_x = 1216 * 2*2,
-			outer_corner_x = 1504 * 2*2,
-			side_x         = 1792 * 2*2,
-			u_transition_x = 1056 * 2*2,
-			o_transition_x = 544 * 2*2,
-			inner_corner_count = 8,
-			outer_corner_count = 8,
-			side_count         = 8,
-			u_transition_count = 1,
-			o_transition_count = 1,
+			scale                    = 0.25,
+			inner_corner_x           = 1216 * 2 * 2,
+			outer_corner_x           = 1504 * 2 * 2,
+			side_x                   = 1792 * 2 * 2,
+			u_transition_x           = 1056 * 2 * 2,
+			o_transition_x           = 544 * 2 * 2,
+			inner_corner_count       = 8,
+			outer_corner_count       = 8,
+			side_count               = 8,
+			u_transition_count       = 1,
+			o_transition_count       = 1,
 			u_transition_line_length = 4,
 			o_transition_line_length = 4,
-			overlay = { x_offset = 0 }
+			overlay                  = { x_offset = 0 }
 		}
 	end
 
@@ -152,73 +152,74 @@ end
 
 local tile_spritesheet_layout_hd = {}
 tile_spritesheet_layout_hd.transition_16_16_16_4_4 = {
-	scale = 0.25,
-	inner_corner_count = 16,
-	outer_corner_count = 16,
-	side_count = 16,
-	u_transition_count = 4,
-	o_transition_count = 4,
-	inner_corner_y = 0,
-	outer_corner_y = 576*2,
-	side_y = 1152*2,
-	u_transition_y = 1728*2,
-	o_transition_y = 2304*2,
+	scale                    = 0.25,
+	inner_corner_count       = 16,
+	outer_corner_count       = 16,
+	side_count               = 16,
+	u_transition_count       = 4,
+	o_transition_count       = 4,
+	inner_corner_y           = 0,
+	outer_corner_y           = 576 * 2,
+	side_y                   = 1152 * 2,
+	u_transition_y           = 1728 * 2,
+	o_transition_y           = 2304 * 2,
 	inner_corner_tile_height = 2,
 	outer_corner_tile_height = 2,
-	side_tile_height = 2,
+	side_tile_height         = 2,
 	u_transition_tile_height = 2,
-	overlay    = { x_offset = 0 },
-	mask       = { x_offset = 2176*2 },
-	background = { x_offset = 1088*2 }
+	overlay                  = { x_offset = 0 },
+	mask                     = { x_offset = 2176 * 2 },
+	background               = { x_offset = 1088 * 2 }
 }
 
 tile_spritesheet_layout_hd.transition_4_4_8_1_1 = {
-	scale = 0.25,
-	inner_corner_count = 4,
-	outer_corner_count = 4,
-	side_count = 8,
-	u_transition_count = 1,
-	o_transition_count = 1,
-	inner_corner_y = 0,
-	outer_corner_y = 576*2,
-	side_y = 1152*2,
-	u_transition_y = 1728*2,
-	o_transition_y = 2304*2,
+	scale                    = 0.25,
+	inner_corner_count       = 4,
+	outer_corner_count       = 4,
+	side_count               = 8,
+	u_transition_count       = 1,
+	o_transition_count       = 1,
+	inner_corner_y           = 0,
+	outer_corner_y           = 576 * 2,
+	side_y                   = 1152 * 2,
+	u_transition_y           = 1728 * 2,
+	o_transition_y           = 2304 * 2,
 	inner_corner_tile_height = 2,
 	outer_corner_tile_height = 2,
-	side_tile_height = 2,
+	side_tile_height         = 2,
 	u_transition_tile_height = 2,
-	overlay    = { x_offset = 0 },
-	mask       = { x_offset = 2176*2 },
-	background = { x_offset = 1088*2 }
+	overlay                  = { x_offset = 0 },
+	mask                     = { x_offset = 2176 * 2 },
+	background               = { x_offset = 1088 * 2 }
 }
 
 tile_spritesheet_layout_hd.transition_3_3_3_1_0 = {
-	scale = 0.25,
-	inner_corner_count = 3,
-	outer_corner_count = 3,
-	side_count = 3,
-	u_transition_count = 1,
-	o_transition_count = 0,
-	inner_corner_y = 0,
-	outer_corner_y = 576*2,
-	side_y = 1152*2,
-	u_transition_y = 1728*2,
-	o_transition_y = 2304*2,
+	scale                    = 0.25,
+	inner_corner_count       = 3,
+	outer_corner_count       = 3,
+	side_count               = 3,
+	u_transition_count       = 1,
+	o_transition_count       = 0,
+	inner_corner_y           = 0,
+	outer_corner_y           = 576 * 2,
+	side_y                   = 1152 * 2,
+	u_transition_y           = 1728 * 2,
+	o_transition_y           = 2304 * 2,
 	inner_corner_tile_height = 2,
 	outer_corner_tile_height = 2,
-	side_tile_height = 2,
+	side_tile_height         = 2,
 	u_transition_tile_height = 2,
-	overlay    = { x_offset = 0 },
-	mask       = { x_offset = 2176*2 },
-	background = { x_offset = 1088*2 }
+	overlay                  = { x_offset = 0 },
+	mask                     = { x_offset = 2176 * 2 },
+	background               = { x_offset = 1088 * 2 }
 }
 
 local lava_patch = {
-	filename = "__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/water-transitions/lava-patch.png",
+	filename =
+	"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/water-transitions/lava-patch.png",
 	scale = 0.25,
-	width = 64*2,
-	height = 64*2
+	width = 64 * 2,
+	height = 64 * 2
 }
 
 local lava_stone_transitions = {
@@ -226,10 +227,12 @@ local lava_stone_transitions = {
 		to_tiles = water_tile_type_names,
 		transition_group = water_transition_group_id,
 
-		spritesheet = "__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/water-transitions/lava-stone-cold.png",
+		spritesheet =
+		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/water-transitions/lava-stone-cold.png",
 		layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4,
 		effect_map_layout = {
-			spritesheet = "__factorio_hd_age_space_age_terrain_vulcanus__/data/base/graphics/terrain/effect-maps/water-dirt-mask.png",
+			spritesheet =
+			"__factorio_hd_age_space_age_terrain_vulcanus__/data/base/graphics/terrain/effect-maps/water-dirt-mask.png",
 			inner_corner_count = 8,
 			outer_corner_count = 8,
 			side_count = 8,
@@ -240,13 +243,16 @@ local lava_stone_transitions = {
 	{
 		to_tiles = lava_tile_type_names,
 		transition_group = lava_transition_group_id,
-		spritesheet = "__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/water-transitions/lava-stone.png",
+		spritesheet =
+		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/water-transitions/lava-stone.png",
 		lightmap_layout = {
-			spritesheet = "__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/water-transitions/lava-stone-lightmap.png"
+			spritesheet =
+			"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/water-transitions/lava-stone-lightmap.png"
 		},
 		layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4,
 		effect_map_layout = {
-			spritesheet = "__factorio_hd_age_space_age_terrain_vulcanus__/data/base/graphics/terrain/effect-maps/water-dirt-mask.png",
+			spritesheet =
+			"__factorio_hd_age_space_age_terrain_vulcanus__/data/base/graphics/terrain/effect-maps/water-dirt-mask.png",
 			inner_corner_count = 8,
 			outer_corner_count = 8,
 			side_count = 8,
@@ -255,12 +261,13 @@ local lava_stone_transitions = {
 		}
 	},
 	{
-		to_tiles = {"out-of-map","empty-space","oil-ocean-shallow"},
+		to_tiles = { "out-of-map", "empty-space", "oil-ocean-shallow" },
 		transition_group = out_of_map_transition_group_id,
 		background_layer_offset = 1,
 		background_layer_group = "zero",
 		offset_background_layer_by_tile_layer = true,
-		spritesheet = "__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/out-of-map-transition/volcanic-out-of-map-transition.png",
+		spritesheet =
+		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/out-of-map-transition/volcanic-out-of-map-transition.png",
 		layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1,
 		overlay_enabled = false
 	}
@@ -270,10 +277,12 @@ local lava_stone_transitions_between_transitions = {
 	{
 		transition_group1 = default_transition_group_id,
 		transition_group2 = water_transition_group_id,
-		spritesheet = "__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/water-transitions/lava-stone-cold-transition.png",
+		spritesheet =
+		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/water-transitions/lava-stone-cold-transition.png",
 		layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0,
 		effect_map_layout = {
-			spritesheet = "__factorio_hd_age_space_age_terrain_vulcanus__/data/base/graphics/terrain/effect-maps/water-dirt-to-land-mask.png",
+			spritesheet =
+			"__factorio_hd_age_space_age_terrain_vulcanus__/data/base/graphics/terrain/effect-maps/water-dirt-to-land-mask.png",
 			o_transition_count = 0
 		},
 		water_patch = lava_patch
@@ -284,20 +293,24 @@ local lava_stone_transitions_between_transitions = {
 		background_layer_offset = 1,
 		background_layer_group = "zero",
 		offset_background_layer_by_tile_layer = true,
-		spritesheet = "__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/out-of-map-transition/lava-stone-cold-shore-out-of-map-transition.png",
+		spritesheet =
+		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/out-of-map-transition/lava-stone-cold-shore-out-of-map-transition.png",
 		layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0,
 		effect_map_layout = {
-			spritesheet = "__factorio_hd_age_space_age_terrain_vulcanus__/data/base/graphics/terrain/effect-maps/water-dirt-to-out-of-map-mask.png",
+			spritesheet =
+			"__factorio_hd_age_space_age_terrain_vulcanus__/data/base/graphics/terrain/effect-maps/water-dirt-to-out-of-map-mask.png",
 			o_transition_count = 0
 		}
 	},
 	{
 		transition_group1 = default_transition_group_id,
 		transition_group2 = lava_transition_group_id,
-		spritesheet = "__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/water-transitions/lava-stone-transition.png",
+		spritesheet =
+		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/water-transitions/lava-stone-transition.png",
 		layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0,
 		effect_map_layout = {
-			spritesheet = "__factorio_hd_age_space_age_terrain_vulcanus__/data/base/graphics/terrain/effect-maps/water-dirt-to-land-mask.png",
+			spritesheet =
+			"__factorio_hd_age_space_age_terrain_vulcanus__/data/base/graphics/terrain/effect-maps/water-dirt-to-land-mask.png",
 			o_transition_count = 0
 		},
 		water_patch = lava_patch
@@ -308,10 +321,12 @@ local lava_stone_transitions_between_transitions = {
 		background_layer_offset = 1,
 		background_layer_group = "zero",
 		offset_background_layer_by_tile_layer = true,
-		spritesheet = "__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/out-of-map-transition/lava-stone-shore-out-of-map-transition.png",
+		spritesheet =
+		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/out-of-map-transition/lava-stone-shore-out-of-map-transition.png",
 		layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0,
 		effect_map_layout = {
-			spritesheet = "__factorio_hd_age_space_age_terrain_vulcanus__/data/base/graphics/terrain/effect-maps/water-dirt-to-out-of-map-mask.png",
+			spritesheet =
+			"__factorio_hd_age_space_age_terrain_vulcanus__/data/base/graphics/terrain/effect-maps/water-dirt-to-out-of-map-mask.png",
 			o_transition_count = 0
 		}
 	},
@@ -321,7 +336,8 @@ local lava_stone_transitions_between_transitions = {
 		background_layer_offset = 1,
 		background_layer_group = "zero",
 		offset_background_layer_by_tile_layer = true,
-		spritesheet = "__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/out-of-map-transition/volcanic-out-of-map-transition-transition.png",
+		spritesheet =
+		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/out-of-map-transition/volcanic-out-of-map-transition-transition.png",
 		layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0,
 		overlay_enabled = false
 	}
@@ -333,16 +349,17 @@ if not settings.startup["f_hd_a_sa_tv_disable_lava"].value then
 		"__base__/graphics/terrain/masks/transition-1.png",
 		{
 			max_size = 4,
-			[1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
 		}
 	)
 
 	data.raw["tile"]["lava-hot"].variants = {
 		main = {
 			{
-				picture = "__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/lava-hot.png",
+				picture =
+				"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/lava-hot.png",
 				count = 1,
 				scale = 0.25,
 				size = 1
@@ -359,9 +376,9 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_ash"].value then
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-ash-cracks.png",
 		{
 			max_size = 4,
-			[1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
 		}
 	)
 
@@ -371,9 +388,9 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_ash"].value then
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-ash-dark.png",
 		{
 			max_size = 4,
-			[1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
 		}
 	)
 
@@ -383,9 +400,9 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_ash"].value then
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-ash-flats.png",
 		{
 			max_size = 4,
-			[1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
 		}
 	)
 
@@ -395,9 +412,9 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_ash"].value then
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-ash-light.png",
 		{
 			max_size = 4,
-			[1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
 		}
 	)
 
@@ -407,9 +424,9 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_ash"].value then
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-ash-soil.png",
 		{
 			max_size = 4,
-			[1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = {0.070, 0.070, 0.025, 0.070, 0.070, 0.070, 0.007, 0.025, 0.070, 0.050, 0.015, 0.026, 0.030, 0.005, 0.070, 0.027 } },
-			[4] = { probability = 1.00, weights = {0.070, 0.070, 0.070, 0.070, 0.070, 0.070, 0.015, 0.070, 0.070, 0.070, 0.015, 0.050, 0.070, 0.070, 0.065, 0.070 }, },
+			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+			[2] = { probability = 1, weights = { 0.070, 0.070, 0.025, 0.070, 0.070, 0.070, 0.007, 0.025, 0.070, 0.050, 0.015, 0.026, 0.030, 0.005, 0.070, 0.027 } },
+			[4] = { probability = 1.00, weights = { 0.070, 0.070, 0.070, 0.070, 0.070, 0.070, 0.015, 0.070, 0.070, 0.070, 0.015, 0.050, 0.070, 0.070, 0.065, 0.070 }, },
 		}
 	)
 end
@@ -421,9 +438,9 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_cracks"].value then
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-cracks.png",
 		{
 			max_size = 4,
-			[1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
 		}
 	)
 
@@ -434,9 +451,9 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_cracks"].value then
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-cracks-hot-light.png",
 		{
 			max_size = 4,
-			[1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
 		}
 	)
 
@@ -447,9 +464,9 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_cracks"].value then
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-cracks-warm-lightmap1.png",
 		{
 			max_size = 4,
-			[1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
 		}
 	)
 end
@@ -461,9 +478,9 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_folds"].value then
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-folds.png",
 		{
 			max_size = 4,
-			[1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
 		}
 	)
 
@@ -473,9 +490,9 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_folds"].value then
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-folds-flat.png",
 		{
 			max_size = 4,
-			[1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
 		}
 	)
 
@@ -486,60 +503,64 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_folds"].value then
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-folds-warm-lightmap.png",
 		{
 			max_size = 4,
-			[1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
 		}
 	)
 
 	data.raw["tile"]["volcanic-jagged-ground"].transitions = lava_stone_transitions
-	data.raw["tile"]["volcanic-jagged-ground"].transitions_between_transitions = lava_stone_transitions_between_transitions
+	data.raw["tile"]["volcanic-jagged-ground"].transitions_between_transitions =
+	lava_stone_transitions_between_transitions
 	data.raw["tile"]["volcanic-jagged-ground"].variants = tile_variations_template_with_transitions_hd(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-jagged-ground.png",
 		{
 			max_size = 4,
-			[1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
 		}
 	)
 end
 
 if not settings.startup["f_hd_a_sa_tv_disable_volcanic_stone"].value then
 	data.raw["tile"]["volcanic-pumice-stones"].transitions = lava_stone_transitions
-	data.raw["tile"]["volcanic-pumice-stones"].transitions_between_transitions = lava_stone_transitions_between_transitions
+	data.raw["tile"]["volcanic-pumice-stones"].transitions_between_transitions =
+	lava_stone_transitions_between_transitions
 	data.raw["tile"]["volcanic-pumice-stones"].variants = tile_variations_template_with_transitions_hd(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-pumice-stones.png",
 		{
 			max_size = 4,
-			[1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
 		}
 	)
 
 	data.raw["tile"]["volcanic-smooth-stone"].transitions = lava_stone_transitions
-	data.raw["tile"]["volcanic-smooth-stone"].transitions_between_transitions = lava_stone_transitions_between_transitions
+	data.raw["tile"]["volcanic-smooth-stone"].transitions_between_transitions =
+	lava_stone_transitions_between_transitions
 	data.raw["tile"]["volcanic-smooth-stone"].variants = tile_variations_template_with_transitions_hd(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-smooth-stone.png",
 		{
 			max_size = 4,
-			[1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
 		}
 	)
 
 	data.raw["tile"]["volcanic-smooth-stone-warm"].transitions = lava_stone_transitions
-	data.raw["tile"]["volcanic-smooth-stone-warm"].transitions_between_transitions = lava_stone_transitions_between_transitions
+	data.raw["tile"]["volcanic-smooth-stone-warm"].transitions_between_transitions =
+	lava_stone_transitions_between_transitions
 	data.raw["tile"]["volcanic-smooth-stone-warm"].variants = tile_variations_template_with_transitions_and_light_hd(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-smooth-stone-warm.png",
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-smooth-stone-warm-lightmap.png",
 		{
 			max_size = 4,
-			[1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = {0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
 		}
 	)
 end
@@ -551,9 +572,9 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_soil"].value then
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-soil-dark.png",
 		{
 			max_size = 4,
-			[1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = {0.070, 0.070, 0.025, 0.070, 0.070, 0.070, 0.007, 0.025, 0.070, 0.050, 0.015, 0.026, 0.030, 0.005, 0.070, 0.027 } },
-			[4] = { probability = 1.00, weights = {0.070, 0.070, 0.070, 0.070, 0.070, 0.070, 0.015, 0.070, 0.070, 0.070, 0.015, 0.050, 0.070, 0.070, 0.065, 0.070 }, },
+			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+			[2] = { probability = 1, weights = { 0.070, 0.070, 0.025, 0.070, 0.070, 0.070, 0.007, 0.025, 0.070, 0.050, 0.015, 0.026, 0.030, 0.005, 0.070, 0.027 } },
+			[4] = { probability = 1.00, weights = { 0.070, 0.070, 0.070, 0.070, 0.070, 0.070, 0.015, 0.070, 0.070, 0.070, 0.015, 0.050, 0.070, 0.070, 0.065, 0.070 }, },
 		}
 	)
 
@@ -563,9 +584,9 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_soil"].value then
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-soil-light.png",
 		{
 			max_size = 4,
-			[1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = {0.070, 0.070, 0.025, 0.070, 0.070, 0.070, 0.007, 0.025, 0.070, 0.050, 0.015, 0.026, 0.030, 0.005, 0.070, 0.027 } },
-			[4] = { probability = 1.00, weights = {0.070, 0.070, 0.070, 0.070, 0.070, 0.070, 0.015, 0.070, 0.070, 0.070, 0.015, 0.050, 0.070, 0.070, 0.065, 0.070 }, },
+			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+			[2] = { probability = 1, weights = { 0.070, 0.070, 0.025, 0.070, 0.070, 0.070, 0.007, 0.025, 0.070, 0.050, 0.015, 0.026, 0.030, 0.005, 0.070, 0.027 } },
+			[4] = { probability = 1.00, weights = { 0.070, 0.070, 0.070, 0.070, 0.070, 0.070, 0.015, 0.070, 0.070, 0.070, 0.015, 0.050, 0.070, 0.070, 0.065, 0.070 }, },
 		}
 	)
 end
