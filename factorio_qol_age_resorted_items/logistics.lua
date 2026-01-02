@@ -188,14 +188,14 @@ data.raw.item["pump"].subgroup = "fluid-distribution"
 data.raw.item["pump"].order = "da"
 
 if mods["zithorian-extra-storage-tanks-port"] then
-	data.raw.item["fluid-tank-1x1"].subgroup = "fluid-distribution"
-	data.raw.item["fluid-tank-1x1"].order = "db"
-	data.raw.item["fluid-tank-2x2"].subgroup = "fluid-distribution"
-	data.raw.item["fluid-tank-2x2"].order = "dc"
-	data.raw.item["fluid-tank-3x4"].subgroup = "fluid-distribution"
-	data.raw.item["fluid-tank-3x4"].order = "de"
-	data.raw.item["fluid-tank-5x5"].subgroup = "fluid-distribution"
-	data.raw.item["fluid-tank-5x5"].order = "df"
+	data.raw.item["zith-storage-tank-1x1"].subgroup = "fluid-distribution"
+	data.raw.item["zith-storage-tank-1x1"].order = "db"
+	data.raw.item["zith-storage-tank-2x2"].subgroup = "fluid-distribution"
+	data.raw.item["zith-storage-tank-2x2"].order = "dc"
+	data.raw.item["zith-storage-tank-3x4"].subgroup = "fluid-distribution"
+	data.raw.item["zith-storage-tank-3x4"].order = "de"
+	data.raw.item["zith-storage-tank-5x5"].subgroup = "fluid-distribution"
+	data.raw.item["zith-storage-tank-5x5"].order = "df"
 end
 
 if mods["est-tiny-storage-tank"] then
