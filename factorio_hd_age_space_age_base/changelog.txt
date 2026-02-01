@@ -2,6 +2,7 @@
 Version: 2.0.1
 Date: ????
   Changes:
+    - Fixed compatibility issues with "Among Us Character"
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: 2025-12-10
