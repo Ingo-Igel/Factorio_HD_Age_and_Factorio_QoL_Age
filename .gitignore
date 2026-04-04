@@ -1,4 +1,5 @@
 .vscode/
+.gitignore
 *.zip
 *.png
 !*Logo.png
