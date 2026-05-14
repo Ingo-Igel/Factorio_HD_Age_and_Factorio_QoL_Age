@@ -8,9 +8,9 @@
 	"dependencies": ["base >= 2.0",
 	"space-age >= 2.0",
 	"4k_planets >= 1.0.60",
-	"Better_Starmap_Background >= 0.6.1",
-	"custom-space-map >=1.1.0",
-	"visible-planets >= 1.2.12"
+	"Better_Starmap_Background >= 2.2.0",
+	"visible-planets >= 1.2.12",
+	"? PlanetsLib >= 1.17.1"
 	],
 	"space_travel_required": true,
 	"description": "In addition to the HD textures for the Space Age DLC, this modpack includes visual enhancement mods and tweaks.\nAll included mods are automatically set and adjusted to create a consistent look.",
