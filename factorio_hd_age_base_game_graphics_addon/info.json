@@ -8,7 +8,7 @@
 	"dependencies": ["base >= 2.0",
 	"alternate-science-packs >= 1.0.1",
 	"BetterAlertArrows >= 1.1.0",
-	"biter-cleanup >= 2.2.1",
+	"biter-cleanup >= 4.2.0",
 	"bullet-trails >= 0.7.1",
 	"coloured-tool-icons >= 0.0.3",
 	"DiscoScience >= 2.0.1",
