@@ -148,7 +148,6 @@ end
 for rt = 1, 4 do
 	local rail_type = rail_type0[rt] .. variation[rt]
 	local elevated_rail = data.raw["elevated-" .. rail_type0[rt] .. "-rail" .. variation[rt]]
-	["elevated-" .. rail_type0[rt] .. "-rail" .. variation[rt]]
 
 	for d = 1, 4 do
 		elevated_rail.pictures[direction[d]] = elevated_rails(rail_type, direction[d])
