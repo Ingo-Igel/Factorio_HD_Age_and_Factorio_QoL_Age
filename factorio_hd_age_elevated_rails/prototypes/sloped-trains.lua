@@ -212,7 +212,7 @@ updates.apply_all_base = function()
 	if not settings.startup["f_hd_a_er_disable_cargo_wagon_sloped"].value then
 		meld(data.raw["cargo-wagon"]["cargo-wagon"], updates.cargo_wagon)
 	end
-	if not settings.startup["f_hd_a_er_disable_cargo_wagon_sloped"].value then
+	if not settings.startup["f_hd_a_er_disable_fluid_wagon_sloped"].value then
 		meld(data.raw["fluid-wagon"]["fluid-wagon"], updates.fluid_wagon)
 	end
 	if not settings.startup["f_hd_a_er_disable_artillery_wagon_sloped"].value then
