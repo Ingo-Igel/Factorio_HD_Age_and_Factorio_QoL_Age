@@ -13,7 +13,7 @@ local function add_disable_words(setting_name)
     end
 
     local value = setting.value
-    if value == "" then
+    if type(value) ~= "string" or value == "" then
         return
     end
 
