@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1
-Date: ????
+Date: 2026-06-04
   Changes:
     - Updated Textures. An improved compression algorithm reduces compression artifacts while achieving slightly smaller file sizes.
     - Optimized string settings insertion
