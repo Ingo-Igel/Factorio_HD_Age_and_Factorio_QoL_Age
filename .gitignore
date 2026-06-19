@@ -1,10 +1,3 @@
-.vscode/
-.gitignore
-*.zip
 *.png
-*.todo
-!*Logo.png
 !thumbnail.png
 !thumbnail_huge.png
-mod-list.json
-mod-settings.dat
