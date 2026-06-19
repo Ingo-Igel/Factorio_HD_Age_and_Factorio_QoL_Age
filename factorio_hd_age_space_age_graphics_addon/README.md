@@ -10,7 +10,6 @@ All included mods are automatically set and adjusted to create a consistent look
 * [4k planets](https://mods.factorio.com/mod/4k_planets?from=search) by [Nauviax](https://mods.factorio.com/user/Nauviax)
 * [Space Map Asteroid Belts](https://mods.factorio.com/mod/custom-space-map?from=search) by [Director_K1](https://mods.factorio.com/user/Director_K1)
 * [StarMap Background](https://mods.factorio.com/mod/Better_Starmap_Background?from=search) by [Tserup](https://mods.factorio.com/user/Tserup)
-* [Visible Planets in Space](https://mods.factorio.com/mod/visible-planets?from=search) by [grog2](https://mods.factorio.com/user/grog2)
 
 ***
 
