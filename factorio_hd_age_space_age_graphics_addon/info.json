@@ -1,15 +1,14 @@
 {
 	"name": "factorio_hd_age_space_age_graphics_addon",
-	"version": "1.0.9",
+	"version": "1.1.0",
 	"title": "Factorio HD Age: Space Age - Graphics addon",
 	"author": "Ingo_Igel",
 	"homepage": "https://codeberg.org/Ingo_Igel/Factorio_HD_Age_and_Factorio_QoL_Age",
 	"factorio_version": "2.0",
-	"dependencies": ["base >= 2.0",
-	"space-age >= 2.0",
+	"dependencies": ["base >= 2.1",
+	"space-age >= 2.1",
 	"4k_planets >= 1.0.60",
-	"Better_Starmap_Background >= 2.2.0",
-	"visible-planets >= 1.2.12"
+	"Better_Starmap_Background >= 2.2.0"
 	],
 	"space_travel_required": true,
 	"description": "In addition to the HD textures for the Space Age DLC, this modpack includes visual enhancement mods and tweaks.\nAll included mods are automatically set and adjusted to create a consistent look.",
