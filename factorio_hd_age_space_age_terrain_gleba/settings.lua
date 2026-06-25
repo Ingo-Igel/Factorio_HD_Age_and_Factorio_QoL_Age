@@ -103,6 +103,14 @@ data:extend {
 		forced_value = true,
 		order = "m"
 	},
+		{
+		type = "bool-setting",
+		setting_type = "startup",
+		name = "f_hd_a_sa_tg_disable_gleba_transitions",
+		default_value = false,
+		forced_value = true,
+		order = "n"
+	},
 	{
 		type = "string-setting",
 		setting_type = "startup",

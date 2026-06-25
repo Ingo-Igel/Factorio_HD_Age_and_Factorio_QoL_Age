@@ -100,125 +100,79 @@ tile_spritesheet_layout_hd.transition_3_3_3_1_0 = {
 	background               = { x_offset = 1088 * 2 }
 }
 
-tile_spritesheet_layout_hd.transition_4_4_8_1_1 = {
-	scale                    = 0.25,
-	inner_corner_count       = 4,
-	outer_corner_count       = 4,
-	side_count               = 8,
-	u_transition_count       = 1,
-	o_transition_count       = 1,
-	inner_corner_y           = 0,
-	outer_corner_y           = 576 * 2,
-	side_y                   = 1152 * 2,
-	u_transition_y           = 1728 * 2,
-	o_transition_y           = 2304 * 2,
-	inner_corner_tile_height = 2,
-	outer_corner_tile_height = 2,
-	side_tile_height         = 2,
-	u_transition_tile_height = 2,
-	overlay                  = { x_offset = 0 },
-	mask                     = { x_offset = 2176 * 2 },
-	background               = { x_offset = 1088 * 2 }
-}
 
 local ice_transitions_between_transitions = {
-	{
-		transition_group1 = default_transition_group_id,
-		transition_group2 = water_transition_group_id,
-		spritesheet =
-		"__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/water-transitions/ice-transition.png",
-		layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0,
-		background_enabled = false,
-		effect_map_layout = {
-			spritesheet =
-			"__factorio_hd_age_space_age_terrain_aquilo__/data/base/graphics/terrain/effect-maps/water-dirt-to-land-mask.png",
-			o_transition_count = 0
-		},
-		water_patch = {
-			filename =
-			"__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/water-transitions/ice-patch.png",
-			scale = 0.5,
-			width = 64,
-			height = 64
-		}
-	},
-	{
-		transition_group1 = default_transition_group_id,
-		transition_group2 = out_of_map_transition_group_id,
-		background_layer_offset = 1,
-		background_layer_group = "zero",
-		offset_background_layer_by_tile_layer = true,
-		spritesheet =
-		"__factorio_hd_age_space_age_terrain_aquilo__/data/base/graphics/terrain/out-of-map-transition/dirt-out-of-map-transition.png",
-		layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0,
-		overlay_enabled = false
-	},
-	{
-		transition_group1 = water_transition_group_id,
-		transition_group2 = out_of_map_transition_group_id,
-		background_layer_offset = 1,
-		background_layer_group = "zero",
-		offset_background_layer_by_tile_layer = true,
-		spritesheet =
-		"__factorio_hd_age_space_age_terrain_aquilo__/data/base/graphics/terrain/out-of-map-transition/dry-dirt-shore-out-of-map-transition.png",
-		layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0,
-		effect_map_layout = {
-			spritesheet =
-			"__factorio_hd_age_space_age_terrain_aquilo__/data/base/graphics/terrain/effect-maps/water-dirt-to-out-of-map-mask.png",
-			u_transition_count = 0,
-			o_transition_count = 0
-		}
-	}
+  {
+    transition_group1 = default_transition_group_id,
+    transition_group2 = water_transition_group_id,
+    spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/water-transitions/ice-transition.png",
+    layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0,
+    background_enabled = false,
+    effect_map_layout = {
+      spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/base/graphics/terrain/effect-maps/water-dirt-to-land-mask.png",
+      o_transition_count = 0
+    },
+    water_patch = {
+      filename = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/water-transitions/ice-patch.png",
+      scale = 0.5,
+      width = 64,
+      height = 64
+    }
+  },
+  {
+    transition_group1 = default_transition_group_id,
+    transition_group2 = out_of_map_transition_group_id,
+    background_layer_offset = 1,
+    background_layer_group = "zero",
+    offset_background_layer_by_tile_layer = true,
+    spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/out-of-map-transition/ice-out-of-map-transition-b.png",
+    layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0,
+    overlay_enabled = true
+  },
+  {
+    transition_group1 = water_transition_group_id,
+    transition_group2 = out_of_map_transition_group_id,
+    background_layer_offset = 1,
+    background_layer_group = "zero",
+    offset_background_layer_by_tile_layer = true,
+    spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/out-of-map-transition/ice-shore-out-of-map.png",
+    layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0,
+    overlay_enabled = true,
+    effect_map_layout = {
+      spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/base/graphics/terrain/effect-maps/water-dirt-to-out-of-map-mask.png",
+      u_transition_count = 0,
+      o_transition_count = 0
+    }
+  }
 }
 
-local ice_transitions = {
-	{
-		to_tiles = water_tile_type_names,
-		transition_group = water_transition_group_id,
-		spritesheet =
-		"__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/water-transitions/ice-2.png",
-		layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4,
-		effect_map_layout = {
-			spritesheet =
-			"__factorio_hd_age_space_age_terrain_aquilo__/data/base/graphics/terrain/effect-maps/water-dirt-mask.png",
-			inner_corner_count = 8,
-			outer_corner_count = 8,
-			side_count = 8,
-			u_transition_count = 2,
-			o_transition_count = 1
-		}
-	},
-	{
-		to_tiles = lava_tile_type_names,
-		transition_group = lava_transition_group_id,
-		spritesheet =
-		"__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/water-transitions/lava-stone.png",
-		lightmap_layout = {
-			spritesheet =
-			"__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/water-transitions/lava-stone-lightmap.png"
-		},
-		layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4,
-		effect_map_layout = {
-			spritesheet =
-			"__factorio_hd_age_space_age_terrain_aquilo__/data/base/graphics/terrain/effect-maps/water-dirt-mask.png",
-			inner_corner_count = 8,
-			outer_corner_count = 8,
-			side_count = 8,
-			u_transition_count = 2,
-			o_transition_count = 1
-		}
-	},
-	{
-		to_tiles = { "out-of-map", "empty-space", "oil-ocean-shallow" },
-		transition_group = out_of_map_transition_group_id,
-		background_layer_offset = 1,
-		background_layer_group = "zero",
-		offset_background_layer_by_tile_layer = true,
-		spritesheet =
-		"__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/out-of-map-transition/volcanic-out-of-map-transition.png",
-		layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1,
-		overlay_enabled = false
-	}
+local ice_transitions =
+{
+  {
+    to_tiles = water_tile_type_names,
+    transition_group = water_transition_group_id,
+    spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/water-transitions/ice-2.png",
+    layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4,
+    effect_map_layout =
+    {
+      spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/base/graphics/terrain/effect-maps/water-dirt-mask.png",
+      inner_corner_count = 8,
+      outer_corner_count = 8,
+      side_count = 8,
+      u_transition_count = 2,
+      o_transition_count = 1
+    }
+  },
+  {
+    to_tiles = {"out-of-map","empty-space","oil-ocean-shallow"},
+    transition_group = out_of_map_transition_group_id,
+    background_layer_offset = 1,
+    background_layer_group = "zero",
+    offset_background_layer_by_tile_layer = true,
+    spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/out-of-map-transition/ice-out-of-map.png",
+    layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4,
+    overlay_enabled = true
+  }
 }
 
 if not settings.startup["f_hd_a_sa_ta_disable_dust"].value then
@@ -276,6 +230,9 @@ if not settings.startup["f_hd_a_sa_ta_disable_dust"].value then
 end
 
 if not settings.startup["f_hd_a_sa_ta_disable_ice"].value then
+	data.raw["tile"]["brash-ice"].transitions = data.raw.tile["water"].transitions
+	data.raw["tile"]["brash-ice"].transitions_between_transitions = data.raw.tile["water"].transitions_between_transitions
+
 	data.raw["tile"]["ice-platform"].transitions = ice_transitions
 	data.raw["tile"]["ice-platform"].transitions_between_transitions = ice_transitions_between_transitions
 

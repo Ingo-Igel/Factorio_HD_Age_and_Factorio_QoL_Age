@@ -226,7 +226,6 @@ local lava_stone_transitions = {
 	{
 		to_tiles = water_tile_type_names,
 		transition_group = water_transition_group_id,
-
 		spritesheet =
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/water-transitions/lava-stone-cold.png",
 		layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4,
@@ -343,7 +342,33 @@ local lava_stone_transitions_between_transitions = {
 	}
 }
 
+local lava_to_out_of_map_transition = {
+	to_tiles = out_of_map_tile_type_names,
+	transition_group = out_of_map_transition_group_id,
+	overlay_layer_group = "zero",
+	apply_effect_color_to_overlay = false,
+	background_layer_offset = 1,
+	background_layer_group = "zero",
+	offset_background_layer_by_tile_layer = true,
+	spritesheet = "__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/out-of-map-transition/lava-out-of-map-transition.png",
+	lightmap_layout = { spritesheet = "__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/out-of-map-transition/lava-out-of-map-transition.png" },
+	layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1,
+	background_enabled = false,
+	mask_layout = {
+		spritesheet = "__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/masks/lava-edge-transition.png",
+		count = 1,
+		double_side_count = 0,
+		scale = 0.25,
+		outer_corner_x = 64 * 2,
+		side_x = 128 * 2,
+		u_transition_x = 192 * 2,
+		o_transition_x = 256 * 2,
+		y = 0
+	}
+}
+
 if not settings.startup["f_hd_a_sa_tv_disable_lava"].value then
+	data.raw["tile"]["lava"].transitions =  {lava_to_out_of_map_transition}
 	data.raw["tile"]["lava"].variants = tile_variations_template_hd_extra(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/lava.png",
 		"__base__/graphics/terrain/masks/transition-1.png",
@@ -355,6 +380,7 @@ if not settings.startup["f_hd_a_sa_tv_disable_lava"].value then
 		}
 	)
 
+	data.raw["tile"]["lava-hot"].transitions =  {lava_to_out_of_map_transition}
 	data.raw["tile"]["lava-hot"].variants = {
 		main = {
 			{
@@ -511,7 +537,7 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_folds"].value then
 
 	data.raw["tile"]["volcanic-jagged-ground"].transitions = lava_stone_transitions
 	data.raw["tile"]["volcanic-jagged-ground"].transitions_between_transitions =
-	lava_stone_transitions_between_transitions
+		lava_stone_transitions_between_transitions
 	data.raw["tile"]["volcanic-jagged-ground"].variants = tile_variations_template_with_transitions_hd(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-jagged-ground.png",
 		{
@@ -526,7 +552,7 @@ end
 if not settings.startup["f_hd_a_sa_tv_disable_volcanic_stone"].value then
 	data.raw["tile"]["volcanic-pumice-stones"].transitions = lava_stone_transitions
 	data.raw["tile"]["volcanic-pumice-stones"].transitions_between_transitions =
-	lava_stone_transitions_between_transitions
+		lava_stone_transitions_between_transitions
 	data.raw["tile"]["volcanic-pumice-stones"].variants = tile_variations_template_with_transitions_hd(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-pumice-stones.png",
 		{
@@ -539,7 +565,7 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_stone"].value then
 
 	data.raw["tile"]["volcanic-smooth-stone"].transitions = lava_stone_transitions
 	data.raw["tile"]["volcanic-smooth-stone"].transitions_between_transitions =
-	lava_stone_transitions_between_transitions
+		lava_stone_transitions_between_transitions
 	data.raw["tile"]["volcanic-smooth-stone"].variants = tile_variations_template_with_transitions_hd(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-smooth-stone.png",
 		{
@@ -552,7 +578,7 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_stone"].value then
 
 	data.raw["tile"]["volcanic-smooth-stone-warm"].transitions = lava_stone_transitions
 	data.raw["tile"]["volcanic-smooth-stone-warm"].transitions_between_transitions =
-	lava_stone_transitions_between_transitions
+		lava_stone_transitions_between_transitions
 	data.raw["tile"]["volcanic-smooth-stone-warm"].variants = tile_variations_template_with_transitions_and_light_hd(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-smooth-stone-warm.png",
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-smooth-stone-warm-lightmap.png",
@@ -589,4 +615,70 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_soil"].value then
 			[4] = { probability = 1.00, weights = { 0.070, 0.070, 0.070, 0.070, 0.070, 0.070, 0.015, 0.070, 0.070, 0.070, 0.015, 0.050, 0.070, 0.070, 0.065, 0.070 }, },
 		}
 	)
+end
+
+if not settings.startup["f_hd_a_sa_tv_disable_base_lava_transitions"].value then
+	for _, tile in pairs(data.raw.tile) do
+		local has_transition_to_lava = false
+		if tile.transitions ~= nil and tile.transitions_between_transitions ~= nil then
+			for _, transition in pairs(tile.transitions) do
+				if transition.transition_group == lava_transition_group_id then has_transition_to_lava = true end
+			end
+
+
+			if has_transition_to_lava == false then
+				tile.transitions[#tile.transitions + 1] =
+				{
+					to_tiles = lava_tile_type_names,
+					transition_group = lava_transition_group_id,
+					spritesheet =
+					"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/lava-transitions/lava-stone.png",
+					layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4,
+					lightmap_layout = { spritesheet = "__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/lava-transitions/lava-stone-lightmap.png" },
+					effect_map_layout =
+					{
+						spritesheet =
+						"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/effect-maps/lava-dirt-mask.png",
+						inner_corner_count = 8,
+						outer_corner_count = 8,
+						side_count = 8,
+						u_transition_count = 2,
+						o_transition_count = 1
+					}
+				}
+				tile.transitions_between_transitions[#tile.transitions_between_transitions + 1] =
+				{
+					transition_group1 = default_transition_group_id,
+					transition_group2 = lava_transition_group_id,
+					spritesheet =
+					"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/lava-transitions/lava-stone-transition.png",
+					layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0,
+					effect_map_layout =
+					{
+						spritesheet =
+						"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/effect-maps/lava-dirt-to-land-mask.png",
+						o_transition_count = 0
+					},
+					water_patch = lava_patch
+				}
+				tile.transitions_between_transitions[#tile.transitions_between_transitions + 1] =
+				{
+					transition_group1 = lava_transition_group_id,
+					transition_group2 = out_of_map_transition_group_id,
+					background_layer_offset = 1,
+					background_layer_group = "zero",
+					offset_background_layer_by_tile_layer = true,
+					spritesheet =
+					"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/out-of-map-transition/lava-stone-shore-out-of-map-transition.png",
+					layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0,
+					effect_map_layout =
+					{
+						spritesheet =
+						"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/effect-maps/lava-dirt-to-out-of-map-mask.png",
+						o_transition_count = 0
+					}
+				}
+			end
+		end
+	end
 end

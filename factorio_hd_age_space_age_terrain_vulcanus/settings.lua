@@ -48,6 +48,14 @@ data:extend {
 		order = "f"
 	},
 	{
+		type = "bool-setting",
+		setting_type = "startup",
+		name = "f_hd_a_sa_tv_disable_base_lava_transitions",
+		default_value = false,
+		forced_value = true,
+		order = "g"
+	},
+	{
 		type = "string-setting",
 		setting_type = "startup",
 		name = "f_hd_a_sa_tv_disable_string",

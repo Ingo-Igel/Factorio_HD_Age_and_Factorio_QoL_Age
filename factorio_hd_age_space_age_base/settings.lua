@@ -18,7 +18,7 @@ data:extend {
 	{
 		type = "bool-setting",
 		setting_type = "startup",
-		name = "f_hd_a_sa_b_disable_foundation_transitions",
+		name = "f_hd_a_sa_b_disable_transitions",
 		default_value = false,
 		forced_value = true,
 		order = "c"

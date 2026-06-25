@@ -2,6 +2,8 @@
 Version: 2.0.2
 Date: ????
   Changes:
+    - Added new transitions from Factorio 2.1.7
+    - Added deep-oil HD textures
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: 2026-06-04

@@ -223,192 +223,192 @@ end
 
 if not settings.startup["f_hd_a_sa_tg_disable_blubber"].value then
 	data.raw["tile"]["lowland-olive-blubber"].variants =
-	lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
-		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-olive-blubber.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-		}
-	)
+		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
+			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-olive-blubber.png",
+			{
+				max_size = 4,
+				[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+				[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+				[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			}
+		)
 
 	data.raw["tile"]["lowland-olive-blubber-2"].variants =
-	lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
-		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-olive-blubber-2.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-		}
-	)
+		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
+			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-olive-blubber-2.png",
+			{
+				max_size = 4,
+				[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+				[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+				[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			}
+		)
 
 	data.raw["tile"]["lowland-olive-blubber-3"].variants =
-	lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
-		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-olive-blubber-3.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-		}
-	)
+		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
+			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-olive-blubber-3.png",
+			{
+				max_size = 4,
+				[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+				[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+				[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			}
+		)
 
 	data.raw["tile"]["lowland-brown-blubber"].variants =
-	lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
-		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-brown-blubber.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-		}
-	)
+		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
+			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-brown-blubber.png",
+			{
+				max_size = 4,
+				[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+				[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+				[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			}
+		)
 end
 
 if not settings.startup["f_hd_a_sa_tg_disable_pale_green"].value then
 	data.raw["tile"]["lowland-pale-green"].variants =
-	lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
-		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-pale-green.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-		}
-	)
+		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
+			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-pale-green.png",
+			{
+				max_size = 4,
+				[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+				[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+				[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			}
+		)
 end
 
 if not settings.startup["f_hd_a_sa_tg_disable_cream_cauliflower"].value then
 	data.raw["tile"]["lowland-cream-cauliflower"].variants =
-	lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
-		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/cauliflower-mold.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-		}
-	)
+		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
+			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/cauliflower-mold.png",
+			{
+				max_size = 4,
+				[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+				[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+				[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			}
+		)
 
 	data.raw["tile"]["lowland-cream-cauliflower-2"].variants =
-	lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
-		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/cauliflower-mold-2.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-		}
-	)
+		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
+			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/cauliflower-mold-2.png",
+			{
+				max_size = 4,
+				[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+				[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+				[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			}
+		)
 end
 
 if not settings.startup["f_hd_a_sa_tg_disable_dead_skin"].value then
 	data.raw["tile"]["lowland-dead-skin"].variants =
-	lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
-		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-dead-skin.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-		}
-	)
+		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
+			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-dead-skin.png",
+			{
+				max_size = 4,
+				[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+				[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+				[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			}
+		)
 
 	data.raw["tile"]["lowland-dead-skin-2"].variants =
-	lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
-		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-dead-skin-2.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-		}
-	)
+		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
+			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-dead-skin-2.png",
+			{
+				max_size = 4,
+				[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+				[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+				[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			}
+		)
 end
 
 if not settings.startup["f_hd_a_sa_tg_disable_cream_red"].value then
 	data.raw["tile"]["lowland-cream-red"].variants =
-	lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
-		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-cream-red.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-		}
-	)
+		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
+			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-cream-red.png",
+			{
+				max_size = 4,
+				[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+				[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+				[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			}
+		)
 end
 
 if not settings.startup["f_hd_a_sa_tg_disable_red_vein"].value then
 	data.raw["tile"]["lowland-red-vein"].variants =
-	lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
-		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-red-vein.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-		}
-	)
+		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
+			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-red-vein.png",
+			{
+				max_size = 4,
+				[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+				[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+				[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			}
+		)
 
 	data.raw["tile"]["lowland-red-vein-2"].variants =
-	lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
-		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-red-vein-2.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-		}
-	)
+		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
+			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-red-vein-2.png",
+			{
+				max_size = 4,
+				[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+				[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+				[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			}
+		)
 
 	data.raw["tile"]["lowland-red-vein-3"].variants =
-	lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
-		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-red-vein-3.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-		}
-	)
+		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
+			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-red-vein-3.png",
+			{
+				max_size = 4,
+				[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+				[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+				[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			}
+		)
 
 	data.raw["tile"]["lowland-red-vein-4"].variants =
-	lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
-		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-red-vein-4.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-		}
-	)
+		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
+			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-red-vein-4.png",
+			{
+				max_size = 4,
+				[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+				[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+				[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			}
+		)
 
 	data.raw["tile"]["lowland-red-vein-dead"].variants =
-	lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
-		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-red-vein-dead.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-		}
-	)
+		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
+			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-red-vein-dead.png",
+			{
+				max_size = 4,
+				[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+				[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+				[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			}
+		)
 end
 
 if not settings.startup["f_hd_a_sa_tg_disable_red_infection"].value then
 	data.raw["tile"]["lowland-red-infection"].variants =
-	lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
-		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-red-infection.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-		}
-	)
+		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
+			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-red-infection.png",
+			{
+				max_size = 4,
+				[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+				[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+				[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			}
+		)
 end
 
 if not settings.startup["f_hd_a_sa_tg_disable_cracked_lichen"].value then
@@ -424,28 +424,28 @@ if not settings.startup["f_hd_a_sa_tg_disable_cracked_lichen"].value then
 	)
 
 	data.raw["tile"]["midland-cracked-lichen-dull"].variants =
-	tile_variations_template_with_transitions_and_effect_map_hd(
-		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/cracked-lichen-dull.png",
-		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics//terrain/effect-maps/water-gleba-mask.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-		}
-	)
+		tile_variations_template_with_transitions_and_effect_map_hd(
+			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/cracked-lichen-dull.png",
+			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics//terrain/effect-maps/water-gleba-mask.png",
+			{
+				max_size = 4,
+				[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+				[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+				[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			}
+		)
 
 	data.raw["tile"]["midland-cracked-lichen-dark"].variants =
-	tile_variations_template_with_transitions_and_effect_map_hd(
-		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/cracked-lichen-dark.png",
-		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics//terrain/effect-maps/water-gleba-mask.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-		}
-	)
+		tile_variations_template_with_transitions_and_effect_map_hd(
+			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/cracked-lichen-dark.png",
+			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics//terrain/effect-maps/water-gleba-mask.png",
+			{
+				max_size = 4,
+				[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+				[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+				[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+			}
+		)
 end
 
 if not settings.startup["f_hd_a_sa_tg_disable_turquoise_bark"].value then
@@ -562,4 +562,139 @@ if not settings.startup["f_hd_a_sa_tg_disable_rock"].value then
 			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
 		}
 	)
+end
+
+local tile_spritesheet_layout_hd = {}
+
+tile_spritesheet_layout_hd.transition_4_4_8_1_1 = {
+	scale                    = 0.25,
+	inner_corner_count       = 4,
+	outer_corner_count       = 4,
+	side_count               = 8,
+	u_transition_count       = 1,
+	o_transition_count       = 1,
+	inner_corner_y           = 0,
+	outer_corner_y           = 576 * 2,
+	side_y                   = 1152 * 2,
+	u_transition_y           = 1728 * 2,
+	o_transition_y           = 2304 * 2,
+	inner_corner_tile_height = 2,
+	outer_corner_tile_height = 2,
+	side_tile_height         = 2,
+	u_transition_tile_height = 2,
+	overlay                  = { x_offset = 0 },
+	mask                     = { x_offset = 2176 * 2 },
+	background               = { x_offset = 1088 * 2 }
+}
+
+tile_spritesheet_layout_hd.transition_3_3_3_1_0 = {
+	scale                    = 0.25,
+	inner_corner_count       = 3,
+	outer_corner_count       = 3,
+	side_count               = 3,
+	u_transition_count       = 1,
+	o_transition_count       = 0,
+	inner_corner_y           = 0,
+	outer_corner_y           = 576 * 2,
+	side_y                   = 1152 * 2,
+	u_transition_y           = 1728 * 2,
+	o_transition_y           = 2304 * 2,
+	inner_corner_tile_height = 2,
+	outer_corner_tile_height = 2,
+	side_tile_height         = 2,
+	u_transition_tile_height = 2,
+	overlay                  = { x_offset = 0 },
+	mask                     = { x_offset = 2176 * 2 },
+	background               = { x_offset = 1088 * 2 }
+}
+
+local function gleba_land_out_of_map_transition(suffix)
+	return
+	{
+		to_tiles = out_of_map_tile_type_names,
+		transition_group = out_of_map_transition_group_id,
+		background_layer_offset = 1,
+		background_layer_group = "zero",
+		offset_background_layer_by_tile_layer = true,
+		spritesheet =
+			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/out-of-map-transition/gleba-out-of-map-transition" ..
+			suffix .. ".png",
+		layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1,
+		overlay_enabled = false
+	}
+end
+
+local function gleba_land_transitions_to_transitions(suffix)
+	return
+	{
+		{
+			transition_group1 = default_transition_group_id,
+			transition_group2 = out_of_map_transition_group_id,
+
+			background_layer_offset = 1,
+			background_layer_group = "zero",
+			offset_background_layer_by_tile_layer = true,
+
+			spritesheet =
+				"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/out-of-map-transition/gleba-out-of-map-transition-b" ..
+				suffix .. ".png",
+			layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0,
+			overlay_enabled = false
+		},
+		{
+			transition_group1 = water_transition_group_id,
+			transition_group2 = out_of_map_transition_group_id,
+
+			background_layer_offset = 1,
+			background_layer_group = "zero",
+			offset_background_layer_by_tile_layer = true,
+			overlay_enabled = false,
+
+			spritesheet =
+				"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/out-of-map-transition/gleba-shore-out-of-map-transition" ..
+				suffix .. ".png",
+			layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0,
+			effect_map_layout =
+			{
+				spritesheet =
+				"__factorio_hd_age_space_age_terrain_gleba__/data/base/graphics/terrain/effect-maps/water-grass-to-out-of-map-mask.png",
+				o_transition_count = 0
+			},
+		}
+	}
+end
+
+local gleba_land_tiles =
+{
+	"pit-rock",
+	"artificial-yumako-soil", "overgrowth-yumako-soil", "artificial-jellynut-soil", "overgrowth-jellynut-soil",
+	"natural-yumako-soil", "natural-jellynut-soil",
+	"lowland-olive-blubber", "lowland-olive-blubber-2", "lowland-olive-blubber-3", "lowland-brown-blubber",
+	"lowland-pale-green", "lowland-cream-cauliflower-2", "lowland-cream-cauliflower",
+	"lowland-dead-skin", "lowland-dead-skin-2",
+	"lowland-cream-red",
+	"lowland-red-vein-2", "lowland-red-vein", "lowland-red-vein-3", "lowland-red-vein-4", "lowland-red-vein-dead",
+	"lowland-red-infection",
+	"midland-cracked-lichen", "midland-cracked-lichen-dull", "midland-cracked-lichen-dark",
+	"midland-turquoise-bark-2", "midland-turquoise-bark",
+	"midland-yellow-crust-3", "midland-yellow-crust-2", "midland-yellow-crust", "midland-yellow-crust-4",
+	"highland-dark-rock", "highland-dark-rock-2", "highland-yellow-rock",
+}
+
+if not settings.startup["f_hd_a_sa_tg_disable_gleba_transitions"].value then
+	for _, value in pairs(gleba_land_tiles) do
+		local suffix = ""
+		if (string.find(value, "red") or string.find(value, "jellynut")) then suffix = "-red" end
+		if (string.find(value, "lichen") or string.find(value, "crust")) then suffix = "-yellow" end
+		local transitions =
+		{
+			gleba_land_out_of_map_transition(suffix),
+			table.deepcopy(data.raw.tile[value].variants.transition),
+		}
+		transitions[2].to_tiles = water_tile_type_names
+		transitions[2].transition_group = water_transition_group_id
+
+		data.raw.tile[value].transitions = transitions
+		data.raw.tile[value].transitions_between_transitions = gleba_land_transitions_to_transitions(suffix)
+	end
 end
