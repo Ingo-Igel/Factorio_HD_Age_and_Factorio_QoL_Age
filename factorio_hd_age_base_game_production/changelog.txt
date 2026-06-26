@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 2.0.2
+Version: 2.1.0
 Date: ????
   Changes:
     - Added Factorio 2.1 Assembling-machine-1 textures

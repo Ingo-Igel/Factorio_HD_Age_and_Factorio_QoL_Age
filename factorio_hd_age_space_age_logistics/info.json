@@ -1,13 +1,13 @@
 {
 	"name": "factorio_hd_age_space_age_logistics",
-	"version": "2.0.2",
+	"version": "2.1.0",
 	"title": "Factorio HD Age: Space Age - Logistics",
 	"author": "Ingo_Igel",
 	"homepage": "https://codeberg.org/Ingo_Igel/Factorio_HD_Age_and_Factorio_QoL_Age",
-	"factorio_version": "2.0",
+	"factorio_version": "2.1",
 	"dependencies": [
-		"base >= 2.0.33",
-		"space-age >=2.0.33"
+		"base >= 2.1",
+		"space-age >=2.1"
 	],
 	"description": "This mod contains and integrates HD textures for the logistics entities of the Space Age DLC.",
 	"package": {
