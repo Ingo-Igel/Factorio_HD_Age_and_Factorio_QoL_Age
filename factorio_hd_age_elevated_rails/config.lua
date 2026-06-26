@@ -1,8 +1,6 @@
 local exclude = {
 	"*shadow*",
-	"*reflection*",
-	"*lights*",
-	"*ramp-segment-visualisations-middle*"
+	"*reflection*"
 }
 
 local function add_disable_words(setting_name)
@@ -41,7 +39,9 @@ return {
 					},
 					["elevated-rail-chain-signal"] = {},
 					["elevated-rail-pylon"] = { ["*"] = {}, ["remnants"] = {} },
-					["elevated-rail-ramp"] = { ["*"] = {}, ["remnants"] = {} },
+					["elevated-rail-ramp"] = {
+						["elevated-rail-ramp*"] = {},
+						["remnants"] = {} },
 					["elevated-rail-signal"] = {}
 				}
 			}
