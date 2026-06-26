@@ -4,13 +4,13 @@ local updates = {}
 
 updates.wheels = {
 	sloped = util.sprite_load(
-	"__factorio_hd_age_elevated_rails__/data/elevated-rails/graphics/entity/train-wheel/train-wheel-sloped", {
-		priority = "very-low",
-		direction_count = 160,
-		scale = 0.25,
-		shift = util.by_pixel(0, 8),
-		usage = "train"
-	}),
+		"__factorio_hd_age_elevated_rails__/data/elevated-rails/graphics/entity/train-wheel/train-wheel-sloped", {
+			priority = "very-low",
+			direction_count = 160,
+			scale = 0.25,
+			shift = util.by_pixel(0, 8),
+			usage = "train"
+		}),
 	slope_angle_between_frames = 1.25
 }
 
@@ -23,7 +23,7 @@ if not settings.startup["f_hd_a_er_disable_locomotive_sloped"].value then
 				sloped = {
 					layers = {
 						util.sprite_load(
-						"__factorio_hd_age_elevated_rails__/data/elevated-rails/graphics/entity/locomotive/locomotive-sloped",
+							"__factorio_hd_age_elevated_rails__/data/elevated-rails/graphics/entity/locomotive/locomotive-sloped",
 							{
 								dice = 4,
 								priority = "very-low",
@@ -31,6 +31,25 @@ if not settings.startup["f_hd_a_er_disable_locomotive_sloped"].value then
 								scale = 0.25,
 								usage = "train"
 							})
+					}
+				}
+			},
+			front_light_pictures = {
+				slope_angle_between_frames = 1.25,
+				sloped = {
+					layers = {
+						util.sprite_load(
+							"__factorio_hd_age_elevated_rails__/data/elevated-rails/graphics/entity/locomotive/locomotive-sloped-lights",
+							{
+								dice = 4,
+								priority = "very-low",
+								blend_mode = "additive",
+								draw_as_light = true,
+								direction_count = 160,
+								scale = 0.25,
+								usage = "train"
+							}
+						)
 					}
 				}
 			}
@@ -43,7 +62,7 @@ if not settings.startup["f_hd_a_er_disable_locomotive_sloped"].value then
 				sloped = {
 					layers = {
 						util.sprite_load(
-						"__factorio_hd_age_elevated_rails__/data/elevated-rails/graphics/entity/locomotive/locomotive-sloped",
+							"__factorio_hd_age_elevated_rails__/data/elevated-rails/graphics/entity/locomotive/locomotive-sloped",
 							{
 								dice = 4,
 								priority = "very-low",
@@ -52,7 +71,7 @@ if not settings.startup["f_hd_a_er_disable_locomotive_sloped"].value then
 								usage = "train"
 							}),
 						util.sprite_load(
-						"__factorio_hd_age_elevated_rails__/data/elevated-rails/graphics/entity/locomotive/locomotive-sloped-mask",
+							"__factorio_hd_age_elevated_rails__/data/elevated-rails/graphics/entity/locomotive/locomotive-sloped-mask",
 							{
 								dice = 4,
 								priority = "very-low",
@@ -63,6 +82,26 @@ if not settings.startup["f_hd_a_er_disable_locomotive_sloped"].value then
 								scale = 0.25,
 								usage = "train"
 							})
+					}
+				}
+			},
+			front_light_pictures =
+			{
+				slope_angle_between_frames = 1.25,
+				sloped = {
+					layers = {
+						util.sprite_load(
+							"__factorio_hd_age_elevated_rails__/data/elevated-rails/graphics/entity/locomotive/locomotive-sloped-lights",
+							{
+								dice = 4,
+								priority = "very-low",
+								blend_mode = "additive",
+								draw_as_light = true,
+								direction_count = 160,
+								scale = 0.25,
+								usage = "train"
+							}
+						)
 					}
 				}
 			}
@@ -80,7 +119,7 @@ if not settings.startup["f_hd_a_er_disable_cargo_wagon_sloped"].value then
 				sloped = {
 					layers = {
 						util.sprite_load(
-						"__factorio_hd_age_elevated_rails__/data/elevated-rails/graphics/entity/cargo-wagon/cargo-wagon-sloped",
+							"__factorio_hd_age_elevated_rails__/data/elevated-rails/graphics/entity/cargo-wagon/cargo-wagon-sloped",
 							{
 								dice = 4,
 								priority = "very-low",
@@ -102,7 +141,7 @@ if not settings.startup["f_hd_a_er_disable_cargo_wagon_sloped"].value then
 				sloped = {
 					layers = {
 						util.sprite_load(
-						"__factorio_hd_age_elevated_rails__/data/elevated-rails/graphics/entity/cargo-wagon/cargo-wagon-sloped",
+							"__factorio_hd_age_elevated_rails__/data/elevated-rails/graphics/entity/cargo-wagon/cargo-wagon-sloped",
 							{
 								dice = 4,
 								priority = "very-low",
@@ -112,7 +151,7 @@ if not settings.startup["f_hd_a_er_disable_cargo_wagon_sloped"].value then
 								usage = "train"
 							}),
 						util.sprite_load(
-						"__factorio_hd_age_elevated_rails__/data/elevated-rails/graphics/entity/cargo-wagon/cargo-wagon-sloped-mask",
+							"__factorio_hd_age_elevated_rails__/data/elevated-rails/graphics/entity/cargo-wagon/cargo-wagon-sloped-mask",
 							{
 								dice = 4,
 								priority = "very-low",
@@ -139,7 +178,7 @@ if not settings.startup["f_hd_a_er_disable_fluid_wagon_sloped"].value then
 			sloped = {
 				layers = {
 					util.sprite_load(
-					"__factorio_hd_age_elevated_rails__/data/elevated-rails/graphics/entity/fluid-wagon/fluid-wagon-sloped",
+						"__factorio_hd_age_elevated_rails__/data/elevated-rails/graphics/entity/fluid-wagon/fluid-wagon-sloped",
 						{
 							dice = 4,
 							priority = "very-low",
@@ -161,7 +200,7 @@ if not settings.startup["f_hd_a_er_disable_artillery_wagon_sloped"].value then
 			sloped = {
 				layers = {
 					util.sprite_load(
-					"__factorio_hd_age_elevated_rails__/data/elevated-rails/graphics/entity/artillery-wagon/artillery-wagon-sloped-base",
+						"__factorio_hd_age_elevated_rails__/data/elevated-rails/graphics/entity/artillery-wagon/artillery-wagon-sloped-base",
 						{
 							dice = 4,
 							priority = "very-low",
@@ -177,7 +216,7 @@ if not settings.startup["f_hd_a_er_disable_artillery_wagon_sloped"].value then
 			sloped = {
 				layers = {
 					util.sprite_load(
-					"__factorio_hd_age_elevated_rails__/data/elevated-rails/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-base",
+						"__factorio_hd_age_elevated_rails__/data/elevated-rails/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-base",
 						{
 							priority = "very-low",
 							direction_count = 160,
@@ -192,7 +231,7 @@ if not settings.startup["f_hd_a_er_disable_artillery_wagon_sloped"].value then
 			sloped = {
 				layers = {
 					util.sprite_load(
-					"__factorio_hd_age_elevated_rails__/data/elevated-rails/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-barrel",
+						"__factorio_hd_age_elevated_rails__/data/elevated-rails/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-barrel",
 						{
 							priority = "very-low",
 							direction_count = 160,
