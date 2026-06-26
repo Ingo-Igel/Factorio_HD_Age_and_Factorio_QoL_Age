@@ -8,8 +8,8 @@
 	"dependencies": [
 		"base >= 2.0.29",
 		"quality >=2.0.29",
-		"base < 2.1.0",
-		"quality < 2.1.0"
+		"base < 2.1",
+		"quality < 2.1"
 	],
 	"quality_required": true,
 	"description": "This mod contains and integrates HD textures for the quality entities of the Space Age DLC.",
