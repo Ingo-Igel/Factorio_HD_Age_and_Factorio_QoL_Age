@@ -42,22 +42,8 @@ return {
 					},
 					["craters"] = {
 						["vulcanus"] = {
-							["vulcanus-crater-section-lower-E.png"] = {},
-							["vulcanus-crater-section-lower-N.png"] = {},
-							["vulcanus-crater-section-lower-NE.png"] = {},
-							["vulcanus-crater-section-lower-NW.png"] = {},
-							["vulcanus-crater-section-lower-S.png"] = {},
-							["vulcanus-crater-section-lower-SE.png"] = {},
-							["vulcanus-crater-section-lower-SW.png"] = {},
-							["vulcanus-crater-section-lower-W.png"] = {},
-							["vulcanus-crater-section-upper-E.png"] = {},
-							["vulcanus-crater-section-upper-N.png"] = {},
-							["vulcanus-crater-section-upper-NE.png"] = {},
-							["vulcanus-crater-section-upper-NW.png"] = {},
-							["vulcanus-crater-section-upper-S.png"] = {},
-							["vulcanus-crater-section-upper-SE.png"] = {},
-							["vulcanus-crater-section-upper-SW.png"] = {},
-							["vulcanus-crater-section-upper-W.png"] = {}
+							["vulcanus-crater-section-lower-*"] = {},
+							["vulcanus-crater-section-*"] = {}
 						}
 					},
 					["vulcanus"] = {

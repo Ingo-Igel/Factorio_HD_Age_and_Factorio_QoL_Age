@@ -30,10 +30,8 @@ return {
 				entity = {
 					["railgun-turret"] = { ["*"] = {}, ["remnants"] = {} },
 					["rocket-turret"] = {
-						["rocket-turret-base.png"] = {},
-						["rocket-turret-base-mask.png"] = {},
-						["rocket-turret-rising.png"] = {},
-						["rocket-turret-rising-mask.png"] = {},
+						["rocket-turret-base*"] = {},
+						["rocket-turret-rising*"] = {},
 						["remnants"] = {}
 					},
 					["tesla-turret"] = { ["*"] = {}, ["remnants"] = {} }

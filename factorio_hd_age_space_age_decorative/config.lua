@@ -1,32 +1,19 @@
-local exclude = {
-	"*shadow*",
-	"*lights*",
-	"*reflection*",
-	"*transition*",
-	"*tint*",
-	"*mask*",
-	"*glow*",
-	"*beam*",
-	"*gas*",
-	"*fluids*",
-	"*visualization*",
-	"*flame*"
-}
+local exclude = { "*shadow*" }
 
 local function add_disable_words(setting_name)
-    local setting = settings.startup[setting_name]
-    if not setting then
-        return
-    end
+	local setting = settings.startup[setting_name]
+	if not setting then
+		return
+	end
 
-    local value = setting.value
-    if type(value) ~= "string" or value == "" then
-        return
-    end
+	local value = setting.value
+	if type(value) ~= "string" or value == "" then
+		return
+	end
 
-    for word in string.gmatch(value, "[^,%s]+") do
-        table.insert(exclude, "*" .. word .. "*")
-    end
+	for word in string.gmatch(value, "[^,%s]+") do
+		table.insert(exclude, "*" .. word .. "*")
+	end
 end
 
 add_disable_words("f_hd_a_sa_d_disable_string")
@@ -48,7 +35,6 @@ return {
 					["aquilo-iceberg"] = {},
 					["barnacles-decal"] = {},
 					["barney"] = {},
-					["big-volcanic-rock"] = {},
 					["black-sceptre"] = {},
 					["blood-grape"] = {},
 					["blood-grape-vibrant"] = {},
@@ -61,10 +47,17 @@ return {
 					["coral-stunted-grey"] = {},
 					["coral-water"] = {},
 					["curly-root-grey"] = {},
+					["demolisher-corpse"] = {},
 					["fuchsia-pita"] = {},
 					["fulgoran-gravewort"] = {},
 					["fulgoran-ruin"] = {},
 					["fulgora-rock"] = {},
+					["fulgora-ruin-flooded"] = {
+						["*"] = {},
+						["big"] = {},
+						["medium"] = {},
+						["small"] = {}
+					},
 					["fulgurite"] = {},
 					["gleba-cliff-roots"] = {},
 					["gleba-cliff-roots-orange"] = {},
@@ -79,14 +72,12 @@ return {
 					["honeycomb-fungus"] = {},
 					["honeycomb-fungus-1x1"] = {},
 					["honeycomb-fungus-decayed"] = {},
-					["huge-volcanic-rock"] = {},
 					["lithium-iceberg-big"] = {},
 					["lithium-iceberg-huge"] = {},
 					["lithium-iceberg-medium"] = {},
 					["lithium-iceberg-small"] = {},
 					["lithium-iceberg-tiny"] = {},
 					["matches-small"] = {},
-					["medium-volcanic-rock"] = {},
 					["mycelium"] = {},
 					["nerve-roots"] = {},
 					["nerve-roots-veins"] = {},
@@ -114,6 +105,7 @@ return {
 					["vulcanus-crater"] = {},
 					["vulcanus-dune-decal"] = {},
 					["vulcanus-relief-decal"] = {},
+					["vulcanus-rocks"] = {},
 					["vulcanus-rock-decal"] = {},
 					["vulcanus-sand-decal"] = {},
 					["white-carpet-grass"] = {},

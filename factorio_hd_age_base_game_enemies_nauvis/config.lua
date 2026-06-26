@@ -1,10 +1,4 @@
-local exclude = {
-	"*shadow*",
-	"*reflection*",
-	"*visualisation*",
-	"*worm-attack*",
-	"*biter-*"
-}
+local exclude = { "*shadow*" }
 
 local function add_disable_words(setting_name)
     local setting = settings.startup[setting_name]
@@ -42,9 +36,19 @@ return {
 				entity = {
 					["acid-splash"] = {},
 					["acid-sticker"] = {},
-					["biter"] = {},
+					["biter"] = {
+						["blood-puddle-var-main.png"] = {},
+						["gut_particles.png"] = {}
+					},
 					["spawner"] = {},
-					["worm"] = {}
+					["worm"] = {
+						["worm-decay-*"] = {},
+						["worm-die-*"] = {},
+						["worm-folded*"] = {},
+						["worm-hole-collapse.png"] = {},
+						["worm-prepared*"] = {},
+						["worm-preparing*"] = {}
+					}
 				}
 			}
 		}

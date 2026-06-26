@@ -3,6 +3,11 @@ Version: 2.1.0
 Date: ????
   Changes:
     - Added new transitions from Factorio 2.1
+    - Added Factorio 2.1 Stromatolite textures
+    - Added Factorio 2.1 Frozen textures
+    - Added Factorio 2.1 Tree-mounds textures
+    - Added Factorio 2.1 Planted-tree textures
+    - Optimized config.lua
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2
 Date: 2026-06-04

@@ -1,25 +1,19 @@
-local exclude = {
-	"*shadow*",
-	"*reflection*",
-	"*visualization*",
-	"smoke.png",
-	"*laser-ground-light*"
-}
+local exclude = { "*shadow*" }
 
 local function add_disable_words(setting_name)
-    local setting = settings.startup[setting_name]
-    if not setting then
-        return
-    end
+	local setting = settings.startup[setting_name]
+	if not setting then
+		return
+	end
 
-    local value = setting.value
-    if type(value) ~= "string" or value == "" then
-        return
-    end
+	local value = setting.value
+	if type(value) ~= "string" or value == "" then
+		return
+	end
 
-    for word in string.gmatch(value, "[^,%s]+") do
-        table.insert(exclude, "*" .. word .. "*")
-    end
+	for word in string.gmatch(value, "[^,%s]+") do
+		table.insert(exclude, "*" .. word .. "*")
+	end
 end
 
 add_disable_words("f_hd_a_bg_m_disable_string")
@@ -34,7 +28,10 @@ return {
 		base = {
 			graphics = {
 				entity = {
-					["artillery-turret"] = { ["*"] = {}, ["remnants"] = {} },
+					["artillery-turret"] = {
+						["artillery-turret-base.png"] = {},
+						["remnants"] = {}
+					},
 					["artillery-wagon"] = { ["remnants"] = {} },
 					["beam"] = {},
 					["bigass-explosion"] = {},
@@ -49,15 +46,29 @@ return {
 					["flamethrower-turret"] = { ["*"] = {}, ["remnants"] = { ["*"] = {}, ["mask"] = {} } },
 					["gate"] = { ["*"] = {}, ["remnants"] = {} },
 					["grenade"] = {},
-					["gun-turret"] = { ["*"] = {}, ["remnants"] = { ["*"] = {}, ["mask"] = {} } },
+					["gun-turret"] = {
+						["gun-turret-base*"] = {},
+						["gun-turret-raising*"] = {},
+						["gun-turret-shooting-*"] = {},
+						["remnants"] = { ["*"] = {}, ["mask"] = {} }
+					},
 					["land-mine"] = { ["*"] = {}, ["remnants"] = {} },
-					["laser-turret"] = { ["*"] = {}, ["remnants"] = { ["*"] = {}, ["mask"] = {} } },
+					["laser-turret"] = {
+						["laser-body*"] = {},
+						["laser-end*"] = {},
+						["laser-turret-base.png"] = {},
+						["laser-turret-raising*"] = {},
+						["laser-turret-shooting*"] = {},
+						["remnants"] = { ["*"] = {}, ["mask"] = {} }
+					},
 					["poison-capsule"] = {},
 					["radar"] = { ["*"] = {}, ["remnants"] = {} },
 					["slowdown-capsule"] = {},
 					["slowdown-sticker"] = {},
 					["small-explosion"] = {},
-					["smoke"] = {},
+					["smoke"] = {
+						["nuke-shockwave-*"] = {}
+					},
 					["wall"] = { ["*"] = {}, ["remnants"] = {} }
 				}
 			}

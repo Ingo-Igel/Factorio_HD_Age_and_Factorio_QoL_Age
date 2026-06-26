@@ -2,6 +2,8 @@
 Version: 2.0.2
 Date: ????
   Changes:
+    - Added Factorio 2.1 Flamethrower-turret textures
+    - Optimized config.lua
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: 2026-06-04

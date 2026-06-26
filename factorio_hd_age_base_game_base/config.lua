@@ -1,17 +1,6 @@
 local exclude = {
 	"*shadow*",
-	"*reflection*",
-	"*visualisation*",
-	"*03-rocket*",
-	"red-light.png",
-	"nuke-shockwave-*",
-	"*jet*",
-	"*oil-smoke*",
-	"*rocket-smoke*",
-	"*08-rocket-silo-arms-right*",
-	"*footprints*",
-	"*-mask*",
-	"*effect_map*"
+	"*reflection*"
 }
 
 local function add_disable_words(setting_name)
@@ -46,7 +35,15 @@ return {
 		base = {
 			graphics = {
 				entity = {
-					["character"] = {},
+					["character"] = {
+						["level1_dead.png"] = {},
+						["level1_dead_mask.png"] = {},
+						["level1_idle_*"] = {},
+						["level1_mining_*"] = {},
+						["level1_running_*"] = {},
+						["level2addon_*"] = {},
+						["level3addon_*"] = {},
+					},
 					["coal"] = {},
 					["compilatron"] = {},
 					["copper-ore"] = {},
@@ -55,7 +52,22 @@ return {
 					["crude-oil"] = {},
 					["iron-ore"] = {},
 					["remnants"] = {},
-					["rocket-silo"] = { ["*"] = {}, ["15-remnants"] = {} },
+					["rocket-silo"] = {
+						["01-rocket-silo-*"] = {},
+						["*-door-*"] = {},
+						["06-rocket-silo.png"] = {},
+						["12-rocket-smoke.png"] = {},
+						["13-rocket-silo-arms-front.png"] = {},
+						["14-rocket-silo-front.png"] = {},
+						["15-rocket-silo-turbine.png"] = {},
+						["crafting*"] = {},
+						["engine.png"] = {},
+						["filter.png"] = {},
+						["roboport-door.png"] = {},
+						["rocket-static-*"] = {},
+						["steam-*"] = {},
+						["15-remnants"] = {}
+					},
 					["scorchmark"] = {},
 					["stone"] = {},
 					["tree"] = {

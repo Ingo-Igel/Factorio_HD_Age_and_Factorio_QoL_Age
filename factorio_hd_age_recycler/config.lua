@@ -1,6 +1,5 @@
 local exclude = {
 	"*shadow*",
-	"*smoke*",
 	"*reflection*"
 }
 

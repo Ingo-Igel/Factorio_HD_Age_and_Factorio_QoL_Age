@@ -1,7 +1,4 @@
-local exclude = {
-	"*shadow*",
-	"*mask*"
-}
+local exclude = { "*shadow*" }
 
 local function add_disable_words(setting_name)
     local setting = settings.startup[setting_name]

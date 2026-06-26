@@ -1,8 +1,4 @@
-local exclude = {
-	"*shadow*",
-	"*reflection*",
-	"*visualisation*"
-}
+local exclude = { "*shadow*" }
 
 local function add_disable_words(setting_name)
     local setting = settings.startup[setting_name]
@@ -33,7 +29,7 @@ return {
 			graphics = {
 				entity = {
 					["cargo-wagon"] = {
-						["*door*"] = {},
+						["cargo-wagon-door-*"] = {},
 						["remnants"] = {}
 					},
 					["fluid-wagon"] = { ["remnants"] = {} },
@@ -41,7 +37,9 @@ return {
 						["remnants"] = { ["*"] = {}, ["mask"] = {} }
 					},
 					["rails"] = {
-						["rail"] = { ["*endings*"] = {} }
+						["rail"] = {
+							["rail-endings*"] = {}
+						 }
 					}
 				}
 			}

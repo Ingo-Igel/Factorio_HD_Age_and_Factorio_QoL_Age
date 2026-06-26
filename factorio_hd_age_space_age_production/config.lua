@@ -1,9 +1,6 @@
 local exclude = {
 	"*shadow*",
-	"*reflection*",
-	"*visualization*",
-	"*particles*",
-	"*dust*"
+	"*reflection*"
 }
 
 local function add_disable_words(setting_name)
@@ -35,9 +32,8 @@ return {
 			graphics = {
 				entity = {
 					["agricultural-tower"] = {
-						["agricultural-tower-base.png"] = {},
-						["agricultural-tower-base-light.png"] = {},
-						["agricultural-tower-base-plant-mask.png"] = {},
+						["agricultural-tower-anim.png"] = {},
+						["agricultural-tower-base*"] = {},
 						["agricultural-tower-crane-3.png"] = {},
 						["agricultural-tower-crane-4.png"] = {},
 						["agricultural-tower-crane-6.png"] = {},
@@ -46,9 +42,18 @@ return {
 						["agricultural-tower-crane-10.png"] = {},
 						["agricultural-tower-remnants.png"] = {}
 					},
-					["asteroid-collector"] = {},
+					["asteroid-collector"] = {
+						["asteroid-collector-bottom.png"] = {},
+						["asteroid-collector-head.png"] = {},
+						["asteroid-collector-head-top.png"] = {},
+						["asteroid-collector-link.png"] = {},
+						["asteroid-collector-middle.png"] = {},
+						["asteroid-collector-remnants.png"] = {},
+						["asteroid-collector-status-lamp.png"] = {},
+						["asteroid-collector-top-*"] = {}
+					},
 					["big-mining-drill"] = {
-						["*"] = {},
+						["big-mining-drill-drill*"] = {},
 						["East"] = {},
 						["North"] = {},
 						["remnants"] = {},

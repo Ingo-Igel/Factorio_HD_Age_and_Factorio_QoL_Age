@@ -1,4 +1,4 @@
-local exclude = { "*shadow*" }
+local exclude = { }
 
 local function add_disable_words(setting_name)
     local setting = settings.startup[setting_name]
@@ -29,8 +29,13 @@ return {
 			graphics = {
 				entity = {
 					["gleba-spawner"] = {
-						["*"] = {},
-						["small"] = {}
+						["gleba-spawner-corpse.png"] = {},
+						["spawner-patch-*"] = {},
+						["spawner-upper-*"] = {},
+						["small"] = {
+							["spawner-patch-small-*"] = {},
+							["spawner-upper-small-*"] = {}
+						}
 					}
 				}
 			}

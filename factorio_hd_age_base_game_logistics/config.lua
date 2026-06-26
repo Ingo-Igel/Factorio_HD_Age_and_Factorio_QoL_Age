@@ -1,10 +1,6 @@
 local exclude = {
 	"*shadow*",
-	"*reflection*",
-	"*visualization.png",
-	"fluid-background.png",
-	"*combinator-LED*",
-	"*pod-thruster*"
+	"*reflection*"
 }
 
 local function add_disable_words(setting_name)
@@ -45,9 +41,17 @@ return {
 					["cargo-hubs"] = {
 						["connections"] = {},
 						["hatches"] = {},
-						["hubs"] = {}
+						["hubs"] = {
+							["planet-hub-*"] = {}
+						}
 					},
-					["cargo-pod"] = {},
+					["cargo-pod"] = {
+						["pod-corpse.png"] = {},
+						["pod-death.png"] = {},
+						["pod-landing.png"] = {},
+						["pod-open*"] = {},
+						["pod-static-*"] = {}
+					},
 					["circuit-connector"] = {},
 					["cliff-explosives"] = {},
 					["combinator"] = {
@@ -79,9 +83,21 @@ return {
 					["long-handed-inserter"] = { ["*"] = {}, ["remnants"] = {} },
 					["market"] = {},
 					["medium-electric-pole"] = { ["*"] = {}, ["remnants"] = {} },
-					["pipe"] = { ["*"] = {}, ["remnants"] = {} },
+					["pipe"] = {
+						["fluid-flow-*"] = {},
+						["pipe-corner-*"] = {},
+						["pipe-cross.png"] = {},
+						["pipe-ending-*"] = {},
+						["*-window-background.png"] = {},
+						["pipe-straight-*"] = {},
+						["pipe-t-*"] = {},
+						["remnants"] = {}
+					},
 					["pipe-covers"] = {},
-					["pipe-to-ground"] = { ["*"] = {}, ["remnants"] = {} },
+					["pipe-to-ground"] = {
+						["pipe-to-ground-*"] = {},
+						["remnants"] = {}
+					},
 					["power-switch"] = { ["*"] = {}, ["remnants"] = {} },
 					["programmable-speaker"] = { ["*"] = {}, ["remnants"] = {} },
 					["pump"] = {
@@ -92,7 +108,10 @@ return {
 					["rail-chain-signal"] = { ["*"] = {}, ["remnants"] = {} },
 					["rail-signal"] = { ["*"] = {}, ["remnants"] = {} },
 					["roboport"] = { ["*"] = {}, ["remnants"] = {} },
-					["small-electric-pole"] = { ["*"] = {}, ["remnants"] = {} },
+					["small-electric-pole"] = {
+						["small-electric-pole.png"] = {},
+						["remnants"] = {}
+					},
 					["small-lamp"] = { ["*"] = {}, ["remnants"] = {} },
 					["spidertron"] = {
 						["legs"] = {},
@@ -101,7 +120,11 @@ return {
 					},
 					["splitter"] = { ["*"] = {}, ["remnants"] = {} },
 					["steel-chest"] = { ["*"] = {}, ["remnants"] = {} },
-					["storage-tank"] = { ["*"] = {}, ["remnants"] = {} },
+					["storage-tank"] = {
+						["storage-tank.png"] = {},
+						["window-background.png"] = {},
+						["remnants"] = {}
+					},
 					["substation"] = { ["*"] = {}, ["remnants"] = {} },
 					["tank"] = {
 						["*"] = {},

@@ -1,7 +1,4 @@
-local exclude = {
-	"*shadow*",
-	"*reflections*"
-}
+local exclude = { "*shadow*" }
 
 local function add_disable_words(setting_name)
     local setting = settings.startup[setting_name]
@@ -32,8 +29,14 @@ return {
 			graphics = {
 				entity = {
 					["cargo-hubs"] = {
-						["bays"] = {},
+						["bays"] = {
+							["planet-bay-remnants.png"] = {},
+							["planet-cargo-bay-3.png"] = {},
+							["platform-cargo-bay-3.png"] = {},
+							["shared-cargo-bay-*"] = {}
+						},
 						["connections"] = {},
+						["extractor"] = {},
 						["hatches"] = {},
 						["hubs"] = {}
 					},
