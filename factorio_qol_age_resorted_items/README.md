@@ -50,7 +50,7 @@ Due to the file size limitations, the textures are divided thematically into sev
 * [Modpack](https://mods.factorio.com/mod/factorio_hd_age_modpack) +7,6 GB of VRAM | at least 13 GB of VRAM is recommended
   or [Modpack (all optional)](https://mods.factorio.com/mod/factorio_hd_age_modpack_optional) Additional VRAM consumption depends on the enabled mods.
     * [Elevated Rails](https://mods.factorio.com/mod/factorio_hd_age_elevated_rails) +450 MB of VRAM
-    * [Quality](https://mods.factorio.com/mod/factorio_hd_age_quality) +170 MB of VRAM
+    * [Recycler](https://mods.factorio.com/mod/factorio_hd_age_recycler) +170 MB of VRAM
     * [Space Age - Base](https://mods.factorio.com/mod/factorio_hd_age_space_age_base) +680 MB of VRAM
     * [Space Age - Decorative](https://mods.factorio.com/mod/factorio_hd_age_space_age_decorative) +450 MB of VRAM
     * [Space Age - Enemies Gleba](https://mods.factorio.com/mod/factorio_hd_age_space_age_enemies_gleba) +470 MB of VRAM
