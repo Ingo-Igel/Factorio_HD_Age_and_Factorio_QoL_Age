@@ -1,6 +1,6 @@
 {
 	"name": "factorio_hd_age_modpack_optional",
-	"version": "2.0.1",
+	"version": "2.1.0",
 	"title": "Factorio HD Age: Modpack (all optional)",
 	"author": "Ingo_Igel",
 	"homepage": "https://codeberg.org/Ingo_Igel/Factorio_HD_Age_and_Factorio_QoL_Age",
@@ -10,7 +10,7 @@
 		"space-age >=2.0.23",
 		"factorio_hd_age_modpack_base_game_optional >= 1.0.0",
 		"? factorio_hd_age_elevated_rails >= 0.1.0",
-		"? factorio_hd_age_quality >= 0.1.0",
+		"? factorio_hd_age_recycler >= 2.1.0",
 		"? factorio_hd_age_space_age_base >= 0.1.0",
 		"? factorio_hd_age_space_age_decorative >= 0.1.0",
 		"? factorio_hd_age_space_age_enemies_gleba >= 0.1.0",
