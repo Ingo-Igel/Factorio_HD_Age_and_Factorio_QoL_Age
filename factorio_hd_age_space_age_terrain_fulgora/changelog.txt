@@ -5,6 +5,7 @@ Date: ????
     - Added new transitions from Factorio 2.1
     - Added deep-oil HD textures
     - Added Factorio 2.1 Oil-sand textures
+    - Updated textures that, for some reason, I had missed when they were updated.
     - Optimized config.lua
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1

@@ -5,6 +5,7 @@ Date: ????
     - Added new transitions from Factorio 2.1
     - Added Factorio 2.1 Rocket-silo textures
     - Deleted obsolete textures
+    - Updated textures that, for some reason, I had missed when they were updated.
     - Optimized config.lua
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1

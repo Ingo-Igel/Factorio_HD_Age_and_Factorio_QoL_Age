@@ -4,6 +4,7 @@ Date: ????
   Changes:
     - Added Factorio 2.1 Stopmer-head-main textures
     - Added Factorio 2.1 Gleba-spawner-corpse textures
+    - Updated textures that, for some reason, I had missed when they were updated.
     - Optimized config.lua
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1

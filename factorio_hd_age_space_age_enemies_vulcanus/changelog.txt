@@ -2,6 +2,7 @@
 Version: 2.0.2
 Date: ????
   Changes:
+    - Updated textures that, for some reason, I had missed when they were updated.
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: 2026-06-04

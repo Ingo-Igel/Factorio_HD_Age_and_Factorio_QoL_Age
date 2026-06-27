@@ -5,6 +5,7 @@ Date: ????
     - Added Factorio 2.1 Agricultural-tower textures
     - Added Factorio 2.1 Asteroid-collector textures
     - Added Factorio 2.1 Foundry textures
+    - Updated textures that, for some reason, I had missed when they were updated.
     - Optimized config.lua
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1

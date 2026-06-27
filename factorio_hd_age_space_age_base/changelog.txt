@@ -8,6 +8,7 @@ Date: ????
     - Added Factorio 2.1 Tree-mounds textures
     - Added Factorio 2.1 Planted-tree textures
     - Deleted obsolete textures
+    - Updated textures that, for some reason, I had missed when they were updated.
     - Optimized config.lua
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2
