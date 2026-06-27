@@ -2,6 +2,7 @@
 Version: 2.1.1
 Date: ????
   Changes:
+    - Updated textures that, for some reason, I had missed when they were updated.
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.0
 Date: 2026-06-26
