@@ -8,6 +8,7 @@ Date: ????
     - Deleted obsolete textures
     - Updated textures that, for some reason, I had missed when they were updated.
     - Optimized config.lua
+    - Fixed storage-tank and pipe fluid animation
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: 2026-06-04

@@ -83,7 +83,6 @@ return {
 					["market"] = {},
 					["medium-electric-pole"] = { ["*"] = {}, ["remnants"] = {} },
 					["pipe"] = {
-						["fluid-flow-*"] = {},
 						["pipe-corner-*"] = {},
 						["pipe-cross.png"] = {},
 						["pipe-ending-*"] = {},
