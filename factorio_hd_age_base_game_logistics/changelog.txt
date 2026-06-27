@@ -5,6 +5,7 @@ Date: ????
     - Added Factorio 2.1 Pump textures
     - Added Factorio 2.1 Combinator-displays textures
     - Added Factorio 2.1 Cargo-hubs Connections textures
+    - Deleted obsolete textures
     - Optimized config.lua
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1

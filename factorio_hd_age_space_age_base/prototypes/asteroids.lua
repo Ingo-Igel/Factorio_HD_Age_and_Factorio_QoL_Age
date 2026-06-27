@@ -80,7 +80,7 @@ for count = 1, 6 do
 end
 
 -- carbonic
-for count = 1, 7 do
+for count = 1, 6 do
 	data.raw["asteroid-chunk"]["carbonic-asteroid-chunk"].graphics_set.variations[count] = asteroid_variation("carbonic",
 		"0" .. count, 1)
 end

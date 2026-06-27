@@ -63,7 +63,6 @@ return {
 							["selector"] = {}
 						}
 					},
-					["compilatron-chest"] = {},
 					["construction-robot"] = { ["*"] = {}, ["remnants"] = {} },
 					["display-panel"] = {},
 					["express-splitter"] = { ["*"] = {}, ["remnants"] = {} },

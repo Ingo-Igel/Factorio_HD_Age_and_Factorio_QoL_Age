@@ -1,6 +1,7 @@
 local exclude = {
 	"*shadow*",
-	"*reflection*"
+	"*reflection*",
+	"*-mask.png"
 }
 
 local function add_disable_words(setting_name)
@@ -45,7 +46,6 @@ return {
 						["level3addon_*"] = {},
 					},
 					["coal"] = {},
-					["compilatron"] = {},
 					["copper-ore"] = {},
 					["crash-site-chests"] = {},
 					["crash-site-spaceship"] = {},
