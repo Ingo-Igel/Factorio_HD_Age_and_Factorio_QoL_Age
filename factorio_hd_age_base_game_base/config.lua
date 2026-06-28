@@ -56,6 +56,7 @@ return {
 						["01-rocket-silo-*"] = {},
 						["*-door-*"] = {},
 						["06-rocket-silo.png"] = {},
+						["08-rocket-silo-arms-back.png"] = {},
 						["12-rocket-smoke.png"] = {},
 						["13-rocket-silo-arms-front.png"] = {},
 						["14-rocket-silo-front.png"] = {},
