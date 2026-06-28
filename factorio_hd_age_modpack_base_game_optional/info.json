@@ -1,21 +1,21 @@
 {
 	"name": "factorio_hd_age_modpack_base_game_optional",
-	"version": "2.0.1",
+	"version": "2.1.0",
 	"title": "Factorio HD Age: Modpack - Base Game (all optional)",
 	"author": "Ingo_Igel",
 	"homepage": "https://codeberg.org/Ingo_Igel/Factorio_HD_Age_and_Factorio_QoL_Age",
-	"factorio_version": "2.0",
+	"factorio_version": "2.1",
 	"dependencies": [
-		"base >= 2.0.23",
-		"? factorio_hd_age_base_game_base >= 1.0.0",
-		"? factorio_hd_age_base_game_decorative >= 1.0.0",
-		"? factorio_hd_age_base_game_enemies_nauvis >= 1.0.0",
+		"base >= 2.1",
+		"? factorio_hd_age_base_game_base >= 2.1",
+		"? factorio_hd_age_base_game_decorative >= 2.1",
+		"? factorio_hd_age_base_game_enemies_nauvis >= 2.1",
 		"? factorio_hd_age_base_game_graphics_addon >= 1.0.0",
-		"? factorio_hd_age_base_game_logistics >= 1.0.0",
-		"? factorio_hd_age_base_game_military >= 1.0.0",
-		"? factorio_hd_age_base_game_production >= 1.0.0",
-		"? factorio_hd_age_base_game_railway >= 1.0.0",
-		"? factorio_hd_age_base_game_terrain_nauvis >= 1.0.0"
+		"? factorio_hd_age_base_game_logistics >= 2.1",
+		"? factorio_hd_age_base_game_military >= 2.1",
+		"? factorio_hd_age_base_game_production >= 2.1",
+		"? factorio_hd_age_base_game_railway >= 2.1",
+		"? factorio_hd_age_base_game_terrain_nauvis >= 2.1"
 	],
 	"description": "This modpack bundles all of the Factorio HD Age mods for the Base Game.\nIt doesn't contain any content itself. It only references to the other Factorio HD Age mods as optional dependencies.",
 	"package": {
