@@ -4,7 +4,7 @@ if not settings.startup["f_hd_a_bg_b_disable_transitions"].value then
 	function tile_spritesheet_layout_hd.concrete_layout(refined, out_of_map, transition_to_transition)
 		return
 		{
-			scale                    = 0.5,
+			scale                    = 0.25,
 			inner_corner_count       = refined and 8 or (transition_to_transition and 3 or 16),
 			outer_corner_count       = refined and 4 or (transition_to_transition and 3 or 8),
 			side_count               = refined and 8 or (transition_to_transition and 3 or 16),

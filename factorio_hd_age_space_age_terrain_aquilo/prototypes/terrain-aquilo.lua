@@ -37,17 +37,17 @@ local function tile_variations_template_hd(high_res_picture, high_res_transition
 		result.transition = {
 			spritesheet = high_res_transition_mask,
 			layout = {
-				scale = 0.5,
+				scale = 0.25,
 				count = (options and options.mask_variations) or 8,
 				double_side_count = 0,
 				u_transition_count = 1,
 				o_transition_count = 1,
 				u_transition_line_length = 1,
 				o_transition_line_length = 2,
-				outer_corner_x = 576,
-				side_x = 1152,
-				u_transition_x = 1728,
-				o_transition_x = 2304,
+				outer_corner_x = 576 * 2,
+				side_x = 1152 * 2,
+				u_transition_x = 1728 * 2,
+				o_transition_x = 2304 * 2,
 				mask = { y_offset = 0 }
 			}
 		}
@@ -114,9 +114,9 @@ local ice_transitions_between_transitions = {
     },
     water_patch = {
       filename = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/water-transitions/ice-patch.png",
-      scale = 0.5,
-      width = 64,
-      height = 64
+      scale = 0.25,
+      width = 64 * 2,
+      height = 64 * 2
     }
   },
   {

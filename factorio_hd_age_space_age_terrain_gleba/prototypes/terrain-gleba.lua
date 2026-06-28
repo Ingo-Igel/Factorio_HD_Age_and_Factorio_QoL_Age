@@ -105,7 +105,7 @@ local function lowland_tile_variations_template_with_transitions_and_puddle_tran
 		{
 			spritesheet              =
 			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/effect-maps/water-gleba-mask.png",
-			scale                    = 0.5,
+			scale                    = 0.25,
 			x                        = 0,
 			inner_corner_count       = 8,
 			outer_corner_count       = 8,
@@ -132,7 +132,7 @@ function tile_variations_template_with_transitions_and_effect_map_hd(spritesheet
 	if result.transition then
 		result.transition.effect_map_layout = {
 			spritesheet              = effect_map_spritesheet,
-			scale                    = 0.5,
+			scale                    = 0.25,
 			x                        = 0,
 			inner_corner_count       = 8,
 			outer_corner_count       = 8,
