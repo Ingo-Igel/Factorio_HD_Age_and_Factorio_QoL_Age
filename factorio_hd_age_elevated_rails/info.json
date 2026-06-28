@@ -4,10 +4,10 @@
 	"title": "Factorio HD Age: Elevated Rails",
 	"author": "Ingo_Igel",
 	"homepage": "https://codeberg.org/Ingo_Igel/Factorio_HD_Age_and_Factorio_QoL_Age",
-	"factorio_version": "2.0",
+	"factorio_version": "2.1",
 	"dependencies": [
-		"base >= 2.0",
-		"elevated-rails >=2.0"
+		"base >= 2.1",
+		"elevated-rails >=2.1"
 	],
 	"rail_bridges_required": true,
 	"description": "This mod contains and integrates HD textures for the elevated rails from the Space Age DLC.",
