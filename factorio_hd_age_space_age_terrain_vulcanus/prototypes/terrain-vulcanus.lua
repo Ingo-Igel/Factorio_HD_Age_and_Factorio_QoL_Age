@@ -95,17 +95,17 @@ local function tile_variations_template_hd_extra(high_res_picture, high_res_tran
 		result.transition = {
 			spritesheet = high_res_transition_mask,
 			layout = {
-				scale = 0.25,
+				scale = 0.5,
 				count = (options and options.mask_variations) or 8,
 				double_side_count = 0,
 				u_transition_count = 1,
 				o_transition_count = 1,
 				u_transition_line_length = 1,
 				o_transition_line_length = 2,
-				outer_corner_x = 576 * 2,
-				side_x = 1152 * 2,
-				u_transition_x = 1728 * 2,
-				o_transition_x = 2304 * 2,
+				outer_corner_x = 576,
+				side_x = 1152,
+				u_transition_x = 1728,
+				o_transition_x = 2304,
 				mask = { y_offset = 0 }
 			}
 		}
