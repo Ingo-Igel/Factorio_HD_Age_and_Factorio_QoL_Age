@@ -43,7 +43,7 @@ return {
 					["craters"] = {
 						["vulcanus"] = {
 							["vulcanus-crater-section-lower-*"] = {},
-							["vulcanus-crater-section-*"] = {}
+							["vulcanus-crater-section-upper*"] = {}
 						}
 					},
 					["vulcanus"] = {
