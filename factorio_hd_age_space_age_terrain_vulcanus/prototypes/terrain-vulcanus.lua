@@ -355,14 +355,14 @@ local lava_to_out_of_map_transition = {
 	layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1,
 	background_enabled = false,
 	mask_layout = {
-		spritesheet = "__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/masks/lava-edge-transition.png",
+		spritesheet = "__space-age__/graphics/terrain/masks/lava-edge-transition.png",
 		count = 1,
 		double_side_count = 0,
-		scale = 0.25,
-		outer_corner_x = 64 * 2,
-		side_x = 128 * 2,
-		u_transition_x = 192 * 2,
-		o_transition_x = 256 * 2,
+		scale = 0.5,
+		outer_corner_x = 64,
+		side_x = 128,
+		u_transition_x = 192,
+		o_transition_x = 256,
 		y = 0
 	}
 }

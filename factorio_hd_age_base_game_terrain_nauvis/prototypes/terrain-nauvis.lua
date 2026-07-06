@@ -37,17 +37,17 @@ local function tile_variations_template_hd(high_res_picture, high_res_transition
 		result.transition = {
 			spritesheet = high_res_transition_mask,
 			layout = {
-				scale = 0.25,
+				scale = 0.5,
 				count = (options and options.mask_variations) or 8,
 				double_side_count = 0,
 				u_transition_count = 1,
 				o_transition_count = 1,
 				u_transition_line_length = 1,
 				o_transition_line_length = 2,
-				outer_corner_x = 576 * 2,
-				side_x = 1152 * 2,
-				u_transition_x = 1728 * 2,
-				o_transition_x = 2304 * 2,
+				outer_corner_x = 576,
+				side_x = 1152,
+				u_transition_x = 1728,
+				o_transition_x = 2304,
 				mask = { y_offset = 0 }
 			}
 		}
@@ -99,8 +99,8 @@ tile_spritesheet_layout_hd.transition_3_3_3_1_0_only_u_tall = {
 
 tile_spritesheet_layout_hd.simple_3_3_3_1_0_three_way_edge_mask = {
 	spritesheet =
-	"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/masks/sand-water-edge-3-way-transition.png",
-	scale = 0.25,
+	"__base__/graphics/terrain/masks/sand-water-edge-3-way-transition.png",
+	scale = 0.5,
 	tile_height = 1,
 	x = 0,
 	count = 0,
@@ -110,10 +110,10 @@ tile_spritesheet_layout_hd.simple_3_3_3_1_0_three_way_edge_mask = {
 	u_transition_count = 1,
 	o_transition_count = 0,
 	inner_corner_y = 0,
-	outer_corner_y = 576 * 2,
-	side_y = 1152 * 2,
-	u_transition_y = 1728 * 2,
-	o_transition_y = 2304 * 2
+	outer_corner_y = 576,
+	side_y = 1152,
+	u_transition_y = 1728,
+	o_transition_y = 2304
 }
 
 tile_spritesheet_layout_hd.transition_4_4_8_1_1 = {
@@ -258,14 +258,14 @@ local water_to_out_of_map_transition = {
 	mask_enabled = true,
 	mask_layout = {
 		spritesheet =
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/masks/water-edge-transition.png",
+		"__base__/graphics/terrain/masks/water-edge-transition.png",
 		count = 1,
 		double_side_count = 0,
-		scale = 0.25,
-		outer_corner_x = 64 * 2,
-		side_x = 128 * 2,
-		u_transition_x = 192 * 2,
-		o_transition_x = 256 * 2,
+		scale = 0.5,
+		outer_corner_x = 64,
+		side_x = 128,
+		u_transition_x = 192,
+		o_transition_x = 256,
 		y = 0
 	}
 }
@@ -672,7 +672,7 @@ if not settings.startup["f_hd_a_bg_tn_disable_gras"].value then
 	data.raw["tile"]["grass-1"].transitions_between_transitions = grass_transitions_between_transitions
 	data.raw["tile"]["grass-1"].variants = tile_variations_template_hd(
 		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/grass-1.png",
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/masks/transition-3.png",
+		"__base__/graphics/terrain/masks/transition-3.png",
 		{
 			max_size = 4,
 			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
@@ -685,7 +685,7 @@ if not settings.startup["f_hd_a_bg_tn_disable_gras"].value then
 	data.raw["tile"]["grass-2"].transitions_between_transitions = grass_transitions_between_transitions
 	data.raw["tile"]["grass-2"].variants = tile_variations_template_hd(
 		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/grass-2.png",
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/masks/transition-3.png",
+		"__base__/graphics/terrain/masks/transition-3.png",
 		{
 			max_size = 4,
 			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
@@ -698,7 +698,7 @@ if not settings.startup["f_hd_a_bg_tn_disable_gras"].value then
 	data.raw["tile"]["grass-3"].transitions_between_transitions = grass_transitions_between_transitions
 	data.raw["tile"]["grass-3"].variants = tile_variations_template_hd(
 		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/grass-3.png",
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/masks/transition-3.png",
+		"__base__/graphics/terrain/masks/transition-3.png",
 		{
 			max_size = 4,
 			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
@@ -711,7 +711,7 @@ if not settings.startup["f_hd_a_bg_tn_disable_gras"].value then
 	data.raw["tile"]["grass-4"].transitions_between_transitions = grass_transitions_between_transitions
 	data.raw["tile"]["grass-4"].variants = tile_variations_template_hd(
 		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/grass-4.png",
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/masks/transition-3.png",
+		"__base__/graphics/terrain/masks/transition-3.png",
 		{
 			max_size = 4,
 			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
@@ -726,7 +726,7 @@ if not settings.startup["f_hd_a_bg_tn_disable_dirt"].value then
 	data.raw["tile"]["dry-dirt"].transitions_between_transitions = dry_dirt_transitions_between_transitions
 	data.raw["tile"]["dry-dirt"].variants = tile_variations_template_hd(
 		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/dry-dirt.png",
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/masks/transition-1.png",
+		"__base__/graphics/terrain/masks/transition-1.png",
 		{
 			max_size = 4,
 			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
@@ -739,7 +739,7 @@ if not settings.startup["f_hd_a_bg_tn_disable_dirt"].value then
 	data.raw["tile"]["dirt-1"].transitions_between_transitions = dry_dirt_transitions_between_transitions
 	data.raw["tile"]["dirt-1"].variants = tile_variations_template_hd(
 		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/dirt-1.png",
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/masks/transition-1.png",
+		"__base__/graphics/terrain/masks/transition-1.png",
 		{
 			max_size = 4,
 			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
@@ -752,7 +752,7 @@ if not settings.startup["f_hd_a_bg_tn_disable_dirt"].value then
 	data.raw["tile"]["dirt-2"].transitions_between_transitions = dry_dirt_transitions_between_transitions
 	data.raw["tile"]["dirt-2"].variants = tile_variations_template_hd(
 		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/dirt-2.png",
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/masks/transition-1.png",
+		"__base__/graphics/terrain/masks/transition-1.png",
 		{
 			max_size = 4,
 			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
@@ -765,7 +765,7 @@ if not settings.startup["f_hd_a_bg_tn_disable_dirt"].value then
 	data.raw["tile"]["dirt-3"].transitions_between_transitions = dry_dirt_transitions_between_transitions
 	data.raw["tile"]["dirt-3"].variants = tile_variations_template_hd(
 		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/dirt-3.png",
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/masks/transition-1.png",
+		"__base__/graphics/terrain/masks/transition-1.png",
 		{
 			max_size = 4,
 			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
@@ -778,7 +778,7 @@ if not settings.startup["f_hd_a_bg_tn_disable_dirt"].value then
 	data.raw["tile"]["dirt-4"].transitions_between_transitions = dark_dirt_transitions_between_transitions
 	data.raw["tile"]["dirt-4"].variants = tile_variations_template_hd(
 		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/dirt-4.png",
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/masks/transition-1.png",
+		"__base__/graphics/terrain/masks/transition-1.png",
 		{
 			max_size = 4,
 			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
@@ -791,7 +791,7 @@ if not settings.startup["f_hd_a_bg_tn_disable_dirt"].value then
 	data.raw["tile"]["dirt-5"].transitions_between_transitions = dark_dirt_transitions_between_transitions
 	data.raw["tile"]["dirt-5"].variants = tile_variations_template_hd(
 		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/dirt-5.png",
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/masks/transition-1.png",
+		"__base__/graphics/terrain/masks/transition-1.png",
 		{
 			max_size = 4,
 			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
@@ -804,7 +804,7 @@ if not settings.startup["f_hd_a_bg_tn_disable_dirt"].value then
 	data.raw["tile"]["dirt-6"].transitions_between_transitions = dark_dirt_transitions_between_transitions
 	data.raw["tile"]["dirt-6"].variants = tile_variations_template_hd(
 		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/dirt-6.png",
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/masks/transition-1.png",
+		"__base__/graphics/terrain/masks/transition-1.png",
 		{
 			max_size = 4,
 			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
@@ -817,7 +817,7 @@ if not settings.startup["f_hd_a_bg_tn_disable_dirt"].value then
 	data.raw["tile"]["dirt-7"].transitions_between_transitions = dark_dirt_transitions_between_transitions
 	data.raw["tile"]["dirt-7"].variants = tile_variations_template_hd(
 		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/dirt-7.png",
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/masks/transition-1.png",
+		"__base__/graphics/terrain/masks/transition-1.png",
 		{
 			max_size = 4,
 			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
@@ -832,7 +832,7 @@ if not settings.startup["f_hd_a_bg_tn_disable_sand"].value then
 	data.raw["tile"]["sand-1"].transitions_between_transitions = sand_transitions_between_transitions
 	data.raw["tile"]["sand-1"].variants = tile_variations_template_hd(
 		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/sand-1.png",
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/masks/transition-4.png",
+		"__base__/graphics/terrain/masks/transition-4.png",
 		{
 			max_size = 8,
 			[2] = { probability = 0.39, weights = { 0.025, 0.010, 0.013, 0.025, 0.025, 0.100, 0.100, 0.005, 0.010, 0.010, 0.005, 0.005, 0.001, 0.015, 0.020, 0.020 } },
@@ -845,7 +845,7 @@ if not settings.startup["f_hd_a_bg_tn_disable_sand"].value then
 	data.raw["tile"]["sand-2"].transitions_between_transitions = sand_transitions_between_transitions
 	data.raw["tile"]["sand-2"].variants = tile_variations_template_hd(
 		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/sand-2.png",
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/masks/transition-4.png",
+		"__base__/graphics/terrain/masks/transition-4.png",
 		{
 			max_size = 8,
 			[2] = { probability = 0.39, weights = { 0.025, 0.010, 0.013, 0.025, 0.025, 0.100, 0.100, 0.005, 0.010, 0.010, 0.005, 0.005, 0.001, 0.015, 0.020, 0.020 } },
@@ -858,7 +858,7 @@ if not settings.startup["f_hd_a_bg_tn_disable_sand"].value then
 	data.raw["tile"]["sand-3"].transitions_between_transitions = sand_transitions_between_transitions
 	data.raw["tile"]["sand-3"].variants = tile_variations_template_hd(
 		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/sand-3.png",
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/masks/transition-4.png",
+		"__base__/graphics/terrain/masks/transition-4.png",
 		{
 			max_size = 4,
 			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
@@ -873,7 +873,7 @@ if not settings.startup["f_hd_a_bg_tn_disable_dessert"].value then
 	data.raw["tile"]["red-desert-0"].transitions_between_transitions = grass_transitions_between_transitions
 	data.raw["tile"]["red-desert-0"].variants = tile_variations_template_hd(
 		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/red-desert-0.png",
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/masks/transition-3.png",
+		"__base__/graphics/terrain/masks/transition-3.png",
 		{
 			max_size = 4,
 			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
@@ -886,7 +886,7 @@ if not settings.startup["f_hd_a_bg_tn_disable_dessert"].value then
 	data.raw["tile"]["red-desert-1"].transitions_between_transitions = dry_dirt_transitions_between_transitions
 	data.raw["tile"]["red-desert-1"].variants = tile_variations_template_hd(
 		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/red-desert-1.png",
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/masks/transition-1.png",
+		"__base__/graphics/terrain/masks/transition-1.png",
 		{
 			max_size = 4,
 			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
@@ -899,7 +899,7 @@ if not settings.startup["f_hd_a_bg_tn_disable_dessert"].value then
 	data.raw["tile"]["red-desert-2"].transitions_between_transitions = dry_dirt_transitions_between_transitions
 	data.raw["tile"]["red-desert-2"].variants = tile_variations_template_hd(
 		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/red-desert-2.png",
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/masks/transition-1.png",
+		"__base__/graphics/terrain/masks/transition-1.png",
 		{
 			max_size = 4,
 			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
@@ -913,7 +913,7 @@ if not settings.startup["f_hd_a_bg_tn_disable_dessert"].value then
 	data.raw["tile"]["red-desert-3"].transitions_between_transitions = dry_dirt_transitions_between_transitions
 	data.raw["tile"]["red-desert-3"].variants = tile_variations_template_hd(
 		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/red-desert-3.png",
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/masks/transition-1.png",
+		"__base__/graphics/terrain/masks/transition-1.png",
 		{
 			max_size = 4,
 			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
