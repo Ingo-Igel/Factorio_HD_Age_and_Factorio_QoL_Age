@@ -140,6 +140,28 @@ tile_spritesheet_layout_hd.transition_3_3_3_1_0_only_u_tall = {
 	background               = { x_offset = 1088 * 2 }
 }
 
+tile_spritesheet_layout_hd.transition_4_4_8_1_1 =
+{
+	scale                    = 0.25,
+	inner_corner_count       = 4,
+	outer_corner_count       = 4,
+	side_count               = 8,
+	u_transition_count       = 1,
+	o_transition_count       = 1,
+	inner_corner_y           = 0,
+	outer_corner_y           = 576 * 2,
+	side_y                   = 1152 * 2,
+	u_transition_y           = 1728 * 2,
+	o_transition_y           = 2304 * 2,
+	inner_corner_tile_height = 2,
+	outer_corner_tile_height = 2,
+	side_tile_height         = 2,
+	u_transition_tile_height = 2,
+	overlay                  = { x_offset = 0 },
+	mask                     = { x_offset = 2176 * 2 },
+	background               = { x_offset = 1088 * 2 }
+}
+
 tile_spritesheet_layout_hd.simple_white_mask = {
 	spritesheet = "__core__/graphics/white-square.png",
 	x = 0,
