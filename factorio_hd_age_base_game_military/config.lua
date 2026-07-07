@@ -67,9 +67,7 @@ return {
 					["slowdown-capsule"] = {},
 					["slowdown-sticker"] = {},
 					["small-explosion"] = {},
-					["smoke"] = {
-						["nuke-shockwave-*"] = {}
-					},
+					["smoke"] = {},
 					["wall"] = { ["*"] = {}, ["remnants"] = {} }
 				}
 			}
