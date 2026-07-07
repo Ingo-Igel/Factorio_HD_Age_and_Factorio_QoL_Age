@@ -1,4 +1,7 @@
-local exclude = { "*shadow*" }
+local exclude = {
+	"*shadow*",
+	"*reflection*"
+}
 
 local function add_disable_words(setting_name)
 	local setting = settings.startup[setting_name]
@@ -47,9 +50,7 @@ return {
 					["gate"] = { ["*"] = {}, ["remnants"] = {} },
 					["grenade"] = {},
 					["gun-turret"] = {
-						["gun-turret-base*"] = {},
-						["gun-turret-raising*"] = {},
-						["gun-turret-shooting-*"] = {},
+						["*"] = {},
 						["remnants"] = { ["*"] = {}, ["mask"] = {} }
 					},
 					["land-mine"] = { ["*"] = {}, ["remnants"] = {} },
