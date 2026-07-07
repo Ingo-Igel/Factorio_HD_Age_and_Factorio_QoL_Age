@@ -1,6 +1,7 @@
 local exclude = {
 	"*shadow*",
-	"*effect-map*"
+	"*effect-*",
+	"*-alpha.png"
 }
 
 local function add_disable_words(setting_name)
@@ -103,10 +104,10 @@ return {
 					},
 					["scrap"] = {},
 					["space-platform-build-anim"] = {},
-					["stromatolite"] = {
-						["copper"] = {},
-						["iron"] = {}
-					},
+					-- ["stromatolite"] = {
+					--	["copper"] = {},
+					--	["iron"] = {}
+					-- },
 					["sulfuric-acid-geyser"] = {
 						["sulfuric-acid-geyser.png"] = {}
 					},
