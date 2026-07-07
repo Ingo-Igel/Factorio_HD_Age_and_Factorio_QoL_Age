@@ -2,7 +2,7 @@ if not settings.startup["f_hd_a_sa_b_disable_asteroids"].value then
 	require("prototypes.asteroids")
 end
 
-if not settings.startup["f_hd_a_sa_b_disable_foundation_transitions"].value then
+if not settings.startup["f_hd_a_sa_b_disable_transitions"].value then
 	require("prototypes.transitions")
 end
 
