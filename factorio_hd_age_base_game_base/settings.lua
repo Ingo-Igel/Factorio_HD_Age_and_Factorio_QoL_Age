@@ -10,10 +10,18 @@ data:extend {
 	{
 		type = "bool-setting",
 		setting_type = "startup",
-		name = "f_hd_a_bg_b_disable_transitions",
+		name = "f_hd_a_bg_b_disable_water-transitions",
 		default_value = false,
 		forced_value = true,
 		order = "b"
+	},
+	{
+		type = "bool-setting",
+		setting_type = "startup",
+		name = "f_hd_a_bg_b_disable_out-of-map-transitions",
+		default_value = true,
+		forced_value = true,
+		order = "c"
 	},
 	{
 		type = "string-setting",
