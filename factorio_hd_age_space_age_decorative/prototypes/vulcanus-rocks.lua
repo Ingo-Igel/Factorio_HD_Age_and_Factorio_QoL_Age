@@ -1,4 +1,4 @@
-data.raw["simple-entity"]["medium-volcanic-rock"].pictures.layers = {
+data.raw["optimized-decorative"]["medium-volcanic-rock"].pictures.layers = {
 	util.sprite_load(
 		"__factorio_hd_age_space_age_decorative__/data/space-age/graphics/decorative/vulcanus-rocks/vulcanus-rock-medium",
 		{
