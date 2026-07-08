@@ -216,7 +216,7 @@ tile_spritesheet_layout_hd.transition_3_3_3_1_0 = {
 
 local lava_patch = {
 	filename =
-	"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/water-transitions/lava-patch.png",
+	"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/lava-transitions/lava-patch.png",
 	scale = 0.25,
 	width = 64 * 2,
 	height = 64 * 2
@@ -243,15 +243,15 @@ local lava_stone_transitions = {
 		to_tiles = lava_tile_type_names,
 		transition_group = lava_transition_group_id,
 		spritesheet =
-		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/water-transitions/lava-stone.png",
+		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/lava-transitions/lava-stone.png",
 		lightmap_layout = {
 			spritesheet =
-			"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/water-transitions/lava-stone-lightmap.png"
+			"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/lava-transitions/lava-stone-lightmap.png"
 		},
 		layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4,
 		effect_map_layout = {
 			spritesheet =
-			"__factorio_hd_age_space_age_terrain_vulcanus__/data/base/graphics/terrain/effect-maps/water-dirt-mask.png",
+			"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/effect-maps/lava-dirt-mask.png",
 			inner_corner_count = 8,
 			outer_corner_count = 8,
 			side_count = 8,
@@ -305,7 +305,7 @@ local lava_stone_transitions_between_transitions = {
 		transition_group1 = default_transition_group_id,
 		transition_group2 = lava_transition_group_id,
 		spritesheet =
-		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/water-transitions/lava-stone-transition.png",
+		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/lava-transitions/lava-stone-transition.png",
 		layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0,
 		effect_map_layout = {
 			spritesheet =
