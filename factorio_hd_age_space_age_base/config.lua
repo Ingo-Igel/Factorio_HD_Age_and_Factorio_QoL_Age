@@ -116,9 +116,12 @@ return {
 				},
 				terrain = {
 					["foundation"] = {
-						["foundation*"] = {
-							["foundation.png"] = {}
-						}
+						["foundation.png"] = {},
+						["foundation-inner-corner.png"] = {},
+						["foundation-o.png"] = {},
+						["foundation-outer-corner.png"] = {},
+						["foundation-side.png"] = {},
+						["foundation-u.png"] = {}
 					},
 					["space-platform"] = {
 						["space-platform-1x1.png"] = {},
