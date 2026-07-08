@@ -47,14 +47,11 @@ return {
 					["coral-stunted-grey"] = {},
 					["coral-water"] = {},
 					["curly-root-grey"] = {},
-					["demolisher-corpse"] = {},
 					["fuchsia-pita"] = {},
 					["fulgoran-gravewort"] = {},
 					["fulgoran-ruin"] = {},
 					["fulgora-rock"] = {},
 					["fulgora-ruin-flooded"] = {
-						["*"] = {},
-						["big"] = {},
 						["medium"] = {},
 						["small"] = {}
 					},
@@ -105,7 +102,6 @@ return {
 					["vulcanus-crater"] = {},
 					["vulcanus-dune-decal"] = {},
 					["vulcanus-relief-decal"] = {},
-					["vulcanus-rocks"] = {},
 					["vulcanus-rock-decal"] = {},
 					["vulcanus-sand-decal"] = {},
 					["white-carpet-grass"] = {},
