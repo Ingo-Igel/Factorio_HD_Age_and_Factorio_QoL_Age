@@ -1,7 +1,8 @@
 local exclude = {
 	"*shadow*",
 	"*effect-*",
-	"*-alpha.png"
+	"*-alpha.png",
+	"*-warp.png"
 }
 
 local function add_disable_words(setting_name)
