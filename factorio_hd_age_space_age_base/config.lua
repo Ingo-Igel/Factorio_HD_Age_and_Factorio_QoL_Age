@@ -105,10 +105,6 @@ return {
 					},
 					["scrap"] = {},
 					["space-platform-build-anim"] = {},
-					-- ["stromatolite"] = {
-					--	["copper"] = {},
-					--	["iron"] = {}
-					-- },
 					["sulfuric-acid-geyser"] = {
 						["sulfuric-acid-geyser.png"] = {}
 					},

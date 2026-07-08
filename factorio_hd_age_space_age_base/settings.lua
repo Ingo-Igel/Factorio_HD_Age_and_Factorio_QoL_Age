@@ -15,10 +15,10 @@ data:extend {
 		forced_value = true,
 		order = "b"
 	},
-		{
+	{
 		type = "bool-setting",
 		setting_type = "startup",
-		name = "f_hd_a_sa_b_disable_water-transitions",
+		name = "f_hd_a_sa_b_disable_stromatolite",
 		default_value = false,
 		forced_value = true,
 		order = "c"
@@ -26,7 +26,7 @@ data:extend {
 	{
 		type = "bool-setting",
 		setting_type = "startup",
-		name = "f_hd_a_sa_b_disable_lava-transitions",
+		name = "f_hd_a_sa_b_disable_water-transitions",
 		default_value = false,
 		forced_value = true,
 		order = "d"
@@ -34,10 +34,18 @@ data:extend {
 	{
 		type = "bool-setting",
 		setting_type = "startup",
+		name = "f_hd_a_sa_b_disable_lava-transitions",
+		default_value = false,
+		forced_value = true,
+		order = "e"
+	},
+	{
+		type = "bool-setting",
+		setting_type = "startup",
 		name = "f_hd_a_sa_b_disable_out-of-map-transitions",
 		default_value = true,
 		forced_value = true,
-		order = "e"
+		order = "f"
 	},
 	{
 		type = "string-setting",
