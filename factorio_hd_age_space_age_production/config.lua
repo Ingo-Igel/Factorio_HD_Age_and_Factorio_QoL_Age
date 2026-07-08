@@ -79,6 +79,7 @@ return {
 						["remnants"] = {}
 					},
 					["foundry"] = {
+						["foundry-base.png"] = {},
 						["foundry-frozen.png"] = {},
 						["foundry-pipe-connections-east.png"] = {},
 						["foundry-pipe-connections-east-frozen.png"] = {},
@@ -88,6 +89,7 @@ return {
 						["foundry-pipe-connections-south-frozen.png"] = {},
 						["foundry-pipe-connections-west.png"] = {},
 						["foundry-pipe-connections-west-frozen.png"] = {},
+						["foundry-smoke*"] = {},
 						["foundry-remnants.png"] = {},
 						["foundry-status-lamp.png"] = {}
 					},
