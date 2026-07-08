@@ -25,7 +25,7 @@ function tile_spritesheet_layout_hd.concrete_layout(refined, out_of_map, transit
 end
 
 if not settings.startup["f_hd_a_bg_b_disable_water-transitions"].value then
-	data.raw["tile"]["stone-path"].transitions[1] = {
+	data.raw.tile["stone-path"].transitions[1] = {
 		to_tiles = water_tile_type_names,
 		transition_group = water_transition_group_id,
 		spritesheet = "__factorio_hd_age_base_game_base__/data/base/graphics/terrain/water-transitions/stone-path.png",
@@ -44,7 +44,7 @@ if not settings.startup["f_hd_a_bg_b_disable_water-transitions"].value then
 		}
 	}
 
-	data.raw["tile"]["concrete"].transitions[1] = {
+	data.raw.tile["concrete"].transitions[1] = {
 		to_tiles = water_tile_type_names,
 		transition_group = water_transition_group_id,
 
@@ -65,7 +65,7 @@ if not settings.startup["f_hd_a_bg_b_disable_water-transitions"].value then
 		}
 	}
 
-	data.raw["tile"]["refined-concrete"].transitions[1] = {
+	data.raw.tile["refined-concrete"].transitions[1] = {
 		to_tiles = water_tile_type_names,
 		transition_group = water_transition_group_id,
 
@@ -87,7 +87,7 @@ if not settings.startup["f_hd_a_bg_b_disable_water-transitions"].value then
 		}
 	}
 
-	data.raw["tile"]["stone-path"].transitions_between_transitions[1] = {
+	data.raw.tile["stone-path"].transitions_between_transitions[1] = {
 		transition_group1 = default_transition_group_id,
 		transition_group2 = water_transition_group_id,
 		spritesheet =
@@ -108,7 +108,7 @@ if not settings.startup["f_hd_a_bg_b_disable_water-transitions"].value then
 		}
 	}
 
-	data.raw["tile"]["concrete"].transitions_between_transitions[1] = {
+	data.raw.tile["concrete"].transitions_between_transitions[1] = {
 		transition_group1 = default_transition_group_id,
 		transition_group2 = water_transition_group_id,
 
@@ -130,7 +130,7 @@ if not settings.startup["f_hd_a_bg_b_disable_water-transitions"].value then
 		}
 	}
 
-	data.raw["tile"]["refined-concrete"].transitions_between_transitions[1] = {
+	data.raw.tile["refined-concrete"].transitions_between_transitions[1] = {
 		transition_group1 = default_transition_group_id,
 		transition_group2 = water_transition_group_id,
 
@@ -154,7 +154,7 @@ if not settings.startup["f_hd_a_bg_b_disable_water-transitions"].value then
 end
 
 if not settings.startup["f_hd_a_bg_b_disable_out-of-map-transitions"].value then
-	data.raw["tile"]["refined-concrete"].transitions[2] = {
+	data.raw.tile["refined-concrete"].transitions[2] = {
 		to_tiles = out_of_map_tile_type_names,
 		transition_group = out_of_map_transition_group_id,
 		spritesheet =
@@ -167,7 +167,7 @@ if not settings.startup["f_hd_a_bg_b_disable_out-of-map-transitions"].value then
 		offset_background_layer_by_tile_layer = true,
 	}
 
-	data.raw["tile"]["stone-path"].transitions[2] = {
+	data.raw.tile["stone-path"].transitions[2] = {
 		to_tiles = out_of_map_tile_type_names,
 		transition_group = out_of_map_transition_group_id,
 		background_layer_offset = 1,
@@ -179,7 +179,7 @@ if not settings.startup["f_hd_a_bg_b_disable_out-of-map-transitions"].value then
 		background_enabled = true,
 	}
 
-	data.raw["tile"]["concrete"].transitions[2] = {
+	data.raw.tile["concrete"].transitions[2] = {
 		to_tiles = out_of_map_tile_type_names,
 		transition_group = out_of_map_transition_group_id,
 
@@ -192,7 +192,7 @@ if not settings.startup["f_hd_a_bg_b_disable_out-of-map-transitions"].value then
 		layout = tile_spritesheet_layout_hd.concrete_layout(false, true, false),
 	}
 
-	data.raw["tile"]["stone-path"].transitions_between_transitions[2] = {
+	data.raw.tile["stone-path"].transitions_between_transitions[2] = {
 		transition_group1 = default_transition_group_id,
 		transition_group2 = out_of_map_transition_group_id,
 		background_layer_offset = 1,
@@ -203,7 +203,7 @@ if not settings.startup["f_hd_a_bg_b_disable_out-of-map-transitions"].value then
 		layout = tile_spritesheet_layout_hd.concrete_layout(false, true, true),
 	}
 
-	data.raw["tile"]["concrete"].transitions_between_transitions[2] = {
+	data.raw.tile["concrete"].transitions_between_transitions[2] = {
 		transition_group1 = default_transition_group_id,
 		transition_group2 = out_of_map_transition_group_id,
 
@@ -216,7 +216,7 @@ if not settings.startup["f_hd_a_bg_b_disable_out-of-map-transitions"].value then
 		layout = tile_spritesheet_layout_hd.concrete_layout(false, true, true),
 	}
 
-	data.raw["tile"]["refined-concrete"].transitions_between_transitions[2] = {
+	data.raw.tile["refined-concrete"].transitions_between_transitions[2] = {
 		transition_group1 = default_transition_group_id,
 		transition_group2 = out_of_map_transition_group_id,
 
@@ -229,7 +229,7 @@ if not settings.startup["f_hd_a_bg_b_disable_out-of-map-transitions"].value then
 		layout = tile_spritesheet_layout_hd.concrete_layout(true, true, true),
 	}
 
-	data.raw["tile"]["stone-path"].transitions_between_transitions[3] = {
+	data.raw.tile["stone-path"].transitions_between_transitions[3] = {
 		transition_group1 = water_transition_group_id,
 		transition_group2 = out_of_map_transition_group_id,
 		background_layer_offset = 1,
@@ -250,7 +250,7 @@ if not settings.startup["f_hd_a_bg_b_disable_out-of-map-transitions"].value then
 		}
 	}
 
-	data.raw["tile"]["concrete"].transitions_between_transitions[3] = {
+	data.raw.tile["concrete"].transitions_between_transitions[3] = {
 		transition_group1 = water_transition_group_id,
 		transition_group2 = out_of_map_transition_group_id,
 
@@ -273,7 +273,7 @@ if not settings.startup["f_hd_a_bg_b_disable_out-of-map-transitions"].value then
 		}
 	}
 
-	data.raw["tile"]["refined-concrete"].transitions_between_transitions[3] = {
+	data.raw.tile["refined-concrete"].transitions_between_transitions[3] = {
 		transition_group1 = water_transition_group_id,
 		transition_group2 = out_of_map_transition_group_id,
 

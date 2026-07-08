@@ -154,7 +154,7 @@ function tile_variations_template_with_transitions_and_effect_map_hd(spritesheet
 end
 
 if not settings.startup["f_hd_a_sa_tg_disable_yumako_soil"].value then
-	data.raw["tile"]["artificial-yumako-soil"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
+	data.raw.tile["artificial-yumako-soil"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/artificial-yumako-soil.png",
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/effect-maps/water-gleba-mask.png",
 		{
@@ -165,7 +165,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_yumako_soil"].value then
 		}
 	)
 
-	data.raw["tile"]["natural-yumako-soil"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
+	data.raw.tile["natural-yumako-soil"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/natural-yumako-soil.png",
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/effect-maps/water-gleba-mask.png",
 		{
@@ -176,7 +176,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_yumako_soil"].value then
 		}
 	)
 
-	data.raw["tile"]["overgrowth-yumako-soil"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
+	data.raw.tile["overgrowth-yumako-soil"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/overgrowth-yumako-soil.png",
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/effect-maps/water-gleba-mask.png",
 		{
@@ -189,7 +189,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_yumako_soil"].value then
 end
 
 if not settings.startup["f_hd_a_sa_tg_disable_jellynut_soil"].value then
-	data.raw["tile"]["artificial-jellynut-soil"].variants = tile_variations_template_with_transitions_hd(
+	data.raw.tile["artificial-jellynut-soil"].variants = tile_variations_template_with_transitions_hd(
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/artificial-jellynut-soil.png",
 		{
 			max_size = 4,
@@ -199,7 +199,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_jellynut_soil"].value then
 		}
 	)
 
-	data.raw["tile"]["natural-jellynut-soil"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
+	data.raw.tile["natural-jellynut-soil"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/natural-jellynut-soil.png",
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/effect-maps/water-gleba-mask.png",
 		{
@@ -210,7 +210,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_jellynut_soil"].value then
 		}
 	)
 
-	data.raw["tile"]["overgrowth-jellynut-soil"].variants = tile_variations_template_with_transitions_hd(
+	data.raw.tile["overgrowth-jellynut-soil"].variants = tile_variations_template_with_transitions_hd(
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/overgrowth-jellynut-soil.png",
 		{
 			max_size = 4,
@@ -222,7 +222,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_jellynut_soil"].value then
 end
 
 if not settings.startup["f_hd_a_sa_tg_disable_blubber"].value then
-	data.raw["tile"]["lowland-olive-blubber"].variants =
+	data.raw.tile["lowland-olive-blubber"].variants =
 		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
 			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-olive-blubber.png",
 			{
@@ -233,7 +233,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_blubber"].value then
 			}
 		)
 
-	data.raw["tile"]["lowland-olive-blubber-2"].variants =
+	data.raw.tile["lowland-olive-blubber-2"].variants =
 		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
 			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-olive-blubber-2.png",
 			{
@@ -244,7 +244,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_blubber"].value then
 			}
 		)
 
-	data.raw["tile"]["lowland-olive-blubber-3"].variants =
+	data.raw.tile["lowland-olive-blubber-3"].variants =
 		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
 			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-olive-blubber-3.png",
 			{
@@ -255,7 +255,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_blubber"].value then
 			}
 		)
 
-	data.raw["tile"]["lowland-brown-blubber"].variants =
+	data.raw.tile["lowland-brown-blubber"].variants =
 		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
 			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-brown-blubber.png",
 			{
@@ -268,7 +268,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_blubber"].value then
 end
 
 if not settings.startup["f_hd_a_sa_tg_disable_pale_green"].value then
-	data.raw["tile"]["lowland-pale-green"].variants =
+	data.raw.tile["lowland-pale-green"].variants =
 		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
 			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-pale-green.png",
 			{
@@ -281,7 +281,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_pale_green"].value then
 end
 
 if not settings.startup["f_hd_a_sa_tg_disable_cream_cauliflower"].value then
-	data.raw["tile"]["lowland-cream-cauliflower"].variants =
+	data.raw.tile["lowland-cream-cauliflower"].variants =
 		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
 			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/cauliflower-mold.png",
 			{
@@ -292,7 +292,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_cream_cauliflower"].value then
 			}
 		)
 
-	data.raw["tile"]["lowland-cream-cauliflower-2"].variants =
+	data.raw.tile["lowland-cream-cauliflower-2"].variants =
 		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
 			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/cauliflower-mold-2.png",
 			{
@@ -305,7 +305,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_cream_cauliflower"].value then
 end
 
 if not settings.startup["f_hd_a_sa_tg_disable_dead_skin"].value then
-	data.raw["tile"]["lowland-dead-skin"].variants =
+	data.raw.tile["lowland-dead-skin"].variants =
 		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
 			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-dead-skin.png",
 			{
@@ -316,7 +316,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_dead_skin"].value then
 			}
 		)
 
-	data.raw["tile"]["lowland-dead-skin-2"].variants =
+	data.raw.tile["lowland-dead-skin-2"].variants =
 		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
 			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-dead-skin-2.png",
 			{
@@ -329,7 +329,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_dead_skin"].value then
 end
 
 if not settings.startup["f_hd_a_sa_tg_disable_cream_red"].value then
-	data.raw["tile"]["lowland-cream-red"].variants =
+	data.raw.tile["lowland-cream-red"].variants =
 		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
 			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-cream-red.png",
 			{
@@ -342,7 +342,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_cream_red"].value then
 end
 
 if not settings.startup["f_hd_a_sa_tg_disable_red_vein"].value then
-	data.raw["tile"]["lowland-red-vein"].variants =
+	data.raw.tile["lowland-red-vein"].variants =
 		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
 			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-red-vein.png",
 			{
@@ -353,7 +353,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_red_vein"].value then
 			}
 		)
 
-	data.raw["tile"]["lowland-red-vein-2"].variants =
+	data.raw.tile["lowland-red-vein-2"].variants =
 		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
 			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-red-vein-2.png",
 			{
@@ -364,7 +364,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_red_vein"].value then
 			}
 		)
 
-	data.raw["tile"]["lowland-red-vein-3"].variants =
+	data.raw.tile["lowland-red-vein-3"].variants =
 		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
 			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-red-vein-3.png",
 			{
@@ -375,7 +375,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_red_vein"].value then
 			}
 		)
 
-	data.raw["tile"]["lowland-red-vein-4"].variants =
+	data.raw.tile["lowland-red-vein-4"].variants =
 		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
 			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-red-vein-4.png",
 			{
@@ -386,7 +386,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_red_vein"].value then
 			}
 		)
 
-	data.raw["tile"]["lowland-red-vein-dead"].variants =
+	data.raw.tile["lowland-red-vein-dead"].variants =
 		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
 			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-red-vein-dead.png",
 			{
@@ -399,7 +399,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_red_vein"].value then
 end
 
 if not settings.startup["f_hd_a_sa_tg_disable_red_infection"].value then
-	data.raw["tile"]["lowland-red-infection"].variants =
+	data.raw.tile["lowland-red-infection"].variants =
 		lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
 			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/lowland-red-infection.png",
 			{
@@ -412,7 +412,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_red_infection"].value then
 end
 
 if not settings.startup["f_hd_a_sa_tg_disable_cracked_lichen"].value then
-	data.raw["tile"]["midland-cracked-lichen"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
+	data.raw.tile["midland-cracked-lichen"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/cracked-lichen.png",
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics//terrain/effect-maps/water-gleba-mask.png",
 		{
@@ -423,7 +423,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_cracked_lichen"].value then
 		}
 	)
 
-	data.raw["tile"]["midland-cracked-lichen-dull"].variants =
+	data.raw.tile["midland-cracked-lichen-dull"].variants =
 		tile_variations_template_with_transitions_and_effect_map_hd(
 			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/cracked-lichen-dull.png",
 			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics//terrain/effect-maps/water-gleba-mask.png",
@@ -435,7 +435,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_cracked_lichen"].value then
 			}
 		)
 
-	data.raw["tile"]["midland-cracked-lichen-dark"].variants =
+	data.raw.tile["midland-cracked-lichen-dark"].variants =
 		tile_variations_template_with_transitions_and_effect_map_hd(
 			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/cracked-lichen-dark.png",
 			"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics//terrain/effect-maps/water-gleba-mask.png",
@@ -449,7 +449,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_cracked_lichen"].value then
 end
 
 if not settings.startup["f_hd_a_sa_tg_disable_turquoise_bark"].value then
-	data.raw["tile"]["midland-turquoise-bark"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
+	data.raw.tile["midland-turquoise-bark"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/midland-turquoise-bark.png",
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics//terrain/effect-maps/water-gleba-mask.png",
 		{
@@ -460,7 +460,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_turquoise_bark"].value then
 		}
 	)
 
-	data.raw["tile"]["midland-turquoise-bark-2"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
+	data.raw.tile["midland-turquoise-bark-2"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/midland-turquoise-bark-2.png",
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics//terrain/effect-maps/water-gleba-mask.png",
 		{
@@ -473,7 +473,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_turquoise_bark"].value then
 end
 
 if not settings.startup["f_hd_a_sa_tg_disable_yellow_crust"].value then
-	data.raw["tile"]["midland-yellow-crust"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
+	data.raw.tile["midland-yellow-crust"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/starburst-lichen.png",
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics//terrain/effect-maps/water-gleba-mask.png",
 		{
@@ -484,7 +484,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_yellow_crust"].value then
 		}
 	)
 
-	data.raw["tile"]["midland-yellow-crust-2"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
+	data.raw.tile["midland-yellow-crust-2"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/starburst-lichen-2.png",
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics//terrain/effect-maps/water-gleba-mask.png",
 		{
@@ -495,7 +495,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_yellow_crust"].value then
 		}
 	)
 
-	data.raw["tile"]["midland-yellow-crust-3"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
+	data.raw.tile["midland-yellow-crust-3"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/starburst-lichen-3.png",
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics//terrain/effect-maps/water-gleba-mask.png",
 		{
@@ -506,7 +506,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_yellow_crust"].value then
 		}
 	)
 
-	data.raw["tile"]["midland-yellow-crust-4"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
+	data.raw.tile["midland-yellow-crust-4"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/starburst-lichen-4.png",
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics//terrain/effect-maps/water-gleba-mask.png",
 		{
@@ -519,7 +519,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_yellow_crust"].value then
 end
 
 if not settings.startup["f_hd_a_sa_tg_disable_rock"].value then
-	data.raw["tile"]["highland-dark-rock"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
+	data.raw.tile["highland-dark-rock"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/highland-dark-rock.png",
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics//terrain/effect-maps/water-gleba-mask.png",
 		{
@@ -530,7 +530,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_rock"].value then
 		}
 	)
 
-	data.raw["tile"]["highland-dark-rock-2"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
+	data.raw.tile["highland-dark-rock-2"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/highland-dark-rock-2.png",
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics//terrain/effect-maps/water-gleba-mask.png",
 		{
@@ -541,7 +541,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_rock"].value then
 		}
 	)
 
-	data.raw["tile"]["highland-yellow-rock"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
+	data.raw.tile["highland-yellow-rock"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/highland-yellow-rock.png",
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics//terrain/effect-maps/water-gleba-mask.png",
 		{
@@ -552,7 +552,7 @@ if not settings.startup["f_hd_a_sa_tg_disable_rock"].value then
 		}
 	)
 
-	data.raw["tile"]["pit-rock"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
+	data.raw.tile["pit-rock"].variants = tile_variations_template_with_transitions_and_effect_map_hd(
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics/terrain/gleba/pit-rock.png",
 		"__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphics//terrain/effect-maps/water-gleba-mask.png",
 		{

@@ -368,8 +368,8 @@ local lava_to_out_of_map_transition = {
 }
 
 if not settings.startup["f_hd_a_sa_tv_disable_lava"].value then
-	data.raw["tile"]["lava"].transitions =  {lava_to_out_of_map_transition}
-	data.raw["tile"]["lava"].variants = tile_variations_template_hd_extra(
+	data.raw.tile["lava"].transitions =  {lava_to_out_of_map_transition}
+	data.raw.tile["lava"].variants = tile_variations_template_hd_extra(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/lava.png",
 		"__base__/graphics/terrain/masks/transition-1.png",
 		{
@@ -380,8 +380,8 @@ if not settings.startup["f_hd_a_sa_tv_disable_lava"].value then
 		}
 	)
 
-	data.raw["tile"]["lava-hot"].transitions =  {lava_to_out_of_map_transition}
-	data.raw["tile"]["lava-hot"].variants = {
+	data.raw.tile["lava-hot"].transitions =  {lava_to_out_of_map_transition}
+	data.raw.tile["lava-hot"].variants = {
 		main = {
 			{
 				picture =
@@ -396,9 +396,9 @@ if not settings.startup["f_hd_a_sa_tv_disable_lava"].value then
 end
 
 if not settings.startup["f_hd_a_sa_tv_disable_volcanic_ash"].value then
-	data.raw["tile"]["volcanic-ash-cracks"].transitions = lava_stone_transitions
-	data.raw["tile"]["volcanic-ash-cracks"].transitions_between_transitions = lava_stone_transitions_between_transitions
-	data.raw["tile"]["volcanic-ash-cracks"].variants = tile_variations_template_with_transitions_hd(
+	data.raw.tile["volcanic-ash-cracks"].transitions = lava_stone_transitions
+	data.raw.tile["volcanic-ash-cracks"].transitions_between_transitions = lava_stone_transitions_between_transitions
+	data.raw.tile["volcanic-ash-cracks"].variants = tile_variations_template_with_transitions_hd(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-ash-cracks.png",
 		{
 			max_size = 4,
@@ -408,9 +408,9 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_ash"].value then
 		}
 	)
 
-	data.raw["tile"]["volcanic-ash-dark"].transitions = lava_stone_transitions
-	data.raw["tile"]["volcanic-ash-dark"].transitions_between_transitions = lava_stone_transitions_between_transitions
-	data.raw["tile"]["volcanic-ash-dark"].variants = tile_variations_template_with_transitions_hd(
+	data.raw.tile["volcanic-ash-dark"].transitions = lava_stone_transitions
+	data.raw.tile["volcanic-ash-dark"].transitions_between_transitions = lava_stone_transitions_between_transitions
+	data.raw.tile["volcanic-ash-dark"].variants = tile_variations_template_with_transitions_hd(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-ash-dark.png",
 		{
 			max_size = 4,
@@ -420,9 +420,9 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_ash"].value then
 		}
 	)
 
-	data.raw["tile"]["volcanic-ash-flats"].transitions = lava_stone_transitions
-	data.raw["tile"]["volcanic-ash-flats"].transitions_between_transitions = lava_stone_transitions_between_transitions
-	data.raw["tile"]["volcanic-ash-flats"].variants = tile_variations_template_with_transitions_hd(
+	data.raw.tile["volcanic-ash-flats"].transitions = lava_stone_transitions
+	data.raw.tile["volcanic-ash-flats"].transitions_between_transitions = lava_stone_transitions_between_transitions
+	data.raw.tile["volcanic-ash-flats"].variants = tile_variations_template_with_transitions_hd(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-ash-flats.png",
 		{
 			max_size = 4,
@@ -432,9 +432,9 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_ash"].value then
 		}
 	)
 
-	data.raw["tile"]["volcanic-ash-light"].transitions = lava_stone_transitions
-	data.raw["tile"]["volcanic-ash-light"].transitions_between_transitions = lava_stone_transitions_between_transitions
-	data.raw["tile"]["volcanic-ash-light"].variants = tile_variations_template_with_transitions_hd(
+	data.raw.tile["volcanic-ash-light"].transitions = lava_stone_transitions
+	data.raw.tile["volcanic-ash-light"].transitions_between_transitions = lava_stone_transitions_between_transitions
+	data.raw.tile["volcanic-ash-light"].variants = tile_variations_template_with_transitions_hd(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-ash-light.png",
 		{
 			max_size = 4,
@@ -444,9 +444,9 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_ash"].value then
 		}
 	)
 
-	data.raw["tile"]["volcanic-ash-soil"].transitions = lava_stone_transitions
-	data.raw["tile"]["volcanic-ash-soil"].transitions_between_transitions = lava_stone_transitions_between_transitions
-	data.raw["tile"]["volcanic-ash-soil"].variants = tile_variations_template_with_transitions_hd(
+	data.raw.tile["volcanic-ash-soil"].transitions = lava_stone_transitions
+	data.raw.tile["volcanic-ash-soil"].transitions_between_transitions = lava_stone_transitions_between_transitions
+	data.raw.tile["volcanic-ash-soil"].variants = tile_variations_template_with_transitions_hd(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-ash-soil.png",
 		{
 			max_size = 4,
@@ -458,9 +458,9 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_ash"].value then
 end
 
 if not settings.startup["f_hd_a_sa_tv_disable_volcanic_cracks"].value then
-	data.raw["tile"]["volcanic-cracks"].transitions = lava_stone_transitions
-	data.raw["tile"]["volcanic-cracks"].transitions_between_transitions = lava_stone_transitions_between_transitions
-	data.raw["tile"]["volcanic-cracks"].variants = tile_variations_template_with_transitions_hd(
+	data.raw.tile["volcanic-cracks"].transitions = lava_stone_transitions
+	data.raw.tile["volcanic-cracks"].transitions_between_transitions = lava_stone_transitions_between_transitions
+	data.raw.tile["volcanic-cracks"].variants = tile_variations_template_with_transitions_hd(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-cracks.png",
 		{
 			max_size = 4,
@@ -470,9 +470,9 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_cracks"].value then
 		}
 	)
 
-	data.raw["tile"]["volcanic-cracks-hot"].transitions = lava_stone_transitions
-	data.raw["tile"]["volcanic-cracks-hot"].transitions_between_transitions = lava_stone_transitions_between_transitions
-	data.raw["tile"]["volcanic-cracks-hot"].variants = tile_variations_template_with_transitions_and_light_hd(
+	data.raw.tile["volcanic-cracks-hot"].transitions = lava_stone_transitions
+	data.raw.tile["volcanic-cracks-hot"].transitions_between_transitions = lava_stone_transitions_between_transitions
+	data.raw.tile["volcanic-cracks-hot"].variants = tile_variations_template_with_transitions_and_light_hd(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-cracks-hot.png",
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-cracks-hot-light.png",
 		{
@@ -483,9 +483,9 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_cracks"].value then
 		}
 	)
 
-	data.raw["tile"]["volcanic-cracks-warm"].transitions = lava_stone_transitions
-	data.raw["tile"]["volcanic-cracks-warm"].transitions_between_transitions = lava_stone_transitions_between_transitions
-	data.raw["tile"]["volcanic-cracks-warm"].variants = tile_variations_template_with_transitions_and_light_hd(
+	data.raw.tile["volcanic-cracks-warm"].transitions = lava_stone_transitions
+	data.raw.tile["volcanic-cracks-warm"].transitions_between_transitions = lava_stone_transitions_between_transitions
+	data.raw.tile["volcanic-cracks-warm"].variants = tile_variations_template_with_transitions_and_light_hd(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-cracks-warm.png",
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-cracks-warm-lightmap1.png",
 		{
@@ -498,9 +498,9 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_cracks"].value then
 end
 
 if not settings.startup["f_hd_a_sa_tv_disable_volcanic_folds"].value then
-	data.raw["tile"]["volcanic-folds"].transitions = lava_stone_transitions
-	data.raw["tile"]["volcanic-folds"].transitions_between_transitions = lava_stone_transitions_between_transitions
-	data.raw["tile"]["volcanic-folds"].variants = tile_variations_template_with_transitions_hd(
+	data.raw.tile["volcanic-folds"].transitions = lava_stone_transitions
+	data.raw.tile["volcanic-folds"].transitions_between_transitions = lava_stone_transitions_between_transitions
+	data.raw.tile["volcanic-folds"].variants = tile_variations_template_with_transitions_hd(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-folds.png",
 		{
 			max_size = 4,
@@ -510,9 +510,9 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_folds"].value then
 		}
 	)
 
-	data.raw["tile"]["volcanic-folds-flat"].transitions = lava_stone_transitions
-	data.raw["tile"]["volcanic-folds-flat"].transitions_between_transitions = lava_stone_transitions_between_transitions
-	data.raw["tile"]["volcanic-folds-flat"].variants = tile_variations_template_with_transitions_hd(
+	data.raw.tile["volcanic-folds-flat"].transitions = lava_stone_transitions
+	data.raw.tile["volcanic-folds-flat"].transitions_between_transitions = lava_stone_transitions_between_transitions
+	data.raw.tile["volcanic-folds-flat"].variants = tile_variations_template_with_transitions_hd(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-folds-flat.png",
 		{
 			max_size = 4,
@@ -522,9 +522,9 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_folds"].value then
 		}
 	)
 
-	data.raw["tile"]["volcanic-folds-warm"].transitions = lava_stone_transitions
-	data.raw["tile"]["volcanic-folds-warm"].transitions_between_transitions = lava_stone_transitions_between_transitions
-	data.raw["tile"]["volcanic-folds-warm"].variants = tile_variations_template_with_transitions_and_light_hd(
+	data.raw.tile["volcanic-folds-warm"].transitions = lava_stone_transitions
+	data.raw.tile["volcanic-folds-warm"].transitions_between_transitions = lava_stone_transitions_between_transitions
+	data.raw.tile["volcanic-folds-warm"].variants = tile_variations_template_with_transitions_and_light_hd(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-folds-warm.png",
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-folds-warm-lightmap.png",
 		{
@@ -535,10 +535,10 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_folds"].value then
 		}
 	)
 
-	data.raw["tile"]["volcanic-jagged-ground"].transitions = lava_stone_transitions
-	data.raw["tile"]["volcanic-jagged-ground"].transitions_between_transitions =
+	data.raw.tile["volcanic-jagged-ground"].transitions = lava_stone_transitions
+	data.raw.tile["volcanic-jagged-ground"].transitions_between_transitions =
 		lava_stone_transitions_between_transitions
-	data.raw["tile"]["volcanic-jagged-ground"].variants = tile_variations_template_with_transitions_hd(
+	data.raw.tile["volcanic-jagged-ground"].variants = tile_variations_template_with_transitions_hd(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-jagged-ground.png",
 		{
 			max_size = 4,
@@ -550,10 +550,10 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_folds"].value then
 end
 
 if not settings.startup["f_hd_a_sa_tv_disable_volcanic_stone"].value then
-	data.raw["tile"]["volcanic-pumice-stones"].transitions = lava_stone_transitions
-	data.raw["tile"]["volcanic-pumice-stones"].transitions_between_transitions =
+	data.raw.tile["volcanic-pumice-stones"].transitions = lava_stone_transitions
+	data.raw.tile["volcanic-pumice-stones"].transitions_between_transitions =
 		lava_stone_transitions_between_transitions
-	data.raw["tile"]["volcanic-pumice-stones"].variants = tile_variations_template_with_transitions_hd(
+	data.raw.tile["volcanic-pumice-stones"].variants = tile_variations_template_with_transitions_hd(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-pumice-stones.png",
 		{
 			max_size = 4,
@@ -563,10 +563,10 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_stone"].value then
 		}
 	)
 
-	data.raw["tile"]["volcanic-smooth-stone"].transitions = lava_stone_transitions
-	data.raw["tile"]["volcanic-smooth-stone"].transitions_between_transitions =
+	data.raw.tile["volcanic-smooth-stone"].transitions = lava_stone_transitions
+	data.raw.tile["volcanic-smooth-stone"].transitions_between_transitions =
 		lava_stone_transitions_between_transitions
-	data.raw["tile"]["volcanic-smooth-stone"].variants = tile_variations_template_with_transitions_hd(
+	data.raw.tile["volcanic-smooth-stone"].variants = tile_variations_template_with_transitions_hd(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-smooth-stone.png",
 		{
 			max_size = 4,
@@ -576,10 +576,10 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_stone"].value then
 		}
 	)
 
-	data.raw["tile"]["volcanic-smooth-stone-warm"].transitions = lava_stone_transitions
-	data.raw["tile"]["volcanic-smooth-stone-warm"].transitions_between_transitions =
+	data.raw.tile["volcanic-smooth-stone-warm"].transitions = lava_stone_transitions
+	data.raw.tile["volcanic-smooth-stone-warm"].transitions_between_transitions =
 		lava_stone_transitions_between_transitions
-	data.raw["tile"]["volcanic-smooth-stone-warm"].variants = tile_variations_template_with_transitions_and_light_hd(
+	data.raw.tile["volcanic-smooth-stone-warm"].variants = tile_variations_template_with_transitions_and_light_hd(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-smooth-stone-warm.png",
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-smooth-stone-warm-lightmap.png",
 		{
@@ -592,9 +592,9 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_stone"].value then
 end
 
 if not settings.startup["f_hd_a_sa_tv_disable_volcanic_soil"].value then
-	data.raw["tile"]["volcanic-soil-dark"].transitions = lava_stone_transitions
-	data.raw["tile"]["volcanic-soil-dark"].transitions_between_transitions = lava_stone_transitions_between_transitions
-	data.raw["tile"]["volcanic-soil-dark"].variants = tile_variations_template_with_transitions_hd(
+	data.raw.tile["volcanic-soil-dark"].transitions = lava_stone_transitions
+	data.raw.tile["volcanic-soil-dark"].transitions_between_transitions = lava_stone_transitions_between_transitions
+	data.raw.tile["volcanic-soil-dark"].variants = tile_variations_template_with_transitions_hd(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-soil-dark.png",
 		{
 			max_size = 4,
@@ -604,9 +604,9 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_soil"].value then
 		}
 	)
 
-	data.raw["tile"]["volcanic-soil-light"].transitions = lava_stone_transitions
-	data.raw["tile"]["volcanic-soil-light"].transitions_between_transitions = lava_stone_transitions_between_transitions
-	data.raw["tile"]["volcanic-soil-light"].variants = tile_variations_template_with_transitions_hd(
+	data.raw.tile["volcanic-soil-light"].transitions = lava_stone_transitions
+	data.raw.tile["volcanic-soil-light"].transitions_between_transitions = lava_stone_transitions_between_transitions
+	data.raw.tile["volcanic-soil-light"].variants = tile_variations_template_with_transitions_hd(
 		"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/vulcanus/volcanic-soil-light.png",
 		{
 			max_size = 4,

@@ -400,48 +400,48 @@ local fulgora_oil_sand_transitions_between_transitions = {
 }
 
 if not settings.startup["f_hd_a_sa_tf_disable_fulgora_transitions"].value then
-	data.raw["tile"]["fulgoran-dust"].transitions = fulgora_rock_sand_transitions
-	data.raw["tile"]["fulgoran-dust"].transitions_between_transitions = fulgora_sand_transitions_between_transitions
+	data.raw.tile["fulgoran-dust"].transitions = fulgora_rock_sand_transitions
+	data.raw.tile["fulgoran-dust"].transitions_between_transitions = fulgora_sand_transitions_between_transitions
 
-	data.raw["tile"]["fulgoran-dunes"].transitions = fulgora_rock_sand_transitions
-	data.raw["tile"]["fulgoran-dunes"].transitions_between_transitions = fulgora_sand_transitions_between_transitions
+	data.raw.tile["fulgoran-dunes"].transitions = fulgora_rock_sand_transitions
+	data.raw.tile["fulgoran-dunes"].transitions_between_transitions = fulgora_sand_transitions_between_transitions
 
-	data.raw["tile"]["fulgoran-sand"].transitions = fulgora_rock_sand_transitions
-	data.raw["tile"]["fulgoran-sand"].transitions_between_transitions = fulgora_sand_transitions_between_transitions
+	data.raw.tile["fulgoran-sand"].transitions = fulgora_rock_sand_transitions
+	data.raw.tile["fulgoran-sand"].transitions_between_transitions = fulgora_sand_transitions_between_transitions
 
-	data.raw["tile"]["fulgoran-rock"].transitions = fulgora_rock_sand_transitions
-	data.raw["tile"]["fulgoran-rock"].transitions_between_transitions = fulgora_sand_transitions_between_transitions
+	data.raw.tile["fulgoran-rock"].transitions = fulgora_rock_sand_transitions
+	data.raw.tile["fulgoran-rock"].transitions_between_transitions = fulgora_sand_transitions_between_transitions
 
-	data.raw["tile"]["fulgoran-paving"].transitions = fulgora_rock_sand_transitions
-	data.raw["tile"]["fulgoran-paving"].transitions_between_transitions = fulgora_sand_transitions_between_transitions
+	data.raw.tile["fulgoran-paving"].transitions = fulgora_rock_sand_transitions
+	data.raw.tile["fulgoran-paving"].transitions_between_transitions = fulgora_sand_transitions_between_transitions
 
-	data.raw["tile"]["fulgoran-walls"].transitions = fulgora_rock_sand_transitions
-	data.raw["tile"]["fulgoran-walls"].transitions_between_transitions = fulgora_sand_transitions_between_transitions
+	data.raw.tile["fulgoran-walls"].transitions = fulgora_rock_sand_transitions
+	data.raw.tile["fulgoran-walls"].transitions_between_transitions = fulgora_sand_transitions_between_transitions
 
-	data.raw["tile"]["fulgoran-conduit"].transitions = fulgora_rock_sand_transitions
-	data.raw["tile"]["fulgoran-conduit"].transitions_between_transitions = fulgora_sand_transitions_between_transitions
+	data.raw.tile["fulgoran-conduit"].transitions = fulgora_rock_sand_transitions
+	data.raw.tile["fulgoran-conduit"].transitions_between_transitions = fulgora_sand_transitions_between_transitions
 
-	data.raw["tile"]["fulgoran-machinery"].transitions = fulgora_rock_sand_transitions
-	data.raw["tile"]["fulgoran-machinery"].transitions_between_transitions = fulgora_sand_transitions_between_transitions
+	data.raw.tile["fulgoran-machinery"].transitions = fulgora_rock_sand_transitions
+	data.raw.tile["fulgoran-machinery"].transitions_between_transitions = fulgora_sand_transitions_between_transitions
 
-	data.raw["tile"]["oil-ocean-shallow"].transitions = fulgora_oil_sand_transitions
-	data.raw["tile"]["oil-ocean-shallow"].transitions_between_transitions =
+	data.raw.tile["oil-ocean-shallow"].transitions = fulgora_oil_sand_transitions
+	data.raw.tile["oil-ocean-shallow"].transitions_between_transitions =
 		fulgora_oil_sand_transitions_between_transitions
 
-	data.raw["tile"]["oil-ocean-shallow-2"].transitions = fulgora_oil_sand_transitions
-	data.raw["tile"]["oil-ocean-shallow-2"].transitions_between_transitions =
+	data.raw.tile["oil-ocean-shallow-2"].transitions = fulgora_oil_sand_transitions
+	data.raw.tile["oil-ocean-shallow-2"].transitions_between_transitions =
 		fulgora_oil_sand_transitions_between_transitions
 
-	data.raw["tile"]["oil-ocean-deep"].transitions = fulgora_oil_transitions
-	data.raw["tile"]["oil-ocean-deep"].transitions_between_transitions = fulgora_oil_transitions_between_transitions
+	data.raw.tile["oil-ocean-deep"].transitions = fulgora_oil_transitions
+	data.raw.tile["oil-ocean-deep"].transitions_between_transitions = fulgora_oil_transitions_between_transitions
 
-	data.raw["tile"]["oil-ocean-deep-2"].transitions = table.deepcopy(data.raw.tile["water-shallow"].transitions)
-	data.raw["tile"]["oil-ocean-deep-2"].transitions_between_transitions = table.deepcopy(data.raw.tile["water-shallow"]
+	data.raw.tile["oil-ocean-deep-2"].transitions = table.deepcopy(data.raw.tile["water-shallow"].transitions)
+	data.raw.tile["oil-ocean-deep-2"].transitions_between_transitions = table.deepcopy(data.raw.tile["water-shallow"]
 		.transitions_between_transitions)
 end
 
 if not settings.startup["f_hd_a_sa_tf_disable_oil_ocean_deep"].value then
-	data.raw["tile"]["oil-ocean-deep"].variants = tile_variations_template_with_transitions_hd(
+	data.raw.tile["oil-ocean-deep"].variants = tile_variations_template_with_transitions_hd(
 		"__factorio_hd_age_space_age_terrain_fulgora__/data/space-age/graphics/terrain/oil-ocean-deep.png",
 		{
 			max_size = 4,
@@ -451,7 +451,7 @@ if not settings.startup["f_hd_a_sa_tf_disable_oil_ocean_deep"].value then
 		}
 	)
 
-	data.raw["tile"]["oil-ocean-deep-2"].variants = tile_variations_template_with_transitions_hd(
+	data.raw.tile["oil-ocean-deep-2"].variants = tile_variations_template_with_transitions_hd(
 		"__factorio_hd_age_space_age_terrain_fulgora__/data/space-age/graphics/terrain/oil-ocean-deep.png",
 		{
 			max_size = 4,
