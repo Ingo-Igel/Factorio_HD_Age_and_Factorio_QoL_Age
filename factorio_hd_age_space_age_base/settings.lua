@@ -15,13 +15,29 @@ data:extend {
 		forced_value = true,
 		order = "b"
 	},
-	{
+		{
 		type = "bool-setting",
 		setting_type = "startup",
-		name = "f_hd_a_sa_b_disable_transitions",
+		name = "f_hd_a_sa_b_disable_water-transitions",
 		default_value = false,
 		forced_value = true,
 		order = "c"
+	},
+	{
+		type = "bool-setting",
+		setting_type = "startup",
+		name = "f_hd_a_sa_b_disable_lava-transitions",
+		default_value = false,
+		forced_value = true,
+		order = "d"
+	},
+	{
+		type = "bool-setting",
+		setting_type = "startup",
+		name = "f_hd_a_sa_b_disable_out-of-map-transitions",
+		default_value = true,
+		forced_value = true,
+		order = "e"
 	},
 	{
 		type = "string-setting",
