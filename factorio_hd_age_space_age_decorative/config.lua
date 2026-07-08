@@ -52,6 +52,7 @@ return {
 					["fulgoran-ruin"] = {},
 					["fulgora-rock"] = {},
 					["fulgora-ruin-flooded"] = {
+						["*"] = {},
 						["medium"] = {},
 						["small"] = {}
 					},
