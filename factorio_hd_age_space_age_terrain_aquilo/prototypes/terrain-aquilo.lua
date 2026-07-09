@@ -1,14 +1,3 @@
-local disable_water_transitions = true
-local disable_out_of_map_transitions = true
-
-if not settings.startup["f_hd_a_sa_ta_disable_water-transitions"].value then
-	disable_water_transitions = false
-end
-
-if not settings.startup["f_hd_a_sa_ta_disable_out-of-map-transitions"].value then
-	disable_out_of_map_transitions = false
-end
-
 local function tile_variations_template_hd(high_res_picture, high_res_transition_mask, options)
 	local function main_variation_hd(size_)
 		local y_ = ((size_ == 1) and 0) or ((size_ == 2) and 256) or ((size_ == 4) and 640) or 1280
@@ -127,7 +116,7 @@ local variants = {
 }
 
 local function load_transitions(name, terrain, variation)
-	if not disable_water_transitions then
+	if not settings.startup["f_hd_a_sa_ta_disable_water-transitions"].value then
 		data.raw.tile[name].transitions[1].spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/water-transitions/ice-2.png"
 		data.raw.tile[name].transitions[1].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
 		data.raw.tile[name].transitions[1].effect_map_layout.spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/base/graphics/terrain/effect-maps/water-dirt-mask.png"
@@ -143,7 +132,7 @@ local function load_transitions(name, terrain, variation)
 		}
 	end
 
-	if not disable_out_of_map_transitions then
+	if not settings.startup["f_hd_a_sa_ta_disable_out-of-map-transitions"].value then
 		data.raw.tile[name].transitions[2].spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/out-of-map-transition/ice-out-of-map.png"
 		data.raw.tile[name].transitions[2].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
 
