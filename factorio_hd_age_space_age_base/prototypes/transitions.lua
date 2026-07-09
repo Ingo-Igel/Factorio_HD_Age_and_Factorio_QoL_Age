@@ -27,87 +27,57 @@ end
 local concrete_mask = "__factorio_hd_age_space_age_base__/data/base/graphics/terrain/effect-maps/concrete-mask.png"
 local concrete_out_of_map_mask = "__factorio_hd_age_space_age_base__/data/base/graphics/terrain/effect-maps/concrete-out-of-map-mask.png"
 
-if not settings.startup["f_hd_a_sa_b_disable_water-transitions"].value then
-	data.raw.tile["foundation"].transitions[1].spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/water-transitions/foundation.png"
-	data.raw.tile["foundation"].transitions[1].layout = tile_spritesheet_layout_hd.concrete_layout(false, false, false)
-	data.raw.tile["foundation"].transitions[1].effect_map_layout.spritesheet = concrete_mask
+local function load_transitions(name, refined, foundation)
+	if not settings.startup["f_hd_a_sa_b_disable_water-transitions"].value and foundation then
+		data.raw.tile[name].transitions[1].spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/water-transitions/" .. name .. ".png"
+		data.raw.tile[name].transitions[1].layout = tile_spritesheet_layout_hd.concrete_layout(refined, false, false)
+		data.raw.tile[name].transitions[1].effect_map_layout.spritesheet = concrete_mask
 
-	data.raw.tile["foundation"].transitions_between_transitions[1].spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/water-transitions/foundation-transitions.png"
-	data.raw.tile["foundation"].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.concrete_layout(false, false, true)
-	data.raw.tile["foundation"].transitions_between_transitions[1].effect_map_layout.spritesheet = concrete_mask
+		data.raw.tile[name].transitions_between_transitions[1].spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/water-transitions/" .. name .. "-transitions.png"
+		data.raw.tile[name].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.concrete_layout(refined, false, true)
+		data.raw.tile[name].transitions_between_transitions[1].effect_map_layout.spritesheet = concrete_mask
+	end
+
+	if not settings.startup["f_hd_a_sa_b_disable_out-of-map-transitions"].value then
+		if foundation then
+			data.raw.tile[name].transitions[3].spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/out-of-map-transition/" .. name .. "-out-of-map-transition.png"
+			data.raw.tile[name].transitions[3].layout = tile_spritesheet_layout_hd.concrete_layout(false, true, false)
+
+			data.raw.tile[name].transitions_between_transitions[2].spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/out-of-map-transition/" .. name .. "-out-of-map-transition-b.png"
+			data.raw.tile[name].transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.concrete_layout(false, true, true)
+
+			data.raw.tile[name].transitions_between_transitions[3].spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/out-of-map-transition/" .. name .. "-shore-out-of-map-transition.png"
+			data.raw.tile[name].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.concrete_layout(false, true, true)
+			data.raw.tile[name].transitions_between_transitions[3].effect_map_layout.spritesheet = concrete_out_of_map_mask
+		end
+
+		data.raw.tile[name].transitions_between_transitions[5].spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/out-of-map-transition/" .. name .. "-lava-shore-out-of-map.png"
+		data.raw.tile[name].transitions_between_transitions[5].lightmap_layout = { spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/out-of-map-transition/" .. name .. "-lava-shore-out-of-map-lightmap.png" }
+		data.raw.tile[name].transitions_between_transitions[5].layout = tile_spritesheet_layout_hd.concrete_layout(refined, true, true)
+		data.raw.tile[name].transitions_between_transitions[5].effect_map_layout.spritesheet = concrete_out_of_map_mask
+	end
+
+	if not settings.startup["f_hd_a_sa_b_disable_lava-transitions"].value then
+		local entry_number = 3
+		if foundation then
+			entry_number = 2
+		else
+			entry_number = 3
+		end
+
+		data.raw.tile[name].transitions[entry_number].spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/lava-transitions/" .. name .. "-lava.png"
+		data.raw.tile[name].transitions[entry_number].lightmap_layout = { spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/lava-transitions/" .. name .. "-lava-lightmap.png" }
+		data.raw.tile[name].transitions[entry_number].layout = tile_spritesheet_layout_hd.concrete_layout(refined, false, false)
+		data.raw.tile[name].transitions[entry_number].effect_map_layout.spritesheet = concrete_mask
+
+		data.raw.tile[name].transitions_between_transitions[4].spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/lava-transitions/" .. name .. "-transitions-lava.png"
+		data.raw.tile[name].transitions_between_transitions[4].lightmap_layout = { spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/lava-transitions/" .. name .. "-transitions-lightmap.png" }
+		data.raw.tile[name].transitions_between_transitions[4].layout = tile_spritesheet_layout_hd.concrete_layout(refined, false, true)
+		data.raw.tile[name].transitions_between_transitions[4].effect_map_layout.spritesheet = concrete_mask
+	end
 end
 
-if not settings.startup["f_hd_a_sa_b_disable_lava-transitions"].value then
-	data.raw.tile["stone-path"].transitions[3].spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/lava-transitions/stone-path-lava.png"
-	data.raw.tile["stone-path"].transitions[3].lightmap_layout = { spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/lava-transitions/stone-path-lava-lightmap.png" }
-	data.raw.tile["stone-path"].transitions[3].layout = tile_spritesheet_layout_hd.concrete_layout(false, false, false)
-	data.raw.tile["stone-path"].transitions[3].effect_map_layout.spritesheet = concrete_mask
-
-	data.raw.tile["stone-path"].transitions_between_transitions[4].spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/lava-transitions/stone-path-lava-transitions.png"
-	data.raw.tile["stone-path"].transitions_between_transitions[4].lightmap_layout = { spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/lava-transitions/stone-path-lava-transitions-lightmap.png" }
-	data.raw.tile["stone-path"].transitions_between_transitions[4].layout = tile_spritesheet_layout_hd.concrete_layout(false, false, true)
-	data.raw.tile["stone-path"].transitions_between_transitions[4].effect_map_layout.spritesheet = concrete_mask
-
-	data.raw.tile["concrete"].transitions[3].spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/lava-transitions/concrete-lava.png"
-	data.raw.tile["concrete"].transitions[3].lightmap_layout = { spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/lava-transitions/concrete-lava-lightmap.png" }
-	data.raw.tile["concrete"].transitions[3].layout = tile_spritesheet_layout_hd.concrete_layout(false, false, false)
-	data.raw.tile["concrete"].transitions[3].effect_map_layout.spritesheet = concrete_mask
-
-	data.raw.tile["concrete"].transitions_between_transitions[4].spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/lava-transitions/concrete-transitions-lava.png"
-	data.raw.tile["concrete"].transitions_between_transitions[4].lightmap_layout = { spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/lava-transitions/concrete-transitions-lightmap.png" }
-	data.raw.tile["concrete"].transitions_between_transitions[4].layout = tile_spritesheet_layout_hd.concrete_layout(false, false, true)
-	data.raw.tile["concrete"].transitions_between_transitions[4].effect_map_layout.spritesheet = concrete_mask
-
-	data.raw.tile["refined-concrete"].transitions[3].spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/lava-transitions/refined-concrete-lava.png"
-	data.raw.tile["refined-concrete"].transitions[3].lightmap_layout = { spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/lava-transitions/refined-concrete-lava-lightmap.png" }
-	data.raw.tile["refined-concrete"].transitions[3].layout = tile_spritesheet_layout_hd.concrete_layout(true, false, false)
-	data.raw.tile["refined-concrete"].transitions[3].effect_map_layout.spritesheet = concrete_mask
-
-
-	data.raw.tile["refined-concrete"].transitions_between_transitions[4].spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/lava-transitions/refined-concrete-transitions-lava.png"
-	data.raw.tile["refined-concrete"].transitions_between_transitions[4].lightmap_layout = { spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/lava-transitions/refined-concrete-transitions-lightmap.png" }
-	data.raw.tile["refined-concrete"].transitions_between_transitions[4].layout = tile_spritesheet_layout_hd.concrete_layout(true, false, true)
-	data.raw.tile["refined-concrete"].transitions_between_transitions[4].effect_map_layout.spritesheet = concrete_mask
-
-	data.raw.tile["foundation"].transitions[2].spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/lava-transitions/foundation-lava.png"
-	data.raw.tile["foundation"].transitions[2].lightmap_layout = { spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/lava-transitions/foundation-lava-lightmap.png" }
-	data.raw.tile["foundation"].transitions[2].layout = tile_spritesheet_layout_hd.concrete_layout(false, false, false)
-	data.raw.tile["foundation"].transitions[2].effect_map_layout.spritesheet = concrete_mask
-
-	data.raw.tile["foundation"].transitions_between_transitions[4].spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/lava-transitions/foundation-transitions-lava.png"
-	data.raw.tile["foundation"].transitions_between_transitions[4].lightmap_layout = { spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/lava-transitions/foundation-transitions-lightmap.png" }
-	data.raw.tile["foundation"].transitions_between_transitions[4].layout = tile_spritesheet_layout_hd.concrete_layout(false, false, true)
-	data.raw.tile["foundation"].transitions_between_transitions[4].effect_map_layout.spritesheet = concrete_mask
-end
-
-if not settings.startup["f_hd_a_sa_b_disable_out-of-map-transitions"].value then
-	data.raw.tile["stone-path"].transitions_between_transitions[5].spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/out-of-map-transition/stone-path-lava-shore-out-of-map.png"
-	data.raw.tile["stone-path"].transitions_between_transitions[5].lightmap_layout = { spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/out-of-map-transition/stone-path-lava-shore-out-of-map-lightmap.png" }
-	data.raw.tile["stone-path"].transitions_between_transitions[5].layout = tile_spritesheet_layout_hd.concrete_layout(false, true, true)
-	data.raw.tile["stone-path"].transitions_between_transitions[5].effect_map_layout.spritesheet = concrete_out_of_map_mask
-
-	data.raw.tile["concrete"].transitions_between_transitions[5].spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/out-of-map-transition/concrete-lava-shore-out-of-map.png"
-	data.raw.tile["concrete"].transitions_between_transitions[5].lightmap_layout = { spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/out-of-map-transition/concrete-lava-shore-out-of-map-lightmap.png" }
-	data.raw.tile["concrete"].transitions_between_transitions[5].layout = tile_spritesheet_layout_hd.concrete_layout(false, true, true)
-	data.raw.tile["concrete"].transitions_between_transitions[5].effect_map_layout.spritesheet = concrete_out_of_map_mask
-
-	data.raw.tile["refined-concrete"].transitions_between_transitions[5].spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/out-of-map-transition/refined-concrete-lava-shore-out-of-map.png"
-	data.raw.tile["refined-concrete"].transitions_between_transitions[5].lightmap_layout = { spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/out-of-map-transition/refined-concrete-lava-shore-out-of-map-lightmap.png" }
-	data.raw.tile["refined-concrete"].transitions_between_transitions[5].layout = tile_spritesheet_layout_hd.concrete_layout(true, true, true)
-	data.raw.tile["refined-concrete"].transitions_between_transitions[5].effect_map_layout.spritesheet = concrete_out_of_map_mask
-
-	data.raw.tile["foundation"].transitions[3].spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/out-of-map-transition/foundation-out-of-map-transition.png"
-	data.raw.tile["foundation"].transitions[3].layout = tile_spritesheet_layout_hd.concrete_layout(false, true, false)
-
-	data.raw.tile["foundation"].transitions_between_transitions[2].spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/out-of-map-transition/foundation-out-of-map-transition-b.png"
-	data.raw.tile["foundation"].transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.concrete_layout(false, true, true)
-
-	data.raw.tile["foundation"].transitions_between_transitions[3].spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/out-of-map-transition/foundation-shore-out-of-map-transition.png"
-	data.raw.tile["foundation"].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.concrete_layout(false, true, true)
-	data.raw.tile["foundation"].transitions_between_transitions[3].effect_map_layout.spritesheet = concrete_out_of_map_mask
-
-	data.raw.tile["foundation"].transitions_between_transitions[5].spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/out-of-map-transition/foundation-lava-shore-out-of-map.png"
-	data.raw.tile["foundation"].transitions_between_transitions[5].lightmap_layout = { spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/out-of-map-transition/foundation-lava-shore-out-of-map-lightmap.png" }
-	data.raw.tile["foundation"].transitions_between_transitions[5].layout = tile_spritesheet_layout_hd.concrete_layout(false, true, true)
-	data.raw.tile["foundation"].transitions_between_transitions[5].effect_map_layout.spritesheet = concrete_out_of_map_mask
-end
+load_transitions("stone-path", false, false)
+load_transitions("concrete", false, false)
+load_transitions("refined-concrete", true, false)
+load_transitions("foundation", false, true)
