@@ -58,12 +58,7 @@ local function load_transitions(name, refined, foundation)
 	end
 
 	if not settings.startup["f_hd_a_sa_b_disable_lava-transitions"].value then
-		local entry_number = 3
-		if foundation then
-			entry_number = 2
-		else
-			entry_number = 3
-		end
+		local entry_number = foundation and 2 or 3
 
 		data.raw.tile[name].transitions[entry_number].spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/lava-transitions/" .. name .. "-lava.png"
 		data.raw.tile[name].transitions[entry_number].lightmap_layout = { spritesheet = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/lava-transitions/" .. name .. "-lava-lightmap.png" }
