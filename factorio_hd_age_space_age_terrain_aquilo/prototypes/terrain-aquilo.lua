@@ -111,23 +111,6 @@ tile_spritesheet_layout_hd.transition_3_3_3_1_0 = {
 	background               = { x_offset = 1088 * 2 }
 }
 
-local patch_for_inner_corner_of_transition_between_transition = {
-	filename = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/water-transitions/ice-patch.png",
-	scale = 0.25,
-	width = 64 * 2,
-	height = 64 * 2
-}
-
-local water_dirt_mask = "__factorio_hd_age_space_age_terrain_aquilo__/data/base/graphics/terrain/effect-maps/water-dirt-mask.png"
-local water_dirt_to_land_mask = "__factorio_hd_age_space_age_terrain_aquilo__/data/base/graphics/terrain/effect-maps/water-dirt-to-land-mask.png"
-local water_dirt_to_out_of_map_mask = "__factorio_hd_age_space_age_terrain_aquilo__/data/base/graphics/terrain/effect-maps/water-dirt-to-out-of-map-mask.png"
-
-local ice_2 = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/water-transitions/ice-2.png"
-local ice_transition = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/water-transitions/ice-transition.png"
-local ice_out_of_map = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/out-of-map-transition/ice-out-of-map.png"
-local ice_out_of_map_transition_b = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/out-of-map-transition/ice-out-of-map-transition-b.png"
-local ice_shore_out_of_map = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/out-of-map-transition/ice-shore-out-of-map.png"
-
 local variants = {
 	{
 		max_size = 4,
@@ -143,28 +126,33 @@ local variants = {
 	}
 }
 
-local function load_transition(name, terrain, variation)
+local function load_transitions(name, terrain, variation)
 	if not disable_water_transitions then
-		data.raw.tile[name].transitions[1].spritesheet = ice_2
+		data.raw.tile[name].transitions[1].spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/water-transitions/ice-2.png"
 		data.raw.tile[name].transitions[1].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-		data.raw.tile[name].transitions[1].effect_map_layout.spritesheet = water_dirt_mask
+		data.raw.tile[name].transitions[1].effect_map_layout.spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/base/graphics/terrain/effect-maps/water-dirt-mask.png"
 
-		data.raw.tile[name].transitions_between_transitions[1].spritesheet = ice_transition
+		data.raw.tile[name].transitions_between_transitions[1].spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/water-transitions/ice-transition.png"
 		data.raw.tile[name].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile[name].transitions_between_transitions[1].effect_map_layout.spritesheet = water_dirt_to_land_mask
-		data.raw.tile[name].transitions_between_transitions[1].water_patch = patch_for_inner_corner_of_transition_between_transition
+		data.raw.tile[name].transitions_between_transitions[1].effect_map_layout.spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/base/graphics/terrain/effect-maps/water-dirt-to-land-mask.png"
+		data.raw.tile[name].transitions_between_transitions[1].water_patch = {
+			filename = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/water-transitions/ice-patch.png",
+			scale = 0.25,
+			width = 64 * 2,
+			height = 64 * 2
+		}
 	end
 
 	if not disable_out_of_map_transitions then
-		data.raw.tile[name].transitions[2].spritesheet = ice_out_of_map
+		data.raw.tile[name].transitions[2].spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/out-of-map-transition/ice-out-of-map.png"
 		data.raw.tile[name].transitions[2].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
 
-		data.raw.tile[name].transitions_between_transitions[2].spritesheet = ice_out_of_map_transition_b
+		data.raw.tile[name].transitions_between_transitions[2].spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/out-of-map-transition/ice-out-of-map-transition-b.png"
 		data.raw.tile[name].transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
 
-		data.raw.tile[name].transitions_between_transitions[3].spritesheet = ice_shore_out_of_map
+		data.raw.tile[name].transitions_between_transitions[3].spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/out-of-map-transition/ice-shore-out-of-map.png"
 		data.raw.tile[name].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile[name].transitions_between_transitions[3].effect_map_layout.spritesheet = water_dirt_to_out_of_map_mask
+		data.raw.tile[name].transitions_between_transitions[3].effect_map_layout.spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/base/graphics/terrain/effect-maps/water-dirt-to-out-of-map-mask.png"
 	end
 
 	if terrain then
@@ -177,24 +165,24 @@ local function load_transition(name, terrain, variation)
 end
 
 if not settings.startup["f_hd_a_sa_ta_disable_dust"].value then
-	load_transition("dust-crests", true, 1)
-	load_transition("dust-flat", true, 1)
-	load_transition("dust-lumpy", true, 1)
-	load_transition("dust-patchy", true, 1)
+	load_transitions("dust-crests", true, 1)
+	load_transitions("dust-flat", true, 1)
+	load_transitions("dust-lumpy", true, 1)
+	load_transitions("dust-patchy", true, 1)
 end
 
 if not settings.startup["f_hd_a_sa_ta_disable_ice"].value then
-	load_transition("ice-platform", false)
-	load_transition("ice-rough", true, 2)
-	load_transition("ice-smooth", false)
+	load_transitions("ice-platform", false)
+	load_transitions("ice-rough", true, 2)
+	load_transitions("ice-smooth", false)
 
 	data.raw.tile["brash-ice"].transitions = data.raw.tile["water"].transitions
 	data.raw.tile["brash-ice"].transitions_between_transitions = data.raw.tile["water"].transitions_between_transitions
 end
 
 if not settings.startup["f_hd_a_sa_ta_disable_snow"].value then
-	load_transition("snow-crests", true, 1)
-	load_transition("snow-flat", true, 1)
-	load_transition("snow-lumpy", true, 1)
-	load_transition("snow-patchy", false)
+	load_transitions("snow-crests", true, 1)
+	load_transitions("snow-flat", true, 1)
+	load_transitions("snow-lumpy", true, 1)
+	load_transitions("snow-patchy", false)
 end
