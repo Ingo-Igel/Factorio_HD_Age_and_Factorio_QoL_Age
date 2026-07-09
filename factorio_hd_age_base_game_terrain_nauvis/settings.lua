@@ -34,7 +34,7 @@ data:extend {
 	{
 		type = "bool-setting",
 		setting_type = "startup",
-		name = "f_hd_a_bg_tn_disable_water_transitions",
+		name = "f_hd_a_bg_tn_disable_water-transitions",
 		default_value = false,
 		forced_value = true,
 		order = "e"
@@ -42,18 +42,10 @@ data:extend {
 	{
 		type = "bool-setting",
 		setting_type = "startup",
-		name = "f_hd_a_bg_tn_disable_landfill_transitions",
-		default_value = false,
+		name = "f_hd_a_bg_tn_disable_out-of-map-transitions",
+		default_value = true,
 		forced_value = true,
 		order = "f"
-	},
-	{
-		type = "bool-setting",
-		setting_type = "startup",
-		name = "f_hd_a_bg_tn_disable_nuclear_ground_transitions",
-		default_value = false,
-		forced_value = true,
-		order = "g"
 	},
 	{
 		type = "string-setting",
