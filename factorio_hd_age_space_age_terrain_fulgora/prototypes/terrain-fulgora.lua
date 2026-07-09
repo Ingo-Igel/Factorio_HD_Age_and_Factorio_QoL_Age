@@ -425,23 +425,26 @@ if not settings.startup["f_hd_a_sa_tf_disable_fulgora_transitions"].value then
 	data.raw.tile["fulgoran-machinery"].transitions_between_transitions = fulgora_sand_transitions_between_transitions
 
 	data.raw.tile["oil-ocean-shallow"].transitions = fulgora_oil_sand_transitions
-	data.raw.tile["oil-ocean-shallow"].transitions_between_transitions =
-		fulgora_oil_sand_transitions_between_transitions
+	data.raw.tile["oil-ocean-shallow"].transitions_between_transitions = fulgora_oil_sand_transitions_between_transitions
 
 	data.raw.tile["oil-ocean-shallow-2"].transitions = fulgora_oil_sand_transitions
-	data.raw.tile["oil-ocean-shallow-2"].transitions_between_transitions =
-		fulgora_oil_sand_transitions_between_transitions
+	data.raw.tile["oil-ocean-shallow-2"].transitions_between_transitions = fulgora_oil_sand_transitions_between_transitions
+end
 
+if not settings.startup["f_hd_a_sa_tf_disable_oil_ocean_deep"].value then
 	data.raw.tile["oil-ocean-deep"].transitions = fulgora_oil_transitions
 	data.raw.tile["oil-ocean-deep"].transitions_between_transitions = fulgora_oil_transitions_between_transitions
 
 	data.raw.tile["oil-ocean-deep-2"].transitions = table.deepcopy(data.raw.tile["water-shallow"].transitions)
-	data.raw.tile["oil-ocean-deep-2"].transitions_between_transitions = table.deepcopy(data.raw.tile["water-shallow"]
-		.transitions_between_transitions)
-end
+	data.raw.tile["oil-ocean-deep-2"].transitions_between_transitions = table.deepcopy(data.raw.tile["water-shallow"].transitions_between_transitions)
 
-if not settings.startup["f_hd_a_sa_tf_disable_oil_ocean_deep"].value then
-	data.raw.tile["oil-ocean-deep"].variants = tile_variations_template_with_transitions_hd(
+	data.raw.tile["oil-ocean-deep-2"].transitions[1].spritesheet = "__factorio_hd_age_space_age_terrain_fulgora__/data/space-age/graphics/terrain/out-of-map-transition/oil-out-of-map-transition.png"
+	data.raw.tile["oil-ocean-deep-2"].transitions[1].layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1
+
+	data.raw.tile["oil-ocean-deep-2"].transitions_between_transitions[1].spritesheet = "__factorio_hd_age_space_age_terrain_fulgora__/data/space-age/graphics/terrain/out-of-map-transition/oil-out-of-map-transition-b.png"
+	data.raw.tile["oil-ocean-deep-2"].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+
+	local variants = tile_variations_template_with_transitions_hd(
 		"__factorio_hd_age_space_age_terrain_fulgora__/data/space-age/graphics/terrain/oil-ocean-deep.png",
 		{
 			max_size = 4,
@@ -451,13 +454,6 @@ if not settings.startup["f_hd_a_sa_tf_disable_oil_ocean_deep"].value then
 		}
 	)
 
-	data.raw.tile["oil-ocean-deep-2"].variants = tile_variations_template_with_transitions_hd(
-		"__factorio_hd_age_space_age_terrain_fulgora__/data/space-age/graphics/terrain/oil-ocean-deep.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-		}
-	)
+	data.raw.tile["oil-ocean-deep"].variants = variants
+	data.raw.tile["oil-ocean-deep-2"].variants = variants
 end
