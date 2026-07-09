@@ -1,4 +1,4 @@
 require("prototypes.rocket-silo")
-require("prototypes.paving")
+require("prototypes.transitions")
 
 require("texture-loading")
