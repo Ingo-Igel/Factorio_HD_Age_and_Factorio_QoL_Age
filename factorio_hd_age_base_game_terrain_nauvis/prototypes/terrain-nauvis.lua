@@ -222,55 +222,47 @@ local function load_grass_transitions(name)
 	end
 end
 
+local function load_terrain(name, transition, options)
+	data.raw.tile[name].variants = tile_variations_template_hd(
+		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/" .. name .. ".png",
+		"__base__/graphics/terrain/masks/transition-" .. transition .. ".png",
+		options
+	)
+end
+
 if not settings.startup["f_hd_a_bg_tn_disable_gras"].value then
 	load_grass_transitions("grass-1")
 	load_grass_transitions("grass-2")
 	load_grass_transitions("grass-3")
 	load_grass_transitions("grass-4")
 
-	data.raw.tile["grass-1"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/grass-1.png",
-		"__base__/graphics/terrain/masks/transition-3.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 0.91, weights = { 0.150, 0.150, 0.150, 0.150, 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025 }, },
-			[4] = { probability = 0.91, weights = { 0.100, 0.80, 0.80, 0.100, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01 }, },
-		}
-	)
+	load_terrain("grass-1", "3", {
+		max_size = 4,
+		[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+		[2] = { probability = 0.91, weights = { 0.150, 0.150, 0.150, 0.150, 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025 } },
+		[4] = { probability = 0.91, weights = { 0.100, 0.80, 0.80, 0.100, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01 } }
+	})
 
-	data.raw.tile["grass-2"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/grass-2.png",
-		"__base__/graphics/terrain/masks/transition-3.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 0.91, weights = { 0.150, 0.150, 0.150, 0.150, 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025 }, },
-			[4] = { probability = 0.75, weights = { 0.085, 0.085, 0.085, 0.075, 0.057, 0.055, 0.085, 0.075, 0.035, 0.015, 0.001, 0.025, 0.005, 0.025, 0.045, 0.045 }, },
-		}
-	)
+	load_terrain("grass-2", "3", {
+		max_size = 4,
+		[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+		[2] = { probability = 0.91, weights = { 0.150, 0.150, 0.150, 0.150, 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025 } },
+		[4] = { probability = 0.75, weights = { 0.085, 0.085, 0.085, 0.075, 0.057, 0.055, 0.085, 0.075, 0.035, 0.015, 0.001, 0.025, 0.005, 0.025, 0.045, 0.045 } }
+	})
 
-	data.raw.tile["grass-3"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/grass-3.png",
-		"__base__/graphics/terrain/masks/transition-3.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-		}
-	)
+	load_terrain("grass-3", "3", {
+		max_size = 4,
+		[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+		[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 } },
+		[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 } }
+	})
 
-	data.raw.tile["grass-4"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/grass-4.png",
-		"__base__/graphics/terrain/masks/transition-3.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.5, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-		}
-	)
+	load_terrain("grass-4", "3", {
+		max_size = 4,
+		[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+		[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 } },
+		[4] = { probability = 0.5, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 } }
+	})
 end
 
 local function load_transitions(name, dry_dirt, dark_dirt)
@@ -319,99 +311,26 @@ if not settings.startup["f_hd_a_bg_tn_disable_dirt"].value then
 	load_transitions("dirt-1", true, false)
 	load_transitions("dirt-2", true, false)
 	load_transitions("dirt-3", true, false)
-
-	data.raw.tile["dry-dirt"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/dry-dirt.png",
-		"__base__/graphics/terrain/masks/transition-1.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.070, 0.070, 0.025, 0.070, 0.070, 0.070, 0.007, 0.025, 0.070, 0.050, 0.015, 0.026, 0.030, 0.005, 0.070, 0.027 }, },
-			[4] = { probability = 1.00, weights = { 0.070, 0.070, 0.070, 0.070, 0.070, 0.070, 0.015, 0.070, 0.070, 0.070, 0.015, 0.050, 0.070, 0.070, 0.065, 0.070 }, },
-		}
-	)
-
-	data.raw.tile["dirt-1"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/dirt-1.png",
-		"__base__/graphics/terrain/masks/transition-1.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.070, 0.070, 0.025, 0.070, 0.070, 0.070, 0.007, 0.025, 0.070, 0.050, 0.015, 0.026, 0.030, 0.005, 0.070, 0.027 } },
-			[4] = { probability = 1.00, weights = { 0.070, 0.070, 0.070, 0.070, 0.070, 0.070, 0.015, 0.070, 0.070, 0.070, 0.015, 0.050, 0.070, 0.070, 0.065, 0.070 }, },
-		}
-	)
-
-	data.raw.tile["dirt-2"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/dirt-2.png",
-		"__base__/graphics/terrain/masks/transition-1.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.070, 0.070, 0.025, 0.070, 0.070, 0.070, 0.007, 0.025, 0.070, 0.050, 0.015, 0.026, 0.030, 0.005, 0.070, 0.027 } },
-			[4] = { probability = 1.00, weights = { 0.070, 0.070, 0.070, 0.070, 0.070, 0.070, 0.015, 0.070, 0.070, 0.070, 0.015, 0.050, 0.070, 0.070, 0.065, 0.070 }, },
-		}
-	)
-
-	data.raw.tile["dirt-3"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/dirt-3.png",
-		"__base__/graphics/terrain/masks/transition-1.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.070, 0.070, 0.025, 0.070, 0.070, 0.070, 0.007, 0.025, 0.070, 0.050, 0.015, 0.026, 0.030, 0.005, 0.070, 0.027 } },
-			[4] = { probability = 1.00, weights = { 0.070, 0.070, 0.070, 0.070, 0.070, 0.070, 0.015, 0.070, 0.070, 0.070, 0.015, 0.050, 0.070, 0.070, 0.065, 0.070 }, },
-		}
-	)
-
 	load_transitions("dirt-4", false, true)
 	load_transitions("dirt-5", false, true)
 	load_transitions("dirt-6", false, true)
 	load_transitions("dirt-7", false, true)
 
-	data.raw.tile["dirt-4"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/dirt-4.png",
-		"__base__/graphics/terrain/masks/transition-1.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.070, 0.070, 0.025, 0.070, 0.070, 0.070, 0.007, 0.025, 0.070, 0.050, 0.015, 0.026, 0.030, 0.005, 0.070, 0.027 } },
-			[4] = { probability = 1.00, weights = { 0.070, 0.070, 0.070, 0.070, 0.070, 0.070, 0.015, 0.070, 0.070, 0.070, 0.015, 0.050, 0.070, 0.070, 0.065, 0.070 }, },
-		}
-	)
+	local options_dirt = {
+		max_size = 4,
+		[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+		[2] = { probability = 1, weights = { 0.070, 0.070, 0.025, 0.070, 0.070, 0.070, 0.007, 0.025, 0.070, 0.050, 0.015, 0.026, 0.030, 0.005, 0.070, 0.027 } },
+		[4] = { probability = 1.00, weights = { 0.070, 0.070, 0.070, 0.070, 0.070, 0.070, 0.015, 0.070, 0.070, 0.070, 0.015, 0.050, 0.070, 0.070, 0.065, 0.070 } }
+	}
 
-	data.raw.tile["dirt-5"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/dirt-5.png",
-		"__base__/graphics/terrain/masks/transition-1.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.070, 0.070, 0.025, 0.070, 0.070, 0.070, 0.007, 0.025, 0.070, 0.050, 0.015, 0.026, 0.030, 0.005, 0.070, 0.027 } },
-			[4] = { probability = 1.00, weights = { 0.070, 0.070, 0.070, 0.070, 0.070, 0.070, 0.015, 0.070, 0.070, 0.070, 0.015, 0.050, 0.070, 0.070, 0.065, 0.070 }, },
-		}
-	)
-
-	data.raw.tile["dirt-6"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/dirt-6.png",
-		"__base__/graphics/terrain/masks/transition-1.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.070, 0.070, 0.025, 0.070, 0.070, 0.070, 0.007, 0.025, 0.070, 0.050, 0.015, 0.026, 0.030, 0.005, 0.070, 0.027 } },
-			[4] = { probability = 1.00, weights = { 0.070, 0.070, 0.070, 0.070, 0.070, 0.070, 0.015, 0.070, 0.070, 0.070, 0.015, 0.050, 0.070, 0.070, 0.065, 0.070 }, },
-		}
-	)
-
-	data.raw.tile["dirt-7"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/dirt-7.png",
-		"__base__/graphics/terrain/masks/transition-1.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.070, 0.070, 0.025, 0.070, 0.070, 0.070, 0.007, 0.025, 0.070, 0.050, 0.015, 0.026, 0.030, 0.005, 0.070, 0.027 } },
-			[4] = { probability = 1.00, weights = { 0.070, 0.070, 0.070, 0.070, 0.070, 0.070, 0.015, 0.070, 0.070, 0.070, 0.015, 0.050, 0.070, 0.070, 0.065, 0.070 }, },
-		}
-	)
+	load_terrain("dry-dirt", "1", options_dirt)
+	load_terrain("dirt-1", "1", options_dirt)
+	load_terrain("dirt-2", "1", options_dirt)
+	load_terrain("dirt-3", "1", options_dirt)
+	load_terrain("dirt-4", "1", options_dirt)
+	load_terrain("dirt-5", "1", options_dirt)
+	load_terrain("dirt-6", "1", options_dirt)
+	load_terrain("dirt-7", "1", options_dirt)
 end
 
 local function load_sand_transitions(name)
@@ -445,92 +364,49 @@ if not settings.startup["f_hd_a_bg_tn_disable_sand"].value then
 	load_sand_transitions("sand-2")
 	load_sand_transitions("sand-3")
 
-	data.raw.tile["sand-1"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/sand-1.png",
-		"__base__/graphics/terrain/masks/transition-4.png",
-		{
-			max_size = 8,
-			[2] = { probability = 0.39, weights = { 0.025, 0.010, 0.013, 0.025, 0.025, 0.100, 0.100, 0.005, 0.010, 0.010, 0.005, 0.005, 0.001, 0.015, 0.020, 0.020 } },
-			[4] = { probability = 0.20, weights = { 0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020 } },
-			[8] = { probability = 0.10, weights = { 0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020 } }
-		}
-	)
+	local options_sand = {
+		max_size = 8,
+		[2] = { probability = 0.39, weights = { 0.025, 0.010, 0.013, 0.025, 0.025, 0.100, 0.100, 0.005, 0.010, 0.010, 0.005, 0.005, 0.001, 0.015, 0.020, 0.020 } },
+		[4] = { probability = 0.20, weights = { 0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020 } },
+		[8] = { probability = 0.10, weights = { 0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020 } }
+	}
 
-	data.raw.tile["sand-2"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/sand-2.png",
-		"__base__/graphics/terrain/masks/transition-4.png",
-		{
-			max_size = 8,
-			[2] = { probability = 0.39, weights = { 0.025, 0.010, 0.013, 0.025, 0.025, 0.100, 0.100, 0.005, 0.010, 0.010, 0.005, 0.005, 0.001, 0.015, 0.020, 0.020 } },
-			[4] = { probability = 0.20, weights = { 0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020 } },
-			[8] = { probability = 0.10, weights = { 0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020 } }
-		}
-	)
-
-	data.raw.tile["sand-3"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/sand-3.png",
-		"__base__/graphics/terrain/masks/transition-4.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 0.39, weights = { 0.025, 0.010, 0.013, 0.025, 0.025, 0.100, 0.100, 0.005, 0.010, 0.010, 0.005, 0.005, 0.001, 0.015, 0.020, 0.020 }, },
-			[4] = { probability = 0.39, weights = { 0.025, 0.010, 0.013, 0.025, 0.025, 0.100, 0.100, 0.005, 0.010, 0.010, 0.005, 0.005, 0.001, 0.015, 0.020, 0.020 }, },
-		}
-	)
+	load_terrain("sand-1", "4", options_sand)
+	load_terrain("sand-2", "4", options_sand)
+	load_terrain("sand-3", "4", {
+		max_size = 4,
+		[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+		[2] = { probability = 0.39, weights = { 0.025, 0.010, 0.013, 0.025, 0.025, 0.100, 0.100, 0.005, 0.010, 0.010, 0.005, 0.005, 0.001, 0.015, 0.020, 0.020 } },
+		[4] = { probability = 0.39, weights = { 0.025, 0.010, 0.013, 0.025, 0.025, 0.100, 0.100, 0.005, 0.010, 0.010, 0.005, 0.005, 0.001, 0.015, 0.020, 0.020 } }
+	})
 end
 
 if not settings.startup["f_hd_a_bg_tn_disable_dessert"].value then
 	load_grass_transitions("red-desert-0")
-
-	data.raw.tile["red-desert-0"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/red-desert-0.png",
-		"__base__/graphics/terrain/masks/transition-3.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.070, 0.070, 0.025, 0.070, 0.070, 0.070, 0.007, 0.025, 0.070, 0.050, 0.015, 0.026, 0.030, 0.005, 0.070, 0.027 }, },
-			[4] = { probability = 1.00, weights = { 0.070, 0.070, 0.070, 0.070, 0.070, 0.070, 0.015, 0.070, 0.070, 0.070, 0.015, 0.050, 0.070, 0.070, 0.065, 0.070 }, },
-		}
-	)
-
 	load_transitions("red-desert-1", true, false)
 	load_transitions("red-desert-2", true, false)
 	load_transitions("red-desert-3", true, false)
 
-	data.raw.tile["red-desert-1"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/red-desert-1.png",
-		"__base__/graphics/terrain/masks/transition-1.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.070, 0.070, 0.025, 0.070, 0.070, 0.070, 0.007, 0.025, 0.070, 0.050, 0.015, 0.026, 0.030, 0.005, 0.070, 0.027 }, },
-			[4] = { probability = 1.00, weights = { 0.070, 0.070, 0.070, 0.070, 0.070, 0.070, 0.015, 0.070, 0.070, 0.070, 0.015, 0.050, 0.070, 0.070, 0.065, 0.070 }, },
-		}
-	)
+	local options_dessert_1 = {
+		max_size = 4,
+		[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+		[2] = { probability = 1, weights = { 0.070, 0.070, 0.025, 0.070, 0.070, 0.070, 0.007, 0.025, 0.070, 0.050, 0.015, 0.026, 0.030, 0.005, 0.070, 0.027 } },
+		[4] = { probability = 1.00, weights = { 0.070, 0.070, 0.070, 0.070, 0.070, 0.070, 0.015, 0.070, 0.070, 0.070, 0.015, 0.050, 0.070, 0.070, 0.065, 0.070 } }
+	}
 
-	data.raw.tile["red-desert-2"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/red-desert-2.png",
-		"__base__/graphics/terrain/masks/transition-1.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.070, 0.070, 0.025, 0.070, 0.070, 0.070, 0.007, 0.025, 0.070, 0.050, 0.015, 0.026, 0.030, 0.005, 0.070, 0.027 }, },
-			[4] = { probability = 1.00, weights = { 0.070, 0.070, 0.070, 0.070, 0.070, 0.070, 0.015, 0.070, 0.070, 0.070, 0.015, 0.050, 0.070, 0.070, 0.065, 0.070 }, },
-			[8] = { probability = 1.00, weights = { 0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020 } }
-		}
-	)
+	load_terrain("red-desert-0", "3", options_dessert_1)
+	load_terrain("red-desert-1", "1", options_dessert_1)
 
-	data.raw.tile["red-desert-3"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/red-desert-3.png",
-		"__base__/graphics/terrain/masks/transition-1.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.070, 0.070, 0.025, 0.070, 0.070, 0.070, 0.007, 0.025, 0.070, 0.050, 0.015, 0.026, 0.030, 0.005, 0.070, 0.027 }, },
-			[4] = { probability = 1.00, weights = { 0.070, 0.070, 0.070, 0.070, 0.070, 0.070, 0.015, 0.070, 0.070, 0.070, 0.015, 0.050, 0.070, 0.070, 0.065, 0.070 }, },
-			[8] = { probability = 1.00, weights = { 0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020 } }
-		}
-	)
+	local options_dessert_2 = {
+		max_size = 4,
+		[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+		[2] = { probability = 1, weights = { 0.070, 0.070, 0.025, 0.070, 0.070, 0.070, 0.007, 0.025, 0.070, 0.050, 0.015, 0.026, 0.030, 0.005, 0.070, 0.027 } },
+		[4] = { probability = 1.00, weights = { 0.070, 0.070, 0.070, 0.070, 0.070, 0.070, 0.015, 0.070, 0.070, 0.070, 0.015, 0.050, 0.070, 0.070, 0.065, 0.070 } },
+		[8] = { probability = 1.00, weights = { 0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020 } }
+	}
+
+	load_terrain("red-desert-2", "1", options_dessert_2)
+	load_terrain("red-desert-3", "1", options_dessert_2)
 end
 
 load_transitions("landfill")
