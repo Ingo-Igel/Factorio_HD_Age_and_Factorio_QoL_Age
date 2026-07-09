@@ -128,320 +128,73 @@ local ice_out_of_map = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-
 local ice_out_of_map_transition_b = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/out-of-map-transition/ice-out-of-map-transition-b.png"
 local ice_shore_out_of_map = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/out-of-map-transition/ice-shore-out-of-map.png"
 
-if not settings.startup["f_hd_a_sa_ta_disable_dust"].value then
+local variants = {
+	{
+		max_size = 4,
+		[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+		[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+		[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015 }, },
+	},
+	{
+		max_size = 4,
+		[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+		[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
+		[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015 }, },
+	}
+}
+
+local function load_transition(name, terrain, variation)
 	if not disable_water_transitions then
-		data.raw.tile["dust-crests"].transitions[1].spritesheet = ice_2
-		data.raw.tile["dust-crests"].transitions[1].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-		data.raw.tile["dust-crests"].transitions[1].effect_map_layout.spritesheet = water_dirt_mask
+		data.raw.tile[name].transitions[1].spritesheet = ice_2
+		data.raw.tile[name].transitions[1].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
+		data.raw.tile[name].transitions[1].effect_map_layout.spritesheet = water_dirt_mask
 
-		data.raw.tile["dust-crests"].transitions_between_transitions[1].spritesheet = ice_transition
-		data.raw.tile["dust-crests"].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile["dust-crests"].transitions_between_transitions[1].effect_map_layout.spritesheet = water_dirt_to_land_mask
-		data.raw.tile["dust-crests"].transitions_between_transitions[1].water_patch = patch_for_inner_corner_of_transition_between_transition
-
-		data.raw.tile["dust-flat"].transitions[1].spritesheet = ice_2
-		data.raw.tile["dust-flat"].transitions[1].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-		data.raw.tile["dust-flat"].transitions[1].effect_map_layout.spritesheet = water_dirt_mask
-
-		data.raw.tile["dust-flat"].transitions_between_transitions[1].spritesheet = ice_transition
-		data.raw.tile["dust-flat"].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile["dust-flat"].transitions_between_transitions[1].effect_map_layout.spritesheet = water_dirt_to_land_mask
-		data.raw.tile["dust-flat"].transitions_between_transitions[1].water_patch = patch_for_inner_corner_of_transition_between_transition
-
-		data.raw.tile["dust-lumpy"].transitions[1].spritesheet = ice_2
-		data.raw.tile["dust-lumpy"].transitions[1].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-		data.raw.tile["dust-lumpy"].transitions[1].effect_map_layout.spritesheet = water_dirt_mask
-
-		data.raw.tile["dust-lumpy"].transitions_between_transitions[1].spritesheet = ice_transition
-		data.raw.tile["dust-lumpy"].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile["dust-lumpy"].transitions_between_transitions[1].effect_map_layout.spritesheet = water_dirt_to_land_mask
-		data.raw.tile["dust-lumpy"].transitions_between_transitions[1].water_patch = patch_for_inner_corner_of_transition_between_transition
-
-		data.raw.tile["dust-patchy"].transitions[1].spritesheet = ice_2
-		data.raw.tile["dust-patchy"].transitions[1].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-		data.raw.tile["dust-patchy"].transitions[1].effect_map_layout.spritesheet = water_dirt_mask
-
-		data.raw.tile["dust-patchy"].transitions_between_transitions[1].spritesheet = ice_transition
-		data.raw.tile["dust-patchy"].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile["dust-patchy"].transitions_between_transitions[1].effect_map_layout.spritesheet = water_dirt_to_land_mask
-		data.raw.tile["dust-patchy"].transitions_between_transitions[1].water_patch = patch_for_inner_corner_of_transition_between_transition
+		data.raw.tile[name].transitions_between_transitions[1].spritesheet = ice_transition
+		data.raw.tile[name].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+		data.raw.tile[name].transitions_between_transitions[1].effect_map_layout.spritesheet = water_dirt_to_land_mask
+		data.raw.tile[name].transitions_between_transitions[1].water_patch = patch_for_inner_corner_of_transition_between_transition
 	end
 
 	if not disable_out_of_map_transitions then
-		data.raw.tile["dust-crests"].transitions[2].spritesheet = ice_out_of_map
-		data.raw.tile["dust-crests"].transitions[2].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
+		data.raw.tile[name].transitions[2].spritesheet = ice_out_of_map
+		data.raw.tile[name].transitions[2].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
 
-		data.raw.tile["dust-crests"].transitions_between_transitions[2].spritesheet = ice_out_of_map_transition_b
-		data.raw.tile["dust-crests"].transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+		data.raw.tile[name].transitions_between_transitions[2].spritesheet = ice_out_of_map_transition_b
+		data.raw.tile[name].transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
 
-		data.raw.tile["dust-crests"].transitions_between_transitions[3].spritesheet = ice_shore_out_of_map
-		data.raw.tile["dust-crests"].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile["dust-crests"].transitions_between_transitions[3].effect_map_layout.spritesheet = water_dirt_to_out_of_map_mask
-
-		data.raw.tile["dust-flat"].transitions[2].spritesheet = ice_out_of_map
-		data.raw.tile["dust-flat"].transitions[2].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-
-		data.raw.tile["dust-flat"].transitions_between_transitions[2].spritesheet = ice_out_of_map_transition_b
-		data.raw.tile["dust-flat"].transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-
-		data.raw.tile["dust-flat"].transitions_between_transitions[3].spritesheet = ice_shore_out_of_map
-		data.raw.tile["dust-flat"].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile["dust-flat"].transitions_between_transitions[3].effect_map_layout.spritesheet = water_dirt_to_out_of_map_mask
-
-		data.raw.tile["dust-lumpy"].transitions[2].spritesheet = ice_out_of_map
-		data.raw.tile["dust-lumpy"].transitions[2].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-
-		data.raw.tile["dust-lumpy"].transitions_between_transitions[2].spritesheet = ice_out_of_map_transition_b
-		data.raw.tile["dust-lumpy"].transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-
-		data.raw.tile["dust-lumpy"].transitions_between_transitions[3].spritesheet = ice_shore_out_of_map
-		data.raw.tile["dust-lumpy"].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile["dust-lumpy"].transitions_between_transitions[3].effect_map_layout.spritesheet = water_dirt_to_out_of_map_mask
-
-		data.raw.tile["dust-patchy"].transitions[2].spritesheet = ice_out_of_map
-		data.raw.tile["dust-patchy"].transitions[2].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-
-		data.raw.tile["dust-patchy"].transitions_between_transitions[2].spritesheet = ice_out_of_map_transition_b
-		data.raw.tile["dust-patchy"].transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-
-		data.raw.tile["dust-patchy"].transitions_between_transitions[3].spritesheet = ice_shore_out_of_map
-		data.raw.tile["dust-patchy"].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile["dust-patchy"].transitions_between_transitions[3].effect_map_layout.spritesheet = water_dirt_to_out_of_map_mask
+		data.raw.tile[name].transitions_between_transitions[3].spritesheet = ice_shore_out_of_map
+		data.raw.tile[name].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+		data.raw.tile[name].transitions_between_transitions[3].effect_map_layout.spritesheet = water_dirt_to_out_of_map_mask
 	end
 
-	data.raw.tile["dust-crests"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/aquilo/dust-crests.png",
-		"__base__/graphics/terrain/masks/transition-4.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015 }, },
-		}
-	)
+	if terrain then
+		data.raw.tile[name].variants = tile_variations_template_hd(
+			"__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/aquilo/" .. name .. ".png",
+			"__base__/graphics/terrain/masks/transition-4.png",
+			variants[variation]
+		)
+	end
+end
 
-	data.raw.tile["dust-flat"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/aquilo/dust-flat.png",
-		"__base__/graphics/terrain/masks/transition-4.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015 }, },
-		}
-	)
-
-	data.raw.tile["dust-lumpy"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/aquilo/dust-lumpy.png",
-		"__base__/graphics/terrain/masks/transition-4.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015 }, },
-		}
-	)
-
-	data.raw.tile["dust-patchy"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/aquilo/dust-patchy.png",
-		"__base__/graphics/terrain/masks/transition-4.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015 }, },
-		}
-	)
+if not settings.startup["f_hd_a_sa_ta_disable_dust"].value then
+	load_transition("dust-crests", true, 1)
+	load_transition("dust-flat", true, 1)
+	load_transition("dust-lumpy", true, 1)
+	load_transition("dust-patchy", true, 1)
 end
 
 if not settings.startup["f_hd_a_sa_ta_disable_ice"].value then
-	if not disable_water_transitions then
-		data.raw.tile["ice-platform"].transitions[1].spritesheet = ice_2
-		data.raw.tile["ice-platform"].transitions[1].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-		data.raw.tile["ice-platform"].transitions[1].effect_map_layout.spritesheet = water_dirt_mask
-
-		data.raw.tile["ice-platform"].transitions_between_transitions[1].spritesheet = ice_transition
-		data.raw.tile["ice-platform"].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile["ice-platform"].transitions_between_transitions[1].effect_map_layout.spritesheet = water_dirt_to_land_mask
-		data.raw.tile["ice-platform"].transitions_between_transitions[1].water_patch = patch_for_inner_corner_of_transition_between_transition
-
-		data.raw.tile["ice-rough"].transitions[1].spritesheet = ice_2
-		data.raw.tile["ice-rough"].transitions[1].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-		data.raw.tile["ice-rough"].transitions[1].effect_map_layout.spritesheet = water_dirt_mask
-
-		data.raw.tile["ice-rough"].transitions_between_transitions[1].spritesheet = ice_transition
-		data.raw.tile["ice-rough"].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile["ice-rough"].transitions_between_transitions[1].effect_map_layout.spritesheet = water_dirt_to_land_mask
-		data.raw.tile["ice-rough"].transitions_between_transitions[1].water_patch = patch_for_inner_corner_of_transition_between_transition
-
-		data.raw.tile["ice-smooth"].transitions[1].spritesheet = ice_2
-		data.raw.tile["ice-smooth"].transitions[1].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-		data.raw.tile["ice-smooth"].transitions[1].effect_map_layout.spritesheet = water_dirt_mask
-
-		data.raw.tile["ice-smooth"].transitions_between_transitions[1].spritesheet = ice_transition
-		data.raw.tile["ice-smooth"].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile["ice-smooth"].transitions_between_transitions[1].effect_map_layout.spritesheet = water_dirt_to_land_mask
-		data.raw.tile["ice-smooth"].transitions_between_transitions[1].water_patch = patch_for_inner_corner_of_transition_between_transition
-	end
-
-	if not disable_out_of_map_transitions then
-		data.raw.tile["ice-platform"].transitions[2].spritesheet = ice_out_of_map
-		data.raw.tile["ice-platform"].transitions[2].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-
-		data.raw.tile["ice-platform"].transitions_between_transitions[2].spritesheet = ice_out_of_map_transition_b
-		data.raw.tile["ice-platform"].transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-
-		data.raw.tile["ice-platform"].transitions_between_transitions[3].spritesheet = ice_shore_out_of_map
-		data.raw.tile["ice-platform"].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile["ice-platform"].transitions_between_transitions[3].effect_map_layout.spritesheet = water_dirt_to_out_of_map_mask
-
-		data.raw.tile["ice-rough"].transitions[2].spritesheet = ice_out_of_map
-		data.raw.tile["ice-rough"].transitions[2].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-
-		data.raw.tile["ice-rough"].transitions_between_transitions[2].spritesheet = ice_out_of_map_transition_b
-		data.raw.tile["ice-rough"].transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-
-		data.raw.tile["ice-rough"].transitions_between_transitions[3].spritesheet = ice_shore_out_of_map
-		data.raw.tile["ice-rough"].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile["ice-rough"].transitions_between_transitions[3].effect_map_layout.spritesheet = water_dirt_to_out_of_map_mask
-
-		data.raw.tile["ice-smooth"].transitions[2].spritesheet = ice_out_of_map
-		data.raw.tile["ice-smooth"].transitions[2].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-
-		data.raw.tile["ice-smooth"].transitions_between_transitions[2].spritesheet = ice_out_of_map_transition_b
-		data.raw.tile["ice-smooth"].transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-
-		data.raw.tile["ice-smooth"].transitions_between_transitions[3].spritesheet = ice_shore_out_of_map
-		data.raw.tile["ice-smooth"].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile["ice-smooth"].transitions_between_transitions[3].effect_map_layout.spritesheet = water_dirt_to_out_of_map_mask
-	end
+	load_transition("ice-platform", false)
+	load_transition("ice-rough", true, 2)
+	load_transition("ice-smooth", false)
 
 	data.raw.tile["brash-ice"].transitions = data.raw.tile["water"].transitions
 	data.raw.tile["brash-ice"].transitions_between_transitions = data.raw.tile["water"].transitions_between_transitions
-
-	data.raw.tile["ice-rough"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/aquilo/ice-rough.png",
-		"__base__/graphics/terrain/masks/transition-4.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-		}
-	)
 end
 
 if not settings.startup["f_hd_a_sa_ta_disable_snow"].value then
-	if not disable_water_transitions then
-		data.raw.tile["snow-crests"].transitions[1].spritesheet = ice_2
-		data.raw.tile["snow-crests"].transitions[1].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-		data.raw.tile["snow-crests"].transitions[1].effect_map_layout.spritesheet = water_dirt_mask
-
-		data.raw.tile["snow-crests"].transitions_between_transitions[1].spritesheet = ice_transition
-		data.raw.tile["snow-crests"].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile["snow-crests"].transitions_between_transitions[1].effect_map_layout.spritesheet = water_dirt_to_land_mask
-		data.raw.tile["snow-crests"].transitions_between_transitions[1].water_patch = patch_for_inner_corner_of_transition_between_transition
-
-		data.raw.tile["snow-flat"].transitions[1].spritesheet = ice_2
-		data.raw.tile["snow-flat"].transitions[1].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-		data.raw.tile["snow-flat"].transitions[1].effect_map_layout.spritesheet = water_dirt_mask
-
-		data.raw.tile["snow-flat"].transitions_between_transitions[1].spritesheet = ice_transition
-		data.raw.tile["snow-flat"].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile["snow-flat"].transitions_between_transitions[1].effect_map_layout.spritesheet = water_dirt_to_land_mask
-		data.raw.tile["snow-flat"].transitions_between_transitions[1].water_patch = patch_for_inner_corner_of_transition_between_transition
-
-		data.raw.tile["snow-lumpy"].transitions[1].spritesheet = ice_2
-		data.raw.tile["snow-lumpy"].transitions[1].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-		data.raw.tile["snow-lumpy"].transitions[1].effect_map_layout.spritesheet = water_dirt_mask
-
-		data.raw.tile["snow-lumpy"].transitions_between_transitions[1].spritesheet = ice_transition
-		data.raw.tile["snow-lumpy"].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile["snow-lumpy"].transitions_between_transitions[1].effect_map_layout.spritesheet = water_dirt_to_land_mask
-		data.raw.tile["snow-lumpy"].transitions_between_transitions[1].water_patch = patch_for_inner_corner_of_transition_between_transition
-
-		data.raw.tile["snow-patchy"].transitions[1].spritesheet = ice_2
-		data.raw.tile["snow-patchy"].transitions[1].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-		data.raw.tile["snow-patchy"].transitions[1].effect_map_layout.spritesheet = water_dirt_mask
-
-		data.raw.tile["snow-patchy"].transitions_between_transitions[1].spritesheet = ice_transition
-		data.raw.tile["snow-patchy"].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile["snow-patchy"].transitions_between_transitions[1].effect_map_layout.spritesheet = water_dirt_to_land_mask
-		data.raw.tile["snow-patchy"].transitions_between_transitions[1].water_patch = patch_for_inner_corner_of_transition_between_transition
-	end
-
-	if not disable_out_of_map_transitions then
-		data.raw.tile["snow-crests"].transitions[2].spritesheet = ice_out_of_map
-		data.raw.tile["snow-crests"].transitions[2].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-
-		data.raw.tile["snow-crests"].transitions_between_transitions[2].spritesheet = ice_out_of_map_transition_b
-		data.raw.tile["snow-crests"].transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-
-		data.raw.tile["snow-crests"].transitions_between_transitions[3].spritesheet = ice_shore_out_of_map
-		data.raw.tile["snow-crests"].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile["snow-crests"].transitions_between_transitions[3].effect_map_layout.spritesheet = water_dirt_to_out_of_map_mask
-
-		data.raw.tile["snow-flat"].transitions[2].spritesheet = ice_out_of_map
-		data.raw.tile["snow-flat"].transitions[2].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-
-		data.raw.tile["snow-flat"].transitions_between_transitions[2].spritesheet = ice_out_of_map_transition_b
-		data.raw.tile["snow-flat"].transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-
-		data.raw.tile["snow-flat"].transitions_between_transitions[3].spritesheet = ice_shore_out_of_map
-		data.raw.tile["snow-flat"].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile["snow-flat"].transitions_between_transitions[3].effect_map_layout.spritesheet = water_dirt_to_out_of_map_mask
-
-		data.raw.tile["snow-lumpy"].transitions[2].spritesheet = ice_out_of_map
-		data.raw.tile["snow-lumpy"].transitions[2].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-
-		data.raw.tile["snow-lumpy"].transitions_between_transitions[2].spritesheet = ice_out_of_map_transition_b
-		data.raw.tile["snow-lumpy"].transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-
-		data.raw.tile["snow-lumpy"].transitions_between_transitions[3].spritesheet = ice_shore_out_of_map
-		data.raw.tile["snow-lumpy"].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile["snow-lumpy"].transitions_between_transitions[3].effect_map_layout.spritesheet = water_dirt_to_out_of_map_mask
-
-		data.raw.tile["snow-patchy"].transitions[2].spritesheet = ice_out_of_map
-		data.raw.tile["snow-patchy"].transitions[2].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-
-		data.raw.tile["snow-patchy"].transitions_between_transitions[2].spritesheet = ice_out_of_map_transition_b
-		data.raw.tile["snow-patchy"].transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-
-		data.raw.tile["snow-patchy"].transitions_between_transitions[3].spritesheet = ice_shore_out_of_map
-		data.raw.tile["snow-patchy"].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile["snow-patchy"].transitions_between_transitions[3].effect_map_layout.spritesheet = water_dirt_to_out_of_map_mask
-	end
-
-	data.raw.tile["snow-crests"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/aquilo/snow-crests.png",
-		"__base__/graphics/terrain/masks/transition-4.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015 }, },
-		}
-	)
-
-	data.raw.tile["snow-flat"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/aquilo/snow-flat.png",
-		"__base__/graphics/terrain/masks/transition-4.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015 }, },
-		}
-	)
-
-	data.raw.tile["snow-lumpy"].variants = tile_variations_template_hd(
-		"__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/aquilo/snow-lumpy.png",
-		"__base__/graphics/terrain/masks/transition-4.png",
-		{
-			max_size = 4,
-			[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-			[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-			[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015 }, },
-		}
-	)
+	load_transition("snow-crests", true, 1)
+	load_transition("snow-flat", true, 1)
+	load_transition("snow-lumpy", true, 1)
+	load_transition("snow-patchy", false)
 end
