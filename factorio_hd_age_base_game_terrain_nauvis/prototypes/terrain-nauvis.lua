@@ -198,6 +198,14 @@ local patch_for_inner_corner_of_transition_between_transition = {
 	height = 64 * 2
 }
 
+local function load_terrain(name, transition, options)
+	data.raw.tile[name].variants = tile_variations_template_hd(
+		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/" .. name .. ".png",
+		"__base__/graphics/terrain/masks/transition-" .. transition .. ".png",
+		options
+	)
+end
+
 local function load_grass_transitions(name)
 	if not disable_water_transitions then
 		data.raw.tile[name].transitions[1].spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/water-transitions/grass.png"
@@ -220,14 +228,6 @@ local function load_grass_transitions(name)
 		data.raw.tile[name].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
 		data.raw.tile[name].transitions_between_transitions[3].effect_map_layout.spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/effect-maps/water-grass-to-out-of-map-mask.png"
 	end
-end
-
-local function load_terrain(name, transition, options)
-	data.raw.tile[name].variants = tile_variations_template_hd(
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/" .. name .. ".png",
-		"__base__/graphics/terrain/masks/transition-" .. transition .. ".png",
-		options
-	)
 end
 
 if not settings.startup["f_hd_a_bg_tn_disable_gras"].value then
@@ -266,19 +266,8 @@ if not settings.startup["f_hd_a_bg_tn_disable_gras"].value then
 end
 
 local function load_transitions(name, dry_dirt, dark_dirt)
-	local name2 = name
-	local patch = true
-
-	if dry_dirt then
-		name2 = "dry-dirt"
-		patch = false
-	elseif dark_dirt then
-		name2 = "dark-dirt"
-		patch = true
-	else
-		name2 = name
-		patch = true
-	end
+	local name2 = dry_dirt and "dry-dirt" or (dark_dirt and "dark-dirt" or name)
+	local patch = not dry_dirt
 
 	if not disable_water_transitions then
 		data.raw.tile[name].transitions[1].spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/water-transitions/" .. name2 .. ".png"
