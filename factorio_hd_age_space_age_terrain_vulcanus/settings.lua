@@ -67,7 +67,7 @@ data:extend {
 		type = "bool-setting",
 		setting_type = "startup",
 		name = "f_hd_a_sa_tv_disable_old-lava-transitions",
-		default_value = false,
+		default_value = true,
 		forced_value = true,
 		order = "i"
 	},
@@ -75,7 +75,7 @@ data:extend {
 		type = "bool-setting",
 		setting_type = "startup",
 		name = "f_hd_a_sa_tv_disable_out-of-map-transitions",
-		default_value = false,
+		default_value = true,
 		forced_value = true,
 		order = "j"
 	},
