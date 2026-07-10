@@ -24,29 +24,30 @@ function tile_spritesheet_layout_hd.concrete_layout(refined, out_of_map, transit
 	}
 end
 
-local concrete_mask = "__factorio_hd_age_base_game_base__/data/base/graphics/terrain/effect-maps/concrete-mask.png"
+local base = "__factorio_hd_age_base_game_base__/data/base/graphics/terrain/"
+local concrete_mask = base .. "effect-maps/concrete-mask.png"
 
 local function load_transitions(name, refined)
 	if not settings.startup["f_hd_a_bg_b_disable_water-transitions"].value then
-		data.raw.tile[name].transitions[1].spritesheet = "__factorio_hd_age_base_game_base__/data/base/graphics/terrain/water-transitions/".. name ..".png"
+		data.raw.tile[name].transitions[1].spritesheet = base .. "water-transitions/".. name ..".png"
 		data.raw.tile[name].transitions[1].layout = tile_spritesheet_layout_hd.concrete_layout(refined, false, false)
 		data.raw.tile[name].transitions[1].effect_map_layout.spritesheet = concrete_mask
 
-		data.raw.tile[name].transitions_between_transitions[1].spritesheet = "__factorio_hd_age_base_game_base__/data/base/graphics/terrain/water-transitions/".. name .."-transitions.png"
+		data.raw.tile[name].transitions_between_transitions[1].spritesheet = base .. "water-transitions/".. name .."-transitions.png"
 		data.raw.tile[name].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.concrete_layout(refined, false, true)
 		data.raw.tile[name].transitions_between_transitions[1].effect_map_layout.spritesheet = concrete_mask
 	end
 
 	if not settings.startup["f_hd_a_bg_b_disable_out-of-map-transitions"].value then
-		data.raw.tile[name].transitions[2].spritesheet = "__factorio_hd_age_base_game_base__/data/base/graphics/terrain/out-of-map-transition/".. name .."-out-of-map-transition.png"
+		data.raw.tile[name].transitions[2].spritesheet = base .. "out-of-map-transition/".. name .."-out-of-map-transition.png"
 		data.raw.tile[name].transitions[2].layout = tile_spritesheet_layout_hd.concrete_layout(refined, true, false)
 
-		data.raw.tile[name].transitions_between_transitions[2].spritesheet = "__factorio_hd_age_base_game_base__/data/base/graphics/terrain/out-of-map-transition/".. name .."-out-of-map-transition-b.png"
+		data.raw.tile[name].transitions_between_transitions[2].spritesheet = base .. "out-of-map-transition/".. name .."-out-of-map-transition-b.png"
 		data.raw.tile[name].transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.concrete_layout(refined, true, true)
 
-		data.raw.tile[name].transitions_between_transitions[3].spritesheet = "__factorio_hd_age_base_game_base__/data/base/graphics/terrain/out-of-map-transition/".. name .."-shore-out-of-map-transition.png"
+		data.raw.tile[name].transitions_between_transitions[3].spritesheet = base .. "out-of-map-transition/".. name .."-shore-out-of-map-transition.png"
 		data.raw.tile[name].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.concrete_layout(refined, true, true)
-		data.raw.tile[name].transitions_between_transitions[3].effect_map_layout.spritesheet = "__factorio_hd_age_base_game_base__/data/base/graphics/terrain/effect-maps/concrete-out-of-map-mask.png"
+		data.raw.tile[name].transitions_between_transitions[3].effect_map_layout.spritesheet = base .. "effect-maps/concrete-out-of-map-mask.png"
 	end
 end
 

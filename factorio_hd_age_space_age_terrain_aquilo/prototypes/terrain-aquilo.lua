@@ -100,6 +100,18 @@ tile_spritesheet_layout_hd.transition_3_3_3_1_0 = {
 	background               = { x_offset = 1088 * 2 }
 }
 
+local base = {
+	"__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/",
+	"__factorio_hd_age_space_age_terrain_aquilo__/data/base/graphics/terrain/"
+}
+
+local patch_for_inner_corner_of_transition_between_transition = {
+			filename = base[1] .. "water-transitions/ice-patch.png",
+			scale = 0.25,
+			width = 64 * 2,
+			height = 64 * 2
+		}
+
 local options_ice = {
 	{
 		max_size = 4,
@@ -117,36 +129,31 @@ local options_ice = {
 
 local function load_transitions(name, terrain, variation)
 	if not settings.startup["f_hd_a_sa_ta_disable_water-transitions"].value then
-		data.raw.tile[name].transitions[1].spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/water-transitions/ice-2.png"
+		data.raw.tile[name].transitions[1].spritesheet = base[1] .. "water-transitions/ice-2.png"
 		data.raw.tile[name].transitions[1].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-		data.raw.tile[name].transitions[1].effect_map_layout.spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/base/graphics/terrain/effect-maps/water-dirt-mask.png"
+		data.raw.tile[name].transitions[1].effect_map_layout.spritesheet = base[2] .. "effect-maps/water-dirt-mask.png"
 
-		data.raw.tile[name].transitions_between_transitions[1].spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/water-transitions/ice-transition.png"
+		data.raw.tile[name].transitions_between_transitions[1].spritesheet = base[1] .. "water-transitions/ice-transition.png"
 		data.raw.tile[name].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile[name].transitions_between_transitions[1].effect_map_layout.spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/base/graphics/terrain/effect-maps/water-dirt-to-land-mask.png"
-		data.raw.tile[name].transitions_between_transitions[1].water_patch = {
-			filename = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/water-transitions/ice-patch.png",
-			scale = 0.25,
-			width = 64 * 2,
-			height = 64 * 2
-		}
+		data.raw.tile[name].transitions_between_transitions[1].effect_map_layout.spritesheet = base[2] .. "effect-maps/water-dirt-to-land-mask.png"
+		data.raw.tile[name].transitions_between_transitions[1].water_patch = patch_for_inner_corner_of_transition_between_transition
 	end
 
 	if not settings.startup["f_hd_a_sa_ta_disable_out-of-map-transitions"].value then
-		data.raw.tile[name].transitions[2].spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/out-of-map-transition/ice-out-of-map.png"
+		data.raw.tile[name].transitions[2].spritesheet = base[1] .. "out-of-map-transition/ice-out-of-map.png"
 		data.raw.tile[name].transitions[2].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
 
-		data.raw.tile[name].transitions_between_transitions[2].spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/out-of-map-transition/ice-out-of-map-transition-b.png"
+		data.raw.tile[name].transitions_between_transitions[2].spritesheet = base[1] .. "out-of-map-transition/ice-out-of-map-transition-b.png"
 		data.raw.tile[name].transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
 
-		data.raw.tile[name].transitions_between_transitions[3].spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/out-of-map-transition/ice-shore-out-of-map.png"
+		data.raw.tile[name].transitions_between_transitions[3].spritesheet = base[1] .. "out-of-map-transition/ice-shore-out-of-map.png"
 		data.raw.tile[name].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile[name].transitions_between_transitions[3].effect_map_layout.spritesheet = "__factorio_hd_age_space_age_terrain_aquilo__/data/base/graphics/terrain/effect-maps/water-dirt-to-out-of-map-mask.png"
+		data.raw.tile[name].transitions_between_transitions[3].effect_map_layout.spritesheet = base[2] .. "effect-maps/water-dirt-to-out-of-map-mask.png"
 	end
 
 	if terrain then
 		data.raw.tile[name].variants = tile_variations_template_hd(
-			"__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/aquilo/" .. name .. ".png",
+			base[1] .. "aquilo/" .. name .. ".png",
 			"__base__/graphics/terrain/masks/transition-4.png",
 			options_ice[variation]
 		)

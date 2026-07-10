@@ -180,10 +180,11 @@ tile_spritesheet_layout_hd.transition_16_16_16_4_8_short = {
 	background         = { x_offset = 1088 * 2 }
 }
 
-local out_of_map_transition = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/out-of-map-transition/out-of-map-transition.png"
+local base = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/"
+local out_of_map_transition = base .. "out-of-map-transition/out-of-map-transition.png"
 local patch_for_inner_corner_of_transition_between_transition = {
 	filename =
-	"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/water-transitions/water-patch.png",
+		base .. "water-transitions/water-patch.png",
 	scale = 0.25,
 	width = 64 * 2,
 	height = 64 * 2
@@ -191,7 +192,7 @@ local patch_for_inner_corner_of_transition_between_transition = {
 
 local function load_terrain(name, transition, options)
 	data.raw.tile[name].variants = tile_variations_template_hd(
-		"__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/" .. name .. ".png",
+		base .. "" .. name .. ".png",
 		"__base__/graphics/terrain/masks/transition-" .. transition .. ".png",
 		options
 	)
@@ -199,25 +200,25 @@ end
 
 local function load_grass_transitions(name)
 	if not disable_water_transitions then
-		data.raw.tile[name].transitions[1].spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/water-transitions/grass.png"
+		data.raw.tile[name].transitions[1].spritesheet = base .. "water-transitions/grass.png"
 		data.raw.tile[name].transitions[1].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_8
-		data.raw.tile[name].transitions[1].effect_map_layout.spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/effect-maps/water-grass-mask.png"
+		data.raw.tile[name].transitions[1].effect_map_layout.spritesheet = base .. "effect-maps/water-grass-mask.png"
 
-		data.raw.tile[name].transitions_between_transitions[1].spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/water-transitions/grass-transition.png"
+		data.raw.tile[name].transitions_between_transitions[1].spritesheet = base .. "water-transitions/grass-transition.png"
 		data.raw.tile[name].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile[name].transitions_between_transitions[1].effect_map_layout.spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/effect-maps/water-grass-to-land-mask.png"
+		data.raw.tile[name].transitions_between_transitions[1].effect_map_layout.spritesheet = base .. "effect-maps/water-grass-to-land-mask.png"
 	end
 
 	if not disable_out_of_map_transitions then
 		data.raw.tile[name].transitions[2].spritesheet = out_of_map_transition
 		data.raw.tile[name].transitions[2].layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1
 
-		data.raw.tile[name].transitions_between_transitions[2].spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/out-of-map-transition/grass-out-of-map-transition.png"
+		data.raw.tile[name].transitions_between_transitions[2].spritesheet = base .. "out-of-map-transition/grass-out-of-map-transition.png"
 		data.raw.tile[name].transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
 
-		data.raw.tile[name].transitions_between_transitions[3].spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/out-of-map-transition/grass-shore-out-of-map-transition.png"
+		data.raw.tile[name].transitions_between_transitions[3].spritesheet = base .. "out-of-map-transition/grass-shore-out-of-map-transition.png"
 		data.raw.tile[name].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile[name].transitions_between_transitions[3].effect_map_layout.spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/effect-maps/water-grass-to-out-of-map-mask.png"
+		data.raw.tile[name].transitions_between_transitions[3].effect_map_layout.spritesheet = base .. "effect-maps/water-grass-to-out-of-map-mask.png"
 	end
 end
 
@@ -261,13 +262,13 @@ local function load_transitions(name, dry_dirt, dark_dirt)
 	local patch = not dry_dirt
 
 	if not disable_water_transitions then
-		data.raw.tile[name].transitions[1].spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/water-transitions/" .. name2 .. ".png"
+		data.raw.tile[name].transitions[1].spritesheet = base .. "water-transitions/" .. name2 .. ".png"
 		data.raw.tile[name].transitions[1].layout = tile_spritesheet_layout_hd.transition_8_8_8_2_4
-		data.raw.tile[name].transitions[1].effect_map_layout.spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/effect-maps/water-dirt-mask.png"
+		data.raw.tile[name].transitions[1].effect_map_layout.spritesheet = base .. "effect-maps/water-dirt-mask.png"
 
-		data.raw.tile[name].transitions_between_transitions[1].spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/water-transitions/" .. name2 .. "-transition.png"
+		data.raw.tile[name].transitions_between_transitions[1].spritesheet = base .. "water-transitions/" .. name2 .. "-transition.png"
 		data.raw.tile[name].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile[name].transitions_between_transitions[1].effect_map_layout.spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/effect-maps/water-dirt-to-land-mask.png"
+		data.raw.tile[name].transitions_between_transitions[1].effect_map_layout.spritesheet = base .. "effect-maps/water-dirt-to-land-mask.png"
 		if patch then
 			data.raw.tile[name].transitions_between_transitions[1].water_patch = patch_for_inner_corner_of_transition_between_transition
 		end
@@ -277,12 +278,12 @@ local function load_transitions(name, dry_dirt, dark_dirt)
 		data.raw.tile[name].transitions[2].spritesheet = out_of_map_transition
 		data.raw.tile[name].transitions[2].layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1
 
-		data.raw.tile[name].transitions_between_transitions[2].spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/out-of-map-transition/dirt-out-of-map-transition.png"
+		data.raw.tile[name].transitions_between_transitions[2].spritesheet = base .. "out-of-map-transition/dirt-out-of-map-transition.png"
 		data.raw.tile[name].transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
 
-		data.raw.tile[name].transitions_between_transitions[3].spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/out-of-map-transition/" .. name2 .. "-shore-out-of-map-transition.png"
+		data.raw.tile[name].transitions_between_transitions[3].spritesheet = base .. "out-of-map-transition/" .. name2 .. "-shore-out-of-map-transition.png"
 		data.raw.tile[name].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile[name].transitions_between_transitions[3].effect_map_layout.spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/effect-maps/water-dirt-to-out-of-map-mask.png"
+		data.raw.tile[name].transitions_between_transitions[3].effect_map_layout.spritesheet = base .. "effect-maps/water-dirt-to-out-of-map-mask.png"
 	end
 end
 
@@ -303,25 +304,20 @@ if not settings.startup["f_hd_a_bg_tn_disable_dirt"].value then
 		[4] = { probability = 1.00, weights = { 0.070, 0.070, 0.070, 0.070, 0.070, 0.070, 0.015, 0.070, 0.070, 0.070, 0.015, 0.050, 0.070, 0.070, 0.065, 0.070 } }
 	}
 
-	load_terrain("dry-dirt", "1", options_dirt)
-	load_terrain("dirt-1", "1", options_dirt)
-	load_terrain("dirt-2", "1", options_dirt)
-	load_terrain("dirt-3", "1", options_dirt)
-	load_terrain("dirt-4", "1", options_dirt)
-	load_terrain("dirt-5", "1", options_dirt)
-	load_terrain("dirt-6", "1", options_dirt)
-	load_terrain("dirt-7", "1", options_dirt)
+	for _, name in ipairs({ "dry-dirt", "dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7" }) do
+		load_terrain(name, "1", options_dirt)
+	end
 end
 
 local function load_sand_transitions(name)
 	if not disable_water_transitions then
-		data.raw.tile[name].transitions[1].spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/water-transitions/sand.png"
+		data.raw.tile[name].transitions[1].spritesheet = base .. "water-transitions/sand.png"
 		data.raw.tile[name].transitions[1].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_8_short
-		data.raw.tile[name].transitions[1].effect_map_layout.spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/effect-maps/water-sand-mask.png"
+		data.raw.tile[name].transitions[1].effect_map_layout.spritesheet = base .. "effect-maps/water-sand-mask.png"
 
-		data.raw.tile[name].transitions_between_transitions[1].spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/water-transitions/sand-transition.png"
+		data.raw.tile[name].transitions_between_transitions[1].spritesheet = base .. "water-transitions/sand-transition.png"
 		data.raw.tile[name].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0_only_u_tall
-		data.raw.tile[name].transitions_between_transitions[1].effect_map_layout.spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/effect-maps/water-sand-to-land-mask.png"
+		data.raw.tile[name].transitions_between_transitions[1].effect_map_layout.spritesheet = base .. "effect-maps/water-sand-to-land-mask.png"
 		data.raw.tile[name].transitions_between_transitions[1].water_patch = patch_for_inner_corner_of_transition_between_transition
 	end
 
@@ -329,12 +325,12 @@ local function load_sand_transitions(name)
 		data.raw.tile[name].transitions[2].spritesheet = out_of_map_transition
 		data.raw.tile[name].transitions[2].layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1
 
-		data.raw.tile[name].transitions_between_transitions[2].spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/out-of-map-transition/sand-out-of-map-transition.png"
+		data.raw.tile[name].transitions_between_transitions[2].spritesheet = base .. "out-of-map-transition/sand-out-of-map-transition.png"
 		data.raw.tile[name].transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
 
-		data.raw.tile[name].transitions_between_transitions[3].spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/out-of-map-transition/sand-shore-out-of-map-transition.png"
+		data.raw.tile[name].transitions_between_transitions[3].spritesheet = base .. "out-of-map-transition/sand-shore-out-of-map-transition.png"
 		data.raw.tile[name].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile[name].transitions_between_transitions[3].effect_map_layout.spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/effect-maps/water-sand-to-out-of-map-mask.png"
+		data.raw.tile[name].transitions_between_transitions[3].effect_map_layout.spritesheet = base .. "effect-maps/water-sand-to-out-of-map-mask.png"
 		data.raw.tile[name].transitions_between_transitions[3].water_patch = patch_for_inner_corner_of_transition_between_transition
 	end
 end
@@ -393,15 +389,15 @@ load_transitions("landfill")
 load_transitions("nuclear-ground")
 
 local function load_water_transitions(name)
-	data.raw.tile[name].transitions[1].spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/out-of-map-transition/water-shallow-out-of-map-transition.png"
+	data.raw.tile[name].transitions[1].spritesheet = base .. "out-of-map-transition/water-shallow-out-of-map-transition.png"
 	data.raw.tile[name].transitions[1].layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1
 
-	data.raw.tile[name].transitions_between_transitions[1].spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/out-of-map-transition/water-shallow-out-of-map-transition-to-water.png"
+	data.raw.tile[name].transitions_between_transitions[1].spritesheet = base .. "out-of-map-transition/water-shallow-out-of-map-transition-to-water.png"
 	data.raw.tile[name].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
 end
 
 if not disable_out_of_map_transitions then
-	data.raw.tile["water"].transitions[1].spritesheet = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/out-of-map-transition/water-out-of-map-transition-tintable.png"
+	data.raw.tile["water"].transitions[1].spritesheet = base .. "out-of-map-transition/water-out-of-map-transition-tintable.png"
 	data.raw.tile["water"].transitions[1].layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1
 
 	load_water_transitions("water-mud")
