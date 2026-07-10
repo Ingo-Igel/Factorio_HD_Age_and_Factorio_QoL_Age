@@ -66,7 +66,7 @@ data:extend {
 	{
 		type = "bool-setting",
 		setting_type = "startup",
-		name = "f_hd_a_sa_tv_disable_old-lava-transitions",
+		name = "f_hd_a_sa_tv_disable_not-vulcanus-lava-transitions",
 		default_value = true,
 		forced_value = true,
 		order = "i"

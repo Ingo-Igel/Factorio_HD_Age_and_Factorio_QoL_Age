@@ -366,48 +366,50 @@ local function load_other_lava_transtion(name, number)
 		data.raw.tile[name].transitions[3].lightmap_layout = { spritesheet = base[1] .. "lava-transitions/lava-stone-lightmap.png" }
 		data.raw.tile[name].transitions[3].effect_map_layout.spritesheet = base[1] .. "effect-maps/lava-dirt-mask.png"
 
-		data.raw.tile[name].transitions_between_transitions[number+1].spritesheet = base[1] .. "lava-transitions/lava-stone-transition.png"
-		data.raw.tile[name].transitions_between_transitions[number+1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile[name].transitions_between_transitions[number+1].effect_map_layout.spritesheet = base[1] .. "effect-maps/lava-dirt-to-land-mask.png"
-		data.raw.tile[name].transitions_between_transitions[number+1].water_patch = lava_patch
+		data.raw.tile[name].transitions_between_transitions[number + 1].spritesheet = base[1] .. "lava-transitions/lava-stone-transition.png"
+		data.raw.tile[name].transitions_between_transitions[number + 1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+		data.raw.tile[name].transitions_between_transitions[number + 1].effect_map_layout.spritesheet = base[1] .. "effect-maps/lava-dirt-to-land-mask.png"
+		data.raw.tile[name].transitions_between_transitions[number + 1].water_patch = lava_patch
 	end
 	if not disable_out_of_map_transitions then
-		data.raw.tile[name].transitions_between_transitions[number+2].spritesheet = base[1] .. "out-of-map-transition/lava-stone-shore-out-of-map-transition.png"
-		data.raw.tile[name].transitions_between_transitions[number+2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile[name].transitions_between_transitions[number+2].effect_map_layout.spritesheet = base[1] .. "effect-maps/lava-dirt-to-out-of-map-mask.png"
+		data.raw.tile[name].transitions_between_transitions[number + 2].spritesheet = base[1] .. "out-of-map-transition/lava-stone-shore-out-of-map-transition.png"
+		data.raw.tile[name].transitions_between_transitions[number + 2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+		data.raw.tile[name].transitions_between_transitions[number + 2].effect_map_layout.spritesheet = base[1] .. "effect-maps/lava-dirt-to-out-of-map-mask.png"
 	end
 end
 
-for _, name in ipairs({
-	"grass-1", "grass-2", "grass-3", "grass-4",
-	"dry-dirt",
-	"dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7",
-	"sand-1", "sand-2", "sand-3",
-	"red-desert-0", "red-desert-1", "red-desert-2", "red-desert-3",
-	"landfill", "nuclear-ground",
-	"dust-crests", "dust-flat", "dust-lumpy", "dust-patchy",
-	"ice-platform", "ice-rough", "ice-smooth",
-	"snow-crests", "snow-flat", "snow-lumpy", "snow-patchy",
-	"oil-ocean-shallow", "oil-ocean-shallow-2",
-	"fulgoran-dust", "fulgoran-dunes", "fulgoran-sand", "fulgoran-rock", "fulgoran-paving", "fulgoran-walls", "fulgoran-conduit", "fulgoran-machinery",
-}) do
-	load_other_lava_transtion(name, 3)
-end
+if not settings.startup["f_hd_a_sa_tv_disable_not-vulcanus-lava-transitions"].value then
+	for _, name in ipairs({
+		"grass-1", "grass-2", "grass-3", "grass-4",
+		"dry-dirt",
+		"dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7",
+		"sand-1", "sand-2", "sand-3",
+		"red-desert-0", "red-desert-1", "red-desert-2", "red-desert-3",
+		"landfill", "nuclear-ground",
+		"dust-crests", "dust-flat", "dust-lumpy", "dust-patchy",
+		"ice-platform", "ice-rough", "ice-smooth",
+		"snow-crests", "snow-flat", "snow-lumpy", "snow-patchy",
+		"oil-ocean-shallow", "oil-ocean-shallow-2",
+		"fulgoran-dust", "fulgoran-dunes", "fulgoran-sand", "fulgoran-rock", "fulgoran-paving", "fulgoran-walls", "fulgoran-conduit", "fulgoran-machinery",
+	}) do
+		load_other_lava_transtion(name, 3)
+	end
 
-for _, name in ipairs({
-	"pit-rock",
-	"artificial-yumako-soil", "overgrowth-yumako-soil", "natural-yumako-soil",
-	"artificial-jellynut-soil", "overgrowth-jellynut-soil", "natural-jellynut-soil",
-	"lowland-olive-blubber", "lowland-olive-blubber-2", "lowland-olive-blubber-3", "lowland-brown-blubber",
-	"lowland-pale-green", "lowland-cream-cauliflower", "lowland-cream-cauliflower-2",
-	"lowland-dead-skin", "lowland-dead-skin-2",
-	"lowland-cream-red",
-	"lowland-red-vein", "lowland-red-vein-2", "lowland-red-vein-3", "lowland-red-vein-4", "lowland-red-vein-dead",
-	"lowland-red-infection",
-	"midland-cracked-lichen", "midland-cracked-lichen-dull", "midland-cracked-lichen-dark",
-	"midland-turquoise-bark", "midland-turquoise-bark-2",
-	"midland-yellow-crust", "midland-yellow-crust-2", "midland-yellow-crust-3", "midland-yellow-crust-4",
-	"highland-dark-rock", "highland-dark-rock-2", "highland-yellow-rock",
-}) do
-	load_other_lava_transtion(name, 2)
+	for _, name in ipairs({
+		"pit-rock",
+		"artificial-yumako-soil", "overgrowth-yumako-soil", "natural-yumako-soil",
+		"artificial-jellynut-soil", "overgrowth-jellynut-soil", "natural-jellynut-soil",
+		"lowland-olive-blubber", "lowland-olive-blubber-2", "lowland-olive-blubber-3", "lowland-brown-blubber",
+		"lowland-pale-green", "lowland-cream-cauliflower", "lowland-cream-cauliflower-2",
+		"lowland-dead-skin", "lowland-dead-skin-2",
+		"lowland-cream-red",
+		"lowland-red-vein", "lowland-red-vein-2", "lowland-red-vein-3", "lowland-red-vein-4", "lowland-red-vein-dead",
+		"lowland-red-infection",
+		"midland-cracked-lichen", "midland-cracked-lichen-dull", "midland-cracked-lichen-dark",
+		"midland-turquoise-bark", "midland-turquoise-bark-2",
+		"midland-yellow-crust", "midland-yellow-crust-2", "midland-yellow-crust-3", "midland-yellow-crust-4",
+		"highland-dark-rock", "highland-dark-rock-2", "highland-yellow-rock",
+	}) do
+		load_other_lava_transtion(name, 2)
+	end
 end
