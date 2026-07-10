@@ -50,10 +50,34 @@ data:extend {
 	{
 		type = "bool-setting",
 		setting_type = "startup",
-		name = "f_hd_a_sa_tv_disable_base_lava_transitions",
+		name = "f_hd_a_sa_tv_disable_water-transitions",
 		default_value = false,
 		forced_value = true,
 		order = "g"
+	},
+	{
+		type = "bool-setting",
+		setting_type = "startup",
+		name = "f_hd_a_sa_tv_disable_lava-transitions",
+		default_value = false,
+		forced_value = true,
+		order = "h"
+	},
+	{
+		type = "bool-setting",
+		setting_type = "startup",
+		name = "f_hd_a_sa_tv_disable_old-lava-transitions",
+		default_value = false,
+		forced_value = true,
+		order = "i"
+	},
+	{
+		type = "bool-setting",
+		setting_type = "startup",
+		name = "f_hd_a_sa_tv_disable_out-of-map-transitions",
+		default_value = false,
+		forced_value = true,
+		order = "j"
 	},
 	{
 		type = "string-setting",
