@@ -165,7 +165,7 @@ tile_spritesheet_layout_hd.transition_4_4_8_1_1 =
 	background               = { x_offset = 1088 * 2 }
 }
 
-local patch_for_inner_corner_of_transition_between_transition = {
+local water_patch = {
 	filename =
 	"__factorio_hd_age_space_age_terrain_fulgora__/data/base/graphics/terrain/water-transitions/water-patch.png",
 	scale = 0.25,
@@ -197,7 +197,7 @@ local function load_sand_transition(name, variant)
 		data.raw.tile[name].transitions_between_transitions[1].spritesheet = base .. assets[variant].water_between
 		data.raw.tile[name].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0_only_u_tall
 		data.raw.tile[name].transitions_between_transitions[1].effect_map_layout.spritesheet = base .. "effect-maps/water-fulgora-sand-to-land-mask.png"
-		data.raw.tile[name].transitions_between_transitions[1].water_patch = patch_for_inner_corner_of_transition_between_transition
+		data.raw.tile[name].transitions_between_transitions[1].water_patch = water_patch
 	end
 
 	if not disable_out_of_map_transitions then
@@ -211,7 +211,7 @@ local function load_sand_transition(name, variant)
 		data.raw.tile[name].transitions_between_transitions[3].spritesheet = base .. "out-of-map-transition/fulgora-shore-out-of-map-transition.png"
 		data.raw.tile[name].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
 		data.raw.tile[name].transitions_between_transitions[3].effect_map_layout.spritesheet = base .. "effect-maps/water-fulgora-sand-to-out-of-map-mask.png"
-		data.raw.tile[name].transitions_between_transitions[3].water_patch = patch_for_inner_corner_of_transition_between_transition
+		data.raw.tile[name].transitions_between_transitions[3].water_patch = water_patch
 	end
 end
 

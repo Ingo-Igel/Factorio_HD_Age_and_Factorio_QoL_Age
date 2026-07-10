@@ -182,7 +182,7 @@ tile_spritesheet_layout_hd.transition_16_16_16_4_8_short = {
 
 local base = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/"
 local out_of_map_transition = base .. "out-of-map-transition/out-of-map-transition.png"
-local patch_for_inner_corner_of_transition_between_transition = {
+local water_patch = {
 	filename =
 		base .. "water-transitions/water-patch.png",
 	scale = 0.25,
@@ -270,7 +270,7 @@ local function load_transitions(name, dry_dirt, dark_dirt)
 		data.raw.tile[name].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
 		data.raw.tile[name].transitions_between_transitions[1].effect_map_layout.spritesheet = base .. "effect-maps/water-dirt-to-land-mask.png"
 		if patch then
-			data.raw.tile[name].transitions_between_transitions[1].water_patch = patch_for_inner_corner_of_transition_between_transition
+			data.raw.tile[name].transitions_between_transitions[1].water_patch = water_patch
 		end
 	end
 
@@ -318,7 +318,7 @@ local function load_sand_transitions(name)
 		data.raw.tile[name].transitions_between_transitions[1].spritesheet = base .. "water-transitions/sand-transition.png"
 		data.raw.tile[name].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0_only_u_tall
 		data.raw.tile[name].transitions_between_transitions[1].effect_map_layout.spritesheet = base .. "effect-maps/water-sand-to-land-mask.png"
-		data.raw.tile[name].transitions_between_transitions[1].water_patch = patch_for_inner_corner_of_transition_between_transition
+		data.raw.tile[name].transitions_between_transitions[1].water_patch = water_patch
 	end
 
 	if not disable_out_of_map_transitions then
@@ -331,7 +331,7 @@ local function load_sand_transitions(name)
 		data.raw.tile[name].transitions_between_transitions[3].spritesheet = base .. "out-of-map-transition/sand-shore-out-of-map-transition.png"
 		data.raw.tile[name].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
 		data.raw.tile[name].transitions_between_transitions[3].effect_map_layout.spritesheet = base .. "effect-maps/water-sand-to-out-of-map-mask.png"
-		data.raw.tile[name].transitions_between_transitions[3].water_patch = patch_for_inner_corner_of_transition_between_transition
+		data.raw.tile[name].transitions_between_transitions[3].water_patch = water_patch
 	end
 end
 

@@ -105,7 +105,7 @@ local base = {
 	"__factorio_hd_age_space_age_terrain_aquilo__/data/base/graphics/terrain/"
 }
 
-local patch_for_inner_corner_of_transition_between_transition = {
+local ice_patch = {
 			filename = base[1] .. "water-transitions/ice-patch.png",
 			scale = 0.25,
 			width = 64 * 2,
@@ -136,7 +136,7 @@ local function load_transitions(name, terrain, variation)
 		data.raw.tile[name].transitions_between_transitions[1].spritesheet = base[1] .. "water-transitions/ice-transition.png"
 		data.raw.tile[name].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
 		data.raw.tile[name].transitions_between_transitions[1].effect_map_layout.spritesheet = base[2] .. "effect-maps/water-dirt-to-land-mask.png"
-		data.raw.tile[name].transitions_between_transitions[1].water_patch = patch_for_inner_corner_of_transition_between_transition
+		data.raw.tile[name].transitions_between_transitions[1].water_patch = ice_patch
 	end
 
 	if not settings.startup["f_hd_a_sa_ta_disable_out-of-map-transitions"].value then
