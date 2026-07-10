@@ -1,14 +1,5 @@
-local disable_water_transitions = true
-local disable_out_of_map_transitions = true
-
-if not settings.startup["f_hd_a_bg_tn_disable_water-transitions"].value then
-	disable_water_transitions = false
-end
-
-if not settings.startup["f_hd_a_bg_tn_disable_out-of-map-transitions"].value then
-	disable_out_of_map_transitions = false
-end
-
+local disable_water_transitions = settings.startup["f_hd_a_bg_tn_disable_water-transitions"].value
+local disable_out_of_map_transitions = settings.startup["f_hd_a_bg_tn_disable_out-of-map-transitions"].value
 
 local function tile_variations_template_hd(high_res_picture, high_res_transition_mask, options)
 	local function main_variation_hd(size_)
