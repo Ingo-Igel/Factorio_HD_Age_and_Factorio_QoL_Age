@@ -165,6 +165,7 @@ tile_spritesheet_layout_hd.transition_4_4_8_1_1 =
 	background               = { x_offset = 1088 * 2 }
 }
 
+local base = "__factorio_hd_age_space_age_terrain_fulgora__/data/space-age/graphics/terrain/"
 local water_patch = {
 	filename =
 	"__factorio_hd_age_space_age_terrain_fulgora__/data/base/graphics/terrain/water-transitions/water-patch.png",
@@ -172,8 +173,6 @@ local water_patch = {
 	width = 64 * 2,
 	height = 64 * 2
 }
-
-local base = "__factorio_hd_age_space_age_terrain_fulgora__/data/space-age/graphics/terrain/"
 
 local function load_sand_transition(name, variant)
 	local assets = {
