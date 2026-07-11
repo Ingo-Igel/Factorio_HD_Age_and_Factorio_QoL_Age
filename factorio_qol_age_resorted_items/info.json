@@ -1,12 +1,12 @@
 {
 	"name": "factorio_qol_age_resorted_items",
-	"version": "1.0.15",
+	"version": "1.1.0",
 	"title": "Factorio Qol Age: Resorted Items",
 	"author": "Ingo-Igel",
 	"homepage": "https://codeberg.org/Ingo_Igel/Factorio_HD_Age_and_Factorio_QoL_Age",
-	"factorio_version": "2.0",
-	"dependencies": ["base >= 2.0.28",
-	"? space-age >=2.0.28",
+	"factorio_version": "2.1",
+	"dependencies": ["base >= 2.1",
+	"? space-age >=2.1",
 	"? zithorian-extra-storage-tanks-port >=1.1.0"
 	],
 	"description": "This mod partially changes the order of items within the Logistics, Production, and Combat groups.",
