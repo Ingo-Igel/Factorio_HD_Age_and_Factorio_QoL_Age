@@ -12,7 +12,7 @@
 		"quality < 2.1"
 	],
 	"quality_required": true,
-	"description": "This mod contains and integrates HD textures for the quality entities of the Space Age DLC.",
+	"description": "This mod contains and integrates HD textures for the quality entities of the Space Age DLC.\n\nFor Factorio 2.1 and later, the same content can now be found under Factorio HD Age: Recycler",
 	"package": {
 		"gallery": [
 			".gallery/thumbnail_huge.png",
