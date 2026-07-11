@@ -10,7 +10,7 @@
 		"space-age >= 2.1",
 		"factorio_hd_age_modpack_base_game_optional >= 2.1",
 		"? factorio_hd_age_elevated_rails >= 2.1",
-		"? factorio_hd_age_recycler >= 2.1",
+		"? factorio_hd_age_quality >= 2.1",
 		"? factorio_hd_age_space_age_base >= 2.1",
 		"? factorio_hd_age_space_age_decorative >= 2.1",
 		"? factorio_hd_age_space_age_enemies_gleba >= 2.1",

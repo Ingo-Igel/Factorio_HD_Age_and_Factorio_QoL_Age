@@ -1,6 +1,6 @@
 local exclude = {
 	"*shadow*",
-	"*smoke*"
+	"*reflection*"
 }
 
 local function add_disable_words(setting_name)

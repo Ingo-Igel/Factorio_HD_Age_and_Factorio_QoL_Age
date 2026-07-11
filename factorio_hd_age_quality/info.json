@@ -1,18 +1,16 @@
 {
 	"name": "factorio_hd_age_quality",
-	"version": "2.1.0",
-	"title": "Factorio HD Age: Quality",
+	"version": "2.1.1",
+	"title": "Factorio HD Age: Recycler",
 	"author": "Ingo_Igel",
 	"homepage": "https://codeberg.org/Ingo_Igel/Factorio_HD_Age_and_Factorio_QoL_Age",
-	"factorio_version": "2.0",
+	"factorio_version": "2.1",
 	"dependencies": [
-		"base >= 2.0.29",
-		"quality >=2.0.29",
-		"base < 2.1",
-		"quality < 2.1"
+		"base >= 2.1",
+		"recycler >=2.1"
 	],
 	"quality_required": true,
-	"description": "This mod contains and integrates HD textures for the quality entities of the Space Age DLC.\n\nFor Factorio 2.1 and later, the same content can now be found under Factorio HD Age: Recycler",
+	"description": "This mod contains and integrates HD textures for the recycler entities of the Space Age DLC.",
 	"package": {
 		"gallery": [
 			".gallery/thumbnail_huge.png",

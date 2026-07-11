@@ -1,8 +1,9 @@
 ---------------------------------------------------------------------------------------------------
-Version: 2.1.0
+Version: 2.1.1
 Date: ????
   Changes:
-    - Canged dependencies, so this mod is disabled with Factorio 2.1 and above, as it is incompatible. (Recycler HD textures for Factorio 2.1 and above, are now availabel under factorio_hd_age_recycler)
+    - Updated to Factorio 2.1
+    - Updated textures that, for some reason, I had missed when they were updated.
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: 2026-06-04
