@@ -23,7 +23,7 @@ data:extend {
 		forced_value = true,
 		order = "c"
 	},
-		{
+	{
 		type = "bool-setting",
 		setting_type = "startup",
 		name = "f_hd_a_sa_ta_disable_water-transitions",

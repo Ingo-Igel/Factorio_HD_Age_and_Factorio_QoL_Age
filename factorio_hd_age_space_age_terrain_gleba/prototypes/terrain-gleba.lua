@@ -109,7 +109,7 @@ local function lowland_tile_variations_template_with_transitions_and_puddle_tran
 		result.transition.effect_map_layout =
 		{
 			spritesheet              =
-			base .. "effect-maps/water-gleba-mask.png",
+				base .. "effect-maps/water-gleba-mask.png",
 			scale                    = 0.25,
 			x                        = 0,
 			inner_corner_count       = 8,

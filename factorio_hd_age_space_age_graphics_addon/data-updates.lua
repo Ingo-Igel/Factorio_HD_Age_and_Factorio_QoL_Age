@@ -18,15 +18,19 @@ if mods["PlanetsLib"] then
 				}
 			},
 			sprite_only = true
-		}		
+		}
 	})
-		if settings.startup["asteroid-belt-2-enabled"].value then
-		PlanetsLib:update({{
-			type = "space-location",
-			name = "background-steroidbelt-2",
-			starmap_icon = "__factorio_hd_age_space_age_graphics_addon__/graphics/belt.png",
-			magnitude = 103
-		}})
+	if settings.startup["asteroid-belt-2-enabled"].value then
+		PlanetsLib:update(
+			{
+				{
+					type = "space-location",
+					name = "background-steroidbelt-2",
+					starmap_icon = "__factorio_hd_age_space_age_graphics_addon__/graphics/belt.png",
+					magnitude = 103
+				}
+			}
+		)
 	end
 else
 	local last_layer = 19

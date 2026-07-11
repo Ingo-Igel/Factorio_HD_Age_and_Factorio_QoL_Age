@@ -17,12 +17,16 @@ data.raw.recipe["land-mine"].order = "c"
 data.raw["item-subgroup"]["turret"].order = "b"
 
 -- item-subgroup - electric-combat
-data:extend({ {
-	type = "item-subgroup",
-	name = "electric-combat",
-	group = "combat",
-	order = "ca"
-} })
+data:extend(
+	{
+		{
+			type = "item-subgroup",
+			name = "electric-combat",
+			group = "combat",
+			order = "ca"
+		}
+	}
+)
 
 data.raw.item["laser-turret"].subgroup = "electric-combat"
 data.raw.item["laser-turret"].order = "aa"
@@ -47,12 +51,16 @@ if space_age then
 end
 
 -- item-subgroup - bullet-combat
-data:extend({ {
-	type = "item-subgroup",
-	name = "bullet-combat",
-	group = "combat",
-	order = "cb"
-} })
+data:extend(
+	{
+		{
+			type = "item-subgroup",
+			name = "bullet-combat",
+			group = "combat",
+			order = "cb"
+		}
+	}
+)
 
 data.raw.item["gun-turret"].subgroup = "bullet-combat"
 data.raw.item["gun-turret"].order = "aa"
@@ -80,12 +88,16 @@ data.raw.recipe["submachine-gun"].subgroup = "bullet-combat"
 data.raw.recipe["submachine-gun"].order = "cb"
 
 -- item-subgroup - shotgun-combat
-data:extend({ {
-	type = "item-subgroup",
-	name = "shotgun-combat",
-	group = "combat",
-	order = "cc"
-} })
+data:extend(
+	{
+		{
+			type = "item-subgroup",
+			name = "shotgun-combat",
+			group = "combat",
+			order = "cc"
+		}
+	}
+)
 
 data.raw.ammo["shotgun-shell"].subgroup = "shotgun-combat"
 data.raw.ammo["shotgun-shell"].order = "ba"
@@ -113,12 +125,16 @@ data.raw.recipe["combat-shotgun"].subgroup = "shotgun-combat"
 data.raw.recipe["combat-shotgun"].order = "cb"
 
 -- item-subgroup - cannon-combat
-data:extend({ {
-	type = "item-subgroup",
-	name = "cannon-combat",
-	group = "combat",
-	order = "cd"
-} })
+data:extend(
+	{
+		{
+			type = "item-subgroup",
+			name = "cannon-combat",
+			group = "combat",
+			order = "cd"
+		}
+	}
+)
 
 data.raw.ammo["cannon-shell"].subgroup = "cannon-combat"
 data.raw.ammo["cannon-shell"].order = "ba"
@@ -138,12 +154,16 @@ data.raw.recipe["explosive-uranium-cannon-shell"].subgroup = "cannon-combat"
 data.raw.recipe["explosive-uranium-cannon-shell"].order = "bd"
 
 -- item-subgroup - artillery-combat
-data:extend({ {
-	type = "item-subgroup",
-	name = "artillery-combat",
-	group = "combat",
-	order = "ce"
-} })
+data:extend(
+	{
+		{
+			type = "item-subgroup",
+			name = "artillery-combat",
+			group = "combat",
+			order = "ce"
+		}
+	}
+)
 
 data.raw.item["artillery-turret"].subgroup = "artillery-combat"
 data.raw.item["artillery-turret"].order = "aa"
@@ -159,12 +179,16 @@ data.raw.capsule["artillery-targeting-remote"].subgroup = "artillery-combat"
 data.raw.capsule["artillery-targeting-remote"].order = "ca"
 
 -- item-subgroup - rocket-combat
-data:extend({ {
-	type = "item-subgroup",
-	name = "rocket-combat",
-	group = "combat",
-	order = "cf"
-} })
+data:extend(
+	{
+		{
+			type = "item-subgroup",
+			name = "rocket-combat",
+			group = "combat",
+			order = "cf"
+		}
+	}
+)
 
 if space_age then
 	data.raw.item["rocket-turret"].subgroup = "rocket-combat"
@@ -197,12 +221,16 @@ data.raw.recipe["rocket-launcher"].subgroup = "rocket-combat"
 data.raw.recipe["rocket-launcher"].order = "ca"
 
 -- item-subgroup - fire-combat
-data:extend({ {
-	type = "item-subgroup",
-	name = "fire-combat",
-	group = "combat",
-	order = "cg"
-} })
+data:extend(
+	{
+		{
+			type = "item-subgroup",
+			name = "fire-combat",
+			group = "combat",
+			order = "cg"
+		}
+	}
+)
 
 data.raw.item["flamethrower-turret"].subgroup = "fire-combat"
 data.raw.item["flamethrower-turret"].order = "aa"
@@ -222,12 +250,16 @@ data.raw.recipe["flamethrower"].order = "ca"
 
 -- item-subgroup - railgun-combat
 if space_age then
-	data:extend({ {
-		type = "item-subgroup",
-		name = "railgun-combat",
-		group = "combat",
-		order = "ch"
-	} })
+	data:extend(
+		{
+			{
+				type = "item-subgroup",
+				name = "railgun-combat",
+				group = "combat",
+				order = "ch"
+			}
+		}
+	)
 
 	data.raw.item["railgun-turret"].subgroup = "railgun-combat"
 	data.raw.item["railgun-turret"].order = "aa"

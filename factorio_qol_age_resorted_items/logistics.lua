@@ -41,12 +41,16 @@ end
 
 -- item-subgroup - underground-belt
 if space_age or lignumis or castra or AdvancedBelts or planetaris_unbounded then
-	data:extend({ {
-		type = "item-subgroup",
-		name = "underground-belt",
-		group = "logistics",
-		order = "bb"
-	} })
+	data:extend(
+		{
+			{
+				type = "item-subgroup",
+				name = "underground-belt",
+				group = "logistics",
+				order = "bb"
+			}
+		}
+	)
 
 	if lignumis then
 		data.raw.item["wood-underground-belt"].subgroup = "underground-belt"
@@ -78,12 +82,16 @@ end
 
 -- item-subgroup - splitter
 if space_age or lignumis or castra or AdvancedBelts or planetaris_unbounded then
-	data:extend({ {
-		type = "item-subgroup",
-		name = "splitter",
-		group = "logistics",
-		order = "bc"
-	} })
+	data:extend(
+		{
+			{
+				type = "item-subgroup",
+				name = "splitter",
+				group = "logistics",
+				order = "bc"
+			}
+		}
+	)
 
 	if lignumis then
 		data.raw.item["wood-splitter"].subgroup = "splitter"
@@ -114,12 +122,16 @@ end
 
 -- item-subgroup - lane-splitter
 if lane_splitters or AdvancedBelts then
-	data:extend({ {
-		type = "item-subgroup",
-		name = "lane-splitter",
-		group = "logistics",
-		order = "bd"
-	} })
+	data:extend(
+		{
+			{
+				type = "item-subgroup",
+				name = "lane-splitter",
+				group = "logistics",
+				order = "bd"
+			}
+		}
+	)
 
 	if lane_splitters then
 		if lignumis then
@@ -165,12 +177,16 @@ data.raw.item["logistic-robot"].order = "ca"
 data.raw.item["construction-robot"].order = "cb"
 
 -- item-subgroup - fluid-distribution
-data:extend({ {
-	type = "item-subgroup",
-	name = "fluid-distribution",
-	group = "logistics",
-	order = "ea"
-} })
+data:extend(
+	{
+		{
+			type = "item-subgroup",
+			name = "fluid-distribution",
+			group = "logistics",
+			order = "ea"
+		}
+	}
+)
 
 data.raw.item["pipe"].subgroup = "fluid-distribution"
 data.raw.item["pipe"].order = "aa"
@@ -223,12 +239,16 @@ if space_age then
 end
 
 if mods["lignumis"] then
-	data:extend({ {
-		type = "item-subgroup",
-		name = "gold-fluid-distribution",
-		group = "logistics",
-		order = "eb"
-	} })
+	data:extend(
+		{
+			{
+				type = "item-subgroup",
+				name = "gold-fluid-distribution",
+				group = "logistics",
+				order = "eb"
+			}
+		}
+	)
 
 	data.raw.item["gold-pipe"].subgroup = "gold-fluid-distribution"
 	data.raw.item["gold-pipe-to-ground"].subgroup = "gold-fluid-distribution"
@@ -247,12 +267,16 @@ if mods["k2-steel-pipes"] then
 end
 
 -- item-subgroup - energy-distribution
-data:extend({ {
-	type = "item-subgroup",
-	name = "energy-distribution",
-	group = "logistics",
-	order = "ed"
-} })
+data:extend(
+	{
+		{
+			type = "item-subgroup",
+			name = "energy-distribution",
+			group = "logistics",
+			order = "ed"
+		}
+	}
+)
 
 data.raw.item["small-electric-pole"].subgroup = "energy-distribution"
 data.raw.item["small-electric-pole"].order = "a"
@@ -287,12 +311,16 @@ data.raw["item-subgroup"]["terrain"].order = "ib"
 
 -- item-subgroup - terrain
 if space_age then
-	data:extend({ {
-		type = "item-subgroup",
-		name = "paving",
-		group = "logistics",
-		order = "ia"
-	} })
+	data:extend(
+		{
+			{
+				type = "item-subgroup",
+				name = "paving",
+				group = "logistics",
+				order = "ia"
+			}
+		}
+	)
 
 	data.raw.item["stone-brick"].subgroup = "paving"
 	data.raw.item["concrete"].subgroup = "paving"
@@ -303,12 +331,16 @@ end
 
 -- item-subgroup - terraforming
 if space_age then
-	data:extend({ {
-		type = "item-subgroup",
-		name = "terraforming",
-		group = "logistics",
-		order = "ic"
-	} })
+	data:extend(
+		{
+			{
+				type = "item-subgroup",
+				name = "terraforming",
+				group = "logistics",
+				order = "ic"
+			}
+		}
+	)
 
 	data.raw.recipe["cliff-explosives"].subgroup = "terraforming"
 	data.raw.recipe["cliff-explosives"].order = "a"

@@ -106,11 +106,11 @@ local base = {
 }
 
 local ice_patch = {
-			filename = base[1] .. "water-transitions/ice-patch.png",
-			scale = 0.25,
-			width = 64 * 2,
-			height = 64 * 2
-		}
+	filename = base[1] .. "water-transitions/ice-patch.png",
+	scale = 0.25,
+	width = 64 * 2,
+	height = 64 * 2
+}
 
 local options_ice = {
 	{

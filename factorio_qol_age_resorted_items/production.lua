@@ -4,12 +4,16 @@ if mods["space-age"] then
 end
 
 -- item-subgroup - thermal-energy
-data:extend({ {
-	type = "item-subgroup",
-	name = "thermal-energy",
-	group = "production",
-	order = "ba"
-} })
+data:extend(
+	{
+		{
+			type = "item-subgroup",
+			name = "thermal-energy",
+			group = "production",
+			order = "ba"
+		}
+	}
+)
 
 data.raw.item["boiler"].subgroup = "thermal-energy"
 data.raw.item["boiler"].order = "a"
@@ -31,12 +35,16 @@ data.raw.item["steam-turbine"].subgroup = "thermal-energy"
 data.raw.item["steam-turbine"].order = "g"
 
 -- item-subgroup - energy-collectors
-data:extend({ {
-	type = "item-subgroup",
-	name = "energy-collectors",
-	group = "production",
-	order = "bb"
-} })
+data:extend(
+	{
+		{
+			type = "item-subgroup",
+			name = "energy-collectors",
+			group = "production",
+			order = "bb"
+		}
+	}
+)
 
 data.raw.item["accumulator"].subgroup = "energy-collectors"
 data.raw.item["accumulator"].order = "a"
@@ -60,12 +68,16 @@ if space_age then
 end
 
 -- item-subgroup - processing-machine
-data:extend({ {
-	type = "item-subgroup",
-	name = "processing-machine",
-	group = "production",
-	order = "ea"
-} })
+data:extend(
+	{
+		{
+			type = "item-subgroup",
+			name = "processing-machine",
+			group = "production",
+			order = "ea"
+		}
+	}
+)
 
 data.raw.item["oil-refinery"].subgroup = "processing-machine"
 data.raw.item["oil-refinery"].order = "a"
@@ -91,14 +103,16 @@ if space_age then
 end
 
 -- item-subgroup - lab
-data:extend({
+data:extend(
 	{
-		type = "item-subgroup",
-		name = "lab",
-		group = "production",
-		order = "ed"
+		{
+			type = "item-subgroup",
+			name = "lab",
+			group = "production",
+			order = "ed"
+		}
 	}
-})
+)
 
 data.raw.item["lab"].subgroup = "lab"
 

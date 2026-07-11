@@ -215,16 +215,16 @@ local function load_sand_transition(name, variant)
 end
 
 for _, name in ipairs({
-    "fulgoran-dust",
-    "fulgoran-dunes",
-    "fulgoran-sand",
-    "fulgoran-rock",
-    "fulgoran-paving",
-    "fulgoran-walls",
-    "fulgoran-conduit",
-    "fulgoran-machinery"
+	"fulgoran-dust",
+	"fulgoran-dunes",
+	"fulgoran-sand",
+	"fulgoran-rock",
+	"fulgoran-paving",
+	"fulgoran-walls",
+	"fulgoran-conduit",
+	"fulgoran-machinery"
 }) do
-    load_sand_transition(name, "rock")
+	load_sand_transition(name, "rock")
 end
 
 load_sand_transition("oil-ocean-shallow", "oil")

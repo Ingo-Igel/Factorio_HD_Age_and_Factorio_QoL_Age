@@ -1,3 +1,5 @@
+local base = "__factorio_hd_age_base_game_railway__/data/base/graphics/entity/rails/rail/"
+
 local rail_type0 = {
 	"straight",
 	"half-diagonal",
@@ -47,41 +49,35 @@ local function rails(rail_type, direction, size_rail, variation_rail)
 
 	return {
 		metals = {
-			filename = "__factorio_hd_age_base_game_railway__/data/base/graphics/entity/rails/rail/rail-metals/" ..
-			rail_type .. "-" .. direction .. ".png",
+			filename = base .. "rail-metals/" .. rail_type .. "-" .. direction .. ".png",
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
 			variation_count = variation_rail,
 		},
 		backplates = {
-			filename = "__factorio_hd_age_base_game_railway__/data/base/graphics/entity/rails/rail/rail-backplates/" ..
-			rail_type .. "-" .. direction .. ".png",
+			filename = base .. "rail-backplates/" .. rail_type .. "-" .. direction .. ".png",
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
 			variation_count = variation_rail,
 		},
 		ties = {
-			filename = "__factorio_hd_age_base_game_railway__/data/base/graphics/entity/rails/rail/rail-ties/" ..
-			rail_type .. "-" .. direction .. ".png",
+			filename = base .. "rail-ties/" .. rail_type .. "-" .. direction .. ".png",
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
 			variation_count = variation_rail,
 		},
 		stone_path = {
-			filename = "__factorio_hd_age_base_game_railway__/data/base/graphics/entity/rails/rail/rail-stone-path/" ..
-			rail_type .. "-" .. direction .. ".png",
+			filename = base .. "rail-stone-path/" .. rail_type .. "-" .. direction .. ".png",
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
 			variation_count = variation_rail,
 		},
 		stone_path_background = {
-			filename =
-			"__factorio_hd_age_base_game_railway__/data/base/graphics/entity/rails/rail/rail-stone-path-inside/" ..
-			rail_type .. "-" .. direction .. ".png",
+			filename = base .. "rail-stone-path-inside/" .. rail_type .. "-" .. direction .. ".png",
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
@@ -98,45 +94,35 @@ local function rails_remnants(rail_type, direction, size_rail, variation_rail)
 
 	return {
 		metals = {
-			filename =
-			"__factorio_hd_age_base_game_railway__/data/base/graphics/entity/rails/rail/remnants/rail-remnants-metals/" ..
-			rail_type .. "-" .. direction .. ".png",
+			filename = base .. "remnants/rail-remnants-metals/" .. rail_type .. "-" .. direction .. ".png",
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
 			variation_count = variation_rail,
 		},
 		backplates = {
-			filename =
-			"__factorio_hd_age_base_game_railway__/data/base/graphics/entity/rails/rail/remnants/rail-remnants-backplates/" ..
-			rail_type .. "-" .. direction .. ".png",
+			filename = base .. "remnants/rail-remnants-backplates/" .. rail_type .. "-" .. direction .. ".png",
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
 			variation_count = variation_rail,
 		},
 		ties = {
-			filename =
-			"__factorio_hd_age_base_game_railway__/data/base/graphics/entity/rails/rail/remnants/rail-remnants-ties/" ..
-			rail_type .. "-" .. direction .. ".png",
+			filename = base .. "remnants/rail-remnants-ties/" .. rail_type .. "-" .. direction .. ".png",
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
 			variation_count = variation_rail,
 		},
 		stone_path = {
-			filename =
-			"__factorio_hd_age_base_game_railway__/data/base/graphics/entity/rails/rail/remnants/rail-remnants-stone-path/" ..
-			rail_type .. "-" .. direction .. ".png",
+			filename = base .. "remnants/rail-remnants-stone-path/" .. rail_type .. "-" .. direction .. ".png",
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
 			variation_count = variation_rail,
 		},
 		stone_path_background = {
-			filename =
-			"__factorio_hd_age_base_game_railway__/data/base/graphics/entity/rails/rail/remnants/rail-remnants-stone-path-inside/" ..
-			rail_type .. "-" .. direction .. ".png",
+			filename = base .. "remnants/rail-remnants-stone-path-inside/" .. rail_type .. "-" .. direction .. ".png",
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
@@ -151,12 +137,10 @@ for rt = 1, 4 do
 	local rail_remnants = data.raw["rail-remnants"][rail_type0[rt] .. "-rail" .. variation[rt] .. "-remnants"]
 	for d = 1, 4 do
 		rail.pictures[direction[d]] = rails(rail_type, direction[d], size_rails[rt], variation_rails[rt])
-		rail_remnants.pictures[direction[d]] = rails_remnants(rail_type, direction[d], size_rails[rt],
-			variation_rails[rt])
+		rail_remnants.pictures[direction[d]] = rails_remnants(rail_type, direction[d], size_rails[rt], variation_rails[rt])
 		if rail_type0[rt] == "curved" then
 			rail.pictures[direction[d + 4]] = rails(rail_type, direction[d + 4], size_rails[rt], variation_rails[rt])
-			rail_remnants.pictures[direction[d + 4]] = rails_remnants(rail_type, direction[d + 4], size_rails[rt],
-				variation_rails[rt])
+			rail_remnants.pictures[direction[d + 4]] = rails_remnants(rail_type, direction[d + 4], size_rails[rt], variation_rails[rt])
 		end
 	end
 end

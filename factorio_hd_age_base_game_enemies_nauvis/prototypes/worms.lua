@@ -25,55 +25,63 @@ if not settings.startup["f_hd_a_bg_en_disable_worms"].value then
 
 	for n = 1, 4 do
 		data.raw["turret"][worm_size[n] .. "-worm-turret"].starting_attack_animation.layers[1] = util.sprite_load(
-		"__factorio_hd_age_base_game_enemies_nauvis__/data/base/graphics/entity/worm/worm-attack", {
-			slice = 4,
-			frame_count = 10,
-			direction_count = 16,
-			scale = worm_scale[n] * 0.25,
-			frame_sequence = start_attack_frame_sequence,
-			multiply_shift = worm_scale[n],
-			allow_forced_downscale = true,
-			surface = "nauvis",
-			usage = "enemy"
-		})
+			"__factorio_hd_age_base_game_enemies_nauvis__/data/base/graphics/entity/worm/worm-attack",
+			{
+				slice = 4,
+				frame_count = 10,
+				direction_count = 16,
+				scale = worm_scale[n] * 0.25,
+				frame_sequence = start_attack_frame_sequence,
+				multiply_shift = worm_scale[n],
+				allow_forced_downscale = true,
+				surface = "nauvis",
+				usage = "enemy"
+			}
+		)
 		data.raw["turret"][worm_size[n] .. "-worm-turret"].starting_attack_animation.layers[2] = util.sprite_load(
-		"__factorio_hd_age_base_game_enemies_nauvis__/data/base/graphics/entity/worm/worm-attack-mask", {
-			slice = 4,
-			frame_count = 10,
-			direction_count = 16,
-			scale = worm_scale[n] * 0.25,
-			frame_sequence = start_attack_frame_sequence,
-			tint = worm_tint[n],
-			multiply_shift = worm_scale[n],
-			allow_forced_downscale = true,
-			surface = "nauvis",
-			usage = "enemy"
-		})
+			"__factorio_hd_age_base_game_enemies_nauvis__/data/base/graphics/entity/worm/worm-attack-mask",
+			{
+				slice = 4,
+				frame_count = 10,
+				direction_count = 16,
+				scale = worm_scale[n] * 0.25,
+				frame_sequence = start_attack_frame_sequence,
+				tint = worm_tint[n],
+				multiply_shift = worm_scale[n],
+				allow_forced_downscale = true,
+				surface = "nauvis",
+				usage = "enemy"
+			}
+		)
 
 		data.raw["turret"][worm_size[n] .. "-worm-turret"].ending_attack_animation.layers[1] = util.sprite_load(
-		"__factorio_hd_age_base_game_enemies_nauvis__/data/base/graphics/entity/worm/worm-attack", {
-			slice = 4,
-			frame_count = 10,
-			direction_count = 16,
-			scale = worm_scale[n] * 0.25,
-			frame_sequence = end_attack_frame_sequence,
-			multiply_shift = worm_scale[n],
-			allow_forced_downscale = true,
-			surface = "nauvis",
-			usage = "enemy"
-		})
+			"__factorio_hd_age_base_game_enemies_nauvis__/data/base/graphics/entity/worm/worm-attack",
+			{
+				slice = 4,
+				frame_count = 10,
+				direction_count = 16,
+				scale = worm_scale[n] * 0.25,
+				frame_sequence = end_attack_frame_sequence,
+				multiply_shift = worm_scale[n],
+				allow_forced_downscale = true,
+				surface = "nauvis",
+				usage = "enemy"
+			}
+		)
 		data.raw["turret"][worm_size[n] .. "-worm-turret"].ending_attack_animation.layers[2] = util.sprite_load(
-		"__factorio_hd_age_base_game_enemies_nauvis__/data/base/graphics/entity/worm/worm-attack-mask", {
-			slice = 4,
-			frame_count = 10,
-			direction_count = 16,
-			scale = worm_scale[n] * 0.25,
-			frame_sequence = end_attack_frame_sequence,
-			tint = worm_tint[n],
-			multiply_shift = worm_scale[n],
-			allow_forced_downscale = true,
-			surface = "nauvis",
-			usage = "enemy"
-		})
+			"__factorio_hd_age_base_game_enemies_nauvis__/data/base/graphics/entity/worm/worm-attack-mask",
+			{
+				slice = 4,
+				frame_count = 10,
+				direction_count = 16,
+				scale = worm_scale[n] * 0.25,
+				frame_sequence = end_attack_frame_sequence,
+				tint = worm_tint[n],
+				multiply_shift = worm_scale[n],
+				allow_forced_downscale = true,
+				surface = "nauvis",
+				usage = "enemy"
+			}
+		)
 	end
 end
