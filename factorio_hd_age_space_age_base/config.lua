@@ -31,6 +31,7 @@ return {
 	white_list = {
 		"__base__/graphics/entity/oil-refinery/frozen",
 		"__space-age__/graphics/entity/",
+		"__space-age__/graphics/space/",
 		"__space-age__/graphics/terrain/foundation/",
 		"__space-age__/graphics/terrain/space-platform/"
 	},
@@ -109,6 +110,17 @@ return {
 						["sulfuric-acid-geyser.png"] = {}
 					},
 					["tungsten-ore"] = {},
+				},
+				space = {
+					["aquilo.png"] = {},
+					["fulgora.png"] = {},
+					["fulgora-normal.png"] = {},
+					["gleba.png"] = {},
+					["nauvis.png"] = {},
+					["nauvis-normal.png"] = {},
+					["planet-lightning.png"] = {},
+					["vulcanus.png"] = {},
+					["vulcanus-emission.png"] = {},
 				},
 				terrain = {
 					["foundation"] = {
