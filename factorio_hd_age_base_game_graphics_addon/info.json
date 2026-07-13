@@ -6,7 +6,7 @@
 	"homepage": "https://codeberg.org/Ingo_Igel/Factorio_HD_Age_and_Factorio_QoL_Age",
 	"factorio_version": "2.1",
 	"dependencies": ["base >= 2.1",
-	"alternate-science-packs >= 1.0.1",
+	"cb-science >= 1.0.2",
 	"BetterAlertArrows >= 1.2.0",
 	"biter-cleanup >= 4.2.1",
 	"bullet-trails >= 0.8.0",
