@@ -95,6 +95,7 @@ return {
 					["sulfur-stain"] = {},
 					["tiny-volcanic-rock"] = {},
 					["tiny-volcanic-rock-cluster"] = {},
+					["tiny-volcanic-rock-copy"] = {},
 					["urchin-cactus"] = {},
 					["veins"] = {},
 					["veins-small"] = {},

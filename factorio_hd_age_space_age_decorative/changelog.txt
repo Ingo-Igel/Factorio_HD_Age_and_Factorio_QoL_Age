@@ -2,6 +2,7 @@
 Version: 2.1.1
 Date: ????
   Changes:
+    - Added tiny rock textures part of Factorio 2.1.10 update
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.0
 Date: 2026-07-11
