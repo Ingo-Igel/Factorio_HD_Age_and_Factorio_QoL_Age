@@ -6,7 +6,7 @@
 	"homepage": "https://codeberg.org/Ingo_Igel/Factorio_HD_Age_and_Factorio_QoL_Age",
 	"factorio_version": "2.1",
 	"dependencies": [
-		"base >= 2.1"
+		"base >= 2.1.10"
 	],
 	"description": "This mod contains and integrates HD textures for the production entities of the base game.",
 	"package": {
