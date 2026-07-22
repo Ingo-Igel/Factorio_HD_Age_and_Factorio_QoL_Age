@@ -2,6 +2,7 @@
 Version: 2.1.2
 Date: ????
   Changes:
+    - Updated assambling-mashine-2-animation acording Factorio 2.1.12 Update
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.1
 Date: 2026-07-13
