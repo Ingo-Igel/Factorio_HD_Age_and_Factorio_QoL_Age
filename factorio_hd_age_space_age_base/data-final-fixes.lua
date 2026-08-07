@@ -10,6 +10,7 @@ if not settings.startup["f_hd_a_sa_b_disable_stromatolite"].value then
 	require("prototypes.stromatolite")
 end
 
+require("prototypes.plants")
 require("prototypes.transitions")
 require("prototypes.transport-belt-frozen")
 

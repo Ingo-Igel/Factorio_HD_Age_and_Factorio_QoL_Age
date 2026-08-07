@@ -85,24 +85,50 @@ return {
 					},
 					["plant"] = {
 						["ashland-trees"] = {},
-						["boompuff"] = {},
-						["cuttlepop"] = {},
-						["funneltrunk"] = {},
-						["hairyclubnub"] = {},
-						["jellystem"] = {},
-						["lickmaw"] = {},
-						["planted-tree"] = {},
-						["slipstack"] = {},
+						["boompuff"] = {
+							["boompuff-trunk.png"] = {}
+						},
+						["cuttlepop"] = {
+							["cuttlepop-trunk.png"] = {}
+						},
+						["funneltrunk"] = {
+							["funneltrunk-trunk.png"] = {}
+						},
+						["hairyclubnub"] = {
+							["hairyclubnub-trunk.png"] = {}
+						},
+						["jellystem"] = {
+							["jellystem-mound.png"] = {},
+							["jellystem-trunk.png"] = {}
+						},
+						["lickmaw"] = {
+							["lickmaw-trunk.png"] = {}
+						},
+						["planted-tree"] = {
+							["planted-tree-mound.png"] = {},
+							["planted-tree-trunk.png"] = {}
+						},
+						["slipstack"] = {
+							["slipstack-trunk.png"] = {}
+						},
 						["stingfrond"] = {
-							["stingfrond-harvest*"] = {},
-							["stingfrond-normal.png"] = {},
+							["stingfrond-harvest-glow.png"] = {},
 							["stingfrond-trunk.png"] = {}
 						},
-						["sunnycomb"] = {},
-						["teflilly"] = {},
+						["sunnycomb"] = {
+							["sunnycomb-trunk.png"] = {}
+						},
+						["teflilly"] = {
+							["teflilly-trunk.png"] = {}
+						},
 						["tree-plant"] = {},
-						["water-cane"] = {},
-						["yumako-tree"] = {}
+						["water-cane"] = {
+							["water-cane-trunk.png"] = {}
+						},
+						["yumako-tree"] = {
+							["yumako-tree-mound.png"] = {},
+							["yumako-tree-trunk.png"] = {}
+						}
 					},
 					["scrap"] = {},
 					["space-platform-build-anim"] = {},
