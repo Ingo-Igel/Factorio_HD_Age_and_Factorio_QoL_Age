@@ -7,14 +7,14 @@ All included mods are automatically set and adjusted to create a consistent look
 
 ### Included Mods:
 
-* [Alternate Science Packs](https://mods.factorio.com/mod/alternate-science-packs) by [CarmineEmbershard](https://mods.factorio.com/user/CarmineEmbershard)
 * [Better Alert Arrows](https://mods.factorio.com/mod/BetterAlertArrows) by [raiguard](https://mods.factorio.com/user/raiguard)
 * [Biter Cleanup](https://mods.factorio.com/mod/biter-cleanup) by [Pseudonymous](https://mods.factorio.com/user/Pseudonymous)
 * [Bullet Trails](https://mods.factorio.com/mod/bullet-trails) by [Earendel](https://mods.factorio.com/user/Earendel)
+* [Colour Blind Friendly Science Packs](https://mods.factorio.com/mod/cb-science) by [Hornwitser](https://mods.factorio.com/user/Hornwitser)
 * [Coloured Shortcut Tool Icons](https://mods.factorio.com/mod/coloured-tool-icons) by [IsaacOscar](https://mods.factorio.com/user/IsaacOscar)
 * [Disco Science](https://mods.factorio.com/mod/DiscoScience) by [danielbrauer](https://mods.factorio.com/user/danielbrauer)
 * [Humble Alt-Mode Shadow (for 2.0)](https://mods.factorio.com/mod/Humble-Alt-Mode-Shadow-2) by [JigSaW_3](https://mods.factorio.com/user/JigSaW_3)
-* [Mining Scars](https://mods.factorio.com/mod/MiningScars) by [Mylon](https://mods.factorio.com/user/Mylon)
+* [Mining Scars Fork](https://mods.factorio.com/mod/mining-scars-fork) by [zinful](https://mods.factorio.com/user/zinful)
 * [Realistic Decoration Cleanup](https://mods.factorio.com/mod/RealisticDecorationCleanup) by [someone1337](https://mods.factorio.com/user/someone1337)
 * [Tree Healing](https://mods.factorio.com/mod/tree-healing) by [Pseudonymous](https://mods.factorio.com/user/Pseudonymous)
 * [Uranium Geiger](https://mods.factorio.com/mod/uranium_geiger) by [ikornaselur](https://mods.factorio.com/user/ikornaselur) (Optional Dependency)

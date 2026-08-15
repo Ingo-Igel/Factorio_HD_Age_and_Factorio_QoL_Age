@@ -13,7 +13,7 @@
 	"coloured-tool-icons >= 0.0.3",
 	"DiscoScience >= 2.1",
 	"Humble-Alt-Mode-Shadow-2 >=1.0.1",
-	"MiningScars >= 2.0.0",
+	"mining-scars-fork >= 1.1.0",
 	"RealisticDecorationCleanup >= 2.1.1",
 	"tree-healing >= 1.2.2",
 	"? uranium_geiger >= 0.5.1"

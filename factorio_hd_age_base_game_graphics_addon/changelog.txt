@@ -4,6 +4,7 @@ Date: ????
   Changes:
     - Updated dependencies
     - changed alternate-science-packs to cb-science
+    - changed MiningScars to Mining Scars Fork
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.10
 Date: 2026-05-15
