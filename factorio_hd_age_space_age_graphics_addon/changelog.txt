@@ -2,8 +2,10 @@
 Version: 1.1.0
 Date: ????
   Changes:
-    - Removed "visible-planets" mod, as planets in the background are now part of Factorio 2.1
-    - Updated dependencies
+    - Updated to Factorio 2.1
+    - Removed 4k planets
+    - Removed Space Map Asteroid Belts
+    - Added PlanetsLib
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.8
 Date: 2026-05-15
