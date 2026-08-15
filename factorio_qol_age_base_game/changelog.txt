@@ -2,9 +2,25 @@
 Version: 1.1.0
 Date: ????
   Changes:
-    - Removed BlueprintTools
+    - Update to Factorio version 2.1
+    - Removed EnableWhen
     - Removed EvenDistributionLite
     - Added even-distribution
+    - Removed death-location
+    - Added some-corpsemarker
+    - Removed not-enough-parameters
+    - Added more-parameters
+    - Removed Explosive Excavation
+    - Added explosive_excavation_unofficial_2_1
+    - Removed OilOutpostPlanner
+    - Removed power-grid-comb
+    - Added power-grid-comb-temp-21-patch
+    - Removed ets-queue-to-front
+    - Added QueueToFrontLimited
+    - Removed resourceMarker
+    - Added resource-map-label-marker-fork
+    - Removed VariantHotkeys
+    - Added change-recipe-quality-without-re-selecting-recipe
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.12
 Date: 2025-08-23
