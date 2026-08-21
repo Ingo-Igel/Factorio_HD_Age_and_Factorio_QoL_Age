@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.1
-Date: ????
+Date: 2026-08-22
   Changes:
     - Moved discharge-defense-remote to subgroupe military-equipment
     - Moved spidertron-remote to subgroup transport
