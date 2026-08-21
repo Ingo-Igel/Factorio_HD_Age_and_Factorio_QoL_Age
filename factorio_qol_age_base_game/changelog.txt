@@ -2,6 +2,14 @@
 Version: 1.1.2
 Date: ????
   Changes:
+    - Added rs-better-zero
+    - Removed Factory Planner
+    - Added Automatic Underground Pipe Connectors for 2.1
+    - Added Circuit Visualizer Fork
+    - Added Heat Visualizer
+    - Added Production Rates Calculator Extreme
+    - Removed explosive_excavation_unofficial_2_1
+    - Added Blueberry Excavation
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.1
 Date: 2026-08-15
