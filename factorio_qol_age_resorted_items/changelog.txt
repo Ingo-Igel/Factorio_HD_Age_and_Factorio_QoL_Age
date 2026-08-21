@@ -2,6 +2,9 @@
 Version: 1.1.1
 Date: ????
   Changes:
+    - Moved discharge-defense-remote to subgroupe military-equipment
+    - Moved spidertron-remote to subgroup transport
+    - Moved spawnable wires to logistic tap
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.0
 Date: 2026-07-11

@@ -286,6 +286,12 @@ data.raw.item["big-electric-pole"].subgroup = "energy-distribution"
 data.raw.item["big-electric-pole"].order = "c"
 data.raw.item["substation"].subgroup = "energy-distribution"
 data.raw.item["substation"].order = "d"
+data.raw.item["copper-wire"].subgroup = "energy-distribution"
+data.raw.item["copper-wire"].order = "ea"
+data.raw.item["green-wire"].subgroup = "energy-distribution"
+data.raw.item["green-wire"].order = "eb"
+data.raw.item["red-wire"].subgroup = "energy-distribution"
+data.raw.item["red-wire"].order = "ec"
 
 if mods["snouz_better_substation"] then
 	data.raw.item["snouz_better_substation"].subgroup = "energy-distribution"
@@ -305,6 +311,9 @@ data.raw["item-subgroup"]["train-transport"].order = "g"
 
 -- item-subgroup - transport
 data.raw["item-subgroup"]["transport"].order = "h"
+
+data.raw["spidertron-remote"]["spidertron-remote"].subgroup = "transport"
+data.raw["spidertron-remote"]["spidertron-remote"].order = "x"
 
 -- item-subgroup - terrain
 data.raw["item-subgroup"]["terrain"].order = "ib"
@@ -347,9 +356,9 @@ if space_age then
 	data.raw.capsule["cliff-explosives"].subgroup = "terraforming"
 	data.raw.capsule["cliff-explosives"].order = "a"
 
-	if mods["Explosive Excavation"] then
-		data.raw.item["blasting-charge"].subgroup = "terraforming"
-		data.raw.item["blasting-charge"].order = "b"
+	if mods["bbexcavation"] then
+		data.raw.item["bbexcavation-explosives"].subgroup = "terraforming"
+		data.raw.item["bbexcavation-explosives"].order = "b"
 	end
 end
 

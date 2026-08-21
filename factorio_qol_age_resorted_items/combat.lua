@@ -16,40 +16,6 @@ data.raw.recipe["land-mine"].order = "c"
 -- item-subgroup - turret
 data.raw["item-subgroup"]["turret"].order = "b"
 
--- item-subgroup - electric-combat
-data:extend(
-	{
-		{
-			type = "item-subgroup",
-			name = "electric-combat",
-			group = "combat",
-			order = "ca"
-		}
-	}
-)
-
-data.raw.item["laser-turret"].subgroup = "electric-combat"
-data.raw.item["laser-turret"].order = "aa"
-data.raw.recipe["laser-turret"].subgroup = "electric-combat"
-data.raw.recipe["laser-turret"].order = "aa"
-
-if space_age then
-	data.raw.item["tesla-turret"].subgroup = "electric-combat"
-	data.raw.item["tesla-turret"].order = "ab"
-	data.raw.recipe["tesla-turret"].subgroup = "electric-combat"
-	data.raw.recipe["tesla-turret"].order = "ab"
-
-	data.raw.ammo["tesla-ammo"].subgroup = "electric-combat"
-	data.raw.ammo["tesla-ammo"].order = "ba"
-	data.raw.recipe["tesla-ammo"].subgroup = "electric-combat"
-	data.raw.recipe["tesla-ammo"].order = "ba"
-
-	data.raw.gun["teslagun"].subgroup = "electric-combat"
-	data.raw.gun["teslagun"].order = "ca"
-	data.raw.recipe["teslagun"].subgroup = "electric-combat"
-	data.raw.recipe["teslagun"].order = "ca"
-end
-
 -- item-subgroup - bullet-combat
 data:extend(
 	{
@@ -57,7 +23,7 @@ data:extend(
 			type = "item-subgroup",
 			name = "bullet-combat",
 			group = "combat",
-			order = "cb"
+			order = "ca"
 		}
 	}
 )
@@ -86,6 +52,40 @@ data.raw.gun["submachine-gun"].subgroup = "bullet-combat"
 data.raw.gun["submachine-gun"].order = "cb"
 data.raw.recipe["submachine-gun"].subgroup = "bullet-combat"
 data.raw.recipe["submachine-gun"].order = "cb"
+
+-- item-subgroup - electric-combat
+data:extend(
+	{
+		{
+			type = "item-subgroup",
+			name = "electric-combat",
+			group = "combat",
+			order = "cb"
+		}
+	}
+)
+
+data.raw.item["laser-turret"].subgroup = "electric-combat"
+data.raw.item["laser-turret"].order = "aa"
+data.raw.recipe["laser-turret"].subgroup = "electric-combat"
+data.raw.recipe["laser-turret"].order = "aa"
+
+if space_age then
+	data.raw.item["tesla-turret"].subgroup = "electric-combat"
+	data.raw.item["tesla-turret"].order = "ab"
+	data.raw.recipe["tesla-turret"].subgroup = "electric-combat"
+	data.raw.recipe["tesla-turret"].order = "ab"
+
+	data.raw.ammo["tesla-ammo"].subgroup = "electric-combat"
+	data.raw.ammo["tesla-ammo"].order = "ba"
+	data.raw.recipe["tesla-ammo"].subgroup = "electric-combat"
+	data.raw.recipe["tesla-ammo"].order = "ba"
+
+	data.raw.gun["teslagun"].subgroup = "electric-combat"
+	data.raw.gun["teslagun"].order = "ca"
+	data.raw.recipe["teslagun"].subgroup = "electric-combat"
+	data.raw.recipe["teslagun"].order = "ca"
+end
 
 -- item-subgroup - shotgun-combat
 data:extend(
@@ -297,3 +297,6 @@ data.raw["item-subgroup"]["utility-equipment"].order = "hb"
 
 -- item-subgroup - military-equipment
 data.raw["item-subgroup"]["military-equipment"].order = "hc"
+
+data.raw.capsule["discharge-defense-remote"].subgroup = "military-equipment"
+data.raw.capsule["discharge-defense-remote"].order = "x"
