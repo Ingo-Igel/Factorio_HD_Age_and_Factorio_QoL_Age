@@ -2,6 +2,7 @@
 Version: 2.1.1
 Date: ????
   Changes:
+    - Updated concrete and stone path water transition textures according to Factorio update 2.1.17
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.0
 Date: 2026-07-11
