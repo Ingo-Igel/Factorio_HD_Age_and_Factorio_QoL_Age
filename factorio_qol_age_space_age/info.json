@@ -8,7 +8,8 @@
 	"dependencies": [
 		"base >= 2.1",
 		"space-age >= 2.1",
-		"factorio_qol_age_base_game >= 1.1"
+		"factorio_qol_age_base_game >= 1.1",
+		"quality-heat-pipes"
 	],
 	"description": "This mod pack contains various QoL mods for the Space Age DLC and Base Game that I personally use.",
 	"package": {

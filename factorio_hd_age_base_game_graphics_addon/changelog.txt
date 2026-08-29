@@ -5,6 +5,9 @@ Date: ????
     - Updated dependencies
     - changed alternate-science-packs to cb-science
     - changed MiningScars to Mining Scars Fork
+    - Added CleanedConcrete
+    - Added Nuclear Scorch Decay
+    - Temporarily set coloured-tool-icons as optional since it's not Factorio 2.1 compatible.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.10
 Date: 2026-05-15
