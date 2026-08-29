@@ -7,13 +7,16 @@ All included mods are automatically set and adjusted to create a consistent look
 
 ### Included Mods:
 
+* [Automatic Station Painter](https://mods.factorio.com/mod/automatic-station-painter) by [doktorstick](https://mods.factorio.com/user/doktorstick)
+* [Automatic Train Painter](https://mods.factorio.com/mod/Automatic_Train_Painter) by [yeahtoast](https://mods.factorio.com/user/yeahtoast)
 * [Better Alert Arrows](https://mods.factorio.com/mod/BetterAlertArrows) by [raiguard](https://mods.factorio.com/user/raiguard)
 * [Biter Cleanup](https://mods.factorio.com/mod/biter-cleanup) by [Pseudonymous](https://mods.factorio.com/user/Pseudonymous)
 * [Bullet Trails](https://mods.factorio.com/mod/bullet-trails) by [Earendel](https://mods.factorio.com/user/Earendel)
 * [Cleaned Concrete](https://mods.factorio.com/mod/CleanedConcrete) by [JusticeDroid](https://mods.factorio.com/user/JusticeDroid)
-* [Colour Blind Friendly Science Packs](https://mods.factorio.com/mod/cb-science) by [Hornwitser](https://mods.factorio.com/user/Hornwitser)
+* [Colour Blind Friendly Science Packs](https://mods.factorio.com/mod/cb-science-Alk) by [Alkumist](https://mods.factorio.com/user/Alkumist)
 * [Coloured Shortcut Tool Icons](https://mods.factorio.com/mod/coloured-tool-icons) by [IsaacOscar](https://mods.factorio.com/user/IsaacOscar)
-* [Disco Science](https://mods.factorio.com/mod/DiscoScience) by [danielbrauer](https://mods.factorio.com/user/danielbrauer)
+* [Disco Science Lite](https://mods.factorio.com/mod/disco-science-lite) by [mokkosu55](https://mods.factorio.com/user/mokkosu55)
+* [Fluid Wagon Color Mask](https://mods.factorio.com/mod/FluidWagonColorMask) by [yeahtoast](https://mods.factorio.com/user/yeahtoast)
 * [Humble Alt-Mode Shadow (for 2.0)](https://mods.factorio.com/mod/Humble-Alt-Mode-Shadow-2) by [JigSaW_3](https://mods.factorio.com/user/JigSaW_3)
 * [Mining Scars Fork](https://mods.factorio.com/mod/mining-scars-fork) by [zinful](https://mods.factorio.com/user/zinful)
 * [Nuclear Scorch Decay](https://mods.factorio.com/mod/nuclear-scorch-decay) by [Pseudonymous](https://mods.factorio.com/user/Pseudonymous)

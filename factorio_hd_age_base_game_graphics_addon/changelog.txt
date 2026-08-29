@@ -2,6 +2,11 @@
 Version: 1.1.1
 Date: ????
   Changes:
+    - Changed DiscoScience to disco-science-lite
+    - Changed cb-science to cb-science-Alk
+    - Added Automatic Train Painter
+    - Added Fluid Wagon Color Mask
+    - Added Automatic Station Painter
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.0
 Date: 2026-08-29
