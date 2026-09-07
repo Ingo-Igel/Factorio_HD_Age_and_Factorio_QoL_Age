@@ -11,7 +11,7 @@
 	"automatic-station-painter",
 	"BetterAlertArrows >= 1.2.0",
 	"biter-cleanup >= 4.2.1",
-	"bullet-trails >= 0.8.0",
+	"visual_tracers",
 	"cb-science-Alk >= 1.0.2",
 	"CleanedConcrete",
 	"disco-science-lite",

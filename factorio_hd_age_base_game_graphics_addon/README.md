@@ -11,7 +11,7 @@ All included mods are automatically set and adjusted to create a consistent look
 * [Automatic Train Painter](https://mods.factorio.com/mod/Automatic_Train_Painter) by [yeahtoast](https://mods.factorio.com/user/yeahtoast)
 * [Better Alert Arrows](https://mods.factorio.com/mod/BetterAlertArrows) by [raiguard](https://mods.factorio.com/user/raiguard)
 * [Biter Cleanup](https://mods.factorio.com/mod/biter-cleanup) by [Pseudonymous](https://mods.factorio.com/user/Pseudonymous)
-* [Bullet Trails](https://mods.factorio.com/mod/bullet-trails) by [Earendel](https://mods.factorio.com/user/Earendel)
+* [Bullet Tracers](https://mods.factorio.com/mod/visual_tracers) by [kittah_khan](https://mods.factorio.com/user/kittah_khan)
 * [Cleaned Concrete](https://mods.factorio.com/mod/CleanedConcrete) by [JusticeDroid](https://mods.factorio.com/user/JusticeDroid)
 * [Colour Blind Friendly Science Packs](https://mods.factorio.com/mod/cb-science-Alk) by [Alkumist](https://mods.factorio.com/user/Alkumist)
 * [Coloured Shortcut Tool Icons](https://mods.factorio.com/mod/coloured-tool-icons) by [IsaacOscar](https://mods.factorio.com/user/IsaacOscar)
