@@ -8,6 +8,7 @@ All QoL Mods that do not require the Space Age DLC can be found in [Factorio QoL
 
 ### Included Mods:
 
+* [Change recipe quality without re-selecting recipe](https://mods.factorio.com/mod/change-recipe-quality-without-re-selecting-recipe) by [Quezler](https://mods.factorio.com/user/Quezler)
 * [Factorio QoL Age: Base Game](https://mods.factorio.com/mod/factorio_qol_age_base_game) by [Ingo_Igel](https://mods.factorio.com/user/Ingo_Igel)
 * [Quality Heat Pipes](https://mods.factorio.com/mod/quality-heat-pipes) by [bunshaman](https://mods.factorio.com/user/bunshaman)
 

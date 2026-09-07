@@ -2,6 +2,8 @@
 Version: 1.1.4
 Date: ????
   Changes:
+    - Added Sort All Inventories
+    - Removed change-recipe-quality-without-re-selecting-recipe
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.3
 Date: 2026-08-29

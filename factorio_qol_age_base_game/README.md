@@ -15,7 +15,7 @@ All QoL Mods that require the Space Age DLC can be found in [Factorio QoL Age: S
 * [Better zero & Q signal](https://mods.factorio.com/mod/rs-better-zero) by [repne.scasb](https://mods.factorio.com/user/repne.scasb)
 * [Blueberry Excavation](https://mods.factorio.com/mod/bbexcavation) by [q2s2t](https://mods.factorio.com/user/q2s2t)
 * [Car Logistics](https://mods.factorio.com/mod/CarLogistics) by [Malidictus](https://mods.factorio.com/user/Malidictus)
-* [Change recipe quality without re-selecting recipe](https://mods.factorio.com/mod/change-recipe-quality-without-re-selecting-recipe) by [Quezler](https://mods.factorio.com/user/Quezler)
+* [Sort All Inventories](https://mods.factorio.com/mod/Sort-All-Inventories) by [peeves91](https://mods.factorio.com/user/peeves91)
 * [Circuit Visualizer Fork](https://mods.factorio.com/mod/circuit_visualizer_fork) by [zinful](https://mods.factorio.com/user/zinful)
 * [Copy Paste Modules](https://mods.factorio.com/mod/CopyPasteModules) by [kajacx](https://mods.factorio.com/user/kajacx)
 * [Corpse Marker](https://mods.factorio.com/mod/some-corpsemarker) by [someone1337](https://mods.factorio.com/user/someone1337)
