@@ -2,7 +2,7 @@
 Version: 2.1.1
 Date: ????
   Changes:
-    - Fix vor Factorio 2.1.18 update
+    - Fix for Factorio 2.1.18 update
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.0
 Date: 2026-07-11
