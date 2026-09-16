@@ -234,7 +234,6 @@ local function load_oil_ocean(name, number)
 	if not disable_water_transitions and (name == "oil-ocean-deep") then
 		data.raw.tile[name].transitions[1].spritesheet = base .. "water-transitions/fulgora-oil-sand.png"
 		data.raw.tile[name].transitions[1].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_8_short
-		data.raw.tile[name].transitions[1].effect_map_layout.spritesheet = base .. "effect-maps/water-fulgora-sand-mask.png"
 	end
 
 	if not disable_out_of_map_transitions then
