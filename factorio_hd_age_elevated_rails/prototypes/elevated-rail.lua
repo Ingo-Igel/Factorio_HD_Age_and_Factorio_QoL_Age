@@ -1,5 +1,18 @@
 local base = "__factorio_hd_age_elevated_rails__/data/elevated-rails/graphics/entity/elevated-rail/"
 
+local color_mapping = {
+	["green"] = "-green",
+	["blue"] = "-blue",
+	["purple"] = "-purple",
+	["yellow"] = "-yellow",
+	["cyan"] = "-cyan",
+	["pink"] = "-pink",
+	["white"] = "-white",
+	["black"] = "-black"
+}
+
+local color = color_mapping[settings.startup["f_hd_a_er_color_railing"].value] or ""
+
 local rail_type0 = {
 	"straight",
 	"half-diagonal",
@@ -63,7 +76,7 @@ local function elevated_rails(rail_type, direction)
 		},
 		stone_path = {
 			filename =
-				base .. "elevated-rail-base/elevated-rail-base-" .. rail_type .. "-" .. direction .. ".png",
+				base .. "elevated-rail-base" .. color .. "/elevated-rail-base-" .. rail_type .. "-" .. direction .. ".png",
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
@@ -92,7 +105,7 @@ end
 -- Railings
 local function fence(rail_type, varcount, side, part, count, direction)
 	return {
-		filename = base .. "elevated-rail-fence-" .. side .. part .. count .. "-upper/elevated-rail-fence-" .. side .. part .. count .. "-upper-" .. rail_type .. "-" .. direction .. ".png",
+		filename = base .. "elevated-rail-fence-" .. side .. part .. count .. "-upper" .. color .. "/elevated-rail-fence-" .. side .. part .. count .. "-upper-" .. rail_type .. "-" .. direction .. ".png",
 		priority = "extra-high",
 		variation_count = varcount,
 		size = size_rail,
@@ -105,7 +118,15 @@ local function fence_with_shadow(rail_type, varcount, side, part, count, directi
 	return {
 		layers = {
 			{
-				filename = base .. "elevated-rail-fence-" .. side .. part .. count .. "/elevated-rail-fence-" .. side .. part .. count .. "-" .. rail_type .. "-" .. direction .. ".png",
+				filename = base .. "elevated-rail-fence-" .. side .. part .. count .. "" .. color .. "/elevated-rail-fence-" .. side .. part .. count .. "-" .. rail_type .. "-" .. direction .. ".png",
+				priority = "extra-high",
+				variation_count = varcount,
+				size = size_rail,
+				scale = scale_rail,
+				shift = shift_rail,
+			},
+			{
+				filename = base .. "elevated-rail-fence-" .. side .. part .. count .. "" .. color .. "/elevated-rail-fence-" .. side .. part .. count .. "-" .. rail_type .. "-" .. direction .. ".png",
 				priority = "extra-high",
 				variation_count = varcount,
 				size = size_rail,
