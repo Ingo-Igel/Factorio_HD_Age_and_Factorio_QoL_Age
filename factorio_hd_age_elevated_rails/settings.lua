@@ -64,23 +64,17 @@ data:extend {
 		order = "z"
 	},
 	{
-		type = "string-setting",
+		type = "bool-setting",
+		setting_type = "startup",
+		name = "f_hd_a_er_use_colored_railing",
+		default_value = false,
+		order = "z"
+	},
+	{
+		type = "color-setting",
 		setting_type = "startup",
 		name = "f_hd_a_er_color_railing",
-		default_value = "red (default)",
-		allowed_values ={
-			"red (default)",
-			"green",
-			"blue",
-			"purple",
-			"yellow",
-			"cyan",
-			"pink",
-			"white",
-			"black"
-		},
-		allow_blank = true,
-		order = "z",
-		hidden = true
+		default_value = {0, 0, 0},
+		order = "z"
 	}
 }
