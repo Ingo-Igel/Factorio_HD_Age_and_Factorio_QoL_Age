@@ -48,40 +48,60 @@ local function rails(rail_type, direction, size_rail, variation_rail)
 	end
 
 	return {
-		metals = {
-			filename = base .. "rail-metals/" .. rail_type .. "-" .. direction .. ".png",
-			priority = "extra-high",
-			size = size_rail,
-			scale = scale_rail,
-			variation_count = variation_rail,
-		},
 		backplates = {
 			filename = base .. "rail-backplates/" .. rail_type .. "-" .. direction .. ".png",
+			flags = {
+				"trilinear-filtering"
+			},
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
 			variation_count = variation_rail,
+			usage = "rail"
 		},
-		ties = {
-			filename = base .. "rail-ties/" .. rail_type .. "-" .. direction .. ".png",
+		metals = {
+			filename = base .. "rail-metals/" .. rail_type .. "-" .. direction .. ".png",
+			flags = {
+				"trilinear-filtering"
+			},
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
 			variation_count = variation_rail,
+			usage = "rail"
 		},
 		stone_path = {
 			filename = base .. "rail-stone-path/" .. rail_type .. "-" .. direction .. ".png",
+			flags = {
+				"low-object"
+			},
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
 			variation_count = variation_rail,
+			usage = "rail"
 		},
 		stone_path_background = {
 			filename = base .. "rail-stone-path-inside/" .. rail_type .. "-" .. direction .. ".png",
+			flags = {
+				"low-object"
+			},
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
 			variation_count = variation_rail,
+			usage = "rail"
+		},
+		ties = {
+			filename = base .. "rail-ties/" .. rail_type .. "-" .. direction .. ".png",
+			flags = {
+				"low-object"
+			},
+			priority = "extra-high",
+			size = size_rail,
+			scale = scale_rail,
+			variation_count = variation_rail,
+			usage = "rail"
 		}
 	}
 end
@@ -93,41 +113,66 @@ local function rails_remnants(rail_type, direction, size_rail, variation_rail)
 	end
 
 	return {
-		metals = {
-			filename = base .. "remnants/rail-remnants-metals/" .. rail_type .. "-" .. direction .. ".png",
-			priority = "extra-high",
-			size = size_rail,
-			scale = scale_rail,
-			variation_count = variation_rail,
-		},
 		backplates = {
+			allow_forced_downscale = true,
 			filename = base .. "remnants/rail-remnants-backplates/" .. rail_type .. "-" .. direction .. ".png",
+			flags = {
+				"trilinear-filtering"
+			},
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
 			variation_count = variation_rail,
+			usage = "rail"
 		},
-		ties = {
-			filename = base .. "remnants/rail-remnants-ties/" .. rail_type .. "-" .. direction .. ".png",
+		metals = {
+			allow_forced_downscale = true,
+			filename = base .. "remnants/rail-remnants-metals/" .. rail_type .. "-" .. direction .. ".png",
+			flags = {
+				"trilinear-filtering"
+			},
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
 			variation_count = variation_rail,
+			usage = "rail"
 		},
 		stone_path = {
+			allow_forced_downscale = true,
 			filename = base .. "remnants/rail-remnants-stone-path/" .. rail_type .. "-" .. direction .. ".png",
+			flags = {
+				"low-object"
+			},
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
 			variation_count = variation_rail,
+			usage = "rail"
 		},
 		stone_path_background = {
+			allow_forced_downscale = true,
 			filename = base .. "remnants/rail-remnants-stone-path-inside/" .. rail_type .. "-" .. direction .. ".png",
+			flags = {
+				"low-object"
+			},
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
 			variation_count = variation_rail,
-		}
+			usage = "rail"
+		},
+		ties = {
+			allow_forced_downscale = true,
+			filename = base .. "remnants/rail-remnants-ties/" .. rail_type .. "-" .. direction .. ".png",
+			flags = {
+				"low-object"
+			},
+			priority = "extra-high",
+			size = size_rail,
+			scale = scale_rail,
+			variation_count = variation_rail,
+			usage = "rail"
+		},
 	}
 end
 
