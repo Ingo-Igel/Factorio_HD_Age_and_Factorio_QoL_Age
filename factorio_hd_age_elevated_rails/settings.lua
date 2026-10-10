@@ -80,6 +80,7 @@ data:extend {
 			"black"
 		},
 		allow_blank = true,
-		order = "z"
+		order = "z",
+		hidden = true
 	}
 }
