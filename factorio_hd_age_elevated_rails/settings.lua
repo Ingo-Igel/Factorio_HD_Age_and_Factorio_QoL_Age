@@ -62,5 +62,25 @@ data:extend {
 		default_value = "",
 		allow_blank = true,
 		order = "z"
+	},
+	{
+		type = "string-setting",
+		setting_type = "startup",
+		name = "f_hd_a_er_color_railing",
+		default_value = "red (default)",
+		allowed_values ={
+			"red (default)",
+			"green",
+			"blue",
+			"purple",
+			"yellow",
+			"cyan",
+			"pink",
+			"white",
+			"black"
+		},
+		allow_blank = true,
+		order = "z",
+		hidden = true
 	}
 }

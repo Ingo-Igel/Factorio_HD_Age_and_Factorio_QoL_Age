@@ -14,12 +14,19 @@ local variation = {
 	"-b"
 }
 
+local variation_count_exceptions = {
+	north = true,
+	east = true,
+	northeast = true,
+	southeast = true
+}
+
 local side = {
 	"A",
 	"B"
 }
 
-local direction = {
+local directions = {
 	"north",
 	"northeast",
 	"east",
@@ -35,93 +42,77 @@ local scale_rail = 0.25
 local shift_rail = { 0, -3 }
 
 -- Rails
-local function elevated_rails(rail_type, direction)
+local function elevated_rails_backplates(rail_type, direction)
 	return {
-		metals = {
-			filename =
-				base .. "elevated-rail-metals/elevated-rail-metals-" .. rail_type .. "-" .. direction .. ".png",
-			priority = "extra-high",
-			size = size_rail,
-			scale = scale_rail,
-			shift = shift_rail,
+		filename = base .. "elevated-rail-backplates/elevated-rail-backplates-" .. rail_type .. "-" .. direction .. ".png",
+		flags = {
+			"trilinear-filtering"
 		},
-		backplates = {
-			filename =
-				base .. "elevated-rail-backplates/elevated-rail-backplates-" .. rail_type .. "-" .. direction .. ".png",
-			priority = "extra-high",
-			size = size_rail,
-			scale = scale_rail,
-			shift = shift_rail,
+		priority = "extra-high",
+		size = size_rail,
+		scale = scale_rail,
+		shift = shift_rail,
+		usage = "elevated-rail"
+	}
+end
+
+local function elevated_rails_metals(rail_type, direction)
+	return {
+		filename =
+			base .. "elevated-rail-metals/elevated-rail-metals-" .. rail_type .. "-" .. direction .. ".png",
+		flags = {
+			"trilinear-filtering"
 		},
-		ties = {
-			filename =
-				base .. "elevated-rail-base-top/elevated-rail-base-top-" .. rail_type .. "-" .. direction .. ".png",
-			priority = "extra-high",
-			size = size_rail,
-			scale = scale_rail,
-			shift = shift_rail,
+		priority = "extra-high",
+		size = size_rail,
+		scale = scale_rail,
+		shift = shift_rail,
+		usage = "elevated-rail"
+	}
+end
+
+local function elevated_rails_stone_path(rail_type, direction)
+	return {
+		filename = base .. "elevated-rail-base-top/elevated-rail-base-top-" .. rail_type .. "-" .. direction .. ".png",
+		flags = {
+			"low-object"
 		},
-		stone_path = {
-			filename =
-				base .. "elevated-rail-base/elevated-rail-base-" .. rail_type .. "-" .. direction .. ".png",
-			priority = "extra-high",
-			size = size_rail,
-			scale = scale_rail,
-			shift = shift_rail,
+		priority = "extra-high",
+		size = size_rail,
+		scale = scale_rail,
+		shift = shift_rail,
+		usage = "elevated-rail"
+	}
+end
+
+local function elevated_rails_stone_path_background(rail_type, direction)
+	return {
+		filename = base .. "elevated-rail-base/elevated-rail-base-" .. rail_type .. "-" .. direction .. ".png",
+		flags = {
+			"low-object"
 		},
-		stone_path_background = {
-			priority = "extra-high",
-			filename =
-				base .. "elevated-rail-base-shadow/elevated-rail-base-shadow-" .. rail_type .. "-" .. direction .. ".png",
-			size = 768,
-			scale = 0.5,
-			shift = { 3.87, 2.75 - 3 },
-			draw_as_shadow = true,
-		},
-		water_reflection = {
-			priority = "extra-high",
-			filename =
-				base .. "elevated-rail-base-reflection/elevated-rail-base-reflection-" .. rail_type .. "-" .. direction .. ".png",
-			size = 768,
-			scale = 0.5,
-			shift = { 0, 3 },
-		},
+		priority = "extra-high",
+		size = size_rail,
+		scale = scale_rail,
+		shift = shift_rail,
+		usage = "elevated-rail"
 	}
 end
 
 -- Railings
-local function fence(rail_type, varcount, side, part, count, direction)
+local function fence(rail_type, side, part, count, upper, direction)
+	varcount = (rail_type == "straight" and variation_count_exceptions[direction]) and 1 or 2
 	return {
-		filename = base .. "elevated-rail-fence-" .. side .. part .. count .. "-upper/elevated-rail-fence-" .. side .. part .. count .. "-upper-" .. rail_type .. "-" .. direction .. ".png",
+		filename = base .. "elevated-rail-fence-" .. side .. part .. count .. upper .. "/elevated-rail-fence-" .. side .. part .. count .. upper .. "-" .. rail_type .. "-" .. direction .. ".png",
+		flags = {
+			"low-object"
+		},
 		priority = "extra-high",
 		variation_count = varcount,
 		size = size_rail,
 		scale = scale_rail,
 		shift = shift_rail,
-	}
-end
-
-local function fence_with_shadow(rail_type, varcount, side, part, count, direction)
-	return {
-		layers = {
-			{
-				filename = base .. "elevated-rail-fence-" .. side .. part .. count .. "/elevated-rail-fence-" .. side .. part .. count .. "-" .. rail_type .. "-" .. direction .. ".png",
-				priority = "extra-high",
-				variation_count = varcount,
-				size = size_rail,
-				scale = scale_rail,
-				shift = shift_rail,
-			},
-			{
-				filename = base .. "elevated-rail-fence-" .. side .. part .. count .. "-shadow/elevated-rail-fence-" .. side .. part .. count .. "-shadow-" .. rail_type .. "-" .. direction .. ".png",
-				priority = "extra-high",
-				variation_count = varcount,
-				size = 768,
-				scale = 0.5,
-				shift = { 3.87, 2.75 - 3 },
-				draw_as_shadow = true,
-			}
-		}
+		usage = "elevated-rail"
 	}
 end
 
@@ -130,25 +121,30 @@ for rt = 1, 4 do
 	local elevated_rail = data.raw["elevated-" .. rail_type0[rt] .. "-rail" .. variation[rt]]["elevated-" .. rail_type0[rt] .. "-rail" .. variation[rt]]
 
 	for d = 1, 4 do
-		elevated_rail.pictures[direction[d]] = elevated_rails(rail_type, direction[d])
+		elevated_rail.pictures[directions[d]]["backplates"] = elevated_rails_backplates(rail_type, directions[d])
+		elevated_rail.pictures[directions[d]]["metals"] = elevated_rails_metals(rail_type, directions[d])
+		elevated_rail.pictures[directions[d]]["stone_path"] = elevated_rails_stone_path(rail_type, directions[d])
+		elevated_rail.pictures[directions[d]]["stone_path_background"].layers[1] = elevated_rails_stone_path_background(rail_type, directions[d])
 		if rail_type0[rt] == "curved" then
-			elevated_rail.pictures[direction[d + 4]] = elevated_rails(rail_type, direction[d + 4])
+			elevated_rail.pictures[directions[d + 4]]["backplates"] = elevated_rails_backplates(rail_type, directions[d + 4])
+			elevated_rail.pictures[directions[d + 4]]["metals"] = elevated_rails_metals(rail_type, directions[d + 4])
+			elevated_rail.pictures[directions[d + 4]]["stone_path"] = elevated_rails_stone_path(rail_type, directions[d + 4])
+			elevated_rail.pictures[directions[d + 4]]["stone_path_background"].layers[1] = elevated_rails_stone_path_background(rail_type, directions[d + 4])
 		end
 
 		for s = 1, 2 do
-			elevated_rail.fence_pictures["side_" .. side[s]].fence[direction[d]] = fence_with_shadow(rail_type, 2, side[s], "", "", direction[d])
-			elevated_rail.fence_pictures["side_" .. side[s]].fence_upper[direction[d]].layers[1] = fence(rail_type, 2, side[s], "", "", direction[d])
+			elevated_rail.fence_pictures["side_" .. side[s]].fence[directions[d]].layers[1] = fence(rail_type, side[s], "", "", "", directions[d])
+			elevated_rail.fence_pictures["side_" .. side[s]].fence_upper[directions[d]].layers[1] = fence(rail_type, side[s], "", "", "-upper", directions[d])
 			if rail_type0[rt] == "curved" then
-				elevated_rail.fence_pictures["side_" .. side[s]].fence[direction[d + 4]] = fence_with_shadow(rail_type, 2, side[s], "", "", direction[d + 4])
-				elevated_rail.fence_pictures["side_" .. side[s]].fence_upper[direction[d + 4]].layers[1] = fence(rail_type, 2, side[s], "", "", direction[d + 4])
+				elevated_rail.fence_pictures["side_" .. side[s]].fence[directions[d + 4]].layers[1] = fence(rail_type, side[s], "", "", "", directions[d + 4])
+				elevated_rail.fence_pictures["side_" .. side[s]].fence_upper[directions[d + 4]].layers[1] = fence(rail_type, side[s], "", "", "-upper", directions[d + 4])
 			end
-
 			for n = 1, 4 do
-				elevated_rail.fence_pictures["side_" .. side[s]].ends[n][direction[d]] = fence_with_shadow(rail_type, 2, side[s], "-end", "-0" .. n, direction[d])
-				elevated_rail.fence_pictures["side_" .. side[s]].ends_upper[n][direction[d]].layers[1] = fence(rail_type, 2, side[s], "-end", "-0" .. n, direction[d])
+				elevated_rail.fence_pictures["side_" .. side[s]].ends[n][directions[d]].layers[1] = fence(rail_type, side[s], "-end", "-0" .. n, "", directions[d])
+				elevated_rail.fence_pictures["side_" .. side[s]].ends_upper[n][directions[d]].layers[1] = fence(rail_type, side[s], "-end", "-0" .. n, "-upper", directions[d])
 				if rail_type0[rt] == "curved" then
-					elevated_rail.fence_pictures["side_" .. side[s]].ends[n][direction[d + 4]] = fence_with_shadow(rail_type, 2, side[s], "-end", "-0" .. n, direction[d + 4])
-					elevated_rail.fence_pictures["side_" .. side[s]].ends_upper[n][direction[d + 4]].layers[1] = fence(rail_type, 2, side[s], "-end", "-0" .. n, direction[d + 4])
+					elevated_rail.fence_pictures["side_" .. side[s]].ends[n][directions[d + 4]].layers[1] = fence(rail_type, side[s], "-end", "-0" .. n, "", directions[d + 4])
+					elevated_rail.fence_pictures["side_" .. side[s]].ends_upper[n][directions[d + 4]].layers[1] = fence(rail_type, side[s], "-end", "-0" .. n, "-upper", directions[d + 4])
 				end
 			end
 		end
