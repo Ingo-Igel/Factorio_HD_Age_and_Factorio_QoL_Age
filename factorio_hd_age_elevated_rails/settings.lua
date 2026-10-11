@@ -61,14 +61,14 @@ data:extend {
 		name = "f_hd_a_er_disable_string",
 		default_value = "",
 		allow_blank = true,
-		order = "z"
+		order = "x"
 	},
 	{
 		type = "bool-setting",
 		setting_type = "startup",
 		name = "f_hd_a_er_use_colored_railing",
 		default_value = false,
-		order = "z"
+		order = "y"
 	},
 	{
 		type = "color-setting",
