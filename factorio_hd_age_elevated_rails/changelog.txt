@@ -2,6 +2,8 @@
 Version: 2.1.2
 Date: ????
   Changes:
+    - updated settings order
+    - updated tint textures
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.1
 Date: 2026-10-11
