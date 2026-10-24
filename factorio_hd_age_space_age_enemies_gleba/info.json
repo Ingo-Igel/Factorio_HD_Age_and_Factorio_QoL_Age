@@ -9,6 +9,7 @@
 		"base >= 2.1",
 		"space-age >= 2.1"
 	],
+	"segmented_units_required": true,
 	"description": "This mod contains and integrates HD textures for the Gleba enemies of the Space Age DLC.",
 	"package": {
 		"gallery": [
