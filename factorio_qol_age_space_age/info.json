@@ -12,6 +12,8 @@
 		"change-recipe-quality-without-re-selecting-recipe",
 		"SpacePlatformOrgUI-Enhanced"
 	],
+	"space_travel_required": true,
+	"quality_required": true,
 	"description": "This mod pack contains various QoL mods for the Space Age DLC and Base Game that I personally use.",
 	"package": {
 		"gallery": [
