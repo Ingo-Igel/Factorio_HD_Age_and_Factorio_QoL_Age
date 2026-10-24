@@ -9,7 +9,6 @@
 		"base >= 2.1",
 		"recycler >= 2.1"
 	],
-	"quality_required": true,
 	"description": "This mod contains and integrates HD textures for the recycler entities of the Space Age DLC.",
 	"package": {
 		"gallery": [
