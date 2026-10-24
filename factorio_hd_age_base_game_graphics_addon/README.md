@@ -14,7 +14,7 @@ All included mods are automatically set and adjusted to create a consistent look
 * [Bullet Tracers](https://mods.factorio.com/mod/visual_tracers) by [kittah_khan](https://mods.factorio.com/user/kittah_khan)
 * [Cleaned Concrete](https://mods.factorio.com/mod/CleanedConcrete) by [JusticeDroid](https://mods.factorio.com/user/JusticeDroid)
 * [Colour Blind Friendly Science Packs](https://mods.factorio.com/mod/cb-science-Alk) by [Alkumist](https://mods.factorio.com/user/Alkumist)
-* [Coloured Shortcut Tool Icons](https://mods.factorio.com/mod/coloured-tool-icons) by [IsaacOscar](https://mods.factorio.com/user/IsaacOscar)
+* [Coloured Shortcut Tool Icons](https://mods.factorio.com/mod/coloured-tool-icons) by [IsaacOscar](https://mods.factorio.com/user/IsaacOscar) [I have temporarily integrated the code from this mod into mine to ensure compatibility with Factorio 2.1 I will remove this integration as soon as IsaacOscar updates his mod.]
 * [Disco Science Lite](https://mods.factorio.com/mod/disco-science-lite) by [mokkosu55](https://mods.factorio.com/user/mokkosu55)
 * [Fluid Wagon Color Mask](https://mods.factorio.com/mod/FluidWagonColorMask) by [yeahtoast](https://mods.factorio.com/user/yeahtoast)
 * [Humble Alt-Mode Shadow (for 2.0)](https://mods.factorio.com/mod/Humble-Alt-Mode-Shadow-2) by [JigSaW_3](https://mods.factorio.com/user/JigSaW_3)

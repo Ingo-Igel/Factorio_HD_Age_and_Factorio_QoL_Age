@@ -3,6 +3,7 @@ Version: 1.1.3
 Date: ????
   Changes:
     - Changed uranium_geiger to uranium_geiger_continued
+    - Added coloured-tool-icons code to this mod to make it compatible with Factorio 2.1 until the author updates the mod.
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.2
 Date: 2026-09-07
