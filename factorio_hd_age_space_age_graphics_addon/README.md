@@ -7,6 +7,7 @@ All included mods are automatically set and adjusted to create a consistent look
 
 ### Included Mods:
 
+* [Fleet View](https://mods.factorio.com/mod/fleet-view) by [holyskib ](https://mods.factorio.com/user/holyskib)
 * [PlanetsLib](https://mods.factorio.com/mod/PlanetsLib) by [thesixthroc](https://mods.factorio.com/user/thesixthroc)
 * [StarMap Background](https://mods.factorio.com/mod/Better_Starmap_Background?from=search) by [Tserup](https://mods.factorio.com/user/Tserup)
 
