@@ -2,6 +2,7 @@
 Version: 1.1.3
 Date: ????
   Changes:
+    - Changed uranium_geiger to uranium_geiger_continued
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.2
 Date: 2026-09-07

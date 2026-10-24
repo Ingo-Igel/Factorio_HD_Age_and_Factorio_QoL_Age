@@ -22,7 +22,7 @@ All included mods are automatically set and adjusted to create a consistent look
 * [Nuclear Scorch Decay](https://mods.factorio.com/mod/nuclear-scorch-decay) by [Pseudonymous](https://mods.factorio.com/user/Pseudonymous)
 * [Realistic Decoration Cleanup](https://mods.factorio.com/mod/RealisticDecorationCleanup) by [someone1337](https://mods.factorio.com/user/someone1337)
 * [Tree Healing](https://mods.factorio.com/mod/tree-healing) by [Pseudonymous](https://mods.factorio.com/user/Pseudonymous)
-* [Uranium Geiger](https://mods.factorio.com/mod/uranium_geiger) by [ikornaselur](https://mods.factorio.com/user/ikornaselur) (Optional Dependency)
+* [Uranium Geiger [Fork]](https://mods.factorio.com/mod/uranium_geiger_continued) by [SargaPulcsis](https://mods.factorio.com/user/SargaPulcsis) (Optional Dependency)
 
 ***
 

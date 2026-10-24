@@ -21,7 +21,7 @@
 	"nuclear-scorch-decay",
 	"RealisticDecorationCleanup >= 2.1.1",
 	"tree-healing >= 1.2.2",
-	"? uranium_geiger >= 0.5.1"
+	"? uranium_geiger_continued >= 0.6.0"
 	],
 	"description": "In addition to the HD textures for the Base Game, this modpack includes visual enhancement mods and tweaks.\nAll included mods are automatically set and adjusted to create a consistent look.",
 	"package": {
