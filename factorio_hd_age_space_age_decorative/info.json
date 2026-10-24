@@ -7,7 +7,7 @@
 	"factorio_version": "2.1",
 	"dependencies": [
 		"base >= 2.1.10",
-		"space-age >=2.1.10"
+		"space-age >= 2.1.10"
 	],
 	"description": "This mod contains and integrates HD textures for the decoratives of the Space Age DLC.",
 	"package": {

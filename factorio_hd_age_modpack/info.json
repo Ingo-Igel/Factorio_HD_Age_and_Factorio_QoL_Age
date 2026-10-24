@@ -8,7 +8,7 @@
 	"factorio_version": "2.1",
 	"dependencies": [
 		"base >= 2.1",
-		"space-age >=2.1",
+		"space-age >= 2.1",
 		"factorio_hd_age_modpack_base_game_only >= 2.1",
 		"factorio_hd_age_elevated_rails >= 2.1",
 		"factorio_hd_age_quality >= 2.1",

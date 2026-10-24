@@ -7,7 +7,7 @@
 	"factorio_version": "2.1",
 	"dependencies": [
 		"base >= 2.1",
-		"space-age >=2.1"
+		"space-age >= 2.1"
 	],
 	"description": "This mod contains and integrates HD textures for the Aquilo terrain of the Space Age DLC.",
 	"package": {

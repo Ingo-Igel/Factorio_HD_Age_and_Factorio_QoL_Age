@@ -7,7 +7,7 @@
 	"factorio_version": "2.1",
 	"dependencies": [
 		"base >= 2.1",
-		"space-age >=2.1"
+		"space-age >= 2.1"
 	],
 	"description": "This mod contains and integrates HD textures for the Vulcanus enemies of the Space Age DLC.\n\nDemolisher's HD textures are not included, as they do not add any significant visual improvement.",
 	"package": {
