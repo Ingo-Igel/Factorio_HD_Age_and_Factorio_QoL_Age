@@ -9,7 +9,7 @@
 		"base >= 2.1",
 		"assemblyanalyst",
 		"AutoDeconstruct",
-		"automatic-underground-pipe-connectors21",
+		"automatic-underground-pipe-connectors",
 		"bbexcavation",
 		"belt-direction-indicator",
 		"belt-visualizer",

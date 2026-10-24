@@ -10,7 +10,7 @@ All QoL Mods that require the Space Age DLC can be found in [Factorio QoL Age: S
 
 * [Assembly Analyst](https://mods.factorio.com/mod/assemblyanalyst) by [Therenas](https://mods.factorio.com/user/Therenas)
 * [Auto Deconstruct](https://mods.factorio.com/mod/AutoDeconstruct) by [mindmix](https://mods.factorio.com/user/mindmix)
-* [Automatic Underground Pipe Connectors for 2.1](https://mods.factorio.com/mod/automatic-underground-pipe-connectors21) by [Maeximus](https://mods.factorio.com/user/Maeximus)
+* [Automatic Underground Pipe Connectors](https://mods.factorio.com/mod/automatic-underground-pipe-connectors) by [sparr](https://mods.factorio.com/user/sparr)
 * [Belt Visualizer](https://mods.factorio.com/mod/belt-visualizer) by [_CodeGreen](https://mods.factorio.com/user/_CodeGreen)
 * [Better zero & Q signal](https://mods.factorio.com/mod/rs-better-zero) by [repne.scasb](https://mods.factorio.com/user/repne.scasb)
 * [Blueberry Excavation](https://mods.factorio.com/mod/bbexcavation) by [q2s2t](https://mods.factorio.com/user/q2s2t)
