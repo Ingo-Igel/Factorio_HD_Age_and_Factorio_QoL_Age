@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.3
-Date: ????
+Date: 2026-10-24
   Changes:
     - Added Space Platform Organizer - Enhanced
     - Removed quality-heat-pipes
