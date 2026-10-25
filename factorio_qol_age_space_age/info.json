@@ -12,7 +12,8 @@
 		"auto-sort-logistic-sections-by-planet",
 		"change-recipe-quality-without-re-selecting-recipe",
 		"space_platform_groups",
-		"SpacePlatformOrgUI-Enhanced"
+		"SpacePlatformOrgUI-Enhanced",
+		"ipt-inter-platform-travel"
 	],
 	"space_travel_required": true,
 	"quality_required": true,

@@ -11,6 +11,7 @@ All QoL Mods that do not require the Space Age DLC can be found in [Factorio QoL
 * [Auto sort logistic section slots](https://mods.factorio.com/mod/auto-sort-logistic-sections-by-planet) by [Icicubes](https://mods.factorio.com/user/Icicubes)
 * [Change recipe quality without re-selecting recipe](https://mods.factorio.com/mod/change-recipe-quality-without-re-selecting-recipe) by [Quezler](https://mods.factorio.com/user/Quezler)
 * [Factorio QoL Age: Base Game](https://mods.factorio.com/mod/factorio_qol_age_base_game) by [Ingo_Igel](https://mods.factorio.com/user/Ingo_Igel)
+* [IPT - Inter Platform Travel](https://mods.factorio.com/mod/ipt-inter-platform-travel) by [SirPuck](https://mods.factorio.com/user/SirPuck)
 * [Space Platform Groups](https://mods.factorio.com/mod/space_platform_groups) by [rycieos](https://mods.factorio.com/user/rycieos)
 * [Space Platform Organizer - Enhanced](https://mods.factorio.com/mod/SpacePlatformOrgUI-Enhanced/changelog) by [Amageddon86](https://mods.factorio.com/user/Amageddon86)
 
