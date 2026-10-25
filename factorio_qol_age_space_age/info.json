@@ -8,12 +8,12 @@
 	"dependencies": [
 		"base >= 2.1",
 		"space-age >= 2.1",
-		"factorio_qol_age_base_game >= 1.1",
 		"auto-sort-logistic-sections-by-planet",
 		"change-recipe-quality-without-re-selecting-recipe",
+		"factorio_qol_age_base_game >= 1.1",
+		"ipt-inter-platform-travel",
 		"space_platform_groups",
-		"SpacePlatformOrgUI-Enhanced",
-		"ipt-inter-platform-travel"
+		"SpacePlatformOrgUI-Enhanced"
 	],
 	"space_travel_required": true,
 	"quality_required": true,

@@ -10,7 +10,6 @@
 	"automatic-station-painter",
 	"BetterAlertArrows >= 1.2.0",
 	"biter-cleanup >= 4.2.1",
-	"visual_tracers",
 	"cb-science-Alk >= 1.0.2",
 	"CleanedConcrete",
 	"disco-science-lite",
@@ -20,6 +19,7 @@
 	"nuclear-scorch-decay",
 	"RealisticDecorationCleanup >= 2.1.1",
 	"tree-healing >= 1.2.2",
+	"visual_tracers",
 	"? uranium_geiger_continued >= 0.6.0"
 	],
 	"description": "In addition to the HD textures for the Base Game, this modpack includes visual enhancement mods and tweaks.\nAll included mods are automatically set and adjusted to create a consistent look.",

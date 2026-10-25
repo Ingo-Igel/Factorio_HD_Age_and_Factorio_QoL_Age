@@ -8,8 +8,8 @@
 	"dependencies": ["base >= 2.1",
 	"space-age >= 2.1",
 	"Better_Starmap_Background >= 2.4.1",
-	"PlanetsLib",
 	"fleet-view",
+	"PlanetsLib",
 	"space-route-overlay"
 	],
 	"space_travel_required": true,
