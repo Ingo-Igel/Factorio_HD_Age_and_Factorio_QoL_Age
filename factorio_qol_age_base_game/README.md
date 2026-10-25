@@ -14,7 +14,6 @@ All QoL Mods that require the Space Age DLC can be found in [Factorio QoL Age: S
 * [Barrel stages](https://mods.factorio.com/mod/barrel-stages) by [Tooster](https://mods.factorio.com/user/Tooster)
 * [Belt Visualizer](https://mods.factorio.com/mod/belt-visualizer) by [_CodeGreen](https://mods.factorio.com/user/_CodeGreen)
 * [Better zero & Q signal](https://mods.factorio.com/mod/rs-better-zero) by [repne.scasb](https://mods.factorio.com/user/repne.scasb)
-* [Blueberry Excavation](https://mods.factorio.com/mod/bbexcavation) by [q2s2t](https://mods.factorio.com/user/q2s2t)
 * [Car Logistics](https://mods.factorio.com/mod/CarLogistics) by [Malidictus](https://mods.factorio.com/user/Malidictus)
 * [Circuit Visualizer Fork](https://mods.factorio.com/mod/circuit_visualizer_fork) by [zinful](https://mods.factorio.com/user/zinful)
 * [Copy Paste Modules](https://mods.factorio.com/mod/CopyPasteModules) by [kajacx](https://mods.factorio.com/user/kajacx)
