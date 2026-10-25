@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.4
-Date: ????
+Date: 2026-10-25
   Changes:
     - Added Feature Flags "Space Travel required" and "Quality required"
     - Added Space Platform Groups
