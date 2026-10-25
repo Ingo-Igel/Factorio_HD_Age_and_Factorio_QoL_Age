@@ -9,6 +9,7 @@
 		"base >= 2.1",
 		"space-age >= 2.1",
 		"factorio_qol_age_base_game >= 1.1",
+		"auto-sort-logistic-sections-by-planet",
 		"change-recipe-quality-without-re-selecting-recipe",
 		"space_platform_groups",
 		"SpacePlatformOrgUI-Enhanced"

@@ -4,6 +4,7 @@ Date: ????
   Changes:
     - Added Feature Flags "Space Travel required" and "Quality required"
     - Added Space Platform Groups
+    - Added Auto sort logistic section slots
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.3
 Date: 2026-10-24
