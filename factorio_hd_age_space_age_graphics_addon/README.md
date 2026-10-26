@@ -11,6 +11,9 @@ All included mods are automatically set and adjusted to create a consistent look
 * [PlanetsLib](https://mods.factorio.com/mod/PlanetsLib) by [thesixthroc](https://mods.factorio.com/user/thesixthroc)
 * [Space Route Overlay](https://mods.factorio.com/mod/space-route-overlay) by [valent125](https://mods.factorio.com/user/valent125)
 * [StarMap Background](https://mods.factorio.com/mod/Better_Starmap_Background?from=search) by [Tserup](https://mods.factorio.com/user/Tserup)
+* [Visible Planets in Space](https://mods.factorio.com/mod/visible-planets) by [Nauviax](https://mods.factorio.com/user/Nauviax)
+
+The graphics for Schatterd Planet are taken from: [grog2's 4k planets](https://mods.factorio.com/mod/4k_planets)
 
 ***
 
