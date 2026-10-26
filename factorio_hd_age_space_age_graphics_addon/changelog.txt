@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.2
-Date: ????
+Date: 2026-10-26
   Changes:
     - Added Space Route Overlay
     - Reimplemented 4K Shattered Planet background texture
