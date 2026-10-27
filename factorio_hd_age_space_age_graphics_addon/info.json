@@ -10,7 +10,8 @@
 	"Better_Starmap_Background >= 2.4.1",
 	"fleet-view",
 	"PlanetsLib",
-	"space-route-overlay"
+	"space-route-overlay",
+	"visible-planets"
 	],
 	"space_travel_required": true,
 	"description": "In addition to the HD textures for the Space Age DLC, this modpack includes visual enhancement mods and tweaks.\nAll included mods are automatically set and adjusted to create a consistent look.",
