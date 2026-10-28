@@ -24,6 +24,7 @@ All QoL Mods that require the Space Age DLC can be found in [Factorio QoL Age: S
 * [Expand Tooltip](https://mods.factorio.com/mod/expandtooltip) by [Honktown](https://mods.factorio.com/user/Honktown)
 * [Factorio Qol Age: Resorted Items](https://mods.factorio.com/mod/factorio_qol_age_resorted_items) by [Ingo_Igel](https://mods.factorio.com/user/Ingo_Igel)
 * [Filter Helper](https://mods.factorio.com/mod/FilterHelper) by [Mudscape](https://mods.factorio.com/user/Mudscape)
+* [Finite Productivity Technologies](https://mods.factorio.com/mod/finite_prod_techs) by [boomshroom](https://mods.factorio.com/user/boomshroom)
 * [Heat Visualizer](https://mods.factorio.com/mod/heat-visualizer) by [justarandomgeek](https://mods.factorio.com/user/justarandomgeek)
 * [Inventory Repair](https://mods.factorio.com/mod/inventory-repair) by [calcwizard](https://mods.factorio.com/user/calcwizard)
 * [Map Tag Generator](https://mods.factorio.com/mod/map-tag-generator) by [majoca](https://mods.factorio.com/user/majoca)
