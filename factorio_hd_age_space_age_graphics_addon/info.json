@@ -8,7 +8,7 @@
 	"dependencies": ["base >= 2.1",
 	"space-age >= 2.1",
 	"Better_Starmap_Background >= 2.4.1",
-	"fleet-view",
+	"? fleet-view",
 	"PlanetsLib",
 	"space-route-overlay",
 	"visible-planets"
