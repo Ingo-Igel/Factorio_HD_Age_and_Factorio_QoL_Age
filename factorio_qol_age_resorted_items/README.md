@@ -6,8 +6,9 @@ This mod partially changes the order of items within the Logistics, Production, 
 
 ### Supported Mods:
 
+* [Advanced Belts](https://mods.factorio.com/mod/AdvancedBeltsSA) by [Buggi](https://mods.factorio.com/user/Buggi)
 * [Corrundum](https://mods.factorio.com/mod/corrundum) by [AnotherZach](https://mods.factorio.com/user/AnotherZach)
-* [Explosive Excavation](https://mods.factorio.com/mod/Explosive%20Excavation?from=search) by [GotLag](https://mods.factorio.com/user/GotLag)
+* [Blueberry Excavation](https://mods.factorio.com/mod/bbexcavation) by [q2s2t ](https://mods.factorio.com/user/q2s2t)
 * [Extra Storage Tanks: Steel Storage Tank](https://mods.factorio.com/mod/est-steel-storage-tank) by [ZarSasha](https://mods.factorio.com/user/ZarSasha)
 * [Extra Storage Tanks: Tiny Storage Tanks](https://mods.factorio.com/mod/est-tiny-storage-tank) by [ZarSasha](https://mods.factorio.com/user/ZarSasha)
 * [Hot Pipes](https://mods.factorio.com/mod/HotPipes) by [C-mers](https://mods.factorio.com/user/C-mers)
