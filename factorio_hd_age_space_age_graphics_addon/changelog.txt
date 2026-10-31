@@ -1,12 +1,8 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.1.5
-Date: 2026-10-31
+Version: 1.1.4
+Date: ????
   Changes:
     - Changed all dependencies to recommended, so all mods can be disabled if wished or needed.
----------------------------------------------------------------------------------------------------
-Version: 1.1.4
-Date: 2026-10-30
-  Changes:
     - Changed Fleet View dependency to optional because of possible performance issues
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.3
