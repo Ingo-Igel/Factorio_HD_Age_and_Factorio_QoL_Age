@@ -2,6 +2,7 @@
 Version: 1.1.4
 Date: ????
   Changes:
+    - Added option to disable the temporarily integrated 'Coloured Shortcut Tool Icons'.
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.3
 Date: 2026-10-24
