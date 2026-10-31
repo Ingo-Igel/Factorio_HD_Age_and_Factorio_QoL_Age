@@ -2,6 +2,7 @@
 Version: 1.1.4
 Date: ????
   Changes:
+    - Changed all dependencies to recommended, so all mods can be disabled if wished or needed.
     - Added option to disable the temporarily integrated 'Coloured Shortcut Tool Icons'.
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.3
