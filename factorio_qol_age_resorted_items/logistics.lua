@@ -238,7 +238,7 @@ if space_age then
 	data.raw.recipe["casting-pipe-to-ground"].order = "f"
 end
 
-if mods["lignumis"] then
+if lignumis then
 	data:extend(
 		{
 			{
