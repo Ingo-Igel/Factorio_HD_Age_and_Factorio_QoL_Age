@@ -2,6 +2,7 @@
 Version: 1.1.5
 Date: ????
   Changes:
+    - Added Circuit Network Selector Wire Icons
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.4
 Date: 2026-10-31

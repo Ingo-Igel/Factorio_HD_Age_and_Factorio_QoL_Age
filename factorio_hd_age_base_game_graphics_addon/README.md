@@ -12,6 +12,7 @@ All included mods are automatically set and adjusted to create a consistent look
 * [Better Alert Arrows](https://mods.factorio.com/mod/BetterAlertArrows) by [raiguard](https://mods.factorio.com/user/raiguard)
 * [Biter Cleanup](https://mods.factorio.com/mod/biter-cleanup) by [Pseudonymous](https://mods.factorio.com/user/Pseudonymous)
 * [Bullet Tracers](https://mods.factorio.com/mod/visual_tracers) by [kittah_khan](https://mods.factorio.com/user/kittah_khan)
+* [Circuit Network Selector Wire Icons](https://mods.factorio.com/mod/circuit-network-selector-wire-icons) by [SuperMikal](https://mods.factorio.com/user/SuperMikal)
 * [Cleaned Concrete](https://mods.factorio.com/mod/CleanedConcrete) by [JusticeDroid](https://mods.factorio.com/user/JusticeDroid)
 * [Colour Blind Friendly Science Packs](https://mods.factorio.com/mod/cb-science-Alk) by [Alkumist](https://mods.factorio.com/user/Alkumist)
 * [Coloured Shortcut Tool Icons](https://mods.factorio.com/mod/coloured-tool-icons) by [IsaacOscar](https://mods.factorio.com/user/IsaacOscar) [I have temporarily integrated the code from this mod into mine to ensure compatibility with Factorio 2.1 I will remove this integration as soon as IsaacOscar updates his mod.]
