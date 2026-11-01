@@ -15,3 +15,8 @@ if mods["visible-planets"] then
 	data.raw["double-setting"]["visible-planets-rotation-speed"].default_value = 0.003
 	data.raw["bool-setting"]["visible-planets-vanilla-compat"].default_value = true
 end
+
+if mods["dynamic_platform_lighting"] then
+	data.raw["int-setting"]["dynamic_platform_solar_limit"].default_value = 180
+	data.raw["int-setting"]["dynamic_platform_solar_min"].default_value = 0
+end

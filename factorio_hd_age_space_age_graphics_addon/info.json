@@ -9,6 +9,7 @@
 	"space-age >= 2.1",
 	"? fleet-view",
 	"+ Better_Starmap_Background >= 2.4.1",
+	"+ dynamic_platform_lighting",
 	"+ PlanetsLib",
 	"+ space-route-overlay",
 	"+ visible-planets"
