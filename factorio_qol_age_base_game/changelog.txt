@@ -4,6 +4,7 @@ Date: ????
   Changes:
     - Removed Blueberry Excavation
     - Added Finite Productivity Technologies 
+    - Changed Even Distribution to an compatible fork
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 2026-10-24

@@ -20,7 +20,7 @@ All QoL Mods that require the Space Age DLC can be found in [Factorio QoL Age: S
 * [Corpse Marker](https://mods.factorio.com/mod/some-corpsemarker) by [someone1337](https://mods.factorio.com/user/someone1337)
 * [Cursor Enhancements](https://mods.factorio.com/mod/CursorEnhancements) by [raiguard](https://mods.factorio.com/user/raiguard)
 * [ET's Queue to Front](https://mods.factorio.com/mod/ets-queue-to-front) by [enraged_tomato](https://mods.factorio.com/user/enraged_tomato)
-* [Even Distribution](https://mods.factorio.com/mod/even-distribution) by [321freddy](https://mods.factorio.com/user/321freddy)
+* [Even Distribution Fork](https://mods.factorio.com/mod/even-distribution-fork) by [Jhorr](https://mods.factorio.com/user/Jhorr)
 * [Expand Tooltip](https://mods.factorio.com/mod/expandtooltip) by [Honktown](https://mods.factorio.com/user/Honktown)
 * [Factorio Qol Age: Resorted Items](https://mods.factorio.com/mod/factorio_qol_age_resorted_items) by [Ingo_Igel](https://mods.factorio.com/user/Ingo_Igel)
 * [Filter Helper](https://mods.factorio.com/mod/FilterHelper) by [Mudscape](https://mods.factorio.com/user/Mudscape)
