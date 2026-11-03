@@ -3,6 +3,7 @@ Version: 1.1.5
 Date: ????
   Changes:
     - Added Dynamic Platform Lighting
+    - Deleted 4k Shatterd Planet background textures (Sorry for the back-and-forth on this. Ultimately, very few players ever reach this stage of the game, and due to the numerous asteroid fragments, most of the texture is obscured.)
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.4
 Date: 2026-10-31

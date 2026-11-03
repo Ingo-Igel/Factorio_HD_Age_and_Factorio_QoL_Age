@@ -35,13 +35,3 @@ if mods["PlanetsLib"] then
 		end
 	end
 end
-
-if mods["visible-planets"] then
-	local prototype = data.raw["space-location"]["shattered-planet"]
-	if not prototype then
-		log("WARNING: missing space location: shattered-planet")
-	else
-		prototype.starmap_icon = "__factorio_hd_age_space_age_graphics_addon__/graphics/shattered-planet-hd.png"
-		prototype.starmap_icon_size = 3840
-	end
-end
