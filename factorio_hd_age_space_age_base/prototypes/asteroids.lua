@@ -1,65 +1,55 @@
 local base = "__factorio_hd_age_space_age_base__/data/space-age/graphics/entity/asteroid/"
 
-local graphics_scale = {
-	0.5, -- chunk
-	0.5, -- small
-	0.5, -- medium
-	0.6, -- big
-	0.75 -- huge
-}
-
-local sizes_resolution = {
-	50 * 2, -- chunk
-	128 * 2, -- small
-	230 * 2, -- medium
-	304 * 2, -- big
-	512 * 2 -- huge
-}
-
 local asteroid_sizes = {
-	"chunk",
-	"small",
-	"medium",
-	"big",
-	"huge"
+	{ name = "chunk",  graphics_scale = 0.5 * 0.5,  resolution = 2 * 50,  type = "asteroid-chunk", prefix = "",        suffix = "-chunk" },
+	{ name = "small",  graphics_scale = 0.5 * 0.5,  resolution = 2 * 128, type = "asteroid",       prefix = "small-",  suffix = "" },
+	{ name = "medium", graphics_scale = 0.5 * 0.5,  resolution = 2 * 230, type = "asteroid",       prefix = "medium-", suffix = "" },
+	{ name = "big",    graphics_scale = 0.5 * 0.6,  resolution = 2 * 304, type = "asteroid",       prefix = "big-",    suffix = "" },
+	{ name = "huge",   graphics_scale = 0.5 * 0.75, resolution = 2 * 512, type = "asteroid",       prefix = "huge-",   suffix = "" }
 }
 
-local function asteroid_variation(asteroid_type, count_array)
-	for size = 1, 5 do
-		count = count_array[size]
-		local front = ""
-		local back = ""
-		if size == 1 then
-			back = "-" .. asteroid_sizes[size]
-		else
-			front = asteroid_sizes[size] .. "-"
-		end
+local asteroid_types = {
+	{ name = "metallic",   counts = { chunk = 8, small = 8, medium = 6, big = 6, huge = 6 } },
+	{ name = "carbonic",   counts = { chunk = 6, small = 6, medium = 6, big = 6, huge = 7 } },
+	{ name = "oxide",      counts = { chunk = 6, small = 7, medium = 5, big = 5, huge = 7 } },
+	{ name = "promethium", counts = { chunk = 6, small = 7, medium = 5, big = 5, huge = 7 } }
+}
+
+local function asteroid_variation(asteroid_data)
+	for size_index, size_data in ipairs(asteroid_sizes) do
+		local count = asteroid_data.counts[size_data.name]
+		local prototype_name = size_data.prefix .. asteroid_data.name .. "-asteroid" .. size_data.suffix
+		local variations = data.raw[size_data.type][prototype_name].graphics_set.variations
+		local size_path = base .. asteroid_data.name .. "/" .. size_data.name .. "/"
+		local file_base = "asteroid-" .. asteroid_data.name .. "-" .. size_data.name .. "-"
+		local texture_scale = size_data.graphics_scale
+
 		for i = 1, count do
-			data.raw["asteroid" .. back][front .. asteroid_type .. "-asteroid" .. back].graphics_set.variations[i] = {
+			local variation_number = "0" .. i
+			variations[i] = {
 				color_texture = {
-					filename = base .. asteroid_type .. "/" .. asteroid_sizes[size] .. "/" .. "asteroid-" .. asteroid_type .. "-" .. asteroid_sizes[size] .. "-colour-" .. "0" .. i .. ".png",
-					size = sizes_resolution[size],
-					scale = graphics_scale[size] * 0.5
+					filename = size_path .. file_base .. "colour-" .. variation_number .. ".png",
+					size = size_data.resolution,
+					scale = texture_scale
 				},
-				shadow_shift = { 0.25 * size, 0.25 * size },
+				shadow_shift = { 0.25 * size_index, 0.25 * size_index },
 				normal_map = {
-					filename = base .. asteroid_type .. "/" .. asteroid_sizes[size] .. "/" .. "asteroid-" .. asteroid_type .. "-" .. asteroid_sizes[size] .. "-normal-" .. "0" .. i .. ".png",
+					filename = size_path .. file_base .. "normal-" .. variation_number .. ".png",
 					premul_alpha = false,
-					size = sizes_resolution[size],
-					scale = graphics_scale[size] * 0.5
+					size = size_data.resolution,
+					scale = texture_scale
 				},
 				roughness_map = {
-					filename = base .. asteroid_type .. "/" .. asteroid_sizes[size] .. "/" .. "asteroid-" .. asteroid_type .. "-" .. asteroid_sizes[size] .. "-roughness-" .. "0" .. i .. ".png",
+					filename = size_path .. file_base .. "roughness-" .. variation_number .. ".png",
 					premul_alpha = false,
-					size = sizes_resolution[size],
-					scale = graphics_scale[size] * 0.5
+					size = size_data.resolution,
+					scale = texture_scale
 				}
 			}
 		end
 	end
 end
 
-asteroid_variation("metallic", { 8, 8, 6, 6, 6 })
-asteroid_variation("carbonic", { 6, 6, 6, 6, 7 })
-asteroid_variation("oxide", { 6, 7, 5, 5, 7 })
-asteroid_variation("promethium", { 6, 7, 5, 5, 7 })
+for _, asteroid_data in ipairs(asteroid_types) do
+	asteroid_variation(asteroid_data)
+end
