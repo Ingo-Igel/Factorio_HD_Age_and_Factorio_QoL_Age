@@ -1,17 +1,10 @@
 local base = "__factorio_hd_age_base_game_railway__/data/base/graphics/entity/rails/rail/"
 
-local rail_type0 = {
-	"straight",
-	"half-diagonal",
-	"curved",
-	"curved",
-}
-
-local variation = {
-	"",
-	"",
-	"-a",
-	"-b",
+local rail_types = {
+	{ base = "straight",      variation = "",   count = 8, size = 512,  directions = 4 },
+	{ base = "half-diagonal", variation = "",   count = 3, size = 768,  directions = 4 },
+	{ base = "curved",        variation = "-a", count = 4, size = 1024, directions = 8 },
+	{ base = "curved",        variation = "-b", count = 4, size = 1024, directions = 8 },
 }
 
 local direction = {
@@ -25,34 +18,23 @@ local direction = {
 	"northwest"
 }
 
-local variation_rails = {
-	8,
-	3,
-	4,
-	4
-}
-
-local size_rails = {
-	512,
-	768,
-	1024,
-	1024
-}
-
 local scale_rail = 0.25
 
-local function rails(rail_type, direction, size_rail, variation_rail)
-	if ((rail_type == "straight") and ((direction == "northeast") or (direction == "southeast"))) then
-		size_rail = 768
-		variation_rail = 3
+local function size_variation_exceptions(rail_type, direction, size_rail, variation_rail)
+	if rail_type == "straight" and (direction == "northeast" or direction == "southeast") then
+		return 768, 3
 	end
+
+	return size_rail, variation_rail
+end
+
+local function rails(rail_type, direction, size_rail, variation_rail)
+	size_rail, variation_rail = size_variation_exceptions(rail_type, direction, size_rail, variation_rail)
 
 	return {
 		backplates = {
 			filename = base .. "rail-backplates/" .. rail_type .. "-" .. direction .. ".png",
-			flags = {
-				"trilinear-filtering"
-			},
+			flags = { "trilinear-filtering" },
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
@@ -61,9 +43,7 @@ local function rails(rail_type, direction, size_rail, variation_rail)
 		},
 		metals = {
 			filename = base .. "rail-metals/" .. rail_type .. "-" .. direction .. ".png",
-			flags = {
-				"trilinear-filtering"
-			},
+			flags = { "trilinear-filtering" },
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
@@ -72,9 +52,7 @@ local function rails(rail_type, direction, size_rail, variation_rail)
 		},
 		stone_path = {
 			filename = base .. "rail-stone-path/" .. rail_type .. "-" .. direction .. ".png",
-			flags = {
-				"low-object"
-			},
+			flags = { "low-object" },
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
@@ -83,9 +61,7 @@ local function rails(rail_type, direction, size_rail, variation_rail)
 		},
 		stone_path_background = {
 			filename = base .. "rail-stone-path-inside/" .. rail_type .. "-" .. direction .. ".png",
-			flags = {
-				"low-object"
-			},
+			flags = { "low-object" },
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
@@ -94,9 +70,7 @@ local function rails(rail_type, direction, size_rail, variation_rail)
 		},
 		ties = {
 			filename = base .. "rail-ties/" .. rail_type .. "-" .. direction .. ".png",
-			flags = {
-				"low-object"
-			},
+			flags = { "low-object" },
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
@@ -107,18 +81,13 @@ local function rails(rail_type, direction, size_rail, variation_rail)
 end
 
 local function rails_remnants(rail_type, direction, size_rail, variation_rail)
-	if ((rail_type == "straight") and ((direction == "northeast") or (direction == "southeast"))) then
-		size_rail = 768
-		variation_rail = 3
-	end
+	size_rail, variation_rail = size_variation_exceptions(rail_type, direction, size_rail, variation_rail)
 
 	return {
 		backplates = {
 			allow_forced_downscale = true,
 			filename = base .. "remnants/rail-remnants-backplates/" .. rail_type .. "-" .. direction .. ".png",
-			flags = {
-				"trilinear-filtering"
-			},
+			flags = { "trilinear-filtering" },
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
@@ -128,9 +97,7 @@ local function rails_remnants(rail_type, direction, size_rail, variation_rail)
 		metals = {
 			allow_forced_downscale = true,
 			filename = base .. "remnants/rail-remnants-metals/" .. rail_type .. "-" .. direction .. ".png",
-			flags = {
-				"trilinear-filtering"
-			},
+			flags = { "trilinear-filtering" },
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
@@ -140,9 +107,7 @@ local function rails_remnants(rail_type, direction, size_rail, variation_rail)
 		stone_path = {
 			allow_forced_downscale = true,
 			filename = base .. "remnants/rail-remnants-stone-path/" .. rail_type .. "-" .. direction .. ".png",
-			flags = {
-				"low-object"
-			},
+			flags = { "low-object" },
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
@@ -152,9 +117,7 @@ local function rails_remnants(rail_type, direction, size_rail, variation_rail)
 		stone_path_background = {
 			allow_forced_downscale = true,
 			filename = base .. "remnants/rail-remnants-stone-path-inside/" .. rail_type .. "-" .. direction .. ".png",
-			flags = {
-				"low-object"
-			},
+			flags = { "low-object" },
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
@@ -164,9 +127,7 @@ local function rails_remnants(rail_type, direction, size_rail, variation_rail)
 		ties = {
 			allow_forced_downscale = true,
 			filename = base .. "remnants/rail-remnants-ties/" .. rail_type .. "-" .. direction .. ".png",
-			flags = {
-				"low-object"
-			},
+			flags = { "low-object" },
 			priority = "extra-high",
 			size = size_rail,
 			scale = scale_rail,
@@ -176,16 +137,15 @@ local function rails_remnants(rail_type, direction, size_rail, variation_rail)
 	}
 end
 
-for rt = 1, 4 do
-	local rail_type = rail_type0[rt] .. variation[rt]
-	local rail = data.raw[rail_type0[rt] .. "-rail" .. variation[rt]][rail_type0[rt] .. "-rail" .. variation[rt]]
-	local rail_remnants = data.raw["rail-remnants"][rail_type0[rt] .. "-rail" .. variation[rt] .. "-remnants"]
-	for d = 1, 4 do
-		rail.pictures[direction[d]] = rails(rail_type, direction[d], size_rails[rt], variation_rails[rt])
-		rail_remnants.pictures[direction[d]] = rails_remnants(rail_type, direction[d], size_rails[rt], variation_rails[rt])
-		if rail_type0[rt] == "curved" then
-			rail.pictures[direction[d + 4]] = rails(rail_type, direction[d + 4], size_rails[rt], variation_rails[rt])
-			rail_remnants.pictures[direction[d + 4]] = rails_remnants(rail_type, direction[d + 4], size_rails[rt], variation_rails[rt])
-		end
+for _, rail_data in ipairs(rail_types) do
+	local rail_type = rail_data.base .. rail_data.variation
+	local prototype_name = rail_data.base .. "-rail" .. rail_data.variation
+	local rail = data.raw[prototype_name][prototype_name]
+	local rail_remnants = data.raw["rail-remnants"][prototype_name .. "-remnants"]
+
+	for d = 1, rail_data.directions do
+		local direction_name = direction[d]
+		rail.pictures[direction_name] = rails(rail_type, direction_name, rail_data.size, rail_data.count)
+		rail_remnants.pictures[direction_name] = rails_remnants(rail_type, direction_name, rail_data.size, rail_data.count)
 	end
 end
