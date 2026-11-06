@@ -192,33 +192,35 @@ local water_patch = {
 
 local function load_terrain(name, transition, options)
 	data.raw.tile[name].variants = tile_variations_template_hd(
-		base .. "" .. name .. ".png",
+		base .. name .. ".png",
 		"__base__/graphics/terrain/masks/transition-" .. transition .. ".png",
 		options
 	)
 end
 
 local function load_grass_transitions(name)
-	if not disable_water_transitions then
-		data.raw.tile[name].transitions[1].spritesheet = base .. "water-transitions/grass.png"
-		data.raw.tile[name].transitions[1].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_8
-		data.raw.tile[name].transitions[1].effect_map_layout.spritesheet = base .. "effect-maps/water-grass-mask.png"
+	local tile = data.raw.tile[name]
 
-		data.raw.tile[name].transitions_between_transitions[1].spritesheet = base .. "water-transitions/grass-transition.png"
-		data.raw.tile[name].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile[name].transitions_between_transitions[1].effect_map_layout.spritesheet = base .. "effect-maps/water-grass-to-land-mask.png"
+	if not disable_water_transitions then
+		tile.transitions[1].spritesheet = base .. "water-transitions/grass.png"
+		tile.transitions[1].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_8
+		tile.transitions[1].effect_map_layout.spritesheet = base .. "effect-maps/water-grass-mask.png"
+
+		tile.transitions_between_transitions[1].spritesheet = base .. "water-transitions/grass-transition.png"
+		tile.transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+		tile.transitions_between_transitions[1].effect_map_layout.spritesheet = base .. "effect-maps/water-grass-to-land-mask.png"
 	end
 
 	if not disable_out_of_map_transitions then
-		data.raw.tile[name].transitions[2].spritesheet = out_of_map_transition
-		data.raw.tile[name].transitions[2].layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1
+		tile.transitions[2].spritesheet = out_of_map_transition
+		tile.transitions[2].layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1
 
-		data.raw.tile[name].transitions_between_transitions[2].spritesheet = base .. "out-of-map-transition/grass-out-of-map-transition.png"
-		data.raw.tile[name].transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+		tile.transitions_between_transitions[2].spritesheet = base .. "out-of-map-transition/grass-out-of-map-transition.png"
+		tile.transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
 
-		data.raw.tile[name].transitions_between_transitions[3].spritesheet = base .. "out-of-map-transition/grass-shore-out-of-map-transition.png"
-		data.raw.tile[name].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile[name].transitions_between_transitions[3].effect_map_layout.spritesheet = base .. "effect-maps/water-grass-to-out-of-map-mask.png"
+		tile.transitions_between_transitions[3].spritesheet = base .. "out-of-map-transition/grass-shore-out-of-map-transition.png"
+		tile.transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+		tile.transitions_between_transitions[3].effect_map_layout.spritesheet = base .. "effect-maps/water-grass-to-out-of-map-mask.png"
 	end
 end
 
@@ -260,30 +262,31 @@ end
 local function load_transitions(name, dry_dirt, dark_dirt)
 	local name2 = dry_dirt and "dry-dirt" or (dark_dirt and "dark-dirt" or name)
 	local patch = not dry_dirt
+	local tile = data.raw.tile[name]
 
 	if not disable_water_transitions then
-		data.raw.tile[name].transitions[1].spritesheet = base .. "water-transitions/" .. name2 .. ".png"
-		data.raw.tile[name].transitions[1].layout = tile_spritesheet_layout_hd.transition_8_8_8_2_4
-		data.raw.tile[name].transitions[1].effect_map_layout.spritesheet = base .. "effect-maps/water-dirt-mask.png"
+		tile.transitions[1].spritesheet = base .. "water-transitions/" .. name2 .. ".png"
+		tile.transitions[1].layout = tile_spritesheet_layout_hd.transition_8_8_8_2_4
+		tile.transitions[1].effect_map_layout.spritesheet = base .. "effect-maps/water-dirt-mask.png"
 
-		data.raw.tile[name].transitions_between_transitions[1].spritesheet = base .. "water-transitions/" .. name2 .. "-transition.png"
-		data.raw.tile[name].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile[name].transitions_between_transitions[1].effect_map_layout.spritesheet = base .. "effect-maps/water-dirt-to-land-mask.png"
+		tile.transitions_between_transitions[1].spritesheet = base .. "water-transitions/" .. name2 .. "-transition.png"
+		tile.transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+		tile.transitions_between_transitions[1].effect_map_layout.spritesheet = base .. "effect-maps/water-dirt-to-land-mask.png"
 		if patch then
-			data.raw.tile[name].transitions_between_transitions[1].water_patch = water_patch
+			tile.transitions_between_transitions[1].water_patch = water_patch
 		end
 	end
 
 	if not disable_out_of_map_transitions then
-		data.raw.tile[name].transitions[2].spritesheet = out_of_map_transition
-		data.raw.tile[name].transitions[2].layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1
+		tile.transitions[2].spritesheet = out_of_map_transition
+		tile.transitions[2].layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1
 
-		data.raw.tile[name].transitions_between_transitions[2].spritesheet = base .. "out-of-map-transition/dirt-out-of-map-transition.png"
-		data.raw.tile[name].transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+		tile.transitions_between_transitions[2].spritesheet = base .. "out-of-map-transition/dirt-out-of-map-transition.png"
+		tile.transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
 
-		data.raw.tile[name].transitions_between_transitions[3].spritesheet = base .. "out-of-map-transition/" .. name2 .. "-shore-out-of-map-transition.png"
-		data.raw.tile[name].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile[name].transitions_between_transitions[3].effect_map_layout.spritesheet = base .. "effect-maps/water-dirt-to-out-of-map-mask.png"
+		tile.transitions_between_transitions[3].spritesheet = base .. "out-of-map-transition/" .. name2 .. "-shore-out-of-map-transition.png"
+		tile.transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+		tile.transitions_between_transitions[3].effect_map_layout.spritesheet = base .. "effect-maps/water-dirt-to-out-of-map-mask.png"
 	end
 end
 
@@ -310,28 +313,30 @@ if not settings.startup["f_hd_a_bg_tn_disable_dirt"].value then
 end
 
 local function load_sand_transitions(name)
-	if not disable_water_transitions then
-		data.raw.tile[name].transitions[1].spritesheet = base .. "water-transitions/sand.png"
-		data.raw.tile[name].transitions[1].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_8_short
-		data.raw.tile[name].transitions[1].effect_map_layout.spritesheet = base .. "effect-maps/water-sand-mask.png"
+	local tile = data.raw.tile[name]
 
-		data.raw.tile[name].transitions_between_transitions[1].spritesheet = base .. "water-transitions/sand-transition.png"
-		data.raw.tile[name].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0_only_u_tall
-		data.raw.tile[name].transitions_between_transitions[1].effect_map_layout.spritesheet = base .. "effect-maps/water-sand-to-land-mask.png"
-		data.raw.tile[name].transitions_between_transitions[1].water_patch = water_patch
+	if not disable_water_transitions then
+		tile.transitions[1].spritesheet = base .. "water-transitions/sand.png"
+		tile.transitions[1].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_8_short
+		tile.transitions[1].effect_map_layout.spritesheet = base .. "effect-maps/water-sand-mask.png"
+
+		tile.transitions_between_transitions[1].spritesheet = base .. "water-transitions/sand-transition.png"
+		tile.transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0_only_u_tall
+		tile.transitions_between_transitions[1].effect_map_layout.spritesheet = base .. "effect-maps/water-sand-to-land-mask.png"
+		tile.transitions_between_transitions[1].water_patch = water_patch
 	end
 
 	if not disable_out_of_map_transitions then
-		data.raw.tile[name].transitions[2].spritesheet = out_of_map_transition
-		data.raw.tile[name].transitions[2].layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1
+		tile.transitions[2].spritesheet = out_of_map_transition
+		tile.transitions[2].layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1
 
-		data.raw.tile[name].transitions_between_transitions[2].spritesheet = base .. "out-of-map-transition/sand-out-of-map-transition.png"
-		data.raw.tile[name].transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+		tile.transitions_between_transitions[2].spritesheet = base .. "out-of-map-transition/sand-out-of-map-transition.png"
+		tile.transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
 
-		data.raw.tile[name].transitions_between_transitions[3].spritesheet = base .. "out-of-map-transition/sand-shore-out-of-map-transition.png"
-		data.raw.tile[name].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile[name].transitions_between_transitions[3].effect_map_layout.spritesheet = base .. "effect-maps/water-sand-to-out-of-map-mask.png"
-		data.raw.tile[name].transitions_between_transitions[3].water_patch = water_patch
+		tile.transitions_between_transitions[3].spritesheet = base .. "out-of-map-transition/sand-shore-out-of-map-transition.png"
+		tile.transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+		tile.transitions_between_transitions[3].effect_map_layout.spritesheet = base .. "effect-maps/water-sand-to-out-of-map-mask.png"
+		tile.transitions_between_transitions[3].water_patch = water_patch
 	end
 end
 
@@ -389,16 +394,18 @@ load_transitions("landfill")
 load_transitions("nuclear-ground")
 
 local function load_water_transitions(name)
-	data.raw.tile[name].transitions[1].spritesheet = base .. "out-of-map-transition/water-shallow-out-of-map-transition.png"
-	data.raw.tile[name].transitions[1].layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1
+	local tile = data.raw.tile[name]
+	tile.transitions[1].spritesheet = base .. "out-of-map-transition/water-shallow-out-of-map-transition.png"
+	tile.transitions[1].layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1
 
-	data.raw.tile[name].transitions_between_transitions[1].spritesheet = base .. "out-of-map-transition/water-shallow-out-of-map-transition-to-water.png"
-	data.raw.tile[name].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+	tile.transitions_between_transitions[1].spritesheet = base .. "out-of-map-transition/water-shallow-out-of-map-transition-to-water.png"
+	tile.transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
 end
 
 if not disable_out_of_map_transitions then
-	data.raw.tile["water"].transitions[1].spritesheet = base .. "out-of-map-transition/water-out-of-map-transition-tintable.png"
-	data.raw.tile["water"].transitions[1].layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1
+	local water_tile = data.raw.tile["water"]
+	water_tile.transitions[1].spritesheet = base .. "out-of-map-transition/water-out-of-map-transition-tintable.png"
+	water_tile.transitions[1].layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1
 
 	load_water_transitions("water-mud")
 	load_water_transitions("water-shallow")
