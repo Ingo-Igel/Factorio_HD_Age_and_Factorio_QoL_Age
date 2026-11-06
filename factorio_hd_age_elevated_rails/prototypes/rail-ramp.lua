@@ -26,9 +26,16 @@ local direction_offsets = {
 
 local function fence_color(side_name, direction_name, suffix)
 	local height_value = suffix == "" and 2372 or 2336
-	local width_value = suffix == "" and 2048 or 2088
+	local width_value = suffix == "" and 2048 or (side_name == "B" and suffix == "-end" and 2092 or 2088)
 	local direction_offset = direction_offsets[direction_name]
-	local shift_value = suffix == "" and { 0, -2.28125 } or { 0.03125, -2.140625 }
+	local shift_value
+	if suffix == "" then
+		shift_value = { 0, -2.28125 }
+	elseif side_name == "B" then
+		shift_value = { 0, -2.140625 }
+	else
+		shift_value = { 0.03125, -2.140625 }
+	end
 
 	return {
 		layers = {
@@ -65,6 +72,10 @@ for _, side_name in ipairs(sides) do
 	local rail_ramp = fence_pictures["side_" .. side_name]
 
 	for _, direction_name in ipairs(directions) do
+		log(serpent.block(rail_ramp.fence[direction_name]))
+		log(serpent.block(rail_ramp.ends[1][direction_name]))
+		log(serpent.block(rail_ramp.ends[2][direction_name]))
+		log(serpent.block(rail_ramp.ends[3][direction_name]))
 		local fence_sprite = fence_color(side_name, direction_name, "")
 		rail_ramp.fence[direction_name] = fence_sprite
 		rail_ramp.ends[1][direction_name] = fence_sprite
