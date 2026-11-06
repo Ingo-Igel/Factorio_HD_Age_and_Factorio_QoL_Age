@@ -1,87 +1,40 @@
-if not settings.startup["f_hd_a_bg_en_disable_worms"].value then
-	local worm_size = {
-		"small",
-		"medium",
-		"big",
-		"behemoth"
-	}
+local worms = {
+	{ size = "small",    scale = 0.65, tint = { 0.7, 1, 0.3, 0.5 } },
+	{ size = "medium",   scale = 0.83, tint = { 0.9, 0.15, 0.3, 1 } },
+	{ size = "big",      scale = 1.0,  tint = { 0.34, 0.68, 0.90, 0.8 } },
+	{ size = "behemoth", scale = 1.2,  tint = { 0.3, 1, 0, 0.8 } }
+}
 
-	local worm_scale = {
-		0.65,
-		0.83,
-		1.0,
-		1.2
-	}
+local start_attack_frame_sequence = { 1, 2, 3, 4, 5, 6, 7, 8, 9 }
+local end_attack_frame_sequence = { 10, 9, 10, 9, 10, 9, 10, 9, 10, 9, 10, 9, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 }
 
-	local worm_tint = {
-		{ 0.7,  1,    0.3,  0.5 },
-		{ 0.9,  0.15, 0.3,  1 },
-		{ 0.34, 0.68, 0.90, 0.8 },
-		{ 0.3,  1,    0,    0.8 }
-	}
+local function load_attack_sprite(worm, frame_sequence, is_mask)
+	local sprite_name = is_mask and "worm-attack-mask" or "worm-attack"
 
-	local start_attack_frame_sequence = { 1, 2, 3, 4, 5, 6, 7, 8, 9 }
-	local end_attack_frame_sequence = { 10, 9, 10, 9, 10, 9, 10, 9, 10, 9, 10, 9, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 }
+	return util.sprite_load(
+		"__factorio_hd_age_base_game_enemies_nauvis__/data/base/graphics/entity/worm/" .. sprite_name,
+		{
+			slice = 4,
+			frame_count = 10,
+			direction_count = 16,
+			scale = worm.scale * 0.25,
+			frame_sequence = frame_sequence,
+			tint = is_mask and worm.tint or nil,
+			multiply_shift = worm.scale,
+			allow_forced_downscale = true,
+			surface = "nauvis",
+			usage = "enemy"
+		}
+	)
+end
 
-	for n = 1, 4 do
-		data.raw["turret"][worm_size[n] .. "-worm-turret"].starting_attack_animation.layers[1] = util.sprite_load(
-			"__factorio_hd_age_base_game_enemies_nauvis__/data/base/graphics/entity/worm/worm-attack",
-			{
-				slice = 4,
-				frame_count = 10,
-				direction_count = 16,
-				scale = worm_scale[n] * 0.25,
-				frame_sequence = start_attack_frame_sequence,
-				multiply_shift = worm_scale[n],
-				allow_forced_downscale = true,
-				surface = "nauvis",
-				usage = "enemy"
-			}
-		)
-		data.raw["turret"][worm_size[n] .. "-worm-turret"].starting_attack_animation.layers[2] = util.sprite_load(
-			"__factorio_hd_age_base_game_enemies_nauvis__/data/base/graphics/entity/worm/worm-attack-mask",
-			{
-				slice = 4,
-				frame_count = 10,
-				direction_count = 16,
-				scale = worm_scale[n] * 0.25,
-				frame_sequence = start_attack_frame_sequence,
-				tint = worm_tint[n],
-				multiply_shift = worm_scale[n],
-				allow_forced_downscale = true,
-				surface = "nauvis",
-				usage = "enemy"
-			}
-		)
+for _, worm in ipairs(worms) do
+	local turret = data.raw.turret[worm.size .. "-worm-turret"]
+	local starting_layers = turret.starting_attack_animation.layers
+	local ending_layers = turret.ending_attack_animation.layers
 
-		data.raw["turret"][worm_size[n] .. "-worm-turret"].ending_attack_animation.layers[1] = util.sprite_load(
-			"__factorio_hd_age_base_game_enemies_nauvis__/data/base/graphics/entity/worm/worm-attack",
-			{
-				slice = 4,
-				frame_count = 10,
-				direction_count = 16,
-				scale = worm_scale[n] * 0.25,
-				frame_sequence = end_attack_frame_sequence,
-				multiply_shift = worm_scale[n],
-				allow_forced_downscale = true,
-				surface = "nauvis",
-				usage = "enemy"
-			}
-		)
-		data.raw["turret"][worm_size[n] .. "-worm-turret"].ending_attack_animation.layers[2] = util.sprite_load(
-			"__factorio_hd_age_base_game_enemies_nauvis__/data/base/graphics/entity/worm/worm-attack-mask",
-			{
-				slice = 4,
-				frame_count = 10,
-				direction_count = 16,
-				scale = worm_scale[n] * 0.25,
-				frame_sequence = end_attack_frame_sequence,
-				tint = worm_tint[n],
-				multiply_shift = worm_scale[n],
-				allow_forced_downscale = true,
-				surface = "nauvis",
-				usage = "enemy"
-			}
-		)
-	end
+	starting_layers[1] = load_attack_sprite(worm, start_attack_frame_sequence, false)
+	starting_layers[2] = load_attack_sprite(worm, start_attack_frame_sequence, true)
+	ending_layers[1] = load_attack_sprite(worm, end_attack_frame_sequence, false)
+	ending_layers[2] = load_attack_sprite(worm, end_attack_frame_sequence, true)
 end
