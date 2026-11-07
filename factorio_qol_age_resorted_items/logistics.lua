@@ -1,33 +1,9 @@
-local space_age = false
-if mods["space-age"] then
-	space_age = true
-end
-
-local lignumis = false
-if mods["lignumis"] then
-	lignumis = true
-end
-
-local castra = false
-if mods["castra"] then
-	castra = true
-end
-
-local AdvancedBelts = false
-if mods["AdvancedBeltsSA"] then
-	AdvancedBelts = true
-end
-
-local planetaris_unbounded = false
-if mods["planetaris-unbounded"] then
-	planetaris_unbounded = true
-end
-
-local lane_splitters = false
-if mods["lane-splitters"] then
-	lane_splitters = true
-end
-
+local space_age = mods["space-age"] ~= nil
+local lignumis = mods["lignumis"] ~= nil
+local castra = mods["castra"] ~= nil
+local AdvancedBelts = mods["AdvancedBeltsSA"] ~= nil
+local planetaris_unbounded = mods["planetaris-unbounded"] ~= nil
+local lane_splitters = mods["lane-splitters"] ~= nil
 
 -- item-subgroup - storage
 data.raw["item-subgroup"]["storage"].order = "a"

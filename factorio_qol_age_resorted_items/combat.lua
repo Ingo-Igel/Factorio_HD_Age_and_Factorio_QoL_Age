@@ -1,7 +1,4 @@
-local space_age = false
-if mods["space-age"] then
-	space_age = true
-end
+local space_age = mods["space-age"] ~= nil
 
 -- item-subgroup - defensive-structure
 data.raw["item-subgroup"]["defensive-structure"].order = "a"
