@@ -41,6 +41,13 @@ local str_match   = string.match
 local str_sub     = string.sub
 
 local prefix_data = "__" .. str_rpn .. "__" .. "/data/"
+local scale_excluded_path_keys = {
+	stripes = true,
+	image_textures = true,
+	planet_surface = true,
+	planet_normal = true,
+	planet_emission = true
+}
 
 local function scaled_floor(value)
 	return max(floor(value * val_sf), 1)
@@ -170,6 +177,8 @@ local adjustDataDotRaw = function(path, filename_key, new_path)
 	local generic_data = generic_root
 
 	if not pathed_data then return end
+	local path_key = path[path_len]
+	local parent_key = path[path_len - 1]
 
 	-- do not overwrite image path if image name contains an element of exclude_names declared in settings
 	if type(tbl_en) == "table" then
@@ -190,7 +199,9 @@ local adjustDataDotRaw = function(path, filename_key, new_path)
 	end
 
 	-- General Value Manipulation: Change image scaling etc.
-	pathed_data["scale"] = (pathed_data["scale"] or 1) / val_sf
+	if not scale_excluded_path_keys[path_key] and not scale_excluded_path_keys[parent_key] then
+		pathed_data["scale"] = (pathed_data["scale"] or 1) / val_sf
+	end
 	if type(pathed_data["width"]) == "number" then pathed_data["width"] = scaled_floor(pathed_data["width"]) end
 	if type(pathed_data["height"]) == "number" then pathed_data["height"] = scaled_floor(pathed_data["height"]) end
 	if type(pathed_data["x"]) == "number" then pathed_data["x"] = floor(pathed_data["x"] * val_sf) end
@@ -244,7 +255,6 @@ local adjustDataDotRaw = function(path, filename_key, new_path)
 
 	-- Adjusts properties for animations making use of the stripes attribute
 	if prev == "stripes" and last == 1 then
-		pathed_data["scale"] = (pathed_data["scale"] or 1) / val_sf
 		if generic_data then
 			if generic_data["scale"] then generic_data["scale"] = generic_data["scale"] / val_sf end
 			if generic_data["width"] then generic_data["width"] = scaled_floor(generic_data["width"]) end
