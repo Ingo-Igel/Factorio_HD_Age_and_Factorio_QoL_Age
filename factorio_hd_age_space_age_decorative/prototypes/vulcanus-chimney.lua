@@ -1,93 +1,57 @@
--- CHIMNEY
-data.raw["simple-entity"]["vulcanus-chimney"].pictures.layers[1] = util.sprite_load(
-	"__factorio_hd_age_space_age_decorative__/data/space-age/graphics/decorative/vulcanus-chimney/sulfuric-chimney-upper",
-	{
-		scale = 0.25,
-		variation_count = 3,
-		multiply_shift = 0.5,
-		shift = { 5, 0 }
-	}
-)
-data.raw["simple-entity"]["vulcanus-chimney"].lower_pictures = util.sprite_load(
-	"__factorio_hd_age_space_age_decorative__/data/space-age/graphics/decorative/vulcanus-chimney/sulfuric-chimney-lower",
-	{
-		scale = 0.25,
-		variation_count = 3,
-		multiply_shift = 0.5,
-		shift = { 5, 0 }
-	}
-)
+local base = "__factorio_hd_age_space_age_decorative__/data/space-age/graphics/decorative/vulcanus-chimney/"
 
--- CHIMNEY FADED
-data.raw["simple-entity"]["vulcanus-chimney-faded"].pictures.layers[1] = util.sprite_load(
-	"__factorio_hd_age_space_age_decorative__/data/space-age/graphics/decorative/vulcanus-chimney/sulfuric-chimney-faded-upper",
+local chimneys = {
 	{
-		scale = 0.25,
+		entity = "vulcanus-chimney",
+		upper = "sulfuric-chimney-upper",
+		lower = "sulfuric-chimney-lower",
+		variation_count = 3,
+		shift = { 5, 0 },
+	},
+	{
+		entity = "vulcanus-chimney-faded",
+		upper = "sulfuric-chimney-faded-upper",
+		lower = "sulfuric-chimney-faded-lower",
 		variation_count = 5,
-		multiply_shift = 0.5,
-		shift = { 5, 0 }
-	}
-)
-data.raw["simple-entity"]["vulcanus-chimney-faded"].lower_pictures = util.sprite_load(
-	"__factorio_hd_age_space_age_decorative__/data/space-age/graphics/decorative/vulcanus-chimney/sulfuric-chimney-faded-lower",
+		shift = { 5, 0 },
+	},
 	{
-		scale = 0.25,
-		variation_count = 5,
-		multiply_shift = 0.5,
-		shift = { 5, 0 }
-	}
-)
-
--- CHIMNEY COLD
-data.raw["simple-entity"]["vulcanus-chimney-cold"].pictures.layers[1] = util.sprite_load(
-	"__factorio_hd_age_space_age_decorative__/data/space-age/graphics/decorative/vulcanus-chimney/cold-chimney-upper", {
-		scale = 0.25,
+		entity = "vulcanus-chimney-cold",
+		upper = "cold-chimney-upper",
+		lower = "cold-chimney-lower",
 		variation_count = 3,
-		multiply_shift = 0.5,
-		shift = { 5, 0 }
-	}
-)
-data.raw["simple-entity"]["vulcanus-chimney-cold"].lower_pictures = util.sprite_load(
-	"__factorio_hd_age_space_age_decorative__/data/space-age/graphics/decorative/vulcanus-chimney/cold-chimney-lower", {
-		scale = 0.25,
-		variation_count = 3,
-		multiply_shift = 0.5,
-		shift = { 5, 0 }
-	}
-)
-
--- SHORT CHIMNEY
-data.raw["simple-entity"]["vulcanus-chimney-short"].pictures.layers[1] = util.sprite_load(
-	"__factorio_hd_age_space_age_decorative__/data/space-age/graphics/decorative/vulcanus-chimney/sulfuric-chimney-short-upper",
+		shift = { 5, 0 },
+	},
 	{
-		scale = 0.25,
+		entity = "vulcanus-chimney-short",
+		upper = "sulfuric-chimney-short-upper",
+		lower = "sulfuric-chimney-short-lower",
 		variation_count = 7,
-		multiply_shift = 0.5
-	}
-)
-data.raw["simple-entity"]["vulcanus-chimney-short"].lower_pictures = util.sprite_load(
-	"__factorio_hd_age_space_age_decorative__/data/space-age/graphics/decorative/vulcanus-chimney/sulfuric-chimney-short-lower",
+	},
 	{
-		scale = 0.25,
-		variation_count = 7,
-		multiply_shift = 0.5
-	}
-)
+		entity = "vulcanus-chimney-truncated",
+		upper = "sulfuric-chimney-truncated-upper",
+		lower = "sulfuric-chimney-truncated-lower",
+		variation_count = 6,
+	},
+}
 
---- TRUNCATED CHIMNEY
-data.raw["simple-entity"]["vulcanus-chimney-truncated"].pictures.layers[1] = util.sprite_load(
-	"__factorio_hd_age_space_age_decorative__/data/space-age/graphics/decorative/vulcanus-chimney/sulfuric-chimney-truncated-upper",
-	{
+local function load_chimney_sprite(name, variation_count, shift)
+	local options = {
 		scale = 0.25,
-		variation_count = 6,
-		multiply_shift = 0.5
+		variation_count = variation_count,
+		multiply_shift = 0.5,
 	}
-)
-data.raw["simple-entity"]["vulcanus-chimney-truncated"].lower_pictures = util.sprite_load(
-	"__factorio_hd_age_space_age_decorative__/data/space-age/graphics/decorative/vulcanus-chimney/sulfuric-chimney-truncated-lower",
-	{
-		scale = 0.25,
-		variation_count = 6,
-		multiply_shift = 0.5
-	}
-)
+
+	if shift then
+		options.shift = shift
+	end
+
+	return util.sprite_load(base .. name, options)
+end
+
+for _, chimney in ipairs(chimneys) do
+	local entity = data.raw["simple-entity"][chimney.entity]
+	entity.pictures.layers[1] = load_chimney_sprite(chimney.upper, chimney.variation_count, chimney.shift)
+	entity.lower_pictures = load_chimney_sprite(chimney.lower, chimney.variation_count, chimney.shift)
+end
