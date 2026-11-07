@@ -1,21 +1,29 @@
 local disable_water_transitions = settings.startup["f_hd_a_sa_tv_disable_water-transitions"].value
 local disable_lava_transitions = settings.startup["f_hd_a_sa_tv_disable_lava-transitions"].value
 local disable_out_of_map_transitions = settings.startup["f_hd_a_sa_tv_disable_out-of-map-transitions"].value
+local base = {
+	"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/",
+	"__factorio_hd_age_space_age_terrain_vulcanus__/data/base/graphics/terrain/effect-maps"
+}
 
-local function tile_variations_template_hd(high_res_picture, high_res_transition_mask, options)
+local function tile_variations_template_hd(high_res_picture, high_res_transition_mask, options, transition_layout_scale, transition_coordinate_scale)
+	local layout_scale = transition_layout_scale or 0.25
+	local coordinate_scale = transition_coordinate_scale or 2
+
 	local function main_variation_hd(size_)
+		local size_options = options[size_]
 		local y_ = ((size_ == 1) and 0) or ((size_ == 2) and 256) or ((size_ == 4) and 640) or 1280
 		local ret = {
 			picture = high_res_picture,
-			count = (options[size_] and options[size_].weights) and #options[size_].weights or 16,
+			count = (size_options and size_options.weights) and #size_options.weights or 16,
 			size = size_,
 			y = y_,
 			line_length = (size_ == 8) and 8 or 16,
 			scale = 0.25
 		}
 
-		if options[size_] then
-			for k, v in pairs(options[size_]) do
+		if size_options then
+			for k, v in pairs(size_options) do
 				ret[k] = v
 			end
 		end
@@ -41,75 +49,17 @@ local function tile_variations_template_hd(high_res_picture, high_res_transition
 		result.transition = {
 			spritesheet = high_res_transition_mask,
 			layout = {
-				scale = 0.25,
+				scale = layout_scale,
 				count = (options and options.mask_variations) or 8,
 				double_side_count = 0,
 				u_transition_count = 1,
 				o_transition_count = 1,
 				u_transition_line_length = 1,
 				o_transition_line_length = 2,
-				outer_corner_x = 576 * 2,
-				side_x = 1152 * 2,
-				u_transition_x = 1728 * 2,
-				o_transition_x = 2304 * 2,
-				mask = { y_offset = 0 }
-			}
-		}
-	end
-
-	return result
-end
-
-local function tile_variations_template_hd_extra(high_res_picture, high_res_transition_mask, options)
-	local function main_variation_hd(size_)
-		local y_ = ((size_ == 1) and 0) or ((size_ == 2) and 256) or ((size_ == 4) and 640) or 1280
-		local ret = {
-			picture = high_res_picture,
-			count = (options[size_] and options[size_].weights) and #options[size_].weights or 16,
-			size = size_,
-			y = y_,
-			line_length = (size_ == 8) and 8 or 16,
-			scale = 0.25
-		}
-
-		if options[size_] then
-			for k, v in pairs(options[size_]) do
-				ret[k] = v
-			end
-		end
-
-		return ret
-	end
-
-	local result = {
-		main = {
-			main_variation_hd(1),
-			main_variation_hd(2),
-			main_variation_hd(4)
-		}
-	}
-
-	if (options.max_size == 8) then
-		table.insert(result.main, main_variation_hd(8))
-	end
-
-	if options.empty_transitions then
-		result.empty_transitions = true
-	else
-		result.transition = {
-			spritesheet = high_res_transition_mask,
-			layout = {
-				scale = 0.5,
-				count = (options and options.mask_variations) or 8,
-				double_side_count = 0,
-				u_transition_count = 1,
-				o_transition_count = 1,
-				u_transition_line_length = 1,
-				o_transition_line_length = 2,
-				outer_corner_x = 576,
-				side_x = 1152,
-				u_transition_x = 1728,
-				o_transition_x = 2304,
+				outer_corner_x = 576 * coordinate_scale,
+				side_x = 1152 * coordinate_scale,
+				u_transition_x = 1728 * coordinate_scale,
+				o_transition_x = 2304 * coordinate_scale,
 				mask = { y_offset = 0 }
 			}
 		}
@@ -218,11 +168,6 @@ tile_spritesheet_layout_hd.transition_3_3_3_1_0 = {
 	background               = { x_offset = 1088 * 2 }
 }
 
-local base = {
-	"__factorio_hd_age_space_age_terrain_vulcanus__/data/space-age/graphics/terrain/",
-	"__factorio_hd_age_space_age_terrain_vulcanus__/data/base/graphics/terrain/effect-maps"
-}
-
 local lava_patch = {
 	filename = base[1] .. "lava-transitions/lava-patch.png",
 	scale = 0.25,
@@ -246,19 +191,23 @@ local terrain_options = {
 }
 
 local function load_lava_transition(name)
+	local tile = data.raw.tile[name]
+
 	if not disable_out_of_map_transitions then
-		data.raw.tile[name].transitions[1].spritesheet = base[1] .. "out-of-map-transition/lava-out-of-map-transition.png"
-		data.raw.tile[name].transitions[1].lightmap_layout = { spritesheet = base[1] .. "out-of-map-transition/lava-out-of-map-transition.png" }
-		data.raw.tile[name].transitions[1].layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1
+		tile.transitions[1].spritesheet = base[1] .. "out-of-map-transition/lava-out-of-map-transition.png"
+		tile.transitions[1].lightmap_layout = { spritesheet = base[1] .. "out-of-map-transition/lava-out-of-map-transition.png" }
+		tile.transitions[1].layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1
 	end
 end
 
 if not settings.startup["f_hd_a_sa_tv_disable_lava"].value then
 	load_lava_transition("lava")
-	data.raw.tile["lava"].variants = tile_variations_template_hd_extra(
+	data.raw.tile["lava"].variants = tile_variations_template_hd(
 		base[1] .. "vulcanus/lava.png",
 		"__base__/graphics/terrain/masks/transition-1.png",
-		terrain_options[1]
+		terrain_options[1],
+		0.5,
+		1
 	)
 
 	load_lava_transition("lava-hot")
@@ -274,53 +223,55 @@ if not settings.startup["f_hd_a_sa_tv_disable_lava"].value then
 end
 
 local function load_lava_stone_transiton(name, lightmap, variation)
-	if not disable_water_transitions then
-		data.raw.tile[name].transitions[1].spritesheet = base[1] .. "water-transitions/lava-stone-cold.png"
-		data.raw.tile[name].transitions[1].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-		data.raw.tile[name].transitions[1].effect_map_layout.spritesheet = base[2] .. "/water-dirt-mask.png"
+	local tile = data.raw.tile[name]
 
-		data.raw.tile[name].transitions_between_transitions[1].spritesheet = base[1] .. "water-transitions/lava-stone-cold-transition.png"
-		data.raw.tile[name].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile[name].transitions_between_transitions[1].effect_map_layout.spritesheet = base[2] .. "/water-dirt-to-land-mask.png"
-		data.raw.tile[name].transitions_between_transitions[1].water_patch = lava_patch
+	if not disable_water_transitions then
+		tile.transitions[1].spritesheet = base[1] .. "water-transitions/lava-stone-cold.png"
+		tile.transitions[1].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
+		tile.transitions[1].effect_map_layout.spritesheet = base[2] .. "/water-dirt-mask.png"
+
+		tile.transitions_between_transitions[1].spritesheet = base[1] .. "water-transitions/lava-stone-cold-transition.png"
+		tile.transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+		tile.transitions_between_transitions[1].effect_map_layout.spritesheet = base[2] .. "/water-dirt-to-land-mask.png"
+		tile.transitions_between_transitions[1].water_patch = lava_patch
 	end
 
 	if not disable_lava_transitions then
-		data.raw.tile[name].transitions[2].spritesheet = base[1] .. "lava-transitions/lava-stone.png"
-		data.raw.tile[name].transitions[2].lightmap_layout = { spritesheet = base[1] .. "lava-transitions/lava-stone-lightmap.png" }
-		data.raw.tile[name].transitions[2].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-		data.raw.tile[name].transitions[2].effect_map_layout.spritesheet = base[1] .. "effect-maps/lava-dirt-mask.png"
+		tile.transitions[2].spritesheet = base[1] .. "lava-transitions/lava-stone.png"
+		tile.transitions[2].lightmap_layout = { spritesheet = base[1] .. "lava-transitions/lava-stone-lightmap.png" }
+		tile.transitions[2].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
+		tile.transitions[2].effect_map_layout.spritesheet = base[1] .. "effect-maps/lava-dirt-mask.png"
 
-		data.raw.tile[name].transitions_between_transitions[3].spritesheet = base[1] .. "lava-transitions/lava-stone-transition.png"
-		data.raw.tile[name].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile[name].transitions_between_transitions[3].effect_map_layout.spritesheet = base[2] .. "/water-dirt-to-land-mask.png"
-		data.raw.tile[name].transitions_between_transitions[3].water_patch = lava_patch
+		tile.transitions_between_transitions[3].spritesheet = base[1] .. "lava-transitions/lava-stone-transition.png"
+		tile.transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+		tile.transitions_between_transitions[3].effect_map_layout.spritesheet = base[2] .. "/water-dirt-to-land-mask.png"
+		tile.transitions_between_transitions[3].water_patch = lava_patch
 	end
 
 	if not disable_out_of_map_transitions then
-		data.raw.tile[name].transitions[3].spritesheet = base[1] .. "out-of-map-transition/volcanic-out-of-map-transition.png"
-		data.raw.tile[name].transitions[3].layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1
+		tile.transitions[3].spritesheet = base[1] .. "out-of-map-transition/volcanic-out-of-map-transition.png"
+		tile.transitions[3].layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1
 
-		data.raw.tile[name].transitions_between_transitions[2].spritesheet = base[1] .. "out-of-map-transition/lava-stone-cold-shore-out-of-map-transition.png"
-		data.raw.tile[name].transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile[name].transitions_between_transitions[2].effect_map_layout.spritesheet = base[2] .. "/water-dirt-to-out-of-map-mask.png"
+		tile.transitions_between_transitions[2].spritesheet = base[1] .. "out-of-map-transition/lava-stone-cold-shore-out-of-map-transition.png"
+		tile.transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+		tile.transitions_between_transitions[2].effect_map_layout.spritesheet = base[2] .. "/water-dirt-to-out-of-map-mask.png"
 
-		data.raw.tile[name].transitions_between_transitions[4].spritesheet = base[1] .. "out-of-map-transition/lava-stone-shore-out-of-map-transition.png"
-		data.raw.tile[name].transitions_between_transitions[4].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile[name].transitions_between_transitions[4].effect_map_layout.spritesheet = base[2] .. "/water-dirt-to-out-of-map-mask.png"
+		tile.transitions_between_transitions[4].spritesheet = base[1] .. "out-of-map-transition/lava-stone-shore-out-of-map-transition.png"
+		tile.transitions_between_transitions[4].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+		tile.transitions_between_transitions[4].effect_map_layout.spritesheet = base[2] .. "/water-dirt-to-out-of-map-mask.png"
 
-		data.raw.tile[name].transitions_between_transitions[5].spritesheet = base[1] .. "out-of-map-transition/volcanic-out-of-map-transition-transition.png"
-		data.raw.tile[name].transitions_between_transitions[5].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+		tile.transitions_between_transitions[5].spritesheet = base[1] .. "out-of-map-transition/volcanic-out-of-map-transition-transition.png"
+		tile.transitions_between_transitions[5].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
 	end
 
 	if lightmap then
-		data.raw.tile[name].variants = tile_variations_template_with_transitions_and_light_hd(
+		tile.variants = tile_variations_template_with_transitions_and_light_hd(
 			base[1] .. "vulcanus/" .. name .. ".png",
 			base[1] .. "vulcanus/" .. name .. "-lightmap.png",
 			terrain_options[variation]
 		)
 	else
-		data.raw.tile[name].variants = tile_variations_template_with_transitions_hd(
+		tile.variants = tile_variations_template_with_transitions_hd(
 			base[1] .. "vulcanus/" .. name .. ".png",
 			terrain_options[variation]
 		)
@@ -360,21 +311,23 @@ if not settings.startup["f_hd_a_sa_tv_disable_volcanic_soil"].value then
 end
 
 local function load_other_lava_transtion(name, number)
-	if not disable_lava_transitions then
-		data.raw.tile[name].transitions[3].spritesheet = base[1] .. "lava-transitions/lava-stone.png"
-		data.raw.tile[name].transitions[3].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-		data.raw.tile[name].transitions[3].lightmap_layout = { spritesheet = base[1] .. "lava-transitions/lava-stone-lightmap.png" }
-		data.raw.tile[name].transitions[3].effect_map_layout.spritesheet = base[1] .. "effect-maps/lava-dirt-mask.png"
+	local tile = data.raw.tile[name]
 
-		data.raw.tile[name].transitions_between_transitions[number + 1].spritesheet = base[1] .. "lava-transitions/lava-stone-transition.png"
-		data.raw.tile[name].transitions_between_transitions[number + 1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile[name].transitions_between_transitions[number + 1].effect_map_layout.spritesheet = base[1] .. "effect-maps/lava-dirt-to-land-mask.png"
-		data.raw.tile[name].transitions_between_transitions[number + 1].water_patch = lava_patch
+	if not disable_lava_transitions then
+		tile.transitions[3].spritesheet = base[1] .. "lava-transitions/lava-stone.png"
+		tile.transitions[3].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
+		tile.transitions[3].lightmap_layout = { spritesheet = base[1] .. "lava-transitions/lava-stone-lightmap.png" }
+		tile.transitions[3].effect_map_layout.spritesheet = base[1] .. "effect-maps/lava-dirt-mask.png"
+
+		tile.transitions_between_transitions[number + 1].spritesheet = base[1] .. "lava-transitions/lava-stone-transition.png"
+		tile.transitions_between_transitions[number + 1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+		tile.transitions_between_transitions[number + 1].effect_map_layout.spritesheet = base[1] .. "effect-maps/lava-dirt-to-land-mask.png"
+		tile.transitions_between_transitions[number + 1].water_patch = lava_patch
 	end
 	if not disable_out_of_map_transitions then
-		data.raw.tile[name].transitions_between_transitions[number + 2].spritesheet = base[1] .. "out-of-map-transition/lava-stone-shore-out-of-map-transition.png"
-		data.raw.tile[name].transitions_between_transitions[number + 2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile[name].transitions_between_transitions[number + 2].effect_map_layout.spritesheet = base[1] .. "effect-maps/lava-dirt-to-out-of-map-mask.png"
+		tile.transitions_between_transitions[number + 2].spritesheet = base[1] .. "out-of-map-transition/lava-stone-shore-out-of-map-transition.png"
+		tile.transitions_between_transitions[number + 2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+		tile.transitions_between_transitions[number + 2].effect_map_layout.spritesheet = base[1] .. "effect-maps/lava-dirt-to-out-of-map-mask.png"
 	end
 end
 

@@ -1,17 +1,25 @@
+local disable_water_transitions = settings.startup["f_hd_a_sa_ta_disable_water-transitions"].value
+local disable_out_of_map_transitions = settings.startup["f_hd_a_sa_ta_disable_out-of-map-transitions"].value
+local base = {
+	"__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/",
+	"__factorio_hd_age_space_age_terrain_aquilo__/data/base/graphics/terrain/"
+}
+
 local function tile_variations_template_hd(high_res_picture, high_res_transition_mask, options)
 	local function main_variation_hd(size_)
+		local size_options = options[size_]
 		local y_ = ((size_ == 1) and 0) or ((size_ == 2) and 256) or ((size_ == 4) and 640) or 1280
 		local ret = {
 			picture = high_res_picture,
-			count = (options[size_] and options[size_].weights) and #options[size_].weights or 16,
+			count = (size_options and size_options.weights) and #size_options.weights or 16,
 			size = size_,
 			y = y_,
 			line_length = (size_ == 8) and 8 or 16,
 			scale = 0.25
 		}
 
-		if options[size_] then
-			for k, v in pairs(options[size_]) do
+		if size_options then
+			for k, v in pairs(size_options) do
 				ret[k] = v
 			end
 		end
@@ -100,11 +108,6 @@ tile_spritesheet_layout_hd.transition_3_3_3_1_0 = {
 	background               = { x_offset = 1088 * 2 }
 }
 
-local base = {
-	"__factorio_hd_age_space_age_terrain_aquilo__/data/space-age/graphics/terrain/",
-	"__factorio_hd_age_space_age_terrain_aquilo__/data/base/graphics/terrain/"
-}
-
 local ice_patch = {
 	filename = base[1] .. "water-transitions/ice-patch.png",
 	scale = 0.25,
@@ -128,31 +131,33 @@ local options_ice = {
 }
 
 local function load_transitions(name, terrain, variation)
-	if not settings.startup["f_hd_a_sa_ta_disable_water-transitions"].value then
-		data.raw.tile[name].transitions[1].spritesheet = base[1] .. "water-transitions/ice-2.png"
-		data.raw.tile[name].transitions[1].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
-		data.raw.tile[name].transitions[1].effect_map_layout.spritesheet = base[2] .. "effect-maps/water-dirt-mask.png"
+	local tile = data.raw.tile[name]
 
-		data.raw.tile[name].transitions_between_transitions[1].spritesheet = base[1] .. "water-transitions/ice-transition.png"
-		data.raw.tile[name].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile[name].transitions_between_transitions[1].effect_map_layout.spritesheet = base[2] .. "effect-maps/water-dirt-to-land-mask.png"
-		data.raw.tile[name].transitions_between_transitions[1].water_patch = ice_patch
+	if not disable_water_transitions then
+		tile.transitions[1].spritesheet = base[1] .. "water-transitions/ice-2.png"
+		tile.transitions[1].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
+		tile.transitions[1].effect_map_layout.spritesheet = base[2] .. "effect-maps/water-dirt-mask.png"
+
+		tile.transitions_between_transitions[1].spritesheet = base[1] .. "water-transitions/ice-transition.png"
+		tile.transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+		tile.transitions_between_transitions[1].effect_map_layout.spritesheet = base[2] .. "effect-maps/water-dirt-to-land-mask.png"
+		tile.transitions_between_transitions[1].water_patch = ice_patch
 	end
 
-	if not settings.startup["f_hd_a_sa_ta_disable_out-of-map-transitions"].value then
-		data.raw.tile[name].transitions[2].spritesheet = base[1] .. "out-of-map-transition/ice-out-of-map.png"
-		data.raw.tile[name].transitions[2].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
+	if not disable_out_of_map_transitions then
+		tile.transitions[2].spritesheet = base[1] .. "out-of-map-transition/ice-out-of-map.png"
+		tile.transitions[2].layout = tile_spritesheet_layout_hd.transition_16_16_16_4_4
 
-		data.raw.tile[name].transitions_between_transitions[2].spritesheet = base[1] .. "out-of-map-transition/ice-out-of-map-transition-b.png"
-		data.raw.tile[name].transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+		tile.transitions_between_transitions[2].spritesheet = base[1] .. "out-of-map-transition/ice-out-of-map-transition-b.png"
+		tile.transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
 
-		data.raw.tile[name].transitions_between_transitions[3].spritesheet = base[1] .. "out-of-map-transition/ice-shore-out-of-map.png"
-		data.raw.tile[name].transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile[name].transitions_between_transitions[3].effect_map_layout.spritesheet = base[2] .. "effect-maps/water-dirt-to-out-of-map-mask.png"
+		tile.transitions_between_transitions[3].spritesheet = base[1] .. "out-of-map-transition/ice-shore-out-of-map.png"
+		tile.transitions_between_transitions[3].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+		tile.transitions_between_transitions[3].effect_map_layout.spritesheet = base[2] .. "effect-maps/water-dirt-to-out-of-map-mask.png"
 	end
 
 	if terrain then
-		data.raw.tile[name].variants = tile_variations_template_hd(
+		tile.variants = tile_variations_template_hd(
 			base[1] .. "aquilo/" .. name .. ".png",
 			"__base__/graphics/terrain/masks/transition-4.png",
 			options_ice[variation]

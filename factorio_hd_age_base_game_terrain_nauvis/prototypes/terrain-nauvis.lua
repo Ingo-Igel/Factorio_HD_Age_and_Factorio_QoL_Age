@@ -1,5 +1,7 @@
 local disable_water_transitions = settings.startup["f_hd_a_bg_tn_disable_water-transitions"].value
 local disable_out_of_map_transitions = settings.startup["f_hd_a_bg_tn_disable_out-of-map-transitions"].value
+local base = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/"
+local out_of_map_transition = base .. "out-of-map-transition/out-of-map-transition.png"
 
 local function tile_variations_template_hd(high_res_picture, high_res_transition_mask, options)
 	local function main_variation_hd(size_)
@@ -180,8 +182,6 @@ tile_spritesheet_layout_hd.transition_16_16_16_4_8_short = {
 	background         = { x_offset = 1088 * 2 }
 }
 
-local base = "__factorio_hd_age_base_game_terrain_nauvis__/data/base/graphics/terrain/"
-local out_of_map_transition = base .. "out-of-map-transition/out-of-map-transition.png"
 local water_patch = {
 	filename =
 		base .. "water-transitions/water-patch.png",

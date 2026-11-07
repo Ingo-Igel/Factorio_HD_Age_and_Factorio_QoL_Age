@@ -5,18 +5,19 @@ local base = "__factorio_hd_age_space_age_terrain_gleba__/data/space-age/graphic
 
 local function tile_variations_template_hd(high_res_picture, high_res_transition_mask, options)
 	local function main_variation_hd(size_)
+		local size_options = options[size_]
 		local y_ = ((size_ == 1) and 0) or ((size_ == 2) and 256) or ((size_ == 4) and 640) or 1280
 		local ret = {
 			picture = high_res_picture,
-			count = (options[size_] and options[size_].weights) and #options[size_].weights or 16,
+			count = (size_options and size_options.weights) and #size_options.weights or 16,
 			size = size_,
 			y = y_,
 			line_length = (size_ == 8) and 8 or 16,
 			scale = 0.25
 		}
 
-		if options[size_] then
-			for k, v in pairs(options[size_]) do
+		if size_options then
+			for k, v in pairs(size_options) do
 				ret[k] = v
 			end
 		end
@@ -108,8 +109,7 @@ local function lowland_tile_variations_template_with_transitions_and_puddle_tran
 		}
 		result.transition.effect_map_layout =
 		{
-			spritesheet              =
-				base .. "effect-maps/water-gleba-mask.png",
+			spritesheet              = base .. "effect-maps/water-gleba-mask.png",
 			scale                    = 0.25,
 			x                        = 0,
 			inner_corner_count       = 8,
@@ -202,54 +202,57 @@ tile_spritesheet_layout_hd.transition_3_3_3_1_0 = {
 	background               = { x_offset = 1088 * 2 }
 }
 
+local terrain_options = {
+	max_size = 4,
+	[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+	[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 } },
+	[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 } }
+}
+
 local function load_terrain(name, has)
-	local options = {
-		max_size = 4,
-		[1] = { weights = { 0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-		[2] = { probability = 1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-		[4] = { probability = 0.1, weights = { 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 }, },
-	}
+	local tile = data.raw.tile[name]
 
 	if has == "mask" then
-		data.raw.tile[name].variants = tile_variations_template_with_transitions_and_effect_map_hd(
+		tile.variants = tile_variations_template_with_transitions_and_effect_map_hd(
 			base .. "gleba/" .. name .. ".png",
 			base .. "effect-maps/water-gleba-mask.png",
-			options
+			terrain_options
 		)
 	elseif has == "puddle" then
-		data.raw.tile[name].variants = lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
+		tile.variants = lowland_tile_variations_template_with_transitions_and_puddle_transitions_hd(
 			base .. "gleba/" .. name .. ".png",
-			options
+			terrain_options
 		)
 	else
-		data.raw.tile[name].variants = tile_variations_template_with_transitions_hd(
+		tile.variants = tile_variations_template_with_transitions_hd(
 			base .. "gleba/" .. name .. ".png",
-			options
+			terrain_options
 		)
 	end
 
 	local suffix = ""
-	if (string.find(name, "red") or string.find(name, "jellynut")) then suffix = "-red" end
-	if (string.find(name, "lichen") or string.find(name, "crust")) then suffix = "-yellow" end
+	if name:find("red", 1, true) or name:find("jellynut", 1, true) then suffix = "-red" end
+	if name:find("lichen", 1, true) or name:find("crust", 1, true) then suffix = "-yellow" end
 
 	if not disable_out_of_map_transitions then
-		data.raw.tile[name].transitions[1].spritesheet = base .. "out-of-map-transition/gleba-out-of-map-transition" .. suffix .. ".png"
-		data.raw.tile[name].transitions[1].layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1
+		tile.transitions[1].spritesheet = base .. "out-of-map-transition/gleba-out-of-map-transition" .. suffix .. ".png"
+		tile.transitions[1].layout = tile_spritesheet_layout_hd.transition_4_4_8_1_1
 
-		data.raw.tile[name].transitions_between_transitions[1].spritesheet = base .. "out-of-map-transition/gleba-out-of-map-transition-b" .. suffix .. ".png"
-		data.raw.tile[name].transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+		tile.transitions_between_transitions[1].spritesheet = base .. "out-of-map-transition/gleba-out-of-map-transition-b" .. suffix .. ".png"
+		tile.transitions_between_transitions[1].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
 
-		data.raw.tile[name].transitions_between_transitions[2].spritesheet = base .. "out-of-map-transition/gleba-shore-out-of-map-transition" .. suffix .. ".png"
-		data.raw.tile[name].transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
-		data.raw.tile[name].transitions_between_transitions[2].effect_map_layout.spritesheet = "__factorio_hd_age_space_age_terrain_gleba__/data/base/graphics/terrain/effect-maps/water-grass-to-out-of-map-mask.png"
+		tile.transitions_between_transitions[2].spritesheet = base .. "out-of-map-transition/gleba-shore-out-of-map-transition" .. suffix .. ".png"
+		tile.transitions_between_transitions[2].layout = tile_spritesheet_layout_hd.transition_3_3_3_1_0
+		tile.transitions_between_transitions[2].effect_map_layout.spritesheet = "__factorio_hd_age_space_age_terrain_gleba__/data/base/graphics/terrain/effect-maps/water-grass-to-out-of-map-mask.png"
 	end
 
 	if not disable_water_transitions then
-		local transitions = table.deepcopy(data.raw.tile[name].variants.transition)
+		local transitions = table.deepcopy(tile.variants.transition)
+		---@cast transitions data.TileTransitionsToTiles
 		transitions.to_tiles = water_tile_type_names
 		transitions.transition_group = water_transition_group_id
 
-		data.raw.tile[name].transitions[2] = transitions
+		tile.transitions[2] = transitions
 	end
 end
 
