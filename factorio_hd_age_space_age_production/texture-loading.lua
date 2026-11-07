@@ -37,7 +37,21 @@ local str_byte    = string.byte
 local str_find    = string.find
 local str_gmatch  = string.gmatch
 local str_gsub    = string.gsub
+local str_match   = string.match
 local str_sub     = string.sub
+
+local prefix_data = "__" .. str_rpn .. "__" .. "/data/"
+local scale_excluded_path_keys = {
+	stripes = true,
+	image_textures = true,
+	planet_surface = true,
+	planet_normal = true,
+	planet_emission = true
+}
+
+local function scaled_floor(value)
+	return max(floor(value * val_sf), 1)
+end
 
 -- split string into list via seperator
 local split       = function(str, sep)
@@ -163,15 +177,14 @@ local adjustDataDotRaw = function(path, filename_key, new_path)
 	local generic_data = generic_root
 
 	if not pathed_data then return end
-
-	local function scaled_floor(v) return max(floor(v * val_sf), 1) end
+	local path_key = path[path_len]
+	local parent_key = path[path_len - 1]
 
 	-- do not overwrite image path if image name contains an element of exclude_names declared in settings
 	if type(tbl_en) == "table" then
 		local filename = pathed_data[filename_key]
 		if type(filename) == "string" then
-			local split_path = split(filename, "/")
-			local last_name = split_path[#split_path]
+			local last_name = str_match(filename, "([^/]+)/?$")
 			for _, name in pairs(tbl_en) do
 				if isValidTerm(name, last_name) then
 					return
@@ -186,7 +199,9 @@ local adjustDataDotRaw = function(path, filename_key, new_path)
 	end
 
 	-- General Value Manipulation: Change image scaling etc.
-	pathed_data["scale"] = (pathed_data["scale"] or 1) / val_sf
+	if not scale_excluded_path_keys[path_key] and not scale_excluded_path_keys[parent_key] then
+		pathed_data["scale"] = (pathed_data["scale"] or 1) / val_sf
+	end
 	if type(pathed_data["width"]) == "number" then pathed_data["width"] = scaled_floor(pathed_data["width"]) end
 	if type(pathed_data["height"]) == "number" then pathed_data["height"] = scaled_floor(pathed_data["height"]) end
 	if type(pathed_data["x"]) == "number" then pathed_data["x"] = floor(pathed_data["x"] * val_sf) end
@@ -216,15 +231,15 @@ local adjustDataDotRaw = function(path, filename_key, new_path)
 	-- cache last and prev path elements for repeated use
 	local last = path[path_len]
 	local prev = path[path_len - 1]
+	local parent_node = generic_data and prev and generic_data[prev]
 
 	-- scales shortcut GUI elements (guard generic_data and prev)
-	if generic_data and prev and generic_data[prev] and generic_data[prev]["type"] == "shortcut" and pathed_data["size"] then
+	if parent_node and parent_node["type"] == "shortcut" and pathed_data["size"] then
 		pathed_data["size"] = max(floor(pathed_data["size"] * val_sf), 1)
 	end
 
 	-- sets item / icon prototype icon_size when images are specified under pictures={} or icons={}
 	if generic_data and (generic_data["type"] == "icon" or generic_data["type"] == "item") then
-		local parent_node = generic_data[prev]
 		if parent_node and last == firstIndex(parent_node) and generic_data["icon_size"] then
 			generic_data["icon_size"] = scaled_floor(generic_data["icon_size"])
 		end
@@ -240,7 +255,6 @@ local adjustDataDotRaw = function(path, filename_key, new_path)
 
 	-- Adjusts properties for animations making use of the stripes attribute
 	if prev == "stripes" and last == 1 then
-		pathed_data["scale"] = (pathed_data["scale"] or 1) / val_sf
 		if generic_data then
 			if generic_data["scale"] then generic_data["scale"] = generic_data["scale"] / val_sf end
 			if generic_data["width"] then generic_data["width"] = scaled_floor(generic_data["width"]) end
@@ -283,12 +297,11 @@ else
 	end
 end
 
--- recursively loop through data.raw to find strings (and the list of keys that leads to them in data.raw) which resemble file paths ending in .png, .jpg and .ogg
+-- recursively loop through data.raw to find strings (and the list of keys that leads to them in data.raw) which resemble file paths ending in .png
 checkData = function(path)
 	-- path is a keylist in data.raw in which this fuction will look for paths that match the description above
 	-- navigate to the location in data.raw denoted by path keylist
 	local pathed_data = data.raw
-	local prefix_data = "__" .. str_rpn .. "__" .. "/data/"
 
 	for i = 1, #path do
 		pathed_data = pathed_data[path[i]]

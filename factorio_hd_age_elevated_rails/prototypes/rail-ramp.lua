@@ -72,10 +72,6 @@ for _, side_name in ipairs(sides) do
 	local rail_ramp = fence_pictures["side_" .. side_name]
 
 	for _, direction_name in ipairs(directions) do
-		log(serpent.block(rail_ramp.fence[direction_name]))
-		log(serpent.block(rail_ramp.ends[1][direction_name]))
-		log(serpent.block(rail_ramp.ends[2][direction_name]))
-		log(serpent.block(rail_ramp.ends[3][direction_name]))
 		local fence_sprite = fence_color(side_name, direction_name, "")
 		rail_ramp.fence[direction_name] = fence_sprite
 		rail_ramp.ends[1][direction_name] = fence_sprite
