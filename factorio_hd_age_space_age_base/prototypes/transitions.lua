@@ -56,11 +56,11 @@ local function load_transitions(name, refined, foundation)
 		local water_transition_between = required_transition(transitions_between, 1)
 		water_transition.spritesheet = water_path .. ".png"
 		water_transition.layout = tile_spritesheet_layout_hd.concrete_layout(refined, false, false)
-		assert(water_transition.effect_map_layout).spritesheet = concrete_mask
+		water_transition.effect_map_layout.spritesheet = concrete_mask
 
 		water_transition_between.spritesheet = water_path .. "-transitions.png"
 		water_transition_between.layout = tile_spritesheet_layout_hd.concrete_layout(refined, false, true)
-		assert(water_transition_between.effect_map_layout).spritesheet = concrete_mask
+		water_transition_between.effect_map_layout.spritesheet = concrete_mask
 	end
 
 	if not disable_out_of_map_transitions then
@@ -76,14 +76,14 @@ local function load_transitions(name, refined, foundation)
 
 			shore_transition_between.spritesheet = out_of_map_path .. "-shore-out-of-map-transition.png"
 			shore_transition_between.layout = tile_spritesheet_layout_hd.concrete_layout(false, true, true)
-			assert(shore_transition_between.effect_map_layout).spritesheet = concrete_out_of_map_mask
+			shore_transition_between.effect_map_layout.spritesheet = concrete_out_of_map_mask
 		end
 
 		local lava_shore_transition_between = required_transition(transitions_between, 5)
 		lava_shore_transition_between.spritesheet = out_of_map_path .. "-lava-shore-out-of-map.png"
 		lava_shore_transition_between.lightmap_layout = { spritesheet = out_of_map_path .. "-lava-shore-out-of-map-lightmap.png" }
 		lava_shore_transition_between.layout = tile_spritesheet_layout_hd.concrete_layout(refined, true, true)
-		assert(lava_shore_transition_between.effect_map_layout).spritesheet = concrete_out_of_map_mask
+		lava_shore_transition_between.effect_map_layout.spritesheet = concrete_out_of_map_mask
 	end
 
 	if not disable_lava_transitions then
@@ -94,12 +94,12 @@ local function load_transitions(name, refined, foundation)
 		lava_transition.spritesheet = lava_path .. "-lava.png"
 		lava_transition.lightmap_layout = { spritesheet = lava_path .. "-lava-lightmap.png" }
 		lava_transition.layout = tile_spritesheet_layout_hd.concrete_layout(refined, false, false)
-		assert(lava_transition.effect_map_layout).spritesheet = concrete_mask
+		lava_transition.effect_map_layout.spritesheet = concrete_mask
 
 		lava_transition_between.spritesheet = lava_path .. "-transitions-lava.png"
 		lava_transition_between.lightmap_layout = { spritesheet = lava_path .. "-transitions-lightmap.png" }
 		lava_transition_between.layout = tile_spritesheet_layout_hd.concrete_layout(refined, false, true)
-		assert(lava_transition_between.effect_map_layout).spritesheet = concrete_mask
+		lava_transition_between.effect_map_layout.spritesheet = concrete_mask
 	end
 end
 
