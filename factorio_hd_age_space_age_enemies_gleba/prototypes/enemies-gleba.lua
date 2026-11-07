@@ -35,7 +35,7 @@ local big_wriggler_body_tint    = gleba_big_body_tint
 
 -- strafer
 if not settings.startup["f_hd_a_sa_eg_disable_strafer"].value then
-	function make_strafer_hd(size, scale, tints)
+	local function make_strafer_hd(size, scale, tints)
 		local tint_mask = tints.mask
 		local tint_mask_thigh = tints.mask_thigh or tint_mask
 		local tint_body = tints.body
@@ -591,7 +591,6 @@ if not settings.startup["f_hd_a_sa_eg_disable_stomper"].value then
 		"small-", 0.9, {
 			mask = fade(gleba_small_mask_tint, 0.2),
 			mask_thigh = fade(gleba_small_mask2_tint, 0.3),
-			mask_head = fade(lerp_color(gleba_small_mask_tint, { 0, 255, 127, 255 }, 0.15), 0.1),
 			body = gleba_small_body_tint,
 			body_thigh = lerp_color(gleba_small_body_tint, grey_overlay({ 0, 255, 127, 255 }, 0.7), 0.3)
 		}
@@ -640,7 +639,7 @@ if not settings.startup["f_hd_a_sa_eg_disable_wriggler"].value then
 				direction_count = 16,
 				scale = 0.25 * 1.2 * scale,
 				animation_speed = speed,
-				flags = { flag } or nil,
+				flags = flag and { flag } or nil,
 				tint_as_overlay = true,
 				tint = tint,
 				surface = "gleba"
