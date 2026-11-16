@@ -2,6 +2,7 @@
 Version: 2.1.4
 Date: ????
   Changes:
+    - Updated textures according to Factorio 2.1.25 update
     - Code optimization
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.3
