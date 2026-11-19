@@ -1,5 +1,7 @@
-local base = "__factorio_hd_age_space_age_base__/data/space-age/graphics/terrain/"
-local concrete_mask = "__factorio_hd_age_space_age_base__/data/base/graphics/terrain/effect-maps/concrete-mask.png"
+local reff_base = "__base__"
+local mod_base = "__factorio_hd_age_space_age_base__"
+local base_path = "/data/space-age/graphics/terrain/"
+local concrete_mask = "/data/base/graphics/terrain/effect-maps/concrete-mask.png"
 local concrete_out_of_map_mask = "__factorio_hd_age_space_age_base__/data/base/graphics/terrain/effect-maps/concrete-out-of-map-mask.png"
 local disable_water_transitions = settings.startup["f_hd_a_sa_b_disable_water-transitions"].value
 local disable_out_of_map_transitions = settings.startup["f_hd_a_sa_b_disable_out-of-map-transitions"].value
@@ -47,59 +49,59 @@ local function load_transitions(name, refined, foundation)
 	local tile = data.raw.tile[name]
 	local transitions = tile.transitions
 	local transitions_between = tile.transitions_between_transitions
-	local water_path = base .. "water-transitions/" .. name
-	local out_of_map_path = base .. "out-of-map-transition/" .. name
-	local lava_path = base .. "lava-transitions/" .. name
+	local water_path = mod_base .. base_path .. "water-transitions/" .. name
+	local out_of_map_path = mod_base .. base_path .. "out-of-map-transition/" .. name
+	local lava_path = mod_base .. base_path .. "lava-transitions/" .. name
 
 	if not disable_water_transitions and foundation then
 		local water_transition = required_transition(transitions, 1)
-		local water_transition_between = required_transition(transitions_between, 1)
 		water_transition.spritesheet = water_path .. ".png"
 		water_transition.layout = tile_spritesheet_layout_hd.concrete_layout(refined, false, false)
-		water_transition.effect_map_layout.spritesheet = concrete_mask
+		water_transition.effect_map_layout.spritesheet = mod_base .. concrete_mask
 
+		local water_transition_between = required_transition(transitions_between, 1)
 		water_transition_between.spritesheet = water_path .. "-transitions.png"
 		water_transition_between.layout = tile_spritesheet_layout_hd.concrete_layout(refined, false, true)
-		water_transition_between.effect_map_layout.spritesheet = concrete_mask
+		water_transition_between.effect_map_layout.spritesheet = mod_base .. concrete_mask
 	end
 
 	if not disable_out_of_map_transitions then
 		if foundation then
 			local out_of_map_transition = required_transition(transitions, 3)
-			local out_of_map_transition_between = required_transition(transitions_between, 2)
-			local shore_transition_between = required_transition(transitions_between, 3)
 			out_of_map_transition.spritesheet = out_of_map_path .. "-out-of-map-transition.png"
 			out_of_map_transition.layout = tile_spritesheet_layout_hd.concrete_layout(false, true, false)
 
+			local out_of_map_transition_between = required_transition(transitions_between, 2)
 			out_of_map_transition_between.spritesheet = out_of_map_path .. "-out-of-map-transition-b.png"
 			out_of_map_transition_between.layout = tile_spritesheet_layout_hd.concrete_layout(false, true, true)
 
+			local shore_transition_between = required_transition(transitions_between, 3)
 			shore_transition_between.spritesheet = out_of_map_path .. "-shore-out-of-map-transition.png"
 			shore_transition_between.layout = tile_spritesheet_layout_hd.concrete_layout(false, true, true)
-			shore_transition_between.effect_map_layout.spritesheet = concrete_out_of_map_mask
+			shore_transition_between.effect_map_layout.spritesheet = mod_base .. concrete_out_of_map_mask
 		end
 
 		local lava_shore_transition_between = required_transition(transitions_between, 5)
 		lava_shore_transition_between.spritesheet = out_of_map_path .. "-lava-shore-out-of-map.png"
 		lava_shore_transition_between.lightmap_layout = { spritesheet = out_of_map_path .. "-lava-shore-out-of-map-lightmap.png" }
 		lava_shore_transition_between.layout = tile_spritesheet_layout_hd.concrete_layout(refined, true, true)
-		lava_shore_transition_between.effect_map_layout.spritesheet = concrete_out_of_map_mask
+		lava_shore_transition_between.effect_map_layout.spritesheet = mod_base .. concrete_out_of_map_mask
 	end
 
 	if not disable_lava_transitions then
 		local entry_number = foundation and 2 or 3
-		local lava_transition = required_transition(transitions, entry_number)
-		local lava_transition_between = required_transition(transitions_between, 4)
 
+		local lava_transition = required_transition(transitions, entry_number)
 		lava_transition.spritesheet = lava_path .. "-lava.png"
 		lava_transition.lightmap_layout = { spritesheet = lava_path .. "-lava-lightmap.png" }
 		lava_transition.layout = tile_spritesheet_layout_hd.concrete_layout(refined, false, false)
-		lava_transition.effect_map_layout.spritesheet = concrete_mask
+		lava_transition.effect_map_layout.spritesheet = mod_base .. concrete_mask
 
+		local lava_transition_between = required_transition(transitions_between, 4)
 		lava_transition_between.spritesheet = lava_path .. "-transitions-lava.png"
 		lava_transition_between.lightmap_layout = { spritesheet = lava_path .. "-transitions-lightmap.png" }
 		lava_transition_between.layout = tile_spritesheet_layout_hd.concrete_layout(refined, false, true)
-		lava_transition_between.effect_map_layout.spritesheet = concrete_mask
+		lava_transition_between.effect_map_layout.spritesheet = mod_base .. concrete_mask
 	end
 end
 

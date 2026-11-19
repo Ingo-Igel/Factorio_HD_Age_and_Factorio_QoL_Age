@@ -1,3 +1,6 @@
+local base = "__factorio_hd_age_base_game_base__/data/base/graphics/terrain/"
+local concrete_mask = base .. "effect-maps/concrete-mask.png"
+
 local tile_spritesheet_layout_hd = {}
 
 function tile_spritesheet_layout_hd.concrete_layout(refined, out_of_map, transition_to_transition)
@@ -23,9 +26,6 @@ function tile_spritesheet_layout_hd.concrete_layout(refined, out_of_map, transit
 		background               = { x_offset = refined and 512 * 2 or 1024 * 2 }
 	}
 end
-
-local base = "__factorio_hd_age_base_game_base__/data/base/graphics/terrain/"
-local concrete_mask = base .. "effect-maps/concrete-mask.png"
 
 local function load_transitions(name, refined)
 	if not settings.startup["f_hd_a_bg_b_disable_water-transitions"].value then
