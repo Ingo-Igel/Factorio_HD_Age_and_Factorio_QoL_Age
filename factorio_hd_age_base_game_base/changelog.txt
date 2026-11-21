@@ -2,6 +2,7 @@
 Version: 2.1.2
 Date: ????
   Changes:
+    - Updated the way in which transitions HD textures are checked against changes from other mods to extend compatibility and make the code more robust.
     - Code optimization
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.1
